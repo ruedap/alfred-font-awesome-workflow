@@ -3,11 +3,15 @@ GEM
   specs:
     alfred-workflow (1.8.0)
       plist (>= 3.1.0)
+    minitest (5.0.6)
     plist (3.1.0)
+    rake (10.1.0)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  alfred-workflow
-  plist
+  alfred-workflow (= 1.8.0)
+  minitest (= 5.0.6)
+  plist (= 3.1.0)
+  rake (= 10.1.0)
