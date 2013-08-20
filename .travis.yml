@@ -1,0 +1,9 @@
+language: ruby
+rvm:
+  - 1.8.7
+  - 1.9.3
+  - 2.0.0
+script:
+  - cd workflow
+  - bundle update && bundle install --standalone --clean
+  - bundle exec rake -T
