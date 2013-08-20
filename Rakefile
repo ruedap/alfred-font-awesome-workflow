@@ -40,6 +40,15 @@ task "bundle:install" => [:chdir] do
   end
 end
 
+desc "Install Gems for Test"
+task "bundle:install:test" => [:clean, :clobber, :chdir] do
+  sh %Q{bundle install --standalone --clean} do |ok, res|
+    if ! ok
+      puts "fail to install gems (status = #{res.exitstatus})"
+    end
+  end
+end
+
 desc "Update Gems"
 task "bundle:update" => [:chdir] do
   sh %Q{bundle update && bundle install --standalone --clean --without test} do |ok, res|
