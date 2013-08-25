@@ -3,3 +3,4 @@ workflow/.bundle
 workflow/bundle
 converter
 materials
+/workflow/coverage
