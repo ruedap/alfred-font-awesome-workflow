@@ -19,7 +19,6 @@ FileList['*/Rakefile'].each { |file|
 }
 
 task :config do
-
   info = Plist::parse_xml($config["plist"])
   unless info['bundleid'].eql?($config["bundleid"])
     info['bundleid'] = $config["bundleid"]
@@ -94,3 +93,10 @@ task :clobber => [:clean] do
   rmtree File.join($config["path"], ".bundle")
   rmtree File.join($config["path"], "bundle")
 end
+
+desc "Run tests"
+task :test => [:chdir] do
+  Rake::Task[:test].invoke
+end
+
+task :default => :test
