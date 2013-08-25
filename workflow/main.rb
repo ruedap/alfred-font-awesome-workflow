@@ -6,14 +6,12 @@ $LOAD_PATH.unshift(File.expand_path(File.dirname(__FILE__)))
 require 'rubygems' unless defined? Gem # rubygems is only needed in 1.8
 require 'bundle/bundler/setup'
 require 'alfred'
+require 'lib/font_awesome'
 
 def generate_feedback(alfred, query)
   feedback = alfred.feedback
   queries  = query.split
-  icons    = Dir.glob(File.expand_path('./icon-*.png')).map { |path|
-               md = /\/icon-(.+)\.png/.match(path)
-               (md && md[1]) ? md[1] : nil
-             }.compact.sort
+  icons = FontAwesome.icons
 
   queries.each do |q|
     icons.reject! { |i| i.index(q.downcase) ? false : true }  # select!...
