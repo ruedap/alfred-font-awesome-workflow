@@ -1,8 +1,8 @@
 # Font Awesome Workflow for Alfred 2
 
-You can incremental search for [Font Awesome Icon Fonts](http://fontawesome.io/icons/) and paste it to front most app.
+[![Build Status](https://travis-ci.org/ruedap/alfred2-font-awesome-workflow.png?branch=master)](https://travis-ci.org/ruedap/alfred2-font-awesome-workflow) [![Coverage Status](https://coveralls.io/repos/ruedap/alfred2-font-awesome-workflow/badge.png)](https://coveralls.io/r/ruedap/alfred2-font-awesome-workflow)
 
-[![Build Status](https://travis-ci.org/ruedap/alfred2-font-awesome-workflow.png?branch=master)](https://travis-ci.org/ruedap/alfred2-font-awesome-workflow)
+You can incremental search for [Font Awesome Icon Fonts](http://fontawesome.io/icons/) and paste it to front most app.
 
 ![Screencast.gif](http://gifzo.net/ZqCN4wKUcq.gif)
 
