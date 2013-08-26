@@ -1,6 +1,6 @@
 .DS_Store
-workflow/.bundle
-workflow/bundle
-converter
-materials
+/converter
+/materials
+/workflow/.bundle
+/workflow/bundle
 /workflow/coverage
