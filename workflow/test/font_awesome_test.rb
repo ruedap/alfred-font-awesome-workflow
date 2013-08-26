@@ -7,7 +7,6 @@ describe FontAwesome do
 
   describe '.icons' do
     before { @icons = FontAwesome.icons }
-    after  { @icons = nil }
 
     it { @icons.count.must_equal 378 }
     it { @icons.first.must_equal 'adjust' }
@@ -26,14 +25,12 @@ describe FontAwesome do
 
   describe '.select!' do
     before { @icons = FontAwesome.icons }
-    after  { @icons = nil }
 
     describe 'with `apple`' do
       before do
         @queries = %w(apple)
         FontAwesome.select!(@icons, @queries)
       end
-      after { @queries = nil }
 
       it { @icons.must_equal @queries }
       it { @icons.count.must_equal 1 }
@@ -44,7 +41,6 @@ describe FontAwesome do
         @queries = %w(left arr)
         FontAwesome.select!(@icons, @queries)
       end
-      after { @queries = nil }
 
       it { @icons.must_equal %w(arrow-left circle-arrow-left long-arrow-left) }
       it { @icons.count.must_equal 3 }
@@ -55,7 +51,6 @@ describe FontAwesome do
         @queries = %w(arr left)
         FontAwesome.select!(@icons, @queries)
       end
-      after { @queries = nil }
 
       it { @icons.must_equal %w(arrow-left circle-arrow-left long-arrow-left) }
       it { @icons.count.must_equal 3 }
@@ -66,7 +61,6 @@ describe FontAwesome do
         @queries = %w(ruedap)
         FontAwesome.select!(@icons, @queries)
       end
-      after { @queries = nil }
 
       it { @icons.must_equal %w() }
       it { @icons.must_be_empty }
@@ -77,7 +71,6 @@ describe FontAwesome do
         @queries = %w()
         FontAwesome.select!(@icons, @queries)
       end
-      after { @queries = nil }
 
       it { @icons.must_equal FontAwesome.icons }
       it { @icons.count.must_equal 378 }
