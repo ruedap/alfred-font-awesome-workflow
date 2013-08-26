@@ -2,11 +2,11 @@
 
 ## HEAD
 
-- [Commit logs](https://github.com/ruedap/alfred2-font-awesome-workflow/compare/0.1.2...master)
+- [Commit logs](https://github.com/ruedap/alfred2-font-awesome-workflow/compare/0.1.3...master)
 
 ## 0.1.3 (Font Awesome 3.2.1) / 2013-08-26
 
-- Support for Ruby 2.0 and 1.9
+- Support for Ruby 2.0 and 1.9 (thanks [Eric Boehs](https://github.com/ericboehs))
 
 ## 0.1.2 (Font Awesome 3.2.1) / 2013-08-26
 
