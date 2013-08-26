@@ -1,9 +1,9 @@
 module FontAwesome
   def self.icons
-    Dir.glob(File.expand_path('./icon-*.png')).map { |path|
+    Dir.glob(File.expand_path('./icon-*.png')).map do |path|
       md = /\/icon-(.+)\.png/.match(path)
       (md && md[1]) ? md[1] : nil
-    }.compact.sort
+    end.compact.sort
   end
 
   def self.select!(icons, queries)
