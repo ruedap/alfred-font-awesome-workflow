@@ -11,22 +11,10 @@ require 'lib/font_awesome'
 def generate_feedback(alfred, query)
   feedback = alfred.feedback
   queries  = query.split
-  icons = FontAwesome.icons
+  icons    = FontAwesome.icons
 
-  queries.each do |q|
-    icons.reject! { |i| i.index(q.downcase) ? false : true }  # select!...
-  end
-
-  icons.each do |icon|
-    feedback.add_item({
-      :uid      => '',
-      :title    => icon,
-      :subtitle => "Copy to clipboard: icon-#{icon}",
-      :arg      => icon,
-      :icon     => { :type => 'default', :name => "icon-#{icon}.png" },
-      :valid    => 'yes',
-    })
-  end
+  FontAwesome.select!(icons, queries)
+  icons.each { |icon| feedback.add_item(FontAwesome.item_hash(icon)) }
 
   puts feedback.to_alfred
 end
@@ -36,4 +24,3 @@ Alfred.with_friendly_error do |alfred|
   query = ARGV.join(' ').strip
   generate_feedback(alfred, query)
 end
-
