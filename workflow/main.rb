@@ -11,11 +11,9 @@ require 'lib/font_awesome'
 def generate_feedback(alfred, query)
   feedback = alfred.feedback
   queries  = query.split
-  icons = FontAwesome.icons
+  icons    = FontAwesome.icons
 
-  queries.each do |q|
-    icons.reject! { |i| i.index(q.downcase) ? false : true }  # select!...
-  end
+  FontAwesome.select!(icons, queries)
 
   icons.each do |icon|
     feedback.add_item({
@@ -36,4 +34,3 @@ Alfred.with_friendly_error do |alfred|
   query = ARGV.join(' ').strip
   generate_feedback(alfred, query)
 end
-
