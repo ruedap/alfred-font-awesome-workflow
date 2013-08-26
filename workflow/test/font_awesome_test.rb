@@ -83,4 +83,20 @@ describe FontAwesome do
       it { @icons.count.must_equal 378 }
     end
   end
+
+  describe '.item_hash' do
+    before do
+      @icon = 'apple'
+      @item_hash = FontAwesome.item_hash(@icon)
+    end
+
+    it { @item_hash[:uid].must_equal '' }
+    it { @item_hash[:title].must_equal @icon }
+    it { @item_hash[:subtitle].must_equal "Copy to clipboard: icon-#{@icon}" }
+    it { @item_hash[:arg].must_equal @icon }
+    it { @item_hash[:icon][:type].must_equal 'default' }
+    it { @item_hash[:icon][:name].must_equal "icon-#{@icon}.png" }
+    it { @item_hash[:valid].must_equal 'yes' }
+    it { @item_hash.count.must_equal 6 }
+  end
 end
