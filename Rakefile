@@ -72,13 +72,6 @@ task :dbxinstall => [:config] do
   ln_sf File.expand_path($config["path"]), File.join($config["workflow_dbx"], $config["bundleid"])
 end
 
-desc "Install to Dropbox for Publish"
-task :dbxpublish => [:dbxuninstall, :clean, :clobber, 'bundle:install'] do
-  chdir '../'
-  Rake::Task[:dbxinstall].invoke
-  puts "\ndone."
-end
-
 desc "Unlink from Dropbox"
 task :dbxuninstall => [:config] do
   rm File.join($config["workflow_dbx"], $config["bundleid"])
@@ -92,6 +85,7 @@ desc "Remove any generated file"
 task :clobber => [:clean] do
   rmtree File.join($config["path"], ".bundle")
   rmtree File.join($config["path"], "bundle")
+  rmtree File.join($config["path"], "coverage")
 end
 
 desc "Run tests"

@@ -1,4 +1,5 @@
 .DS_Store
+.ruby-version
 /converter
 /materials
 /workflow/.bundle
