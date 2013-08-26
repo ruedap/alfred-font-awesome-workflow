@@ -14,17 +14,7 @@ def generate_feedback(alfred, query)
   icons    = FontAwesome.icons
 
   FontAwesome.select!(icons, queries)
-
-  icons.each do |icon|
-    feedback.add_item({
-      :uid      => '',
-      :title    => icon,
-      :subtitle => "Copy to clipboard: icon-#{icon}",
-      :arg      => icon,
-      :icon     => { :type => 'default', :name => "icon-#{icon}.png" },
-      :valid    => 'yes',
-    })
-  end
+  icons.each { |icon| feedback.add_item(FontAwesome.item_hash(icon)) }
 
   puts feedback.to_alfred
 end
