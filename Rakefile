@@ -92,6 +92,7 @@ desc "Remove any generated file"
 task :clobber => [:clean] do
   rmtree File.join($config["path"], ".bundle")
   rmtree File.join($config["path"], "bundle")
+  rmtree File.join($config["path"], "coverage")
 end
 
 desc "Run tests"
