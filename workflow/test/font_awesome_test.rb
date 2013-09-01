@@ -8,7 +8,7 @@ describe FontAwesome do
   describe '.icons' do
     before { @icons = FontAwesome.icons }
 
-    it { @icons.count.must_equal 378 }
+    it { @icons.size.must_equal 378 }
     it { @icons.first.must_equal 'adjust' }
     it { @icons.last.must_equal 'zoom-out' }
 
@@ -33,7 +33,7 @@ describe FontAwesome do
       end
 
       it { @icons.must_equal @queries }
-      it { @icons.count.must_equal 1 }
+      it { @icons.size.must_equal 1 }
     end
 
     describe 'with `left arr`' do
@@ -43,7 +43,7 @@ describe FontAwesome do
       end
 
       it { @icons.must_equal %w(arrow-left circle-arrow-left long-arrow-left) }
-      it { @icons.count.must_equal 3 }
+      it { @icons.size.must_equal 3 }
     end
 
     describe 'with `arr left` (reverse)' do
@@ -53,7 +53,7 @@ describe FontAwesome do
       end
 
       it { @icons.must_equal %w(arrow-left circle-arrow-left long-arrow-left) }
-      it { @icons.count.must_equal 3 }
+      it { @icons.size.must_equal 3 }
     end
 
     describe 'with `ruedap` (does not match)' do
@@ -73,7 +73,7 @@ describe FontAwesome do
       end
 
       it { @icons.must_equal FontAwesome.icons }
-      it { @icons.count.must_equal 378 }
+      it { @icons.size.must_equal 378 }
     end
   end
 
@@ -90,6 +90,6 @@ describe FontAwesome do
     it { @item_hash[:icon][:type].must_equal 'default' }
     it { @item_hash[:icon][:name].must_equal "icon-#{@icon}.png" }
     it { @item_hash[:valid].must_equal 'yes' }
-    it { @item_hash.count.must_equal 6 }
+    it { @item_hash.size.must_equal 6 }
   end
 end
