@@ -12,17 +12,17 @@ describe FontAwesome do
     it { @icons.first.must_equal 'adjust' }
     it { @icons.last.must_equal 'zoom-out' }
 
-    it 'includes these strings' do
-      Fixtures.icons.each { |str| @icons.must_include str }
+    it 'includes these icons' do
+      Fixtures.icons.each { |icon| @icons.must_include icon }
     end
 
-    it 'includes these strings (reverse)' do
-      @icons.each { |str| Fixtures.icons.must_include str }
+    it 'includes these icons (reverse)' do
+      @icons.each { |icon| Fixtures.icons.must_include icon }
     end
 
-    it 'does not includes these strings' do
-      strings = %w(icon awesome)
-      strings.each { |str| @icons.wont_include str }
+    it 'does not includes these icons' do
+      icons = %w(icon awesome)
+      icons.each { |icon| @icons.wont_include icon }
     end
   end
 
