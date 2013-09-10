@@ -16,4 +16,5 @@ require 'bundle/bundler/setup'
 require 'alfred'
 require 'lib/font_awesome'
 
+require 'test/fixtures'
 require 'minitest/autorun'
