@@ -13,12 +13,15 @@ describe FontAwesome do
     it { @icons.last.must_equal 'zoom-out' }
 
     it 'includes these strings' do
-      strings = %w(user repeat copy code-fork)
-      strings.each { |str| @icons.must_include str }
+      Fixtures.icons.each { |str| @icons.must_include str }
+    end
+
+    it 'includes these strings (reverse)' do
+      @icons.each { |str| Fixtures.icons.must_include str }
     end
 
     it 'does not includes these strings' do
-      strings = %w(icon)
+      strings = %w(icon awesome)
       strings.each { |str| @icons.wont_include str }
     end
   end
@@ -56,9 +59,9 @@ describe FontAwesome do
       it { @icons.size.must_equal 3 }
     end
 
-    describe 'with `ruedap` (does not match)' do
+    describe 'with `icon` (does not match)' do
       before do
-        @queries = %w(ruedap)
+        @queries = %w(icon)
         FontAwesome.select!(@icons, @queries)
       end
 
