@@ -7,3 +7,6 @@ script:
   - cd workflow
   - bundle install --standalone --clean
   - bundle exec rake test
+notifications:
+  hipchat:
+    - secure: "HDO93EQS0iNNlVQjCdIHOJKqHQBXknt9yKzRn/vFv5knLOPlwXWtNP3PUzy3cQuaJBqTj2mjN1xsOxcFf0mcHOys0olT51z2tdE8E/5vbV1Ed1Am39IsZUcbGlHmihEcCjQkybYpmVr4oTQKybCh8KlWXME6qDy/1DUcfovEbuE="
