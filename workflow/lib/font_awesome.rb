@@ -1,6 +1,6 @@
 module FontAwesome
   def self.icons
-    Dir.glob(File.expand_path('./icon-*.png')).map do |path|
+    Dir.glob(File.expand_path('./icons/icon-*.png')).map do |path|
       md = /\/icon-(.+)\.png/.match(path)
       (md && md[1]) ? md[1] : nil
     end.compact.uniq.sort
@@ -19,7 +19,7 @@ module FontAwesome
       :title    => icon,
       :subtitle => "Copy to clipboard: icon-#{icon}",
       :arg      => icon,
-      :icon     => { :type => 'default', :name => "icon-#{icon}.png" },
+      :icon     => { :type => 'default', :name => "./icons/icon-#{icon}.png" },
       :valid    => 'yes',
     }
   end
