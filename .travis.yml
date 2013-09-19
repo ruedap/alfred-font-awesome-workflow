@@ -1,13 +1,13 @@
 language: ruby
 rvm:
-- 2.0.0
-- 1.8.7
-- 1.9.3
+  - 2.0.0
+  - 1.8.7
+  - 1.9.3
 script:
-- cd workflow
-- bundle install --standalone --clean
-- bundle exec rake test
+  - cd workflow
+  - bundle install --standalone --clean
+  - bundle exec rake test
 notifications:
   hipchat:
     rooms:
-      secure: faqwuptB9Hajlgb5Lh/WcKoREic+ZDO9EGCc28kgI+8PIY+d+xovsvbu6flJZymzr9g9s4rtP/HHrU+YODIo5k1EnGtspcVZY3e7nCQOYwRxlYoISUl9du9tqETmQr35hwwe/fq1cjOlMdayvqqmUFpXWetQey9+gQfuvE44q1c=
+      secure: FctTkW5gGqZjUdEsn6yGpcdDvSKehq5nAwa+QtxYGvXoA5CJpYU7v/Z5bqWE5wEvQEdj3OQe/mbjtQzshgREYkysUfwh8LaPzsW6ot13YWQwWdomV8hwPeZU2yIlIqKPv1IcGK7sFmv+Jzyle9ntklXdvRwrdgzFM9n0+4g+eYs=
