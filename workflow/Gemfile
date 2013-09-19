@@ -6,5 +6,5 @@ gem 'alfred-workflow', '1.8.0'
 group :test do
   gem 'minitest', '5.0.6'
   gem 'rake', '10.1.0'
-  gem 'coveralls', :require => false
+  gem 'coveralls', '0.7.0', :require => false
 end
