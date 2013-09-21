@@ -4,7 +4,7 @@ gem 'plist', '3.1.0'
 gem 'alfred-workflow', '1.8.0'
 
 group :test do
-  gem 'minitest', '5.0.6'
+  gem 'minitest', '5.0.8'
   gem 'rake', '10.1.0'
   gem 'coveralls', '0.7.0', :require => false
 end

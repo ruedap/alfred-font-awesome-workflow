@@ -10,7 +10,7 @@ GEM
       term-ansicolor
       thor
     mime-types (1.25)
-    minitest (5.0.6)
+    minitest (5.0.8)
     multi_json (1.8.0)
     plist (3.1.0)
     rake (10.1.0)
@@ -31,6 +31,6 @@ PLATFORMS
 DEPENDENCIES
   alfred-workflow (= 1.8.0)
   coveralls (= 0.7.0)
-  minitest (= 5.0.6)
+  minitest (= 5.0.8)
   plist (= 3.1.0)
   rake (= 10.1.0)
