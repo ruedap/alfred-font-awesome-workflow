@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'plist', '3.1.0'
-gem 'alfred-workflow', '1.11.0'
+gem 'alfred-workflow', '1.11.1'
 
 group :test do
   gem 'minitest', '5.0.8'

@@ -27,13 +27,13 @@
 		</array>
 	</dict>
 	<key>createdby</key>
-	<string>ruedap</string>
+	<string>@ruedap</string>
 	<key>description</key>
 	<string>Search Font Awesome</string>
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
-	<string>Font Awesome</string>
+	<string>Font Awesome 0.3.0</string>
 	<key>objects</key>
 	<array>
 		<dict>
@@ -101,7 +101,7 @@
 	<key>readme</key>
 	<string>## Version
 
-0.2.0 (Font Awesome 3.2.1)
+0.3.0 (Font Awesome 3.2.1)
 
 
 ## Thanks
@@ -126,7 +126,7 @@ GNU General Public License version 3
 
 ## Author
 
-ruedap
+@ruedap
 https://github.com/ruedap</string>
 	<key>uidata</key>
 	<dict>
