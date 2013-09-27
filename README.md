@@ -9,7 +9,7 @@ You can incremental search for [Font Awesome Icon Fonts](http://fontawesome.io/i
 
 ## Install
 
-Download [Font Awesome.alfredworkflow](https://github.com/ruedap/alfred2-font-awesome-workflow/raw/master/Font%20Awesome.alfredworkflow) and import to Alfred 2 (require Powerpack).
+Download **[Font Awesome.alfredworkflow](https://github.com/ruedap/alfred2-font-awesome-workflow/raw/master/Font%20Awesome.alfredworkflow)** and import to Alfred 2 (require Powerpack).
 
 
 ## Usage
