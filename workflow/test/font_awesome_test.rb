@@ -45,8 +45,8 @@ describe FontAwesome do
         FontAwesome.select!(@icons, @queries)
       end
 
-      it { @icons.must_equal %w(arrow-left circle-arrow-left long-arrow-left) }
-      it { @icons.size.must_equal 3 }
+      it { @icons.must_equal %w(arrow-circle-left arrow-circle-o-left arrow-left long-arrow-left) }
+      it { @icons.size.must_equal 4 }
     end
 
     describe 'with `arr left` (reverse)' do
@@ -55,8 +55,8 @@ describe FontAwesome do
         FontAwesome.select!(@icons, @queries)
       end
 
-      it { @icons.must_equal %w(arrow-left circle-arrow-left long-arrow-left) }
-      it { @icons.size.must_equal 3 }
+      it { @icons.must_equal %w(arrow-circle-left arrow-circle-o-left arrow-left long-arrow-left) }
+      it { @icons.size.must_equal 4 }
     end
 
     describe 'with `icon` (does not match)' do
