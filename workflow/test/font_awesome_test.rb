@@ -93,4 +93,15 @@ describe FontAwesome do
     it { @item_hash[:valid].must_equal 'yes' }
     it { @item_hash.size.must_equal 6 }
   end
+
+  describe '#add_items' do
+    before do
+      feedback = Alfred::Core.new.feedback
+      icons = %w(beer cloud apple)
+      @feedback = FontAwesome.new.add_items(feedback, icons)
+    end
+
+    it { @feedback.items.first.title.must_equal 'beer' }
+    it { @feedback.items.last.title.must_equal 'apple' }
+  end
 end
