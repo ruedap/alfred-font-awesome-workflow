@@ -29,11 +29,11 @@
 	<key>createdby</key>
 	<string>@ruedap</string>
 	<key>description</key>
-	<string>Search Font Awesome</string>
+	<string>Search through Font Awesome</string>
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
-	<string>Font Awesome 0.3.0</string>
+	<string>Font Awesome 1.0.0</string>
 	<key>objects</key>
 	<array>
 		<dict>
@@ -71,7 +71,7 @@
 				<key>autopaste</key>
 				<true/>
 				<key>clipboardtext</key>
-				<string>icon-{query}</string>
+				<string>fa-{query}</string>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.output.clipboard</string>
@@ -101,7 +101,7 @@
 	<key>readme</key>
 	<string>## Version
 
-0.3.0 (Font Awesome 3.2.1)
+1.0.0 (Font Awesome 4.0.0)
 
 
 ## Thanks
