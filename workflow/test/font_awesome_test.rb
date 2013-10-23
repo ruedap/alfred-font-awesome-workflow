@@ -8,7 +8,7 @@ describe FontAwesome do
   describe '.icons' do
     before { @icons = FontAwesome.icons }
 
-    it { @icons.size.must_equal 378 }
+    it { @icons.size.must_equal 409 }
     it { @icons.first.must_equal 'adjust' }
     it { @icons.last.must_equal 'zoom-out' }
 
@@ -76,7 +76,7 @@ describe FontAwesome do
       end
 
       it { @icons.must_equal FontAwesome.icons }
-      it { @icons.size.must_equal 378 }
+      it { @icons.size.must_equal 409 }
     end
   end
 
