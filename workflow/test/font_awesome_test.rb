@@ -104,4 +104,15 @@ describe FontAwesome do
     it { @feedback.items.first.title.must_equal 'beer' }
     it { @feedback.items.last.title.must_equal 'apple' }
   end
+
+  describe '#to_alfred' do
+    before do
+      alfred = Alfred::Core.new
+      query = 'bookmark'
+      @xml = FontAwesome.new(query).to_alfred(alfred)
+      @result_xml = "<items><item uid='' valid='yes'><title>bookmark</title><arg>bookmark</arg><subtitle>Copy to clipboard: fa-bookmark</subtitle><icon>./icons/fa-bookmark.png</icon></item><item uid='' valid='yes'><title>bookmark-o</title><arg>bookmark-o</arg><subtitle>Copy to clipboard: fa-bookmark-o</subtitle><icon>./icons/fa-bookmark-o.png</icon></item></items>"
+    end
+
+    it { @xml.must_equal @result_xml }
+  end
 end
