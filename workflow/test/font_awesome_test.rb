@@ -10,7 +10,7 @@ describe FontAwesome do
 
     it { @icons.size.must_equal 409 }
     it { @icons.first.must_equal 'adjust' }
-    it { @icons.last.must_equal 'zoom-out' }
+    it { @icons.last.must_equal 'youtube-square' }
 
     it 'includes these icons' do
       Fixtures.icons.each { |icon| @icons.must_include icon }
