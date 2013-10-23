@@ -88,10 +88,10 @@ describe FontAwesome do
 
     it { @item_hash[:uid].must_equal '' }
     it { @item_hash[:title].must_equal @icon }
-    it { @item_hash[:subtitle].must_equal "Copy to clipboard: icon-#{@icon}" }
+    it { @item_hash[:subtitle].must_equal "Copy to clipboard: fa-#{@icon}" }
     it { @item_hash[:arg].must_equal @icon }
     it { @item_hash[:icon][:type].must_equal 'default' }
-    it { @item_hash[:icon][:name].must_equal "./icons/icon-#{@icon}.png" }
+    it { @item_hash[:icon][:name].must_equal "./icons/fa-#{@icon}.png" }
     it { @item_hash[:valid].must_equal 'yes' }
     it { @item_hash.size.must_equal 6 }
   end
