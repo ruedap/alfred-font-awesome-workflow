@@ -19,6 +19,14 @@ def generate_feedback(alfred, query)
   puts feedback.to_alfred
 end
 
+def puts_log(str)
+  log_file = File.expand_path("~/Library/Logs/Alfred-Workflow.log")
+  File.open(log_file, "a+") do |log|
+    log.puts "[PUTS LOG]  #{str}\n"
+    log.flush
+  end
+end
+
 Alfred.with_friendly_error do |alfred|
   alfred.with_rescue_feedback = true
   query = ARGV.join(' ').strip
