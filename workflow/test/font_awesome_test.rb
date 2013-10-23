@@ -27,60 +27,58 @@ describe FontAwesome do
   end
 
   describe '#select!' do
-    before { @fa = FontAwesome.new }
-
     describe 'with `dot-circle-o`' do
       before do
         @queries = %w(dot-circle-o)
-        @fa.select!(@queries)
+        @icons = FontAwesome.new.select!(@queries)
       end
 
-      it { @fa.icons.must_equal @queries }
-      it { @fa.icons.size.must_equal 1 }
+      it { @icons.must_equal @queries }
+      it { @icons.size.must_equal 1 }
     end
 
     describe 'with `left arr`' do
       before do
         queries = %w(left arr)
-        @fa.select!(queries)
+        @icons = FontAwesome.new.select!(queries)
       end
 
-      it { @fa.icons.must_equal %w(arrow-circle-left arrow-circle-o-left arrow-left long-arrow-left) }
-      it { @fa.icons.size.must_equal 4 }
+      it { @icons.must_equal %w(arrow-circle-left arrow-circle-o-left arrow-left long-arrow-left) }
+      it { @icons.size.must_equal 4 }
     end
 
     describe 'with `arr left` (reverse)' do
       before do
         queries = %w(arr left)
-        @fa.select!(queries)
+        @icons = FontAwesome.new.select!(queries)
       end
 
-      it { @fa.icons.must_equal %w(arrow-circle-left arrow-circle-o-left arrow-left long-arrow-left) }
-      it { @fa.icons.size.must_equal 4 }
+      it { @icons.must_equal %w(arrow-circle-left arrow-circle-o-left arrow-left long-arrow-left) }
+      it { @icons.size.must_equal 4 }
     end
 
     describe 'with `icon` (does not match)' do
       before do
         queries = %w(icon)
-        @fa.select!(queries)
+        @icons = FontAwesome.new.select!(queries)
       end
 
-      it { @fa.icons.must_equal %w() }
-      it { @fa.icons.must_be_empty }
+      it { @icons.must_equal %w() }
+      it { @icons.must_be_empty }
     end
 
     describe 'with unknown arguments' do
       before do
         queries = %w()
-        @fa.select!(queries)
+        @icons = FontAwesome.new.select!(queries)
       end
 
-      it { @fa.icons.must_equal FontAwesome.new.icons }
-      it { @fa.icons.size.must_equal 409 }
+      it { @icons.must_equal FontAwesome.new.icons }
+      it { @icons.size.must_equal 409 }
     end
   end
 
-  describe '.item_hash' do
+  describe '#item_hash' do
     before do
       @icon = 'apple'
       @item_hash = FontAwesome.new.item_hash(@icon)

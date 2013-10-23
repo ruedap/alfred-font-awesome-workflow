@@ -11,6 +11,7 @@ class FontAwesome
       # use reject! for ruby 1.8 compatible
       icons.reject! { |i| i.index(q.downcase) ? false : true }
     end
+    icons
   end
 
   def item_hash(icon)
