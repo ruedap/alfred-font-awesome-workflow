@@ -1,8 +1,9 @@
 class FontAwesome
   attr_reader :icons
 
-  def initialize
+  def initialize(query = '')
     @icons = load_icons
+    select!(query.split)
   end
 
   def select!(queries, icons = @icons)
@@ -21,6 +22,15 @@ class FontAwesome
       :icon     => { :type => 'default', :name => "./icons/fa-#{icon}.png" },
       :valid    => 'yes',
     }
+  end
+
+  def add_items(feedback, icons = @icons)
+    icons.each { |icon| feedback.add_item(item_hash(icon)) }
+    feedback
+  end
+
+  def to_alfred(alfred)
+    add_items(alfred.feedback).to_alfred
   end
 
   private
