@@ -11,10 +11,10 @@ require 'lib/font_awesome'
 def generate_feedback(alfred, query)
   feedback = alfred.feedback
   queries  = query.split
-  icons    = FontAwesome.icons
+  fa       = FontAwesome.new
 
-  FontAwesome.select!(icons, queries)
-  icons.each { |icon| feedback.add_item(FontAwesome.item_hash(icon)) }
+  fa.select!(queries)
+  fa.icons.each { |icon| feedback.add_item(fa.item_hash(icon)) }
 
   puts feedback.to_alfred
 end

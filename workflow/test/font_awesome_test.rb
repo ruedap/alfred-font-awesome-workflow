@@ -27,56 +27,56 @@ describe FontAwesome do
   end
 
   describe '#select!' do
-    before { @icons = FontAwesome.new.icons }
+    before { @fa = FontAwesome.new }
 
     describe 'with `dot-circle-o`' do
       before do
         @queries = %w(dot-circle-o)
-        FontAwesome.new.select!(@icons, @queries)
+        @fa.select!(@queries)
       end
 
-      it { @icons.must_equal @queries }
-      it { @icons.size.must_equal 1 }
+      it { @fa.icons.must_equal @queries }
+      it { @fa.icons.size.must_equal 1 }
     end
 
     describe 'with `left arr`' do
       before do
-        @queries = %w(left arr)
-        FontAwesome.new.select!(@icons, @queries)
+        queries = %w(left arr)
+        @fa.select!(queries)
       end
 
-      it { @icons.must_equal %w(arrow-circle-left arrow-circle-o-left arrow-left long-arrow-left) }
-      it { @icons.size.must_equal 4 }
+      it { @fa.icons.must_equal %w(arrow-circle-left arrow-circle-o-left arrow-left long-arrow-left) }
+      it { @fa.icons.size.must_equal 4 }
     end
 
     describe 'with `arr left` (reverse)' do
       before do
-        @queries = %w(arr left)
-        FontAwesome.new.select!(@icons, @queries)
+        queries = %w(arr left)
+        @fa.select!(queries)
       end
 
-      it { @icons.must_equal %w(arrow-circle-left arrow-circle-o-left arrow-left long-arrow-left) }
-      it { @icons.size.must_equal 4 }
+      it { @fa.icons.must_equal %w(arrow-circle-left arrow-circle-o-left arrow-left long-arrow-left) }
+      it { @fa.icons.size.must_equal 4 }
     end
 
     describe 'with `icon` (does not match)' do
       before do
-        @queries = %w(icon)
-        FontAwesome.new.select!(@icons, @queries)
+        queries = %w(icon)
+        @fa.select!(queries)
       end
 
-      it { @icons.must_equal %w() }
-      it { @icons.must_be_empty }
+      it { @fa.icons.must_equal %w() }
+      it { @fa.icons.must_be_empty }
     end
 
     describe 'with unknown arguments' do
       before do
-        @queries = %w()
-        FontAwesome.new.select!(@icons, @queries)
+        queries = %w()
+        @fa.select!(queries)
       end
 
-      it { @icons.must_equal FontAwesome.new.icons }
-      it { @icons.size.must_equal 409 }
+      it { @fa.icons.must_equal FontAwesome.new.icons }
+      it { @fa.icons.size.must_equal 409 }
     end
   end
 
