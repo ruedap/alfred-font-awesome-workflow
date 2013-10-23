@@ -29,9 +29,9 @@ describe FontAwesome do
   describe '.select!' do
     before { @icons = FontAwesome.icons }
 
-    describe 'with `apple`' do
+    describe 'with `dot-circle-o`' do
       before do
-        @queries = %w(apple)
+        @queries = %w(dot-circle-o)
         FontAwesome.select!(@icons, @queries)
       end
 
