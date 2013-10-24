@@ -4,7 +4,7 @@
 
 You can incremental search for [Font Awesome Icon Fonts](http://fontawesome.io/icons/) and paste it to front most app.
 
-![Screencast.gif](http://gifzo.net/ZqCN4wKUcq.gif)
+![screencast.gif](https://github.com/ruedap/alfred2-font-awesome-workflow/raw/master/screenshots/screencast.gif)
 
 
 ## Install
@@ -14,7 +14,7 @@ Download **[Font Awesome.alfredworkflow](https://github.com/ruedap/alfred2-font-
 
 ## Usage
 
-**Keyword** `fonta`: You can incremental search for [Font Awesome Icon Fonts](http://fontawesome.io/icons/) and paste it to front most app.
+**Keyword** `fa` or `fonta`(alias): Search through [Font Awesome Icon Fonts](http://fontawesome.io/icons/).
 
 
 ## Option

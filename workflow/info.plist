@@ -22,18 +22,37 @@
 				<key>modifiers</key>
 				<integer>262144</integer>
 				<key>modifiersubtext</key>
-				<string>Open page: icon-{query}</string>
+				<string>Open page: fa-{query}</string>
+			</dict>
+		</array>
+		<key>969B1F4E-CEAA-4D7A-92A6-222AC6E0D159</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>E0350B01-6660-4568-8F7E-ABB7E73C4B1F</string>
+				<key>modifiers</key>
+				<integer>262144</integer>
+				<key>modifiersubtext</key>
+				<string>Open page: fa-{query}</string>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>8CBC1CA3-D946-4766-9551-505842A4BE52</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
 			</dict>
 		</array>
 	</dict>
 	<key>createdby</key>
 	<string>@ruedap</string>
 	<key>description</key>
-	<string>Search Font Awesome</string>
+	<string>Search through Font Awesome</string>
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
-	<string>Font Awesome 0.3.0</string>
+	<string>Font Awesome 1.0.0</string>
 	<key>objects</key>
 	<array>
 		<dict>
@@ -44,7 +63,7 @@
 				<key>escaping</key>
 				<integer>62</integer>
 				<key>keyword</key>
-				<string>fonta</string>
+				<string>fa</string>
 				<key>runningsubtext</key>
 				<string>...</string>
 				<key>script</key>
@@ -52,7 +71,7 @@
 				<key>subtext</key>
 				<string>Workflow for Font Awesome</string>
 				<key>title</key>
-				<string>Search Font Awesome</string>
+				<string>Search through Font Awesome</string>
 				<key>type</key>
 				<integer>0</integer>
 				<key>withspace</key>
@@ -62,21 +81,6 @@
 			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
 			<string>21557827-8003-42B7-A042-16D4C9278FEC</string>
-			<key>version</key>
-			<integer>0</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>autopaste</key>
-				<true/>
-				<key>clipboardtext</key>
-				<string>icon-{query}</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.clipboard</string>
-			<key>uid</key>
-			<string>8CBC1CA3-D946-4766-9551-505842A4BE52</string>
 			<key>version</key>
 			<integer>0</integer>
 		</dict>
@@ -97,11 +101,55 @@
 			<key>version</key>
 			<integer>0</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<true/>
+				<key>clipboardtext</key>
+				<string>fa-{query}</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>8CBC1CA3-D946-4766-9551-505842A4BE52</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>62</integer>
+				<key>keyword</key>
+				<string>fonta</string>
+				<key>runningsubtext</key>
+				<string>...</string>
+				<key>script</key>
+				<string>/usr/bin/ruby ./main.rb {query}</string>
+				<key>subtext</key>
+				<string>Workflow for Font Awesome</string>
+				<key>title</key>
+				<string>Search through Font Awesome (alias)</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>969B1F4E-CEAA-4D7A-92A6-222AC6E0D159</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string>## Version
 
-0.3.0 (Font Awesome 3.2.1)
+1.0.0 (Font Awesome 4.0.0)
 
 
 ## Thanks
@@ -138,12 +186,17 @@ https://github.com/ruedap</string>
 		<key>8CBC1CA3-D946-4766-9551-505842A4BE52</key>
 		<dict>
 			<key>ypos</key>
-			<real>40</real>
+			<real>160</real>
+		</dict>
+		<key>969B1F4E-CEAA-4D7A-92A6-222AC6E0D159</key>
+		<dict>
+			<key>ypos</key>
+			<real>280</real>
 		</dict>
 		<key>E0350B01-6660-4568-8F7E-ABB7E73C4B1F</key>
 		<dict>
 			<key>ypos</key>
-			<real>210</real>
+			<real>160</real>
 		</dict>
 	</dict>
 	<key>webaddress</key>
