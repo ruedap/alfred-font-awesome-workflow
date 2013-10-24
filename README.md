@@ -18,6 +18,7 @@ Old version is [here](https://github.com/ruedap/alfred2-font-awesome-workflow/re
 
 **Keyword** `fa` or `fonta`(alias): Search through [Font Awesome Icon Fonts](http://fontawesome.io/icons/).
 
+![Workflow](https://github.com/ruedap/alfred2-font-awesome-workflow/raw/master/screenshots/workflow.png)
 
 ## Option
 
