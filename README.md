@@ -20,11 +20,18 @@ The current version corresponds to **Font Awesome 4.0.0**. Old version is [here]
 
 ![Workflow](https://github.com/ruedap/alfred2-font-awesome-workflow/raw/master/screenshots/workflow.png)
 
+
 ## Option
 
 **Disable pasting**: Turn off "Automatically paste to front most app" in Workflows Preferences.
 
 ![Disable pasting](https://github.com/ruedap/alfred2-font-awesome-workflow/raw/master/screenshots/option-disable-pasting.png)
+
+
+## Links
+
+- [Hidden Productivity Secrets With Alfred | Smashing Coding](http://coding.smashingmagazine.com/2013/10/25/hidden-productivity-secrets-with-alfred/)
+- [Automating Front-end Workflow // Speaker Deck](https://speakerdeck.com/addyosmani/automating-front-end-workflow)
 
 
 ## Thanks

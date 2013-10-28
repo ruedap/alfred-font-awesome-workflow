@@ -3,3 +3,4 @@
 /workflow/.bundle
 /workflow/bundle
 /workflow/coverage
+.sass-cache
