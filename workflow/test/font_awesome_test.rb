@@ -14,11 +14,11 @@ describe FontAwesome do
 
     it 'includes these icons' do
       icon_names = @icons.map { |icon| icon.name }
-      Fixtures.icons.each { |icon| icon_names.must_include icon }
+      Fixtures.icon_ids.each { |icon| icon_names.must_include icon }
     end
 
     it 'includes these icons (reverse)' do
-      @icons.each { |icon| Fixtures.icons.must_include icon.name }
+      @icons.each { |icon| Fixtures.icon_ids.must_include icon.name }
     end
 
     it 'does not includes these icons' do
@@ -86,7 +86,7 @@ describe FontAwesome do
       before do
         queries = %w()
         @icons = FontAwesome.new.select!(queries)
-        @icon_names = Fixtures.icons
+        @icon_names = Fixtures.icon_ids
       end
 
       it { @icons.size.must_equal 409 }
