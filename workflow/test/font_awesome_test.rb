@@ -28,17 +28,17 @@ describe FontAwesome do
   end
 
   describe '#select!' do
-    describe 'with `dot-circle-o`' do
+    describe 'with `hdd`' do
       before do
-        @queries = %w(dot-circle-o)
-        @icons = FontAwesome.new.select!(@queries)
+        queries = %w(hdd)
+        @icons = FontAwesome.new.select!(queries)
       end
 
       it { @icons.size.must_equal 1 }
 
-      it 'must equal queries' do
+      it 'must equal icon name' do
         icon_ids = @icons.map { |icon| icon.id }
-        icon_ids.must_equal @queries
+        icon_ids.must_equal %w(hdd-o)
       end
     end
 
