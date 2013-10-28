@@ -9,15 +9,16 @@ describe FontAwesome do
     before { @icons = FontAwesome.new.icons }
 
     it { @icons.size.must_equal 409 }
-    it { @icons.first.must_equal 'adjust' }
-    it { @icons.last.must_equal 'youtube-square' }
+    it { @icons.first.name.must_equal 'adjust' }
+    it { @icons.last.name.must_equal 'youtube-square' }
 
     it 'includes these icons' do
-      Fixtures.icons.each { |icon| @icons.must_include icon }
+      icon_names = @icons.map { |icon| icon.name }
+      Fixtures.icons.each { |icon| icon_names.must_include icon }
     end
 
     it 'includes these icons (reverse)' do
-      @icons.each { |icon| Fixtures.icons.must_include icon }
+      @icons.each { |icon| Fixtures.icons.must_include icon.name }
     end
 
     it 'does not includes these icons' do
@@ -33,28 +34,42 @@ describe FontAwesome do
         @icons = FontAwesome.new.select!(@queries)
       end
 
-      it { @icons.must_equal @queries }
       it { @icons.size.must_equal 1 }
+
+      it 'must equal queries' do
+        icon_names = @icons.map { |icon| icon.name }
+        icon_names.must_equal @queries
+      end
     end
 
     describe 'with `left arr`' do
       before do
         queries = %w(left arr)
         @icons = FontAwesome.new.select!(queries)
+        @icon_names = %w(arrow-circle-left arrow-circle-o-left arrow-left long-arrow-left)
       end
 
-      it { @icons.must_equal %w(arrow-circle-left arrow-circle-o-left arrow-left long-arrow-left) }
       it { @icons.size.must_equal 4 }
+
+      it 'must equal icon names' do
+        icon_names = @icons.map { |icon| icon.name }
+        icon_names.must_equal @icon_names
+      end
     end
 
     describe 'with `arr left` (reverse)' do
       before do
         queries = %w(arr left)
         @icons = FontAwesome.new.select!(queries)
+        @icon_names = %w(arrow-circle-left arrow-circle-o-left arrow-left long-arrow-left)
       end
 
-      it { @icons.must_equal %w(arrow-circle-left arrow-circle-o-left arrow-left long-arrow-left) }
       it { @icons.size.must_equal 4 }
+
+      it 'must equal icon names' do
+        icon_names = @icons.map { |icon| icon.name }
+        icon_names.must_equal @icon_names
+      end
     end
 
     describe 'with `icon` (does not match)' do
@@ -71,10 +86,15 @@ describe FontAwesome do
       before do
         queries = %w()
         @icons = FontAwesome.new.select!(queries)
+        @icon_names = Fixtures.icons
       end
 
-      it { @icons.must_equal FontAwesome.new.icons }
       it { @icons.size.must_equal 409 }
+
+      it 'must equal icon names' do
+        icon_names = @icons.map { |icon| icon.name }
+        icon_names.must_equal @icon_names
+      end
     end
   end
 
@@ -97,7 +117,8 @@ describe FontAwesome do
   describe '#add_items' do
     before do
       feedback = Alfred::Core.new.feedback
-      icons = %w(beer cloud apple)
+      icon_names = %w(beer cloud apple)
+      icons = icon_names.map { |name| FontAwesome::Icon.new(name) }
       @feedback = FontAwesome.new.add_items(feedback, icons)
     end
 
