@@ -9,16 +9,16 @@ describe FontAwesome do
     before { @icons = FontAwesome.new.icons }
 
     it { @icons.size.must_equal 409 }
-    it { @icons.first.name.must_equal 'adjust' }
-    it { @icons.last.name.must_equal 'youtube-square' }
+    it { @icons.first.id.must_equal 'adjust' }
+    it { @icons.last.id.must_equal 'youtube-square' }
 
     it 'includes these icons' do
-      icon_names = @icons.map { |icon| icon.name }
-      Fixtures.icon_ids.each { |icon| icon_names.must_include icon }
+      icon_ids = @icons.map { |icon| icon.id }
+      Fixtures.icon_ids.each { |icon| icon_ids.must_include icon }
     end
 
     it 'includes these icons (reverse)' do
-      @icons.each { |icon| Fixtures.icon_ids.must_include icon.name }
+      @icons.each { |icon| Fixtures.icon_ids.must_include icon.id }
     end
 
     it 'does not includes these icons' do
@@ -37,8 +37,8 @@ describe FontAwesome do
       it { @icons.size.must_equal 1 }
 
       it 'must equal queries' do
-        icon_names = @icons.map { |icon| icon.name }
-        icon_names.must_equal @queries
+        icon_ids = @icons.map { |icon| icon.id }
+        icon_ids.must_equal @queries
       end
     end
 
@@ -46,14 +46,14 @@ describe FontAwesome do
       before do
         queries = %w(left arr)
         @icons = FontAwesome.new.select!(queries)
-        @icon_names = %w(arrow-circle-left arrow-circle-o-left arrow-left long-arrow-left)
+        @icon_ids = %w(arrow-circle-left arrow-circle-o-left arrow-left long-arrow-left)
       end
 
       it { @icons.size.must_equal 4 }
 
       it 'must equal icon names' do
-        icon_names = @icons.map { |icon| icon.name }
-        icon_names.must_equal @icon_names
+        icon_ids = @icons.map { |icon| icon.id }
+        icon_ids.must_equal @icon_ids
       end
     end
 
@@ -61,14 +61,14 @@ describe FontAwesome do
       before do
         queries = %w(arr left)
         @icons = FontAwesome.new.select!(queries)
-        @icon_names = %w(arrow-circle-left arrow-circle-o-left arrow-left long-arrow-left)
+        @icon_ids = %w(arrow-circle-left arrow-circle-o-left arrow-left long-arrow-left)
       end
 
       it { @icons.size.must_equal 4 }
 
       it 'must equal icon names' do
-        icon_names = @icons.map { |icon| icon.name }
-        icon_names.must_equal @icon_names
+        icon_ids = @icons.map { |icon| icon.id }
+        icon_ids.must_equal @icon_ids
       end
     end
 
@@ -86,14 +86,14 @@ describe FontAwesome do
       before do
         queries = %w()
         @icons = FontAwesome.new.select!(queries)
-        @icon_names = Fixtures.icon_ids
+        @icon_ids = Fixtures.icon_ids
       end
 
       it { @icons.size.must_equal 409 }
 
       it 'must equal icon names' do
-        icon_names = @icons.map { |icon| icon.name }
-        icon_names.must_equal @icon_names
+        icon_ids = @icons.map { |icon| icon.id }
+        icon_ids.must_equal @icon_ids
       end
     end
   end
@@ -117,8 +117,8 @@ describe FontAwesome do
   describe '#add_items' do
     before do
       feedback = Alfred::Core.new.feedback
-      icon_names = %w(beer cloud apple)
-      icons = icon_names.map { |name| FontAwesome::Icon.new(name) }
+      icon_ids = %w(beer cloud apple)
+      icons = icon_ids.map { |name| FontAwesome::Icon.new(name) }
       @feedback = FontAwesome.new.add_items(feedback, icons)
     end
 
