@@ -130,10 +130,16 @@ describe FontAwesome do
     before do
       alfred = Alfred::Core.new
       query = 'bookmark'
-      @xml = FontAwesome.new(query).to_alfred(alfred)
-      @result_xml = "<items><item uid='' valid='yes'><title>bookmark</title><arg>bookmark</arg><subtitle>Copy to clipboard: fa-bookmark</subtitle><icon>./icons/fa-bookmark.png</icon></item><item uid='' valid='yes'><title>bookmark-o</title><arg>bookmark-o</arg><subtitle>Copy to clipboard: fa-bookmark-o</subtitle><icon>./icons/fa-bookmark-o.png</icon></item></items>"
+      xml = FontAwesome.new(query).to_alfred(alfred)
+      @doc = REXML::Document.new(xml)
     end
 
-    it { @xml.must_equal @result_xml }
+    it { @doc.elements['items'].size.must_equal 2 }
+    it { @doc.elements['items/item[1]/title'].text.must_equal 'bookmark' }
+    it { @doc.elements['items/item[1]/arg'].text.must_equal 'bookmark' }
+    it { @doc.elements['items/item[1]/icon'].text.must_equal './icons/fa-bookmark.png' }
+    it { @doc.elements['items/item[2]/title'].text.must_equal 'bookmark-o' }
+    it { @doc.elements['items/item[2]/arg'].text.must_equal 'bookmark-o' }
+    it { @doc.elements['items/item[2]/icon'].text.must_equal './icons/fa-bookmark-o.png' }
   end
 end
