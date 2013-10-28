@@ -2,7 +2,12 @@
 
 ## HEAD
 
-- [Commit logs](https://github.com/ruedap/alfred2-font-awesome-workflow/compare/1.0.0...master)
+- [Commit logs](https://github.com/ruedap/alfred2-font-awesome-workflow/compare/1.0.1...master)
+
+## 1.0.1 (Font Awesome 4.0.1) / 2013-10-29
+
+- Support for Font Awesome 4.0.1
+- Change icon name to `hdd-o` from `hdd` ([Font-Awesome#2208](https://github.com/FortAwesome/Font-Awesome/issues/2208))
 
 ## 1.0.0 (Font Awesome 4.0.0) / 2013-10-24
 
