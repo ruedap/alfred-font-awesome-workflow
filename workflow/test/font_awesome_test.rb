@@ -100,16 +100,16 @@ describe FontAwesome do
 
   describe '#item_hash' do
     before do
-      @icon = 'apple'
+      @icon = FontAwesome::Icon.new('apple')
       @item_hash = FontAwesome.new.item_hash(@icon)
     end
 
     it { @item_hash[:uid].must_equal '' }
-    it { @item_hash[:title].must_equal @icon }
-    it { @item_hash[:subtitle].must_equal "Copy to clipboard: fa-#{@icon}" }
-    it { @item_hash[:arg].must_equal @icon }
+    it { @item_hash[:title].must_equal 'apple' }
+    it { @item_hash[:subtitle].must_equal "Copy to clipboard: fa-apple" }
+    it { @item_hash[:arg].must_equal 'apple' }
     it { @item_hash[:icon][:type].must_equal 'default' }
-    it { @item_hash[:icon][:name].must_equal "./icons/fa-#{@icon}.png" }
+    it { @item_hash[:icon][:name].must_equal "./icons/fa-apple.png" }
     it { @item_hash[:valid].must_equal 'yes' }
     it { @item_hash.size.must_equal 6 }
   end

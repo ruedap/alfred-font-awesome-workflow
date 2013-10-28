@@ -26,16 +26,16 @@ class FontAwesome
   def item_hash(icon)
     {
       :uid      => '',
-      :title    => icon,
-      :subtitle => "Copy to clipboard: fa-#{icon}",
-      :arg      => icon,
-      :icon     => { :type => 'default', :name => "./icons/fa-#{icon}.png" },
+      :title    => icon.id,
+      :subtitle => "Copy to clipboard: fa-#{icon.id}",
+      :arg      => icon.id,
+      :icon     => { :type => 'default', :name => "./icons/fa-#{icon.id}.png" },
       :valid    => 'yes',
     }
   end
 
   def add_items(feedback, icons = @icons)
-    icons.each { |icon| feedback.add_item(item_hash(icon.id)) }
+    icons.each { |icon| feedback.add_item(item_hash(icon)) }
     feedback
   end
 
