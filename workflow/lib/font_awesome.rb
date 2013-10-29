@@ -1,15 +1,24 @@
 class FontAwesome
   attr_reader :icons
 
+  class Icon
+    attr_reader :id
+
+    def initialize(id)
+      @id = id
+    end
+  end
+
   def initialize(query = '')
-    @icons = load_icons
+    icon_filenames = glob_icon_filenames
+    @icons = icon_filenames.map { |name| Icon.new(name) }
     select!(query.split)
   end
 
   def select!(queries, icons = @icons)
     queries.each do |q|
       # use reject! for ruby 1.8 compatible
-      icons.reject! { |i| i.index(q.downcase) ? false : true }
+      icons.reject! { |icon| icon.id.index(q.downcase) ? false : true }
     end
     icons
   end
@@ -17,10 +26,10 @@ class FontAwesome
   def item_hash(icon)
     {
       :uid      => '',
-      :title    => icon,
-      :subtitle => "Copy to clipboard: fa-#{icon}",
-      :arg      => icon,
-      :icon     => { :type => 'default', :name => "./icons/fa-#{icon}.png" },
+      :title    => icon.id,
+      :subtitle => "Copy to clipboard: fa-#{icon.id}",
+      :arg      => icon.id,
+      :icon     => { :type => 'default', :name => "./icons/fa-#{icon.id}.png" },
       :valid    => 'yes',
     }
   end
@@ -36,7 +45,7 @@ class FontAwesome
 
   private
 
-  def load_icons
+  def glob_icon_filenames
     Dir.glob(File.expand_path('./icons/fa-*.png')).map do |path|
       md = /\/fa-(.+)\.png/.match(path)
       (md && md[1]) ? md[1] : nil

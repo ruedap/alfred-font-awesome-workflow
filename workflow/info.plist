@@ -52,7 +52,7 @@
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
-	<string>Font Awesome 1.0.0</string>
+	<string>Font Awesome 1.0.1</string>
 	<key>objects</key>
 	<array>
 		<dict>
@@ -69,7 +69,7 @@
 				<key>script</key>
 				<string>/usr/bin/ruby ./main.rb {query}</string>
 				<key>subtext</key>
-				<string>Workflow for Font Awesome</string>
+				<string>Font Awesome Workflow (keyword: fa)</string>
 				<key>title</key>
 				<string>Search through Font Awesome</string>
 				<key>type</key>
@@ -130,9 +130,9 @@
 				<key>script</key>
 				<string>/usr/bin/ruby ./main.rb {query}</string>
 				<key>subtext</key>
-				<string>Workflow for Font Awesome</string>
+				<string>Font Awesome Workflow (keyword: fonta)</string>
 				<key>title</key>
-				<string>Search through Font Awesome (alias)</string>
+				<string>Search through Font Awesome</string>
 				<key>type</key>
 				<integer>0</integer>
 				<key>withspace</key>
@@ -149,7 +149,7 @@
 	<key>readme</key>
 	<string>## Version
 
-1.0.0 (Font Awesome 4.0.0)
+1.0.1 (Font Awesome 4.0.1)
 
 
 ## Thanks

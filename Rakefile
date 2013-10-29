@@ -86,6 +86,7 @@ task :clobber => [:clean] do
   rmtree File.join($config["path"], ".bundle")
   rmtree File.join($config["path"], "bundle")
   rmtree File.join($config["path"], "coverage")
+  rm File.join($config["path"], ".DS_Store")
 end
 
 desc "Run tests"

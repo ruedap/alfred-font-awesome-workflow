@@ -9,15 +9,16 @@ describe FontAwesome do
     before { @icons = FontAwesome.new.icons }
 
     it { @icons.size.must_equal 409 }
-    it { @icons.first.must_equal 'adjust' }
-    it { @icons.last.must_equal 'youtube-square' }
+    it { @icons.first.id.must_equal 'adjust' }
+    it { @icons.last.id.must_equal 'youtube-square' }
 
     it 'includes these icons' do
-      Fixtures.icons.each { |icon| @icons.must_include icon }
+      icon_ids = @icons.map { |icon| icon.id }
+      Fixtures.icon_ids.each { |icon| icon_ids.must_include icon }
     end
 
     it 'includes these icons (reverse)' do
-      @icons.each { |icon| Fixtures.icons.must_include icon }
+      @icons.each { |icon| Fixtures.icon_ids.must_include icon.id }
     end
 
     it 'does not includes these icons' do
@@ -27,34 +28,48 @@ describe FontAwesome do
   end
 
   describe '#select!' do
-    describe 'with `dot-circle-o`' do
+    describe 'with `hdd`' do
       before do
-        @queries = %w(dot-circle-o)
-        @icons = FontAwesome.new.select!(@queries)
+        queries = %w(hdd)
+        @icons = FontAwesome.new.select!(queries)
       end
 
-      it { @icons.must_equal @queries }
       it { @icons.size.must_equal 1 }
+
+      it 'must equal icon name' do
+        icon_ids = @icons.map { |icon| icon.id }
+        icon_ids.must_equal %w(hdd-o)
+      end
     end
 
     describe 'with `left arr`' do
       before do
         queries = %w(left arr)
         @icons = FontAwesome.new.select!(queries)
+        @icon_ids = %w(arrow-circle-left arrow-circle-o-left arrow-left long-arrow-left)
       end
 
-      it { @icons.must_equal %w(arrow-circle-left arrow-circle-o-left arrow-left long-arrow-left) }
       it { @icons.size.must_equal 4 }
+
+      it 'must equal icon names' do
+        icon_ids = @icons.map { |icon| icon.id }
+        icon_ids.must_equal @icon_ids
+      end
     end
 
     describe 'with `arr left` (reverse)' do
       before do
         queries = %w(arr left)
         @icons = FontAwesome.new.select!(queries)
+        @icon_ids = %w(arrow-circle-left arrow-circle-o-left arrow-left long-arrow-left)
       end
 
-      it { @icons.must_equal %w(arrow-circle-left arrow-circle-o-left arrow-left long-arrow-left) }
       it { @icons.size.must_equal 4 }
+
+      it 'must equal icon names' do
+        icon_ids = @icons.map { |icon| icon.id }
+        icon_ids.must_equal @icon_ids
+      end
     end
 
     describe 'with `icon` (does not match)' do
@@ -71,25 +86,30 @@ describe FontAwesome do
       before do
         queries = %w()
         @icons = FontAwesome.new.select!(queries)
+        @icon_ids = Fixtures.icon_ids
       end
 
-      it { @icons.must_equal FontAwesome.new.icons }
       it { @icons.size.must_equal 409 }
+
+      it 'must equal icon names' do
+        icon_ids = @icons.map { |icon| icon.id }
+        icon_ids.must_equal @icon_ids
+      end
     end
   end
 
   describe '#item_hash' do
     before do
-      @icon = 'apple'
+      @icon = FontAwesome::Icon.new('apple')
       @item_hash = FontAwesome.new.item_hash(@icon)
     end
 
     it { @item_hash[:uid].must_equal '' }
-    it { @item_hash[:title].must_equal @icon }
-    it { @item_hash[:subtitle].must_equal "Copy to clipboard: fa-#{@icon}" }
-    it { @item_hash[:arg].must_equal @icon }
+    it { @item_hash[:title].must_equal 'apple' }
+    it { @item_hash[:subtitle].must_equal "Copy to clipboard: fa-apple" }
+    it { @item_hash[:arg].must_equal 'apple' }
     it { @item_hash[:icon][:type].must_equal 'default' }
-    it { @item_hash[:icon][:name].must_equal "./icons/fa-#{@icon}.png" }
+    it { @item_hash[:icon][:name].must_equal "./icons/fa-apple.png" }
     it { @item_hash[:valid].must_equal 'yes' }
     it { @item_hash.size.must_equal 6 }
   end
@@ -97,7 +117,8 @@ describe FontAwesome do
   describe '#add_items' do
     before do
       feedback = Alfred::Core.new.feedback
-      icons = %w(beer cloud apple)
+      icon_ids = %w(beer cloud apple)
+      icons = icon_ids.map { |name| FontAwesome::Icon.new(name) }
       @feedback = FontAwesome.new.add_items(feedback, icons)
     end
 
@@ -109,10 +130,16 @@ describe FontAwesome do
     before do
       alfred = Alfred::Core.new
       query = 'bookmark'
-      @xml = FontAwesome.new(query).to_alfred(alfred)
-      @result_xml = "<items><item uid='' valid='yes'><title>bookmark</title><arg>bookmark</arg><subtitle>Copy to clipboard: fa-bookmark</subtitle><icon>./icons/fa-bookmark.png</icon></item><item uid='' valid='yes'><title>bookmark-o</title><arg>bookmark-o</arg><subtitle>Copy to clipboard: fa-bookmark-o</subtitle><icon>./icons/fa-bookmark-o.png</icon></item></items>"
+      xml = FontAwesome.new(query).to_alfred(alfred)
+      @doc = REXML::Document.new(xml)
     end
 
-    it { @xml.must_equal @result_xml }
+    it { @doc.elements['items'].size.must_equal 2 }
+    it { @doc.elements['items/item[1]/title'].text.must_equal 'bookmark' }
+    it { @doc.elements['items/item[1]/arg'].text.must_equal 'bookmark' }
+    it { @doc.elements['items/item[1]/icon'].text.must_equal './icons/fa-bookmark.png' }
+    it { @doc.elements['items/item[2]/title'].text.must_equal 'bookmark-o' }
+    it { @doc.elements['items/item[2]/arg'].text.must_equal 'bookmark-o' }
+    it { @doc.elements['items/item[2]/icon'].text.must_equal './icons/fa-bookmark-o.png' }
   end
 end
