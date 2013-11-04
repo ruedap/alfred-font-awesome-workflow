@@ -52,7 +52,7 @@
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
-	<string>Font Awesome 1.0.1</string>
+	<string>Font Awesome 1.0.2</string>
 	<key>objects</key>
 	<array>
 		<dict>
@@ -149,7 +149,7 @@
 	<key>readme</key>
 	<string>## Version
 
-1.0.1 (Font Awesome 4.0.1)
+1.0.2 (Font Awesome 4.0.2)
 
 
 ## Thanks
