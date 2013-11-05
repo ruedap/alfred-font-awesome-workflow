@@ -6,7 +6,7 @@
 
 ## [1.0.2](https://github.com/ruedap/alfred2-font-awesome-workflow/blob/1.0.2/Font%20Awesome.alfredworkflow?raw=true) (Font Awesome 4.0.2) / 2013-11-05
 
-- Support for Font Awesome 4.0.2
+- Support for Font Awesome 4.0.2 - 4.0.3
 - Change icon names ([see details](https://github.com/FortAwesome/Font-Awesome/issues?milestone=8&page=1&state=closed))
 
 ## [1.0.1](https://github.com/ruedap/alfred2-font-awesome-workflow/blob/1.0.1/Font%20Awesome.alfredworkflow?raw=true) (Font Awesome 4.0.1) / 2013-10-29
