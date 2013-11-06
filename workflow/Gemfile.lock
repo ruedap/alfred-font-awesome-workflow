@@ -9,6 +9,7 @@ GEM
       simplecov (>= 0.7)
       term-ansicolor
       thor
+    htmlentities (4.3.1)
     mime-types (1.25)
     minitest (5.0.8)
     multi_json (1.8.0)
@@ -31,6 +32,7 @@ PLATFORMS
 DEPENDENCIES
   alfred-workflow (= 1.11.3)
   coveralls (= 0.7.0)
+  htmlentities (= 4.3.1)
   minitest (= 5.0.8)
   plist (= 3.1.0)
   rake (= 10.1.0)
