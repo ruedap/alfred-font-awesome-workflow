@@ -142,4 +142,30 @@ describe FontAwesome do
     it { @doc.elements['items/item[2]/arg'].text.must_equal 'bookmark-o' }
     it { @doc.elements['items/item[2]/icon'].text.must_equal './icons/fa-bookmark-o.png' }
   end
+
+  describe '::Icon' do
+    describe '#initialize' do
+      describe 'star-half-o (#detect_unicode_from_id)' do
+        before { @icon = FontAwesome::Icon.new('star-half-o') }
+
+        it { @icon.id.must_equal 'star-half-o' }
+        it { @icon.unicode.must_equal 'f123' }
+      end
+
+      describe 'star-half-empty (#detect_unicode_from_aliases)' do
+        before { @icon = FontAwesome::Icon.new('star-half-empty') }
+
+        it { @icon.id.must_equal 'star-half-empty' }
+        it { @icon.unicode.must_equal 'f123' }
+      end
+
+      it 'includes these icons' do
+        Fixtures.icon_ids.each do |id|
+          icon = FontAwesome::Icon.new(id)
+          icon.id.must_equal id
+          icon.unicode.wont_be_nil
+        end
+      end
+    end
+  end
 end
