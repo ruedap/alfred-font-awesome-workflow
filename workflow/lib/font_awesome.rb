@@ -1,3 +1,7 @@
+# encoding: utf-8
+
+require 'htmlentities'
+
 class FontAwesome
   attr_reader :icons
 
@@ -25,6 +29,10 @@ class FontAwesome
     end
   end
 
+  def self.to_character_reference(character_code)
+    HTMLEntities.new.decode("&#x#{character_code};")
+  end
+
   def initialize(query = '')
     icon_filenames = glob_icon_filenames
     @icons = icon_filenames.map { |name| Icon.new(name) }
@@ -44,7 +52,7 @@ class FontAwesome
       :uid      => '',
       :title    => icon.id,
       :subtitle => "Copy to clipboard: fa-#{icon.id}",
-      :arg      => icon.id,
+      :arg      => "#{icon.id}|||#{icon.unicode}",
       :icon     => { :type => 'default', :name => "./icons/fa-#{icon.id}.png" },
       :valid    => 'yes',
     }

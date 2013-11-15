@@ -5,6 +5,13 @@ describe FontAwesome do
     require('bundle/bundler/setup').must_equal false
   end
 
+  describe '.to_character_reference' do
+    it { FontAwesome.to_character_reference('f000').must_equal '' }
+    it { FontAwesome.to_character_reference('f17b').must_equal '' }
+
+    it { FontAwesome.to_character_reference('f001').wont_equal '' }
+  end
+
   describe '#icons' do
     before { @icons = FontAwesome.new.icons }
 
@@ -107,7 +114,7 @@ describe FontAwesome do
     it { @item_hash[:uid].must_equal '' }
     it { @item_hash[:title].must_equal 'apple' }
     it { @item_hash[:subtitle].must_equal "Copy to clipboard: fa-apple" }
-    it { @item_hash[:arg].must_equal 'apple' }
+    it { @item_hash[:arg].must_equal 'apple|||f179' }
     it { @item_hash[:icon][:type].must_equal 'default' }
     it { @item_hash[:icon][:name].must_equal "./icons/fa-apple.png" }
     it { @item_hash[:valid].must_equal 'yes' }
@@ -136,10 +143,10 @@ describe FontAwesome do
 
     it { @doc.elements['items'].size.must_equal 2 }
     it { @doc.elements['items/item[1]/title'].text.must_equal 'bookmark' }
-    it { @doc.elements['items/item[1]/arg'].text.must_equal 'bookmark' }
+    it { @doc.elements['items/item[1]/arg'].text.must_equal 'bookmark|||f02e' }
     it { @doc.elements['items/item[1]/icon'].text.must_equal './icons/fa-bookmark.png' }
     it { @doc.elements['items/item[2]/title'].text.must_equal 'bookmark-o' }
-    it { @doc.elements['items/item[2]/arg'].text.must_equal 'bookmark-o' }
+    it { @doc.elements['items/item[2]/arg'].text.must_equal 'bookmark-o|||f097' }
     it { @doc.elements['items/item[2]/icon'].text.must_equal './icons/fa-bookmark-o.png' }
   end
 

@@ -10,7 +10,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>8CBC1CA3-D946-4766-9551-505842A4BE52</string>
+				<string>2D5AC270-69DB-4E00-BE29-B7F4927E632A</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -18,23 +18,72 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
-				<string>E0350B01-6660-4568-8F7E-ABB7E73C4B1F</string>
+				<string>CE9A7E05-0277-46D5-941F-E5DEC7D9F6F7</string>
 				<key>modifiers</key>
-				<integer>262144</integer>
+				<integer>524288</integer>
 				<key>modifiersubtext</key>
-				<string>Open page: fa-{query}</string>
+				<string>Copy to clipboard (character code)</string>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>8EEB02DD-09BA-4657-A9D8-ACE675D342BC</string>
+				<key>modifiers</key>
+				<integer>131072</integer>
+				<key>modifiersubtext</key>
+				<string>Copy to clipboard (character reference)</string>
+			</dict>
+		</array>
+		<key>2D5AC270-69DB-4E00-BE29-B7F4927E632A</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>8CBC1CA3-D946-4766-9551-505842A4BE52</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+		<key>8EEB02DD-09BA-4657-A9D8-ACE675D342BC</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>8CBC1CA3-D946-4766-9551-505842A4BE52</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
 			</dict>
 		</array>
 		<key>969B1F4E-CEAA-4D7A-92A6-222AC6E0D159</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>E0350B01-6660-4568-8F7E-ABB7E73C4B1F</string>
+				<string>2D5AC270-69DB-4E00-BE29-B7F4927E632A</string>
 				<key>modifiers</key>
-				<integer>262144</integer>
+				<integer>0</integer>
 				<key>modifiersubtext</key>
-				<string>Open page: fa-{query}</string>
+				<string></string>
 			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>CE9A7E05-0277-46D5-941F-E5DEC7D9F6F7</string>
+				<key>modifiers</key>
+				<integer>524288</integer>
+				<key>modifiersubtext</key>
+				<string>Copy to clipboard (character code)</string>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>8EEB02DD-09BA-4657-A9D8-ACE675D342BC</string>
+				<key>modifiers</key>
+				<integer>131072</integer>
+				<key>modifiersubtext</key>
+				<string>Copy to clipboard (character reference)</string>
+			</dict>
+		</array>
+		<key>CE9A7E05-0277-46D5-941F-E5DEC7D9F6F7</key>
+		<array>
 			<dict>
 				<key>destinationuid</key>
 				<string>8CBC1CA3-D946-4766-9551-505842A4BE52</string>
@@ -55,6 +104,23 @@
 	<string>Font Awesome 1.0.2</string>
 	<key>objects</key>
 	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>escaping</key>
+				<integer>4</integer>
+				<key>script</key>
+				<string>print "fa-{query}".chomp.split("|||")[0]</string>
+				<key>type</key>
+				<integer>2</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>2D5AC270-69DB-4E00-BE29-B7F4927E632A</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
@@ -87,17 +153,17 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>plusspaces</key>
-				<false/>
-				<key>url</key>
-				<string>http://fontawesome.io/icon/{query}/</string>
-				<key>utf8</key>
-				<true/>
+				<key>escaping</key>
+				<integer>4</integer>
+				<key>script</key>
+				<string>print "{query}".chomp.split("|||")[1]</string>
+				<key>type</key>
+				<integer>2</integer>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.action.openurl</string>
+			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
-			<string>E0350B01-6660-4568-8F7E-ABB7E73C4B1F</string>
+			<string>CE9A7E05-0277-46D5-941F-E5DEC7D9F6F7</string>
 			<key>version</key>
 			<integer>0</integer>
 		</dict>
@@ -107,7 +173,7 @@
 				<key>autopaste</key>
 				<true/>
 				<key>clipboardtext</key>
-				<string>fa-{query}</string>
+				<string>{query}</string>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.output.clipboard</string>
@@ -142,6 +208,23 @@
 			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
 			<string>969B1F4E-CEAA-4D7A-92A6-222AC6E0D159</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>script</key>
+				<string>/usr/bin/ruby ./decode.rb "{query}"</string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>8EEB02DD-09BA-4657-A9D8-ACE675D342BC</string>
 			<key>version</key>
 			<integer>0</integer>
 		</dict>
@@ -183,20 +266,30 @@ https://github.com/ruedap</string>
 			<key>ypos</key>
 			<real>40</real>
 		</dict>
+		<key>2D5AC270-69DB-4E00-BE29-B7F4927E632A</key>
+		<dict>
+			<key>ypos</key>
+			<real>40</real>
+		</dict>
 		<key>8CBC1CA3-D946-4766-9551-505842A4BE52</key>
 		<dict>
 			<key>ypos</key>
-			<real>160</real>
+			<real>170</real>
+		</dict>
+		<key>8EEB02DD-09BA-4657-A9D8-ACE675D342BC</key>
+		<dict>
+			<key>ypos</key>
+			<real>300</real>
 		</dict>
 		<key>969B1F4E-CEAA-4D7A-92A6-222AC6E0D159</key>
 		<dict>
 			<key>ypos</key>
-			<real>280</real>
+			<real>300</real>
 		</dict>
-		<key>E0350B01-6660-4568-8F7E-ABB7E73C4B1F</key>
+		<key>CE9A7E05-0277-46D5-941F-E5DEC7D9F6F7</key>
 		<dict>
 			<key>ypos</key>
-			<real>160</real>
+			<real>170</real>
 		</dict>
 	</dict>
 	<key>webaddress</key>
