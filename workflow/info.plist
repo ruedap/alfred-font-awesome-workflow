@@ -23,7 +23,7 @@
 				<key>destinationuid</key>
 				<string>8EEB02DD-09BA-4657-A9D8-ACE675D342BC</string>
 				<key>modifiers</key>
-				<integer>131072</integer>
+				<integer>262144</integer>
 				<key>modifiersubtext</key>
 				<string>Paste character reference</string>
 			</dict>
@@ -39,7 +39,7 @@
 				<key>destinationuid</key>
 				<string>CE9A7E05-0277-46D5-941F-E5DEC7D9F6F7</string>
 				<key>modifiers</key>
-				<integer>262144</integer>
+				<integer>131072</integer>
 				<key>modifiersubtext</key>
 				<string>Paste character code</string>
 			</dict>
@@ -229,7 +229,7 @@
 	<key>readme</key>
 	<string>## Version
 
-2.0.0 (Font Awesome 4.0.2)
+2.0.0 (Font Awesome 4.0.3)
 
 
 ## Thanks
