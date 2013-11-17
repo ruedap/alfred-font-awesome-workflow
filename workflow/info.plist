@@ -25,7 +25,7 @@
 				<key>modifiers</key>
 				<integer>131072</integer>
 				<key>modifiersubtext</key>
-				<string>Copy to clipboard (character reference)</string>
+				<string>Paste character reference</string>
 			</dict>
 			<dict>
 				<key>destinationuid</key>
@@ -41,7 +41,7 @@
 				<key>modifiers</key>
 				<integer>262144</integer>
 				<key>modifiersubtext</key>
-				<string>Copy to clipboard (character code)</string>
+				<string>Paste character code</string>
 			</dict>
 			<dict>
 				<key>destinationuid</key>

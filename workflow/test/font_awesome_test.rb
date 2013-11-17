@@ -113,7 +113,7 @@ describe FontAwesome do
 
     it { @item_hash[:uid].must_equal '' }
     it { @item_hash[:title].must_equal 'apple' }
-    it { @item_hash[:subtitle].must_equal "Copy to clipboard: fa-apple" }
+    it { @item_hash[:subtitle].must_equal "Paste class name: fa-apple" }
     it { @item_hash[:arg].must_equal 'apple|||f179' }
     it { @item_hash[:icon][:type].must_equal 'default' }
     it { @item_hash[:icon][:name].must_equal "./icons/fa-apple.png" }

@@ -51,7 +51,7 @@ class FontAwesome
     {
       :uid      => '',
       :title    => icon.id,
-      :subtitle => "Copy to clipboard: fa-#{icon.id}",
+      :subtitle => "Paste class name: fa-#{icon.id}",
       :arg      => "#{icon.id}|||#{icon.unicode}",
       :icon     => { :type => 'default', :name => "./icons/fa-#{icon.id}.png" },
       :valid    => 'yes',
