@@ -1,12 +1,36 @@
+# encoding: utf-8
+
+require 'htmlentities'
+
 class FontAwesome
   attr_reader :icons
 
+  ICONS = YAML.load_file(File.expand_path('./icons.yml'))['icons']
+
   class Icon
-    attr_reader :id
+    attr_reader :id, :unicode
 
     def initialize(id)
       @id = id
+      unicode = detect_unicode_from_id(id)
+      @unicode = unicode ? unicode : detect_unicode_from_aliases(id)
     end
+
+    def detect_unicode_from_id(id)
+      detected_icon = ICONS.detect { |icon| icon['id'] == id }
+      detected_icon ? detected_icon['unicode'] : nil
+    end
+
+    def detect_unicode_from_aliases(id)
+      detected_icon = ICONS.detect do |icon|
+        icon['aliases'].include?(id) if icon['aliases']
+      end
+      detected_icon ? detected_icon['unicode'] : nil
+    end
+  end
+
+  def self.to_character_reference(character_code)
+    HTMLEntities.new.decode("&#x#{character_code};")
   end
 
   def initialize(query = '')
@@ -27,8 +51,8 @@ class FontAwesome
     {
       :uid      => '',
       :title    => icon.id,
-      :subtitle => "Copy to clipboard: fa-#{icon.id}",
-      :arg      => icon.id,
+      :subtitle => "Paste class name: fa-#{icon.id}",
+      :arg      => "#{icon.id}|||#{icon.unicode}",
       :icon     => { :type => 'default', :name => "./icons/fa-#{icon.id}.png" },
       :valid    => 'yes',
     }

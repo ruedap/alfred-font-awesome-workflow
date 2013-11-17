@@ -1,8 +1,17 @@
+# encoding: utf-8
+
 require File.expand_path('test_helper', File.dirname(__FILE__))
 
 describe FontAwesome do
   it 'does not cause an error' do
     require('bundle/bundler/setup').must_equal false
+  end
+
+  describe '.to_character_reference' do
+    it { FontAwesome.to_character_reference('f000').must_equal '' }
+    it { FontAwesome.to_character_reference('f17b').must_equal '' }
+
+    it { FontAwesome.to_character_reference('f001').wont_equal '' }
   end
 
   describe '#icons' do
@@ -106,8 +115,8 @@ describe FontAwesome do
 
     it { @item_hash[:uid].must_equal '' }
     it { @item_hash[:title].must_equal 'apple' }
-    it { @item_hash[:subtitle].must_equal "Copy to clipboard: fa-apple" }
-    it { @item_hash[:arg].must_equal 'apple' }
+    it { @item_hash[:subtitle].must_equal "Paste class name: fa-apple" }
+    it { @item_hash[:arg].must_equal 'apple|||f179' }
     it { @item_hash[:icon][:type].must_equal 'default' }
     it { @item_hash[:icon][:name].must_equal "./icons/fa-apple.png" }
     it { @item_hash[:valid].must_equal 'yes' }
@@ -136,10 +145,36 @@ describe FontAwesome do
 
     it { @doc.elements['items'].size.must_equal 2 }
     it { @doc.elements['items/item[1]/title'].text.must_equal 'bookmark' }
-    it { @doc.elements['items/item[1]/arg'].text.must_equal 'bookmark' }
+    it { @doc.elements['items/item[1]/arg'].text.must_equal 'bookmark|||f02e' }
     it { @doc.elements['items/item[1]/icon'].text.must_equal './icons/fa-bookmark.png' }
     it { @doc.elements['items/item[2]/title'].text.must_equal 'bookmark-o' }
-    it { @doc.elements['items/item[2]/arg'].text.must_equal 'bookmark-o' }
+    it { @doc.elements['items/item[2]/arg'].text.must_equal 'bookmark-o|||f097' }
     it { @doc.elements['items/item[2]/icon'].text.must_equal './icons/fa-bookmark-o.png' }
+  end
+
+  describe '::Icon' do
+    describe '#initialize' do
+      describe 'star-half-o (#detect_unicode_from_id)' do
+        before { @icon = FontAwesome::Icon.new('star-half-o') }
+
+        it { @icon.id.must_equal 'star-half-o' }
+        it { @icon.unicode.must_equal 'f123' }
+      end
+
+      describe 'star-half-empty (#detect_unicode_from_aliases)' do
+        before { @icon = FontAwesome::Icon.new('star-half-empty') }
+
+        it { @icon.id.must_equal 'star-half-empty' }
+        it { @icon.unicode.must_equal 'f123' }
+      end
+
+      it 'includes these icons' do
+        Fixtures.icon_ids.each do |id|
+          icon = FontAwesome::Icon.new(id)
+          icon.id.must_equal id
+          icon.unicode.wont_be_nil
+        end
+      end
+    end
   end
 end
