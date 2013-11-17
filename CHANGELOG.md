@@ -2,7 +2,16 @@
 
 ## HEAD
 
-- [Commit logs](https://github.com/ruedap/alfred2-font-awesome-workflow/compare/1.0.2...master)
+- [Commit logs](https://github.com/ruedap/alfred2-font-awesome-workflow/compare/2.0.0...master)
+
+## [2.0.0](https://github.com/ruedap/alfred2-font-awesome-workflow/blob/2.0.0/Font%20Awesome.alfredworkflow?raw=true) (Font Awesome 4.0.3) / 2013-11-17
+
+- Add support for character reference and character code
+    - `Ctrl + Enter`: Paste character reference. **for designing in Photoshop, Illustrator, etc** ([#43](https://github.com/ruedap/alfred2-font-awesome-workflow/issues/43) thanks [Chris Borgia](https://github.com/cborgia) and [Chris Mousdale](https://github.com/Chrisedmo))
+    - `Shift + Enter`: Paste character code. e.g. `f18e` ([#29](https://github.com/ruedap/alfred2-font-awesome-workflow/issues/29) thanks [Daryl Roberts](https://github.com/drbrts))
+    - `Cmd + Enter`: Open in browser. e.g. <http://fontawesome.io/icon/arrow-circle-o-right>
+
+- Remove `fonta` keyword
 
 ## [1.0.2](https://github.com/ruedap/alfred2-font-awesome-workflow/blob/1.0.2/Font%20Awesome.alfredworkflow?raw=true) (Font Awesome 4.0.2) / 2013-11-05
 
