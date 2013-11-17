@@ -6,6 +6,17 @@
 	<string>com.ruedap.font-awesome</string>
 	<key>connections</key>
 	<dict>
+		<key>06116C11-3F9B-438E-A515-7D3CA35574BE</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>61DCB2DD-8EF7-447E-BED3-63AA4B73235C</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
 		<key>21557827-8003-42B7-A042-16D4C9278FEC</key>
 		<array>
 			<dict>
@@ -31,6 +42,14 @@
 				<integer>262144</integer>
 				<key>modifiersubtext</key>
 				<string>Copy to clipboard (character code)</string>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>06116C11-3F9B-438E-A515-7D3CA35574BE</string>
+				<key>modifiers</key>
+				<integer>1048576</integer>
+				<key>modifiersubtext</key>
+				<string>Open in browser</string>
 			</dict>
 		</array>
 		<key>2D5AC270-69DB-4E00-BE29-B7F4927E632A</key>
@@ -97,6 +116,23 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>escaping</key>
+				<integer>4</integer>
+				<key>script</key>
+				<string>print "fa-{query}".chomp.split("|||")[0]</string>
+				<key>type</key>
+				<integer>2</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>2D5AC270-69DB-4E00-BE29-B7F4927E632A</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>argumenttype</key>
 				<integer>1</integer>
 				<key>escaping</key>
@@ -144,14 +180,31 @@
 				<key>escaping</key>
 				<integer>4</integer>
 				<key>script</key>
-				<string>print "fa-{query}".chomp.split("|||")[0]</string>
+				<string>print "{query}".chomp.split("|||")[1]</string>
 				<key>type</key>
 				<integer>2</integer>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
-			<string>2D5AC270-69DB-4E00-BE29-B7F4927E632A</string>
+			<string>CE9A7E05-0277-46D5-941F-E5DEC7D9F6F7</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>escaping</key>
+				<integer>127</integer>
+				<key>script</key>
+				<string>open {query}</string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.script</string>
+			<key>uid</key>
+			<string>61DCB2DD-8EF7-447E-BED3-63AA4B73235C</string>
 			<key>version</key>
 			<integer>0</integer>
 		</dict>
@@ -161,14 +214,14 @@
 				<key>escaping</key>
 				<integer>4</integer>
 				<key>script</key>
-				<string>print "{query}".chomp.split("|||")[1]</string>
+				<string>print "http://fontawesome.io/icon/{query}".chomp.split("|||")[0]</string>
 				<key>type</key>
 				<integer>2</integer>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
-			<string>CE9A7E05-0277-46D5-941F-E5DEC7D9F6F7</string>
+			<string>06116C11-3F9B-438E-A515-7D3CA35574BE</string>
 			<key>version</key>
 			<integer>0</integer>
 		</dict>
@@ -205,6 +258,11 @@ GNU General Public License version 3
 https://github.com/ruedap</string>
 	<key>uidata</key>
 	<dict>
+		<key>06116C11-3F9B-438E-A515-7D3CA35574BE</key>
+		<dict>
+			<key>ypos</key>
+			<real>340</real>
+		</dict>
 		<key>21557827-8003-42B7-A042-16D4C9278FEC</key>
 		<dict>
 			<key>ypos</key>
@@ -214,6 +272,11 @@ https://github.com/ruedap</string>
 		<dict>
 			<key>ypos</key>
 			<real>120</real>
+		</dict>
+		<key>61DCB2DD-8EF7-447E-BED3-63AA4B73235C</key>
+		<dict>
+			<key>ypos</key>
+			<real>340</real>
 		</dict>
 		<key>8CBC1CA3-D946-4766-9551-505842A4BE52</key>
 		<dict>
