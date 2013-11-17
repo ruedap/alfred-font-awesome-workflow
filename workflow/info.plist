@@ -89,7 +89,7 @@
 	<key>createdby</key>
 	<string>@ruedap</string>
 	<key>description</key>
-	<string>Search through Font Awesome</string>
+	<string>Search through Font Awesome Icons</string>
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
@@ -144,9 +144,9 @@
 				<key>script</key>
 				<string>/usr/bin/ruby ./main.rb {query}</string>
 				<key>subtext</key>
-				<string>Font Awesome Workflow (keyword: fa)</string>
+				<string>Font Awesome Workflow</string>
 				<key>title</key>
-				<string>Search through Font Awesome</string>
+				<string>Search through Font Awesome Icons</string>
 				<key>type</key>
 				<integer>0</integer>
 				<key>withspace</key>
