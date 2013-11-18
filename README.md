@@ -40,6 +40,11 @@ The current version is **Font Awesome 4.0.3** support. Old version is [here](htt
 
 - [Hidden Productivity Secrets With Alfred | Smashing Coding](http://coding.smashingmagazine.com/2013/10/25/hidden-productivity-secrets-with-alfred/)
 - [Automating Front-end Workflow // Speaker Deck](https://speakerdeck.com/addyosmani/automating-front-end-workflow)
+- Articles in Japanese
+    - [Font Awesomeのアイコンフォントを検索できるAlfred 2のWorkflowを作ってみた](http://blog.ruedap.com/2013/08/07/alfred2-font-awesome-workflow)
+    - [Font Awesome 4.0に対応したAlfred Workflowをリリースしました](http://blog.ruedap.com/2013/10/25/alfred-workflow-for-font-awesome-4)
+    - [フロントエンド開発者向けのAlfred Workflow](http://blog.ruedap.com/2013/10/30/alfred-workflow-for-front-end-developers)
+    - [Font Awesome WorkflowがPhotoshopやIllustratorでもペースト可能に](http://blog.ruedap.com/2013/11/18/font-awesome-workflow-for-web-designers)
 
 
 ## Thanks
@@ -48,7 +53,6 @@ The current version is **Font Awesome 4.0.3** support. Old version is [here](htt
 - [Alfred 2 Workflow Ruby Template](https://github.com/zhaocai/alfred2-ruby-template) (GNU GPLv3)
 - [Font Awesome](http://fontawesome.io/) (SIL OFL 1.1)
 - [Font Awesome to PNG](https://github.com/odyniec/font-awesome-to-png)
-- [Gifzo](http://gifzo.net/)
 
 
 ## License
