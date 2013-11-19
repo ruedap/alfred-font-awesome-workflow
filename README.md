@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/ruedap/alfred2-font-awesome-workflow.png?branch=master)](https://travis-ci.org/ruedap/alfred2-font-awesome-workflow) [![Coverage Status](https://coveralls.io/repos/ruedap/alfred2-font-awesome-workflow/badge.png)](https://coveralls.io/r/ruedap/alfred2-font-awesome-workflow) [![Code Climate](https://codeclimate.com/github/ruedap/alfred2-font-awesome-workflow.png)](https://codeclimate.com/github/ruedap/alfred2-font-awesome-workflow)
 
-You can incremental search for [Font Awesome Icon Fonts](http://fontawesome.io/icons/) and paste it to front most app.
+You can incremental search for [Font Awesome Icons](http://fontawesome.io/icons/) and paste it to front most app.
 
 #### for coding HTML/CSS
 ![screencast.gif](https://github.com/ruedap/alfred2-font-awesome-workflow/raw/master/screenshots/screencast.gif)
@@ -20,7 +20,7 @@ The current version is **Font Awesome 4.0.3** support. Old version is [here](htt
 
 ## Usage
 
-- **Keyword** `fa`: Search through [Font Awesome Icon Fonts](http://fontawesome.io/icons/).
+- **Keyword** `fa`: Search through [Font Awesome Icons](http://fontawesome.io/icons/).
 - `Enter`: Paste class name (**for coding HTML/CSS**. e.g. `fa-arrow-circle-o-right`)
 - `Ctrl + Enter`: Paste character reference (**for designing in Photoshop, Illustrator, etc**)
 - `Shift + Enter`: Paste character code (e.g. `f18e`)
