@@ -102,7 +102,7 @@
 				<key>escaping</key>
 				<integer>0</integer>
 				<key>script</key>
-				<string>/usr/bin/ruby ./decode.rb "{query}"</string>
+				<string>/usr/bin/ruby ./encode.rb "{query}"</string>
 				<key>type</key>
 				<integer>0</integer>
 			</dict>
