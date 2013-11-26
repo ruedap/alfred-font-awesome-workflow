@@ -109,47 +109,75 @@ describe FontAwesome do
 
   describe '#item_hash' do
     before do
-      @icon = FontAwesome::Icon.new('apple')
-      @item_hash = FontAwesome.new.item_hash(@icon)
+      icon = FontAwesome::Icon.new('apple')
+      @item_hash = FontAwesome.new.item_hash(icon)
     end
 
     it { @item_hash[:uid].must_equal '' }
     it { @item_hash[:title].must_equal 'apple' }
-    it { @item_hash[:subtitle].must_equal "Paste class name: fa-apple" }
+    it { @item_hash[:subtitle].must_equal 'Paste class name: fa-apple' }
     it { @item_hash[:arg].must_equal 'apple|||f179' }
     it { @item_hash[:icon][:type].must_equal 'default' }
-    it { @item_hash[:icon][:name].must_equal "./icons/fa-apple.png" }
+    it { @item_hash[:icon][:name].must_equal './icons/fa-apple.png' }
     it { @item_hash[:valid].must_equal 'yes' }
     it { @item_hash.size.must_equal 6 }
   end
 
-  describe '#add_items' do
+  describe '#item_xml' do
     before do
-      feedback = Alfred::Core.new.feedback
-      icon_ids = %w(beer cloud apple)
-      icons = icon_ids.map { |name| FontAwesome::Icon.new(name) }
-      @feedback = FontAwesome.new.add_items(feedback, icons)
+      icon = FontAwesome::Icon.new('apple')
+      item_hash = FontAwesome.new.item_hash(icon)
+      @item_xml = FontAwesome.new.item_xml(item_hash)
     end
 
-    it { @feedback.items.first.title.must_equal 'beer' }
-    it { @feedback.items.last.title.must_equal 'apple' }
+    it do
+      expectation = <<-XML
+<item arg="apple|||f179" uid="">
+  <title>apple</title>
+  <subtitle>Paste class name: fa-apple</subtitle>
+  <icon>./icons/fa-apple.png</icon>
+</item>
+      XML
+      @item_xml.must_equal expectation
+    end
   end
 
   describe '#to_alfred' do
     before do
-      alfred = Alfred::Core.new
-      query = 'bookmark'
-      xml = FontAwesome.new(query).to_alfred(alfred)
+      queries = ['bookmark']
+      xml = FontAwesome.new(queries).to_alfred
       @doc = REXML::Document.new(xml)
+      # TODO: mute puts
     end
 
-    it { @doc.elements['items'].size.must_equal 2 }
+    it { @doc.elements['items'].elements.size.must_equal 2 }
+    it { @doc.elements['items/item[1]'].attributes['arg'].must_equal 'bookmark|||f02e' }
     it { @doc.elements['items/item[1]/title'].text.must_equal 'bookmark' }
-    it { @doc.elements['items/item[1]/arg'].text.must_equal 'bookmark|||f02e' }
     it { @doc.elements['items/item[1]/icon'].text.must_equal './icons/fa-bookmark.png' }
+    it { @doc.elements['items/item[2]'].attributes['arg'].must_equal 'bookmark-o|||f097' }
     it { @doc.elements['items/item[2]/title'].text.must_equal 'bookmark-o' }
-    it { @doc.elements['items/item[2]/arg'].text.must_equal 'bookmark-o|||f097' }
     it { @doc.elements['items/item[2]/icon'].text.must_equal './icons/fa-bookmark-o.png' }
+
+    it 'must equal $stdout (test for puts)' do
+      expectation = <<-XML
+<?xml version='1.0'?>
+<items>
+<item arg="bookmark|||f02e" uid="">
+  <title>bookmark</title>
+  <subtitle>Paste class name: fa-bookmark</subtitle>
+  <icon>./icons/fa-bookmark.png</icon>
+</item>
+<item arg="bookmark-o|||f097" uid="">
+  <title>bookmark-o</title>
+  <subtitle>Paste class name: fa-bookmark-o</subtitle>
+  <icon>./icons/fa-bookmark-o.png</icon>
+</item>
+</items>
+      XML
+
+      capture(:stdout) { FontAwesome.new(['bookmark']).to_alfred }.must_equal \
+        expectation
+    end
   end
 
   describe '::Icon' do
@@ -177,4 +205,16 @@ describe FontAwesome do
       end
     end
   end
+end
+
+def capture(stream)
+  begin
+    stream = stream.to_s
+    eval "$#{stream} = StringIO.new"
+    yield
+    result = eval("$#{stream}").string
+  ensure
+    eval "$#{stream} = #{stream.upcase}"
+  end
+  result
 end

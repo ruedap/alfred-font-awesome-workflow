@@ -4,21 +4,24 @@
 $LOAD_PATH.unshift(File.expand_path(File.dirname(__FILE__)))
 
 require 'rubygems' unless defined? Gem # rubygems is only needed in 1.8
+require 'logger'
 require 'bundle/bundler/setup'
-require 'alfred'
 require 'lib/font_awesome'
 
-def puts_log(str)
-  log_file = File.expand_path('~/Library/Logs/Alfred-Workflow.log')
-  File.open(log_file, 'a+') do |log|
-    log.puts "[PUTS LOG]  #{str}\n"
-    log.flush
+# Main class
+class Main
+  def initialize(queries, debug = false)
+    xml = FontAwesome.new(queries).to_alfred
+    logging(xml) if debug
+  end
+
+  def logging(string)
+    log_file = File.expand_path('~/Library/Logs/font-awesome-workflow.log')
+    logger = Logger.new(log_file, 'daily')
+    logger.progname = 'Font Awesome Workflow'
+    logger.debug(string)
   end
 end
 
-Alfred.with_friendly_error do |alfred|
-  alfred.with_rescue_feedback = true
-  query = ARGV.join(' ').strip
-
-  puts FontAwesome.new(query).to_alfred(alfred)
-end
+# entry point
+Main.new(ARGV)

@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 
 gem 'plist', '3.1.0'
-gem 'alfred-workflow', '1.11.3'
 gem 'htmlentities', '4.3.1'
 
 group :test do

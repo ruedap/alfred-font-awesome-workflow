@@ -1,12 +1,15 @@
 # encoding: utf-8
 
+require 'yaml'
 require 'htmlentities'
 
+# FontAwesome class
 class FontAwesome
   attr_reader :icons
 
   ICONS = YAML.load_file(File.expand_path('./icons.yml'))['icons']
 
+  # FontAwesome::Icon class
   class Icon
     attr_reader :id, :unicode
 
@@ -33,10 +36,10 @@ class FontAwesome
     HTMLEntities.new.decode("&#x#{character_code};")
   end
 
-  def initialize(query = '')
+  def initialize(queries = [])
     icon_filenames = glob_icon_filenames
     @icons = icon_filenames.map { |name| Icon.new(name) }
-    select!(query.split)
+    select!(queries)
   end
 
   def select!(queries, icons = @icons)
@@ -58,13 +61,20 @@ class FontAwesome
     }
   end
 
-  def add_items(feedback, icons = @icons)
-    icons.each { |icon| feedback.add_item(item_hash(icon)) }
-    feedback
+  def item_xml(options = {})
+    <<-XML
+<item arg="#{options[:arg]}" uid="#{options[:uid]}">
+  <title>#{options[:title]}</title>
+  <subtitle>#{options[:subtitle]}</subtitle>
+  <icon>#{options[:icon][:name]}</icon>
+</item>
+    XML
   end
 
-  def to_alfred(alfred)
-    add_items(alfred.feedback).to_alfred
+  def to_alfred
+    item_xml = @icons.map { |icon| item_xml(item_hash(icon)) }.join
+    puts xml = "<?xml version='1.0'?>\n<items>\n#{item_xml}</items>"
+    xml
   end
 
   private
@@ -72,7 +82,7 @@ class FontAwesome
   def glob_icon_filenames
     Dir.glob(File.expand_path('./icons/fa-*.png')).map do |path|
       md = /\/fa-(.+)\.png/.match(path)
-      (md && md[1]) ? md[1] : nil
+      md && md[1] ? md[1] : nil
     end.compact.uniq.sort
   end
 end
