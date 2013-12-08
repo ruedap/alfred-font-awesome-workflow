@@ -10,7 +10,6 @@ GEM
     diff-lcs (1.2.5)
     htmlentities (4.3.1)
     mime-types (1.25)
-    minitest (5.0.8)
     multi_json (1.8.0)
     plist (3.1.0)
     rake (10.1.0)
@@ -39,7 +38,6 @@ PLATFORMS
 DEPENDENCIES
   coveralls (= 0.7.0)
   htmlentities (= 4.3.1)
-  minitest (= 5.0.8)
   plist (= 3.1.0)
   rake (= 10.1.0)
   rspec (= 2.14.1)

@@ -4,7 +4,6 @@ gem 'plist', '3.1.0'
 gem 'htmlentities', '4.3.1'
 
 group :test do
-  gem 'minitest', '5.0.8'
   gem 'rspec', '2.14.1'
   gem 'rake', '10.1.0'
   gem 'coveralls', '0.7.0', :require => false
