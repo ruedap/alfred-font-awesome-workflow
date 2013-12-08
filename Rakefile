@@ -88,9 +88,9 @@ task :clobber => [:clean] do
   rmtree File.join($config["path"], "coverage")
 end
 
-desc "Run tests"
-task :test => [:chdir] do
-  Rake::Task[:test].invoke
+desc "Run RSpec"
+task :spec => [:chdir] do
+  Rake::Task[:spec].invoke
 end
 
-task :default => :test
+task :default => :spec

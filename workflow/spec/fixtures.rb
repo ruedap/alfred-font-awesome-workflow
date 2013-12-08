@@ -1,5 +1,6 @@
+# Fixtures module
 module Fixtures
-  path = File.expand_path('./test/fixtures/font-awesome-4-0-2-icons.yml')
+  path = File.expand_path('./spec/fixtures/font-awesome-4-0-2-icons.yml')
   ICONS = YAML.load_file(path)['icons']
 
   def self.icon_ids
