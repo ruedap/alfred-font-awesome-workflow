@@ -6,7 +6,7 @@ rvm:
 script:
   - cd workflow
   - bundle install --standalone --clean
-  - bundle exec rake test
+  - bundle exec rake
 notifications:
   hipchat:
     rooms:
