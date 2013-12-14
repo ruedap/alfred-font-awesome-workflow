@@ -15,20 +15,20 @@ class FontAwesome
 
     def initialize(id)
       @id = id
-      unicode = detect_unicode_from_id(id)
-      @unicode = unicode ? unicode : detect_unicode_from_aliases(id)
+      unicode = find_unicode_from_id(id)
+      @unicode = unicode ? unicode : find_unicode_from_aliases(id)
     end
 
-    def detect_unicode_from_id(id)
-      detected_icon = ICONS.detect { |icon| icon['id'] == id }
-      detected_icon ? detected_icon['unicode'] : nil
+    def find_unicode_from_id(id)
+      found_icon = ICONS.find { |icon| icon['id'] == id }
+      found_icon ? found_icon['unicode'] : nil
     end
 
-    def detect_unicode_from_aliases(id)
-      detected_icon = ICONS.detect do |icon|
+    def find_unicode_from_aliases(id)
+      found_icon = ICONS.find do |icon|
         icon['aliases'].include?(id) if icon['aliases']
       end
-      detected_icon ? detected_icon['unicode'] : nil
+      found_icon ? found_icon['unicode'] : nil
     end
   end
 
@@ -52,12 +52,12 @@ class FontAwesome
 
   def item_hash(icon)
     {
-      :uid      => '',
-      :title    => icon.id,
+      :uid => '',
+      :title => icon.id,
       :subtitle => "Paste class name: fa-#{icon.id}",
-      :arg      => "#{icon.id}|||#{icon.unicode}",
-      :icon     => { :type => 'default', :name => "./icons/fa-#{icon.id}.png" },
-      :valid    => 'yes',
+      :arg => "#{icon.id}|||#{icon.unicode}",
+      :icon => { :type => 'default', :name => "./icons/fa-#{icon.id}.png" },
+      :valid => 'yes',
     }
   end
 
