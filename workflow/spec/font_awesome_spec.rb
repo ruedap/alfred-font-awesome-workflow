@@ -76,7 +76,11 @@ describe FontAwesome do
 
       it 'must equal icon names' do
         icon_ids = icons.map { |icon| icon.id }
-        expectation = %w(arrow-circle-left arrow-circle-o-left arrow-left long-arrow-left)
+        expectation = %w(
+          arrow-circle-left
+          arrow-circle-o-left
+          arrow-left long-arrow-left
+        )
         expect(icon_ids).to eq(expectation)
       end
     end
@@ -90,7 +94,11 @@ describe FontAwesome do
 
       it 'must equal icon names' do
         icon_ids = icons.map { |icon| icon.id }
-        expectation = %w(arrow-circle-left arrow-circle-o-left arrow-left long-arrow-left)
+        expectation = %w(
+          arrow-circle-left
+          arrow-circle-o-left
+          arrow-left long-arrow-left
+        )
         expect(icon_ids).to eq(expectation)
       end
     end
