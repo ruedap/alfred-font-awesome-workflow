@@ -11,11 +11,11 @@ You can incremental search for [Font Awesome Icons](http://fontawesome.io/icons/
 ![screencast-illustrator.gif](https://github.com/ruedap/alfred2-font-awesome-workflow/raw/master/screenshots/screencast-illustrator.gif)
 
 
-## Install
+## Installation
 
 Download **[Font Awesome.alfredworkflow](https://github.com/ruedap/alfred2-font-awesome-workflow/raw/master/Font%20Awesome.alfredworkflow)** and import to [Alfred 2](http://www.alfredapp.com/) (require Powerpack).
 
-The current version is **Font Awesome 4.0.3** support. Old version is [here](https://github.com/ruedap/alfred2-font-awesome-workflow/blob/master/CHANGELOG.md).
+The current version is **Font Awesome 4.0.3** support. Previous versions are available [here](https://github.com/ruedap/alfred2-font-awesome-workflow/blob/master/CHANGELOG.md).
 
 
 ## Usage
@@ -34,6 +34,11 @@ The current version is **Font Awesome 4.0.3** support. Old version is [here](htt
 **Disable pasting**: Turn off "Automatically paste to front most app" in Workflows Preferences.
 
 ![Disable pasting](https://github.com/ruedap/alfred2-font-awesome-workflow/raw/master/screenshots/option-disable-pasting.png)
+
+
+## Changelog
+
+Changelog is available [here](https://github.com/ruedap/alfred2-font-awesome-workflow/blob/master/CHANGELOG.md).
 
 
 ## Links
@@ -60,3 +65,6 @@ The current version is **Font Awesome 4.0.3** support. Old version is [here](htt
 GNU General Public License version 3
 
 
+## Author
+
+<a href="http://ruedap.com"><img src="https://dl.dropboxusercontent.com/u/281168/images/github-ruedap-avatar-1500x1500.png" alt="ruedap" title="ruedap" width="100" height="100"></a>
