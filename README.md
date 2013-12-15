@@ -55,8 +55,8 @@ Changelog is available [here](https://github.com/ruedap/alfred2-font-awesome-wor
 ## Thanks
 
 - [Alfred 2](http://www.alfredapp.com/)
-- [Alfred 2 Workflow Ruby Template](https://github.com/zhaocai/alfred2-ruby-template) (GNU GPLv3)
-- [Font Awesome](http://fontawesome.io/) (SIL OFL 1.1)
+- [Alfred 2 Workflow Ruby Template](https://github.com/zhaocai/alfred2-ruby-template)
+- [Font Awesome](http://fontawesome.io/)
 - [Font Awesome to PNG](https://github.com/odyniec/font-awesome-to-png)
 
 
@@ -67,4 +67,4 @@ GNU General Public License version 3
 
 ## Author
 
-<a href="http://ruedap.com"><img src="https://dl.dropboxusercontent.com/u/281168/images/github-ruedap-avatar-1500x1500.png" alt="ruedap" title="ruedap" width="100" height="100"></a>
+<a href="http://ruedap.com" target="_blank"><img src="https://dl.dropboxusercontent.com/u/281168/images/github-ruedap-avatar-1500x1500.png" alt="ruedap" title="ruedap" width="100" height="100"></a>
