@@ -24,7 +24,7 @@ The current version is **Font Awesome 4.0.3** support. Previous versions are ava
 - `Enter`: Paste class name (**for coding HTML/CSS**. e.g. `fa-arrow-circle-o-right`)
 - `Ctrl + Enter`: Paste character reference (**for designing in Photoshop, Illustrator, etc**)
 - `Shift + Enter`: Paste character code (e.g. `f18e`)
-- `Cmd + Enter`: Open in browser (e.g. <http://fontawesome.io/icon/arrow-circle-o-right>)
+- `Command + Enter`: Open in browser (e.g. <http://fontawesome.io/icon/arrow-circle-o-right>)
 
 ![Workflow](https://github.com/ruedap/alfred2-font-awesome-workflow/raw/master/screenshots/workflow.png)
 
