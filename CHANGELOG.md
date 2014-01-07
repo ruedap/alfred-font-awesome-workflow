@@ -64,7 +64,7 @@
 
 ## [0.1.1](https://github.com/ruedap/alfred2-font-awesome-workflow/blob/0.1.1/Font%20Awesome.alfredworkflow?raw=true) (Font Awesome 3.2.1) / 2013-08-20
 
-- Fix OS X Mavericks support
+- Fix Mac OS X Mavericks support
 
 
 ## [0.1.0](https://github.com/ruedap/alfred2-font-awesome-workflow/blob/0.1.0/Font%20Awesome.alfredworkflow?raw=true) (Font Awesome 3.2.1) / 2013-08-04
