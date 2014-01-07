@@ -17,7 +17,7 @@
 - Add support for character reference and character code
     - `Ctrl + Enter`: Paste character reference. **for designing in Photoshop, Illustrator, etc** ([#43](https://github.com/ruedap/alfred2-font-awesome-workflow/issues/43) thanks [Chris Borgia](https://github.com/cborgia) and [Chris Mousdale](https://github.com/Chrisedmo))
     - `Shift + Enter`: Paste character code. e.g. `f18e` ([#29](https://github.com/ruedap/alfred2-font-awesome-workflow/issues/29) thanks [Daryl Roberts](https://github.com/drbrts))
-    - `Cmd + Enter`: Open in browser. e.g. <http://fontawesome.io/icon/arrow-circle-o-right>
+    - `Command + Enter`: Open in browser. e.g. <http://fontawesome.io/icon/arrow-circle-o-right>
 - Remove `fonta` keyword
 
 
