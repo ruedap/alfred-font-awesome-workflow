@@ -93,7 +93,7 @@
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
-	<string>Font Awesome 2.0.0</string>
+	<string>Font Awesome 4.0.3.0</string>
 	<key>objects</key>
 	<array>
 		<dict>
@@ -227,35 +227,7 @@
 		</dict>
 	</array>
 	<key>readme</key>
-	<string>## Version
-
-2.0.0 (Font Awesome 4.0.3)
-
-
-## Thanks
-
-Alfred 2
-http://www.alfredapp.com/
-
-Alfred 2 Workflow Ruby Template (GNU GPLv3)
-https://github.com/zhaocai/alfred2-ruby-template
-
-Font Awesome (SIL OFL 1.1)
-http://fontawesome.io/
-
-Font Awesome to PNG
-https://github.com/odyniec/font-awesome-to-png
-
-
-## License
-
-GNU General Public License version 3
-
-
-## Author
-
-@ruedap
-https://github.com/ruedap</string>
+	<string>https://github.com/ruedap/alfred2-font-awesome-workflow</string>
 	<key>uidata</key>
 	<dict>
 		<key>06116C11-3F9B-438E-A515-7D3CA35574BE</key>
