@@ -8,7 +8,7 @@
 
 - Ruby 2.1 support
 - Improve version number (but, it is not SemVer)
-- Replace to [new PNG files](https://github.com/ruedap/fa2png)
+- Replace to new PNG files using [fa2png](https://github.com/ruedap/fa2png)
 
 
 ## [2.0.0](https://github.com/ruedap/alfred2-font-awesome-workflow/blob/2.0.0/Font%20Awesome.alfredworkflow?raw=true) (Font Awesome 4.0.3) / 2013-11-17
