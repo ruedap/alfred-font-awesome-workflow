@@ -7,7 +7,7 @@ You can incremental search for [Font Awesome Icons](http://fontawesome.io/icons/
 #### for coding HTML/CSS
 ![screencast.gif](https://github.com/ruedap/alfred2-font-awesome-workflow/raw/master/screenshots/screencast.gif)
 
-#### for designing in Photoshop, Illustrator, etc
+#### for designing in Photoshop, Illustrator, Keynote, etc
 ![screencast-illustrator.gif](https://github.com/ruedap/alfred2-font-awesome-workflow/raw/master/screenshots/screencast-illustrator.gif)
 
 
@@ -50,7 +50,7 @@ Changelog is available [here](https://github.com/ruedap/alfred2-font-awesome-wor
     - [Font Awesome 4.0に対応したAlfred Workflowをリリースしました](http://blog.ruedap.com/2013/10/25/alfred-workflow-for-font-awesome-4)
     - [フロントエンド開発者向けのAlfred Workflow](http://blog.ruedap.com/2013/10/30/alfred-workflow-for-front-end-developers)
     - [Font Awesome WorkflowがPhotoshopやIllustratorでもペースト可能に](http://blog.ruedap.com/2013/11/18/font-awesome-workflow-for-web-designers)
-
+    - [Font AwesomeをKeynoteやIllustratorで使う](http://takanomasahiro.tumblr.com/post/78678195177/font-awesome-keynote-illustrator)
 
 ## License
 
