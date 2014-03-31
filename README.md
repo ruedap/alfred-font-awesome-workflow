@@ -1,6 +1,8 @@
 # Font Awesome Workflow for Alfred 2
 
-[![Build Status](https://travis-ci.org/ruedap/alfred2-font-awesome-workflow.png?branch=master)](https://travis-ci.org/ruedap/alfred2-font-awesome-workflow) [![Coverage Status](https://coveralls.io/repos/ruedap/alfred2-font-awesome-workflow/badge.png)](https://coveralls.io/r/ruedap/alfred2-font-awesome-workflow) [![Code Climate](https://codeclimate.com/github/ruedap/alfred2-font-awesome-workflow.png)](https://codeclimate.com/github/ruedap/alfred2-font-awesome-workflow)
+[![Build Status](https://travis-ci.org/ruedap/alfred2-font-awesome-workflow.svg?branch=master)](https://travis-ci.org/ruedap/alfred2-font-awesome-workflow)
+[![Coverage Status](http://img.shields.io/coveralls/ruedap/alfred2-font-awesome-workflow/master.svg)](https://coveralls.io/r/ruedap/alfred2-font-awesome-workflow)
+[![Code Climate](http://img.shields.io/codeclimate/github/ruedap/alfred2-font-awesome-workflow.svg)](https://codeclimate.com/github/ruedap/alfred2-font-awesome-workflow)
 
 You can incremental search for [Font Awesome Icons](http://fontawesome.io/icons/) and paste it to front most app.
 
