@@ -17,7 +17,7 @@ You can incremental search for [Font Awesome Icons](http://fontawesome.io/icons/
 
 Download **[Font Awesome.alfredworkflow](https://github.com/ruedap/alfred2-font-awesome-workflow/raw/master/Font%20Awesome.alfredworkflow)** and import to [Alfred 2](http://www.alfredapp.com/) (require Powerpack).
 
-The current version is **Font Awesome 4.0.3** support. Previous versions are available [here](https://github.com/ruedap/alfred2-font-awesome-workflow/releases).
+The current version is **Font Awesome 4.1.0** support. Previous versions are available [here](https://github.com/ruedap/alfred2-font-awesome-workflow/releases).
 
 
 ## Usage
