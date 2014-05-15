@@ -26,8 +26,8 @@ describe FontAwesome do
   describe '#icons' do
     let(:icons) { FontAwesome.new.icons }
 
-    it 'returns 409' do
-      expect(icons.size).to eq(409)
+    it 'returns 503' do
+      expect(icons.size).to eq(503)
     end
 
     it 'returns "adjust"' do
@@ -47,7 +47,7 @@ describe FontAwesome do
       icons.each { |icon| expect(Fixtures.icon_ids).to be_include(icon.id) }
     end
 
-    it 'does not includes these icons' do
+    it 'does not include these icons' do
       expectation = %w(icon awesome)
       expectation.each { |icon| expect(icons).not_to be_include(icon) }
     end
@@ -103,10 +103,10 @@ describe FontAwesome do
       end
     end
 
-    context 'with "icon" (does not match)' do
-      let(:icons) { FontAwesome.new.select!(%w(icon)) }
+    context 'with "icons" (does not match)' do
+      let(:icons) { FontAwesome.new.select!(%w(icons)) }
 
-      it 'returns a empty array' do
+      it 'returns an empty array' do
         expect(icons).to eq([])
       end
     end
@@ -114,13 +114,22 @@ describe FontAwesome do
     context 'with unknown arguments' do
       let(:icons) { FontAwesome.new.select!([]) }
 
-      it 'returns 409' do
-        expect(icons.size).to eq(409)
+      it 'returns 503' do
+        expect(icons.size).to eq(503)
       end
 
       it 'must equal icon names' do
         icon_ids = icons.map { |icon| icon.id }
         expect(icon_ids).to eq(Fixtures.icon_ids)
+      end
+    end
+
+    context 'with "taxi"' do  # for ver.4.1.0
+      let(:icons) { FontAwesome.new.select!(%w(taxi)) }
+
+      it 'must equal icon name' do
+        icon_ids = icons.map { |icon| icon.id }
+        expect(icon_ids).to eq(%w(taxi))
       end
     end
   end
