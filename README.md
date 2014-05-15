@@ -40,7 +40,7 @@ The current version is **Font Awesome 4.1.0** support. Previous versions are ava
 
 ## Changelog
 
-Changelog is available [here](https://github.com/ruedap/alfred2-font-awesome-workflow/blob/master/CHANGELOG.md).
+See details changes for each version in the [release notes](https://github.com/ruedap/alfred2-font-awesome-workflow/releases).
 
 
 ## Links
