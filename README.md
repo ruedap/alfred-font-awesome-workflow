@@ -47,6 +47,7 @@ See details changes for each version in the [release notes](https://github.com/r
 
 - [Hidden Productivity Secrets With Alfred | Smashing Coding](http://coding.smashingmagazine.com/2013/10/25/hidden-productivity-secrets-with-alfred/)
 - [Automating Front-end Workflow // Speaker Deck](https://speakerdeck.com/addyosmani/automating-front-end-workflow)
+- [Sketch 3 - Insert Font Awesone icons w/ Alfred workflow — QuickCast.](http://quick.as/dvxup47)
 - Articles in Japanese
     - [Font Awesomeのアイコンフォントを検索できるAlfred 2のWorkflowを作ってみた](http://blog.ruedap.com/2013/08/07/alfred2-font-awesome-workflow)
     - [Font Awesome 4.0に対応したAlfred Workflowをリリースしました](http://blog.ruedap.com/2013/10/25/alfred-workflow-for-font-awesome-4)
