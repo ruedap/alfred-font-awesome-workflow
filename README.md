@@ -4,7 +4,7 @@
 [![Coverage Status](http://img.shields.io/coveralls/ruedap/alfred2-font-awesome-workflow/master.svg)](https://coveralls.io/r/ruedap/alfred2-font-awesome-workflow)
 [![Code Climate](http://img.shields.io/codeclimate/github/ruedap/alfred2-font-awesome-workflow.svg)](https://codeclimate.com/github/ruedap/alfred2-font-awesome-workflow)
 
-You can incremental search for [Font Awesome Icons](http://fontawesome.io/icons/) and paste it to front most app.
+You can incremental search for [Font Awesome icons](http://fontawesome.io/icons/) and paste it to front most app.
 
 #### for coding HTML/CSS
 ![screencast.gif](https://github.com/ruedap/alfred2-font-awesome-workflow/raw/master/screenshots/screencast.gif)
@@ -22,7 +22,8 @@ The current version is **Font Awesome 4.1.0** support. Previous versions are ava
 
 ## Usage
 
-- **Keyword** `fa`: Search through [Font Awesome Icons](http://fontawesome.io/icons/).
+**Keyword** `fa`: Search through [Font Awesome icons](http://fontawesome.io/icons/).
+
 - `Enter`: Paste class name (**for coding HTML/CSS**. e.g. `fa-arrow-circle-o-right`)
 - `Ctrl + Enter`: Paste character reference (**for designing in Photoshop, Illustrator, etc**)
 - `Shift + Enter`: Paste character code (e.g. `f18e`)
