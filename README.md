@@ -9,7 +9,7 @@ You can incremental search for [Font Awesome icons](http://fontawesome.io/icons/
 #### for coding HTML/CSS
 ![screencast.gif](https://github.com/ruedap/alfred2-font-awesome-workflow/raw/master/screenshots/screencast.gif)
 
-#### for designing in Photoshop, Illustrator, Keynote, etc
+#### for designing in Photoshop, Illustrator, Sketch 3, Keynote, etc
 ![screencast-illustrator.gif](https://github.com/ruedap/alfred2-font-awesome-workflow/raw/master/screenshots/screencast-illustrator.gif)
 
 
