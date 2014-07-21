@@ -44,7 +44,7 @@ The current version is **Font Awesome 4.1.0** support. Previous versions are ava
 See details changes for each version in the [release notes](https://github.com/ruedap/alfred2-font-awesome-workflow/releases).
 
 
-## Links
+## Guides
 
 - [Hidden Productivity Secrets With Alfred | Smashing Coding](http://coding.smashingmagazine.com/2013/10/25/hidden-productivity-secrets-with-alfred/)
 - [Automating Front-end Workflow // Speaker Deck](https://speakerdeck.com/addyosmani/automating-front-end-workflow)
