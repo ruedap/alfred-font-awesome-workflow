@@ -26,8 +26,8 @@ describe FontAwesome do
   describe '#icons' do
     let(:icons) { FontAwesome.new.icons }
 
-    it 'returns 503' do
-      expect(icons.size).to eq(503)
+    it 'returns 549' do
+      expect(icons.size).to eq(549)
     end
 
     it 'returns "adjust"' do
@@ -114,8 +114,8 @@ describe FontAwesome do
     context 'with unknown arguments' do
       let(:icons) { FontAwesome.new.select!([]) }
 
-      it 'returns 503' do
-        expect(icons.size).to eq(503)
+      it 'returns 549' do
+        expect(icons.size).to eq(549)
       end
 
       it 'must equal icon names' do
@@ -130,6 +130,15 @@ describe FontAwesome do
       it 'must equal icon name' do
         icon_ids = icons.map { |icon| icon.id }
         expect(icon_ids).to eq(%w(taxi))
+      end
+    end
+
+    context 'with "angellist"' do  # for ver.4.2.0
+      let(:icons) { FontAwesome.new.select!(%w(angellist)) }
+
+      it 'must equal icon name' do
+        icon_ids = icons.map { |icon| icon.id }
+        expect(icon_ids).to eq(%w(angellist))
       end
     end
   end
