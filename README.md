@@ -3,6 +3,7 @@
 [![Build Status](https://travis-ci.org/ruedap/alfred2-font-awesome-workflow.svg?branch=master)](https://travis-ci.org/ruedap/alfred2-font-awesome-workflow)
 [![Coverage Status](http://img.shields.io/coveralls/ruedap/alfred2-font-awesome-workflow/master.svg)](https://coveralls.io/r/ruedap/alfred2-font-awesome-workflow)
 [![Code Climate](http://img.shields.io/codeclimate/github/ruedap/alfred2-font-awesome-workflow.svg)](https://codeclimate.com/github/ruedap/alfred2-font-awesome-workflow)
+[![License](http://img.shields.io/badge/license-GPL-brightgreen.svg)](http://www.gnu.org/copyleft/gpl.html)
 
 You can incremental search for [Font Awesome icons](http://fontawesome.io/icons/) and paste it to front most app.
 
