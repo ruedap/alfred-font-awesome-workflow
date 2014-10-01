@@ -159,7 +159,7 @@ describe FontAwesome do
       expect(item_hash[:subtitle]).to eq('Paste class name: fa-apple')
       expect(item_hash[:arg]).to eq('apple|||f179')
       expect(item_hash[:icon][:type]).to eq('default')
-      expect(item_hash[:icon][:name]).to eq('./icons/fa-apple.png')
+      expect(item_hash[:icon][:name]).to eq('./icons/fa-apple.svg')
       expect(item_hash[:valid]).to eq('yes')
     end
   end
@@ -176,7 +176,7 @@ describe FontAwesome do
 <item arg="apple|||f179" uid="">
   <title>apple</title>
   <subtitle>Paste class name: fa-apple</subtitle>
-  <icon>./icons/fa-apple.png</icon>
+  <icon>./icons/fa-apple.svg</icon>
 </item>
       XML
       expect(item_xml).to eq(expectation)
@@ -200,12 +200,12 @@ describe FontAwesome do
         eq('bookmark|||f02e')
       expect(doc.elements['items/item[1]/title'].text).to eq('bookmark')
       expect(doc.elements['items/item[1]/icon'].text).to \
-        eq('./icons/fa-bookmark.png')
+        eq('./icons/fa-bookmark.svg')
       expect(doc.elements['items/item[2]'].attributes['arg']).to \
         eq('bookmark-o|||f097')
       expect(doc.elements['items/item[2]/title'].text).to eq('bookmark-o')
       expect(doc.elements['items/item[2]/icon'].text).to \
-        eq('./icons/fa-bookmark-o.png')
+        eq('./icons/fa-bookmark-o.svg')
     end
 
     it 'must equal $stdout (test for puts)' do
@@ -215,12 +215,12 @@ describe FontAwesome do
 <item arg="bookmark|||f02e" uid="">
   <title>bookmark</title>
   <subtitle>Paste class name: fa-bookmark</subtitle>
-  <icon>./icons/fa-bookmark.png</icon>
+  <icon>./icons/fa-bookmark.svg</icon>
 </item>
 <item arg="bookmark-o|||f097" uid="">
   <title>bookmark-o</title>
   <subtitle>Paste class name: fa-bookmark-o</subtitle>
-  <icon>./icons/fa-bookmark-o.png</icon>
+  <icon>./icons/fa-bookmark-o.svg</icon>
 </item>
 </items>
       XML

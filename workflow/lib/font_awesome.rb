@@ -56,7 +56,7 @@ class FontAwesome
       :title => icon.id,
       :subtitle => "Paste class name: fa-#{icon.id}",
       :arg => "#{icon.id}|||#{icon.unicode}",
-      :icon => { :type => 'default', :name => "./icons/fa-#{icon.id}.png" },
+      :icon => { :type => 'default', :name => "./icons/fa-#{icon.id}.svg" },
       :valid => 'yes',
     }
   end
@@ -80,8 +80,8 @@ class FontAwesome
   private
 
   def glob_icon_filenames
-    Dir.glob(File.expand_path('./icons/fa-*.png')).map do |path|
-      md = /\/fa-(.+)\.png/.match(path)
+    Dir.glob(File.expand_path('./icons/fa-*.svg')).map do |path|
+      md = /\/fa-(.+)\.svg/.match(path)
       md && md[1] ? md[1] : nil
     end.compact.uniq.sort
   end
