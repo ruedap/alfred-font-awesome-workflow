@@ -21,19 +21,19 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>8EEB02DD-09BA-4657-A9D8-ACE675D342BC</string>
-				<key>modifiers</key>
-				<integer>262144</integer>
-				<key>modifiersubtext</key>
-				<string>Paste character reference</string>
-			</dict>
-			<dict>
-				<key>destinationuid</key>
 				<string>2D5AC270-69DB-4E00-BE29-B7F4927E632A</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>8EEB02DD-09BA-4657-A9D8-ACE675D342BC</string>
+				<key>modifiers</key>
+				<integer>262144</integer>
+				<key>modifiersubtext</key>
+				<string>Paste character reference</string>
 			</dict>
 			<dict>
 				<key>destinationuid</key>
@@ -89,7 +89,7 @@
 	<key>createdby</key>
 	<string>@ruedap</string>
 	<key>description</key>
-	<string>Search through Font Awesome Icons</string>
+	<string>Search through Font Awesome icons</string>
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
@@ -102,26 +102,9 @@
 				<key>escaping</key>
 				<integer>0</integer>
 				<key>script</key>
-				<string>/usr/bin/ruby ./encode.rb "{query}"</string>
+				<string>/usr/bin/ruby ./press_enter.rb "{query}"</string>
 				<key>type</key>
 				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>8EEB02DD-09BA-4657-A9D8-ACE675D342BC</string>
-			<key>version</key>
-			<integer>0</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>escaping</key>
-				<integer>4</integer>
-				<key>script</key>
-				<string>print "fa-{query}".chomp.split("|||")[0]</string>
-				<key>type</key>
-				<integer>2</integer>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.script</string>
@@ -178,11 +161,28 @@
 			<key>config</key>
 			<dict>
 				<key>escaping</key>
-				<integer>4</integer>
+				<integer>0</integer>
 				<key>script</key>
-				<string>print "{query}".chomp.split("|||")[1]</string>
+				<string>/usr/bin/ruby ./press_ctrl_enter.rb "{query}"</string>
 				<key>type</key>
-				<integer>2</integer>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>8EEB02DD-09BA-4657-A9D8-ACE675D342BC</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>script</key>
+				<string>/usr/bin/ruby ./press_shift_enter.rb "{query}"</string>
+				<key>type</key>
+				<integer>0</integer>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.script</string>
@@ -195,7 +195,7 @@
 			<key>config</key>
 			<dict>
 				<key>escaping</key>
-				<integer>127</integer>
+				<integer>0</integer>
 				<key>script</key>
 				<string>open {query}</string>
 				<key>type</key>
@@ -212,11 +212,11 @@
 			<key>config</key>
 			<dict>
 				<key>escaping</key>
-				<integer>4</integer>
+				<integer>0</integer>
 				<key>script</key>
-				<string>print "http://fontawesome.io/icon/{query}".chomp.split("|||")[0]</string>
+				<string>/usr/bin/ruby ./press_cmd_enter.rb "{query}"</string>
 				<key>type</key>
-				<integer>2</integer>
+				<integer>0</integer>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.script</string>
@@ -243,7 +243,7 @@
 		<key>2D5AC270-69DB-4E00-BE29-B7F4927E632A</key>
 		<dict>
 			<key>ypos</key>
-			<real>120</real>
+			<real>10</real>
 		</dict>
 		<key>61DCB2DD-8EF7-447E-BED3-63AA4B73235C</key>
 		<dict>
@@ -258,7 +258,7 @@
 		<key>8EEB02DD-09BA-4657-A9D8-ACE675D342BC</key>
 		<dict>
 			<key>ypos</key>
-			<real>10</real>
+			<real>120</real>
 		</dict>
 		<key>CE9A7E05-0277-46D5-941F-E5DEC7D9F6F7</key>
 		<dict>

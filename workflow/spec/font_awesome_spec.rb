@@ -3,6 +3,8 @@
 require File.expand_path('spec_helper', File.dirname(__FILE__))
 
 describe FontAwesome do
+  FREEZE_TIME = Time.now
+
   it 'does not cause an error' do
     actual = require('bundle/bundler/setup')
     expect(actual).to be false
@@ -154,7 +156,7 @@ describe FontAwesome do
     end
 
     it 'must equal hash values' do
-      expect(item_hash[:uid]).to eq('')
+      expect(item_hash[:uid]).to eq('apple')
       expect(item_hash[:title]).to eq('apple')
       expect(item_hash[:subtitle]).to eq('Paste class name: fa-apple')
       expect(item_hash[:arg]).to eq('apple|||f179')
@@ -172,14 +174,16 @@ describe FontAwesome do
     end
 
     it 'returns the XML' do
-      expectation = <<-XML
-<item arg="apple|||f179" uid="">
-  <title>apple</title>
-  <subtitle>Paste class name: fa-apple</subtitle>
-  <icon>./icons/fa-apple.png</icon>
+      Timecop.freeze(FREEZE_TIME) do
+        expectation = <<-XML
+<item arg="apple|||f179" uid="#{Time.now.to_i}-apple">
+<title>apple</title>
+<subtitle>Paste class name: fa-apple</subtitle>
+<icon>./icons/fa-apple.png</icon>
 </item>
-      XML
-      expect(item_xml).to eq(expectation)
+        XML
+        expect(item_xml).to eq(expectation)
+      end
     end
   end
 
@@ -209,24 +213,14 @@ describe FontAwesome do
     end
 
     it 'must equal $stdout (test for puts)' do
-      expectation = <<-XML
-<?xml version='1.0'?>
-<items>
-<item arg="bookmark|||f02e" uid="">
-  <title>bookmark</title>
-  <subtitle>Paste class name: fa-bookmark</subtitle>
-  <icon>./icons/fa-bookmark.png</icon>
-</item>
-<item arg="bookmark-o|||f097" uid="">
-  <title>bookmark-o</title>
-  <subtitle>Paste class name: fa-bookmark-o</subtitle>
-  <icon>./icons/fa-bookmark-o.png</icon>
-</item>
-</items>
-      XML
+      Timecop.freeze(FREEZE_TIME) do
+        expectation = <<-XML
+<?xml version='1.0'?><items><item arg="bookmark|||f02e" uid="#{Time.now.to_i}-bookmark"><title>bookmark</title><subtitle>Paste class name: fa-bookmark</subtitle><icon>./icons/fa-bookmark.png</icon></item><item arg="bookmark-o|||f097" uid="#{Time.now.to_i}-bookmark-o"><title>bookmark-o</title><subtitle>Paste class name: fa-bookmark-o</subtitle><icon>./icons/fa-bookmark-o.png</icon></item></items>
+        XML
 
-      actual = capture(:stdout) { FontAwesome.new(['bookmark']).to_alfred }
-      expect(actual).to eq(expectation)
+        actual = capture(:stdout) { FontAwesome.new(['bookmark']).to_alfred }
+        expect(actual).to eq(expectation)
+      end
     end
   end
 
