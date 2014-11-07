@@ -43,23 +43,23 @@ task 'bundle:update' => [:chdir] do
   end
 end
 
-desc 'Install to Alfred'
-task :install => [:config] do
+desc 'Link to Alfred'
+task :link => [:config] do
   ln_sf File.expand_path($config['path']), File.join(workflow_home, $config['bundle_id'])
 end
 
-desc 'Uninstall from Alfred'
-task :uninstall => [:config] do
+desc 'Unlink from Alfred'
+task :unlink => [:config] do
   rm File.join(workflow_home, $config['bundle_id'])
 end
 
-desc 'Install to Dropbox'
-task 'install:dropbox' => [:config] do
+desc 'Link to Dropbox'
+task 'dropbox:link' => [:config] do
   ln_sf File.expand_path($config['path']), File.join($config['workflow_dropbox_home'], $config['bundle_id'])
 end
 
-desc 'Uninstall from Dropbox'
-task 'uninstall:dropbox' => [:config] do
+desc 'Unlink from Dropbox'
+task 'dropbox:unlink' => [:config] do
   rm File.join($config['workflow_dropbox_home'], $config['bundle_id'])
 end
 
