@@ -12,8 +12,8 @@ describe FontAwesome do
 
   describe '.argv' do
     it "returns the OpenStruct object for ARGV" do
-      ARGV = ['adjust|||f042']
-      actual = described_class.argv(ARGV)
+      argv = ['adjust|||f042']
+      actual = described_class.argv(argv)
       expect(actual.icon_id).to eq('adjust')
       expect(actual.icon_unicode).to eq('f042')
     end
