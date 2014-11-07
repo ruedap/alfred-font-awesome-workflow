@@ -1,13 +1,20 @@
 # encoding: utf-8
 
-require 'yaml'
-require 'ostruct'
+require 'fileutils'
 require 'htmlentities'
+require 'ostruct'
+require 'yaml'
 
 # FontAwesome class
 class FontAwesome
   attr_reader :icons
 
+  VERSION          = '4.2.0.0'
+  BUNDLE_ID        = 'com.ruedap.font-awesome'
+  NONVOLATILE_DIR  = File.expand_path(BUNDLE_ID, '~/Library/Application Support/Alfred 2/Workflow Data/')
+  CONFIG_FILE_PATH = File.join(NONVOLATILE_DIR, 'config.yml')
+
+  FileUtils.mkdir_p(NONVOLATILE_DIR)
   ICONS = YAML.load_file(File.expand_path('./icons.yml'))['icons']
 
   # FontAwesome::Icon class
@@ -49,23 +56,76 @@ class FontAwesome
     HTMLEntities.new.decode("&#x#{icon_unicode};")
   end
 
+  def self.glob_icons
+    filenames = Dir.glob(File.expand_path('./icons/fa-*.png')).map do |path|
+      md = /\/fa-(.+)\.png/.match(path)
+      md && md[1] ? md[1] : nil
+    end.compact.uniq.sort
+
+    filenames.map { |name| Icon.new(name) }
+  end
+
+  def self.load_config
+    unless File.exist? CONFIG_FILE_PATH
+      open(CONFIG_FILE_PATH, 'w') { |f| YAML.dump({ 'version' => VERSION }, f) }
+    end
+
+    YAML.load_file(CONFIG_FILE_PATH)
+  end
+
+  def self.save_config_of_recent_icons(icon_id)
+    config_yaml = load_config
+
+    if config_yaml['recent_icons'].instance_of?(Array)
+      config_yaml['recent_icons'].delete(icon_id)
+      config_yaml['recent_icons'].unshift(icon_id)
+    else
+      config_yaml['recent_icons'] = [icon_id]
+    end
+
+    dump_config(config_yaml)
+  end
+
   def self.url(icon_id)
     "http://fontawesome.io/icon/#{icon_id}/"
   end
 
+  def self.check_version_number(config_yaml)
+    config_yaml['version'] = VERSION unless config_yaml['version'] == VERSION
+    config_yaml
+  end
+  private_class_method :check_version_number
+
+  def self.dump_config(config_yaml)
+    check_version_number(config_yaml)
+    open(CONFIG_FILE_PATH, 'w') { |f| YAML.dump(config_yaml, f) }
+  end
+  private_class_method :dump_config
+
   def initialize(queries = [])
-    icon_filenames = glob_icon_filenames
-    @icons = icon_filenames.map { |name| Icon.new(name) }
-    select!(queries)
+    icons = FontAwesome.glob_icons
+    @selected_icons = select!(queries, icons)
   end
 
-  def select!(queries, icons = @icons)
+  def select!(queries, icons)
     queries.each do |q|
       # use reject! for ruby 1.8 compatible
       icons.reject! { |icon| icon.id.index(q.downcase) ? false : true }
     end
 
-    icons
+    sort_by_recent_icons(icons)
+  end
+
+  def sort_by_recent_icons(icons)
+    recent_icons = FontAwesome.load_config['recent_icons']
+    return icons unless recent_icons.instance_of?(Array)
+
+    recent_icons.reverse.each do |icon_id|
+      found_icon = icons.find { |icon| icon.id == icon_id }
+      icons.unshift(icons.delete(found_icon)) if found_icon.instance_of?(FontAwesome::Icon)
+    end
+
+    icons.compact
   end
 
   def item_hash(icon)
@@ -90,18 +150,9 @@ class FontAwesome
   end
 
   def to_alfred
-    item_xml = @icons.map { |icon| item_xml(item_hash(icon)) }.join
+    item_xml = @selected_icons.map { |icon| item_xml(item_hash(icon)) }.join
     item_xml.gsub!(/(\r\n|\r|\n)/, '')
     puts xml = "<?xml version='1.0'?><items>#{item_xml}</items>"
     xml
-  end
-
-  private
-
-  def glob_icon_filenames
-    Dir.glob(File.expand_path('./icons/fa-*.png')).map do |path|
-      md = /\/fa-(.+)\.png/.match(path)
-      md && md[1] ? md[1] : nil
-    end.compact.uniq.sort
   end
 end

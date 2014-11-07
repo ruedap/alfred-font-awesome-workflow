@@ -5,6 +5,8 @@ require File.expand_path('spec_helper', File.dirname(__FILE__))
 describe FontAwesome do
   FREEZE_TIME = Time.now
 
+  let(:glob_icons) { described_class.glob_icons }
+
   it 'does not cause an error' do
     actual = require('bundle/bundler/setup')
     expect(actual).to be false
@@ -41,6 +43,43 @@ describe FontAwesome do
     end
   end
 
+  describe '.glob_icons' do
+    it 'returns 549' do
+      expect(glob_icons.size).to eq(549)
+    end
+
+    it 'returns "adjust"' do
+      allow(described_class).to receive(:load_config).and_return({})
+      expect(glob_icons.first.id).to eq('adjust')
+    end
+
+    it 'returns "youtube-square"' do
+      expect(glob_icons.last.id).to eq('youtube-square')
+    end
+
+    it 'includes these icons' do
+      icon_ids = glob_icons.map { |icon| icon.id }
+      Fixtures.icon_ids.each { |icon| expect(icon_ids).to be_include(icon) }
+    end
+
+    it 'includes these icons (reverse)' do
+      glob_icons.each { |icon| expect(Fixtures.icon_ids).to be_include(icon.id) }
+    end
+
+    it 'does not include these icons' do
+      expectation = %w(icon awesome)
+      expectation.each { |icon| expect(glob_icons).not_to be_include(icon) }
+    end
+  end
+
+  describe '.load_config' do
+    it 'returns config yaml'
+  end
+
+  describe '.save_config_of_recent_icons' do
+    it 'writes config yaml of recent icons list'
+  end
+
   describe '.url' do
     it 'returns the Font Awesome URL' do
       actual = described_class.url('adjust')
@@ -48,39 +87,9 @@ describe FontAwesome do
     end
   end
 
-  describe '#icons' do
-    let(:icons) { described_class.new.icons }
-
-    it 'returns 549' do
-      expect(icons.size).to eq(549)
-    end
-
-    it 'returns "adjust"' do
-      expect(icons.first.id).to eq('adjust')
-    end
-
-    it 'returns "youtube-square"' do
-      expect(icons.last.id).to eq('youtube-square')
-    end
-
-    it 'includes these icons' do
-      icon_ids = icons.map { |icon| icon.id }
-      Fixtures.icon_ids.each { |icon| expect(icon_ids).to be_include(icon) }
-    end
-
-    it 'includes these icons (reverse)' do
-      icons.each { |icon| expect(Fixtures.icon_ids).to be_include(icon.id) }
-    end
-
-    it 'does not include these icons' do
-      expectation = %w(icon awesome)
-      expectation.each { |icon| expect(icons).not_to be_include(icon) }
-    end
-  end
-
   describe '#select!' do
     context 'with "hdd"' do
-      let(:icons) { described_class.new.select!(%w(hdd)) }
+      let(:icons) { described_class.new.select!(%w(hdd), glob_icons) }
 
       it 'returns 1' do
         expect(icons.size).to eq(1)
@@ -93,7 +102,7 @@ describe FontAwesome do
     end
 
     context 'with "left arr"' do
-      let(:icons) { described_class.new.select!(%w(left arr)) }
+      let(:icons) { described_class.new.select!(%w(left arr), glob_icons) }
 
       it 'returns 4' do
         expect(icons.size).to eq(4)
@@ -111,7 +120,7 @@ describe FontAwesome do
     end
 
     context 'with "arr left" (reverse)' do
-      let(:icons) { described_class.new.select!(%w(arr left)) }
+      let(:icons) { described_class.new.select!(%w(arr left), glob_icons) }
 
       it 'returns 4' do
         expect(icons.size).to eq(4)
@@ -129,7 +138,7 @@ describe FontAwesome do
     end
 
     context 'with "icons" (does not match)' do
-      let(:icons) { described_class.new.select!(%w(icons)) }
+      let(:icons) { described_class.new.select!(%w(icons), glob_icons ) }
 
       it 'returns an empty array' do
         expect(icons).to eq([])
@@ -137,20 +146,21 @@ describe FontAwesome do
     end
 
     context 'with unknown arguments' do
-      let(:icons) { described_class.new.select!([]) }
+      let(:icons) { described_class.new.select!([], glob_icons) }
 
       it 'returns 549' do
         expect(icons.size).to eq(549)
       end
 
       it 'must equal icon names' do
+        allow(described_class).to receive(:load_config).and_return({})
         icon_ids = icons.map { |icon| icon.id }
         expect(icon_ids).to eq(Fixtures.icon_ids)
       end
     end
 
     context 'with "taxi"' do  # for ver.4.1.0
-      let(:icons) { described_class.new.select!(%w(taxi)) }
+      let(:icons) { described_class.new.select!(%w(taxi), glob_icons) }
 
       it 'must equal icon name' do
         icon_ids = icons.map { |icon| icon.id }
@@ -159,13 +169,17 @@ describe FontAwesome do
     end
 
     context 'with "angellist"' do  # for ver.4.2.0
-      let(:icons) { described_class.new.select!(%w(angellist)) }
+      let(:icons) { described_class.new.select!(%w(angellist), glob_icons) }
 
       it 'must equal icon name' do
         icon_ids = icons.map { |icon| icon.id }
         expect(icon_ids).to eq(%w(angellist))
       end
     end
+  end
+
+  describe '#sort_by_recent_icons' do
+    it 'returns sorted icons'
   end
 
   describe '#item_hash' do
