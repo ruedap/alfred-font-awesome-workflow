@@ -11,7 +11,13 @@ describe FontAwesome do
   end
 
   describe '.argv' do
-    it 'returns the ARGV object'
+    it "returns the OpenStruct object for ARGV" do
+      ARGV = ['adjust|||f042']
+      actual = described_class.argv(ARGV)
+
+      expect(actual.icon_id).to eq('adjust')
+      expect(actual.icon_unicode).to eq('f042')
+    end
   end
 
   describe '.css_class_name' do
