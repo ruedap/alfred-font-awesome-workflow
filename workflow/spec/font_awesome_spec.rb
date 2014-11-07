@@ -213,9 +213,10 @@ describe FontAwesome do
   describe '#to_alfred' do
     let(:doc) do
       queries = ['bookmark']
-      xml = described_class.new(queries).to_alfred
+      fa = described_class.new(queries)
+      allow(fa).to receive(:puts) # Mute puts
+      xml = fa.to_alfred
       REXML::Document.new(xml)
-      # TODO: mute puts
     end
 
     it 'returns 2' do
