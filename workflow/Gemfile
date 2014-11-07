@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'plist', '3.1.0'
-gem 'htmlentities', '4.3.1'
+gem 'htmlentities', '4.3.1'  # ruby 1.8 support version
 
 group :test do
   gem 'rspec', '3.1.0'
