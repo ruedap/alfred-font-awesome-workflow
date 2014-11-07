@@ -45,8 +45,8 @@ class FontAwesome
     "fa-#{icon_id}"
   end
 
-  def self.character_reference(character_code)
-    HTMLEntities.new.decode("&#x#{character_code};")
+  def self.character_reference(icon_unicode)
+    HTMLEntities.new.decode("&#x#{icon_unicode};")
   end
 
   def self.url(icon_id)
