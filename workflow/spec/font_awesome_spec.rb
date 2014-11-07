@@ -3,28 +3,53 @@
 require File.expand_path('spec_helper', File.dirname(__FILE__))
 
 describe FontAwesome do
+  FREEZE_TIME = Time.now
+
   it 'does not cause an error' do
     actual = require('bundle/bundler/setup')
     expect(actual).to be false
   end
 
-  describe '.to_character_reference' do
+  describe '.argv' do
+    it "returns the OpenStruct object for ARGV" do
+      ARGV = ['adjust|||f042']
+      actual = described_class.argv(ARGV)
+      expect(actual.icon_id).to eq('adjust')
+      expect(actual.icon_unicode).to eq('f042')
+    end
+  end
+
+  describe '.css_class_name' do
+    it 'returns the CSS class name' do
+      actual = described_class.css_class_name('adjust')
+      expect(actual).to eq('fa-adjust')
+    end
+  end
+
+  describe '.character_reference' do
     it 'returns the character reference' do
-      actual = FontAwesome.to_character_reference('f000')
+      actual = described_class.character_reference('f000')
       expect(actual).to eq('')
 
-      actual = FontAwesome.to_character_reference('f17b')
+      actual = described_class.character_reference('f17b')
       expect(actual).to eq('')
     end
 
     it 'does not returns the character reference' do
-      actual = FontAwesome.to_character_reference('f001')
+      actual = described_class.character_reference('f001')
       expect(actual).not_to eq('')
     end
   end
 
+  describe '.url' do
+    it 'returns the Font Awesome URL' do
+      actual = described_class.url('adjust')
+      expect(actual).to eq('http://fontawesome.io/icon/adjust/')
+    end
+  end
+
   describe '#icons' do
-    let(:icons) { FontAwesome.new.icons }
+    let(:icons) { described_class.new.icons }
 
     it 'returns 549' do
       expect(icons.size).to eq(549)
@@ -55,7 +80,7 @@ describe FontAwesome do
 
   describe '#select!' do
     context 'with "hdd"' do
-      let(:icons) { FontAwesome.new.select!(%w(hdd)) }
+      let(:icons) { described_class.new.select!(%w(hdd)) }
 
       it 'returns 1' do
         expect(icons.size).to eq(1)
@@ -68,7 +93,7 @@ describe FontAwesome do
     end
 
     context 'with "left arr"' do
-      let(:icons) { FontAwesome.new.select!(%w(left arr)) }
+      let(:icons) { described_class.new.select!(%w(left arr)) }
 
       it 'returns 4' do
         expect(icons.size).to eq(4)
@@ -86,7 +111,7 @@ describe FontAwesome do
     end
 
     context 'with "arr left" (reverse)' do
-      let(:icons) { FontAwesome.new.select!(%w(arr left)) }
+      let(:icons) { described_class.new.select!(%w(arr left)) }
 
       it 'returns 4' do
         expect(icons.size).to eq(4)
@@ -104,7 +129,7 @@ describe FontAwesome do
     end
 
     context 'with "icons" (does not match)' do
-      let(:icons) { FontAwesome.new.select!(%w(icons)) }
+      let(:icons) { described_class.new.select!(%w(icons)) }
 
       it 'returns an empty array' do
         expect(icons).to eq([])
@@ -112,7 +137,7 @@ describe FontAwesome do
     end
 
     context 'with unknown arguments' do
-      let(:icons) { FontAwesome.new.select!([]) }
+      let(:icons) { described_class.new.select!([]) }
 
       it 'returns 549' do
         expect(icons.size).to eq(549)
@@ -125,7 +150,7 @@ describe FontAwesome do
     end
 
     context 'with "taxi"' do  # for ver.4.1.0
-      let(:icons) { FontAwesome.new.select!(%w(taxi)) }
+      let(:icons) { described_class.new.select!(%w(taxi)) }
 
       it 'must equal icon name' do
         icon_ids = icons.map { |icon| icon.id }
@@ -134,7 +159,7 @@ describe FontAwesome do
     end
 
     context 'with "angellist"' do  # for ver.4.2.0
-      let(:icons) { FontAwesome.new.select!(%w(angellist)) }
+      let(:icons) { described_class.new.select!(%w(angellist)) }
 
       it 'must equal icon name' do
         icon_ids = icons.map { |icon| icon.id }
@@ -145,8 +170,8 @@ describe FontAwesome do
 
   describe '#item_hash' do
     let(:item_hash) do
-      icon = FontAwesome::Icon.new('apple')
-      FontAwesome.new.item_hash(icon)
+      icon = described_class::Icon.new('apple')
+      described_class.new.item_hash(icon)
     end
 
     it 'returns 6' do
@@ -154,7 +179,7 @@ describe FontAwesome do
     end
 
     it 'must equal hash values' do
-      expect(item_hash[:uid]).to eq('')
+      expect(item_hash[:uid]).to eq('apple')
       expect(item_hash[:title]).to eq('apple')
       expect(item_hash[:subtitle]).to eq('Paste class name: fa-apple')
       expect(item_hash[:arg]).to eq('apple|||f179')
@@ -166,27 +191,29 @@ describe FontAwesome do
 
   describe '#item_xml' do
     let(:item_xml) do
-      icon = FontAwesome::Icon.new('apple')
-      item_hash = FontAwesome.new.item_hash(icon)
-      FontAwesome.new.item_xml(item_hash)
+      icon = described_class::Icon.new('apple')
+      item_hash = described_class.new.item_hash(icon)
+      described_class.new.item_xml(item_hash)
     end
 
     it 'returns the XML' do
-      expectation = <<-XML
-<item arg="apple|||f179" uid="">
-  <title>apple</title>
-  <subtitle>Paste class name: fa-apple</subtitle>
-  <icon>./icons/fa-apple.png</icon>
+      Timecop.freeze(FREEZE_TIME) do
+        expectation = <<-XML
+<item arg="apple|||f179" uid="#{Time.now.to_i}-apple">
+<title>apple</title>
+<subtitle>Paste class name: fa-apple</subtitle>
+<icon>./icons/fa-apple.png</icon>
 </item>
-      XML
-      expect(item_xml).to eq(expectation)
+        XML
+        expect(item_xml).to eq(expectation)
+      end
     end
   end
 
   describe '#to_alfred' do
     let(:doc) do
       queries = ['bookmark']
-      xml = FontAwesome.new(queries).to_alfred
+      xml = described_class.new(queries).to_alfred
       REXML::Document.new(xml)
       # TODO: mute puts
     end
@@ -209,31 +236,21 @@ describe FontAwesome do
     end
 
     it 'must equal $stdout (test for puts)' do
-      expectation = <<-XML
-<?xml version='1.0'?>
-<items>
-<item arg="bookmark|||f02e" uid="">
-  <title>bookmark</title>
-  <subtitle>Paste class name: fa-bookmark</subtitle>
-  <icon>./icons/fa-bookmark.png</icon>
-</item>
-<item arg="bookmark-o|||f097" uid="">
-  <title>bookmark-o</title>
-  <subtitle>Paste class name: fa-bookmark-o</subtitle>
-  <icon>./icons/fa-bookmark-o.png</icon>
-</item>
-</items>
-      XML
+      Timecop.freeze(FREEZE_TIME) do
+        expectation = <<-XML
+<?xml version='1.0'?><items><item arg="bookmark|||f02e" uid="#{Time.now.to_i}-bookmark"><title>bookmark</title><subtitle>Paste class name: fa-bookmark</subtitle><icon>./icons/fa-bookmark.png</icon></item><item arg="bookmark-o|||f097" uid="#{Time.now.to_i}-bookmark-o"><title>bookmark-o</title><subtitle>Paste class name: fa-bookmark-o</subtitle><icon>./icons/fa-bookmark-o.png</icon></item></items>
+        XML
 
-      actual = capture(:stdout) { FontAwesome.new(['bookmark']).to_alfred }
-      expect(actual).to eq(expectation)
+        actual = capture(:stdout) { described_class.new(['bookmark']).to_alfred }
+        expect(actual).to eq(expectation)
+      end
     end
   end
 
   describe '::Icon' do
     describe '#initialize' do
       context 'star-half-o (#detect_unicode_from_id)' do
-        let(:icon) { FontAwesome::Icon.new('star-half-o') }
+        let(:icon) { described_class::Icon.new('star-half-o') }
 
         it 'returns "star-half-o"' do
           expect(icon.id).to eq('star-half-o')
@@ -245,7 +262,7 @@ describe FontAwesome do
       end
 
       context 'star-half-empty (#detect_unicode_from_aliases)' do
-        let(:icon) { FontAwesome::Icon.new('star-half-empty') }
+        let(:icon) { described_class::Icon.new('star-half-empty') }
 
         it 'returns "star-half-o"' do
           expect(icon.id).to eq('star-half-empty')
@@ -258,7 +275,7 @@ describe FontAwesome do
 
       it 'includes these icons' do
         Fixtures.icon_ids.each do |id|
-          icon = FontAwesome::Icon.new(id)
+          icon = described_class::Icon.new(id)
           expect(icon.id).to eq(id)
           expect(icon.unicode).not_to be_nil
         end

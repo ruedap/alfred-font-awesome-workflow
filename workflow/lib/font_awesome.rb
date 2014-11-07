@@ -1,6 +1,7 @@
 # encoding: utf-8
 
 require 'yaml'
+require 'ostruct'
 require 'htmlentities'
 
 # FontAwesome class
@@ -32,8 +33,24 @@ class FontAwesome
     end
   end
 
-  def self.to_character_reference(character_code)
-    HTMLEntities.new.decode("&#x#{character_code};")
+  def self.argv(argv)
+    split_argv = argv[0].chomp.split('|||')
+    os = OpenStruct.new
+    os.icon_id = split_argv[0]
+    os.icon_unicode = split_argv[1]
+    os
+  end
+
+  def self.css_class_name(icon_id)
+    "fa-#{icon_id}"
+  end
+
+  def self.character_reference(icon_unicode)
+    HTMLEntities.new.decode("&#x#{icon_unicode};")
+  end
+
+  def self.url(icon_id)
+    "http://fontawesome.io/icon/#{icon_id}/"
   end
 
   def initialize(queries = [])
@@ -47,12 +64,13 @@ class FontAwesome
       # use reject! for ruby 1.8 compatible
       icons.reject! { |icon| icon.id.index(q.downcase) ? false : true }
     end
+
     icons
   end
 
   def item_hash(icon)
     {
-      :uid => '',
+      :uid => icon.id,
       :title => icon.id,
       :subtitle => "Paste class name: fa-#{icon.id}",
       :arg => "#{icon.id}|||#{icon.unicode}",
@@ -63,17 +81,18 @@ class FontAwesome
 
   def item_xml(options = {})
     <<-XML
-<item arg="#{options[:arg]}" uid="#{options[:uid]}">
-  <title>#{options[:title]}</title>
-  <subtitle>#{options[:subtitle]}</subtitle>
-  <icon>#{options[:icon][:name]}</icon>
+<item arg="#{options[:arg]}" uid="#{Time.new.to_i}-#{options[:uid]}">
+<title>#{options[:title]}</title>
+<subtitle>#{options[:subtitle]}</subtitle>
+<icon>#{options[:icon][:name]}</icon>
 </item>
     XML
   end
 
   def to_alfred
     item_xml = @icons.map { |icon| item_xml(item_hash(icon)) }.join
-    puts xml = "<?xml version='1.0'?>\n<items>\n#{item_xml}</items>"
+    item_xml.gsub!(/(\r\n|\r|\n)/, '')
+    puts xml = "<?xml version='1.0'?><items>#{item_xml}</items>"
     xml
   end
 
