@@ -20,7 +20,7 @@ task 'bundle:install' => [:chdir] do
 end
 
 desc 'Install gems for test'
-task 'bundle:install:test' => [:clean, :chdir] do
+task 'bundle:install:test' => [:chdir] do
   sh %Q{bundle install --standalone --clean} do |ok, res|
     puts "fail to install gems (status = #{res.exitstatus})" unless ok
   end
