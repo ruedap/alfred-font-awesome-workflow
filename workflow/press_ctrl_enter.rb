@@ -8,4 +8,4 @@ require 'bundle/bundler/setup'
 require 'lib/font_awesome'
 
 argv = FontAwesome.argv(ARGV)
-print FontAwesome.to_character_reference(argv.icon_unicode)
+print FontAwesome.character_reference(argv.icon_unicode)

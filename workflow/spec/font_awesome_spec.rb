@@ -26,17 +26,17 @@ describe FontAwesome do
     end
   end
 
-  describe '.to_character_reference' do
+  describe '.character_reference' do
     it 'returns the character reference' do
-      actual = described_class.to_character_reference('f000')
+      actual = described_class.character_reference('f000')
       expect(actual).to eq('')
 
-      actual = described_class.to_character_reference('f17b')
+      actual = described_class.character_reference('f17b')
       expect(actual).to eq('')
     end
 
     it 'does not returns the character reference' do
-      actual = described_class.to_character_reference('f001')
+      actual = described_class.character_reference('f001')
       expect(actual).not_to eq('')
     end
   end
