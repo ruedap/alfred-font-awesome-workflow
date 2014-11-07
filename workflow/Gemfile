@@ -6,6 +6,6 @@ gem 'htmlentities', '4.3.1'  # ruby 1.8 support version
 group :test do
   gem 'rspec', '3.1.0'
   gem 'rake', '10.3.2'
-  gem 'coveralls', '0.7.1', :require => false
+  gem 'coveralls', '0.7.0', :require => false
   gem 'timecop', '0.6.1'  # ruby 1.8 support version
 end
