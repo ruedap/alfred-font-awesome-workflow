@@ -42,7 +42,10 @@ describe FontAwesome do
   end
 
   describe '.url' do
-    it 'returns the Font Awesome URL'
+    it 'returns the Font Awesome URL' do
+      actual = described_class.url('adjust')
+      expect(actual).to eq('http://fontawesome.io/icon/adjust/')
+    end
   end
 
   describe '#icons' do
