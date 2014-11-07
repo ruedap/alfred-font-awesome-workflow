@@ -4,17 +4,7 @@ rvm:
   - 2.0.0
   - 1.9.3
   - 1.8.7
-# Broken bundler on Travis CI - https://github.com/bundler/bundler/issues/2784
-before_install:
-  - gem update bundler
-  - bundle --version
-  - gem update --system 2.1.11
-  - gem --version
 script:
   - cd workflow
   - bundle install --standalone --clean
   - bundle exec rake
-notifications:
-  hipchat:
-    rooms:
-      secure: FctTkW5gGqZjUdEsn6yGpcdDvSKehq5nAwa+QtxYGvXoA5CJpYU7v/Z5bqWE5wEvQEdj3OQe/mbjtQzshgREYkysUfwh8LaPzsW6ot13YWQwWdomV8hwPeZU2yIlIqKPv1IcGK7sFmv+Jzyle9ntklXdvRwrdgzFM9n0+4g+eYs=

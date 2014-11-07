@@ -12,8 +12,8 @@ describe FontAwesome do
 
   describe '.argv' do
     it "returns the OpenStruct object for ARGV" do
-      ARGV = ['adjust|||f042']
-      actual = described_class.argv(ARGV)
+      argv = ['adjust|||f042']
+      actual = described_class.argv(argv)
       expect(actual.icon_id).to eq('adjust')
       expect(actual.icon_unicode).to eq('f042')
     end
@@ -213,9 +213,10 @@ describe FontAwesome do
   describe '#to_alfred' do
     let(:doc) do
       queries = ['bookmark']
-      xml = described_class.new(queries).to_alfred
+      fa = described_class.new(queries)
+      allow(fa).to receive(:puts) # Mute puts
+      xml = fa.to_alfred
       REXML::Document.new(xml)
-      # TODO: mute puts
     end
 
     it 'returns 2' do

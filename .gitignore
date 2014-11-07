@@ -1,6 +1,6 @@
 .DS_Store
-.ruby-version
+.sass-cache
 /workflow/.bundle
+/workflow/.ruby-version
 /workflow/bundle
 /workflow/coverage
-.sass-cache
