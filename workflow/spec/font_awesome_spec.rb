@@ -10,6 +10,14 @@ describe FontAwesome do
     expect(actual).to be false
   end
 
+  describe '.argv' do
+    it 'returns the ARGV object'
+  end
+
+  describe '.css_class_name' do
+    it 'returns the css class name'
+  end
+
   describe '.to_character_reference' do
     it 'returns the character reference' do
       actual = FontAwesome.to_character_reference('f000')
@@ -23,6 +31,10 @@ describe FontAwesome do
       actual = FontAwesome.to_character_reference('f001')
       expect(actual).not_to eq('')
     end
+  end
+
+  describe '.url' do
+    it 'returns the Font Awesome URL'
   end
 
   describe '#icons' do
