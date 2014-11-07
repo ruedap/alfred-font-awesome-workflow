@@ -53,6 +53,13 @@ task :clean do
   rmtree File.join($config['path'], 'coverage')
 end
 
+desc 'Clean up for release'
+task 'clean:release' do
+  ruby_version_path = File.expand_path('./.ruby-version')
+  rm ruby_version_path if File.exist? ruby_version_path
+  rmtree File.join($config['path'], 'coverage')
+end
+
 desc 'Run rspec'
 task :spec => [:chdir] do
   sh %Q{bundle exec rake spec} do |ok, res|
