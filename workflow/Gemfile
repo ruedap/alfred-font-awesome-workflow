@@ -4,7 +4,7 @@ gem 'plist', '3.1.0'
 gem 'htmlentities', '4.3.1'
 
 group :test do
-  gem 'rspec', '3.0.0'
+  gem 'rspec', '3.1.0'
   gem 'rake', '10.1.0'
   gem 'coveralls', '0.7.0', :require => false
   gem 'timecop', '0.6.1'  # ruby 1.8 support version
