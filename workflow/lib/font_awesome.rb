@@ -7,8 +7,6 @@ require 'yaml'
 
 # FontAwesome class
 class FontAwesome
-  attr_reader :icons
-
   VERSION          = '4.2.0.0'
   BUNDLE_ID        = 'com.ruedap.font-awesome'
   NONVOLATILE_DIR  = File.expand_path(BUNDLE_ID, '~/Library/Application Support/Alfred 2/Workflow Data/')
