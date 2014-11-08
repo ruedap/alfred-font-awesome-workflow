@@ -115,6 +115,7 @@ describe FontAwesome do
 
         stub_const("#{described_class}::VERSION", '1.0.0.0')
         expect(described_class.load_config['version']).to eq('1.0.0.0')
+
         stub_const("#{described_class}::VERSION", '2.0.0.0')
         expect(described_class.load_config['version']).to eq('1.0.0.0')
       end
@@ -174,6 +175,20 @@ describe FontAwesome do
 
         actual = described_class.save_config_of_recent_icons('apple')
         expect(actual).to be_nil
+      end
+    end
+
+    context 'when bump version number' do
+      it 'contains new version number' do
+        FileUtils.rm(config_file_path) if File.exist?(config_file_path)
+
+        stub_const("#{described_class}::VERSION", '1.0.0.0')
+        described_class.save_config_of_recent_icons('apple')
+        expect(described_class.load_config['version']).to eq('1.0.0.0')
+
+        stub_const("#{described_class}::VERSION", '2.0.0.0')
+        described_class.save_config_of_recent_icons('apple')
+        expect(described_class.load_config['version']).to eq('2.0.0.0')
       end
     end
   end
