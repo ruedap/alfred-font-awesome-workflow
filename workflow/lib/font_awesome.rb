@@ -7,7 +7,7 @@ require 'yaml'
 
 # FontAwesome class
 class FontAwesome
-  VERSION          = '4.2.0.0'
+  VERSION          = '4.2.0.1'
   BUNDLE_ID        = 'com.ruedap.font-awesome'
   NONVOLATILE_DIR  = File.expand_path(BUNDLE_ID, '~/Library/Application Support/Alfred 2/Workflow Data/')
   CONFIG_FILE_PATH = File.join(NONVOLATILE_DIR, 'config.yml')
