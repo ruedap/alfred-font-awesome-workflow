@@ -71,6 +71,9 @@ class FontAwesome
     end
 
     YAML.load_file(CONFIG_FILE_PATH)
+  rescue StandardError
+    FileUtils.rm(CONFIG_FILE_PATH, :force => true)
+    nil
   end
 
   def self.save_config_of_recent_icons(icon_id)
@@ -97,6 +100,7 @@ class FontAwesome
   private_class_method :check_version_number
 
   def self.dump_config(config_yaml)
+    return nil unless config_yaml.instance_of?(Hash)
     check_version_number(config_yaml)
     open(CONFIG_FILE_PATH, 'w') { |f| YAML.dump(config_yaml, f) }
   end

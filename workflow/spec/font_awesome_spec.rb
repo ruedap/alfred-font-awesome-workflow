@@ -5,7 +5,9 @@ require File.expand_path('spec_helper', File.dirname(__FILE__))
 describe FontAwesome do
   FREEZE_TIME = Time.now
 
+  let(:config_file_path) { described_class::CONFIG_FILE_PATH }
   let(:glob_icons) { described_class.glob_icons }
+  let(:version) { described_class::VERSION }
 
   it 'does not cause an error' do
     actual = require('bundle/bundler/setup')
@@ -13,7 +15,7 @@ describe FontAwesome do
   end
 
   describe '.argv' do
-    it "returns the OpenStruct object for ARGV" do
+    it 'returns the OpenStruct object for ARGV' do
       argv = ['adjust|||f042']
       actual = described_class.argv(argv)
       expect(actual.icon_id).to eq('adjust')
@@ -73,7 +75,41 @@ describe FontAwesome do
   end
 
   describe '.load_config' do
-    it 'returns config yaml'
+    context 'when does not exist config.yml' do
+      it 'returns config.yaml and contains version number' do
+        FileUtils.rm(config_file_path) if File.exist?(config_file_path)
+
+        expect(File.exist?(config_file_path)).to be_falsy
+        expect(described_class.load_config['version']).to eq(version)
+        expect(File.exist?(config_file_path)).to be_truthy
+      end
+    end
+
+    context 'when exists config.yml' do
+      it 'returns config.yaml and contains version number' do
+        unless File.exist?(config_file_path)
+          open(config_file_path, 'w') { |f| YAML.dump({ 'version' => version }, f) }
+        end
+
+        expect(File.exist?(config_file_path)).to be_truthy
+        expect(described_class.load_config['version']).to eq(version)
+        expect(File.exist?(config_file_path)).to be_truthy
+      end
+    end
+
+    context 'when raises an error' do
+      before do
+        allow(YAML).to receive(:load_file).and_raise
+      end
+
+      it 'returns nil' do
+        expect(described_class.load_config).to be_nil
+      end
+
+      it 'does not exist config.yml' do
+        expect(File.exist?(config_file_path)).to be_falsy
+      end
+    end
   end
 
   describe '.save_config_of_recent_icons' do
