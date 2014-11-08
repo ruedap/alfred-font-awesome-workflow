@@ -200,6 +200,14 @@ describe FontAwesome do
     end
   end
 
+  describe '#initialize' do
+    it 'assigns @selected_icons' do
+      fa = described_class.new
+      actual = fa.instance_variable_get(:@selected_icons)
+      expect(actual).not_to be_nil
+    end
+  end
+
   describe '#select!' do
     context 'with "hdd"' do
       let(:icons) { described_class.new.select!(%w(hdd), glob_icons) }
