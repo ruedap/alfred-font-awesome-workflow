@@ -129,7 +129,7 @@ describe FontAwesome do
         described_class.save_config_of_recent_icons('apple')
 
         actual = described_class.load_config['recent_icons']
-        expect(actual).to eq(['apple', 'github', 'twitter'])
+        expect(actual).to eq(%w(apple github twitter))
       end
     end
 
@@ -153,7 +153,7 @@ describe FontAwesome do
         described_class.save_config_of_recent_icons('apple')
 
         actual = described_class.load_config['recent_icons']
-        expect(actual).to eq(['apple', 'github', 'twitter'])
+        expect(actual).to eq(%w(apple github twitter))
       end
     end
 
@@ -266,7 +266,42 @@ describe FontAwesome do
   end
 
   describe '#sort_by_recent_icons' do
-    it 'returns sorted icons'
+    context 'when does not exist recent_icons property in config.yml' do
+      before do
+        config_yaml = {
+          'version' => '0.0.0.0'
+        }
+        allow(described_class).to receive(:load_config).and_return(config_yaml)
+      end
+
+      it 'returns alphabetically icons' do
+        actual = described_class.new.sort_by_recent_icons(glob_icons)
+        expect(actual.first.id).to eq('adjust')
+        expect(actual[100].id).to eq('check-circle')
+        expect(actual[200].id).to eq('file-sound-o')
+        expect(actual.last.id).to eq('youtube-square')
+      end
+    end
+
+    context 'when exists recent_icons property in config.yml' do
+      before do
+        config_yaml = {
+          'version' => '0.0.0.0',
+          'recent_icons' => %w(apple github twitter)
+        }
+        allow(described_class).to receive(:load_config).and_return(config_yaml)
+      end
+
+      it 'returns icons of recently used order' do
+        actual = described_class.new.sort_by_recent_icons(glob_icons)
+        expect(actual.first.id).to eq('apple')
+        expect(actual[1].id).to eq('github')
+        expect(actual[2].id).to eq('twitter')
+        expect(actual[100].id).to eq('chain-broken')
+        expect(actual[200].id).to eq('file-picture-o')
+        expect(actual.last.id).to eq('youtube-square')
+      end
+    end
   end
 
   describe '#item_hash' do
