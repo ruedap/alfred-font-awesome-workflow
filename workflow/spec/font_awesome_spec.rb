@@ -106,8 +106,8 @@ describe FontAwesome do
         expect(described_class.load_config).to be_nil
       end
 
-      it 'does not exist config.yml' do
-        expect(File.exist?(config_file_path)).to be_falsy
+      it 'exists config.yml' do
+        expect(File.exist?(config_file_path)).to be_truthy
       end
     end
   end

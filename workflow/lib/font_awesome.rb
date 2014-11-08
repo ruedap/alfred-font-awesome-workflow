@@ -72,7 +72,6 @@ class FontAwesome
 
     YAML.load_file(CONFIG_FILE_PATH)
   rescue StandardError
-    FileUtils.rm(CONFIG_FILE_PATH, :force => true)  # FIXIME: remove
     nil
   end
 
