@@ -3,8 +3,6 @@
 require File.expand_path('spec_helper', File.dirname(__FILE__))
 
 describe FontAwesome do
-  FREEZE_TIME = Time.now
-
   let(:config_file_path) { described_class::CONFIG_FILE_PATH }
   let(:glob_icons) { described_class.glob_icons }
   let(:version) { described_class::VERSION }
@@ -300,7 +298,7 @@ describe FontAwesome do
     end
 
     it 'returns the XML' do
-      Timecop.freeze(FREEZE_TIME) do
+      Timecop.freeze(Time.now) do
         expectation = <<-XML
 <item arg="apple|||f179" uid="#{Time.now.to_i}-apple">
 <title>apple</title>
@@ -340,7 +338,7 @@ describe FontAwesome do
     end
 
     it 'must equal $stdout (test for puts)' do
-      Timecop.freeze(FREEZE_TIME) do
+      Timecop.freeze(Time.now) do
         expectation = <<-XML
 <?xml version='1.0'?><items><item arg="bookmark|||f02e" uid="#{Time.now.to_i}-bookmark"><title>bookmark</title><subtitle>Paste class name: fa-bookmark</subtitle><icon>./icons/fa-bookmark.png</icon></item><item arg="bookmark-o|||f097" uid="#{Time.now.to_i}-bookmark-o"><title>bookmark-o</title><subtitle>Paste class name: fa-bookmark-o</subtitle><icon>./icons/fa-bookmark-o.png</icon></item></items>
         XML
