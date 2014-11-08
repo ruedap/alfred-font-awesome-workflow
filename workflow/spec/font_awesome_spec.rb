@@ -113,7 +113,60 @@ describe FontAwesome do
   end
 
   describe '.save_config_of_recent_icons' do
-    it 'writes config yaml of recent icons list'
+    context 'when does not exist config.yml' do
+      before do
+        FileUtils.rm(config_file_path) if File.exist?(config_file_path)
+      end
+
+      it 'exists config.yml' do
+        expect(File.exist?(config_file_path)).to be_falsy
+        actual = described_class.save_config_of_recent_icons('apple')
+        expect(actual.instance_of?(File)).to be_truthy
+        expect(File.exist?(config_file_path)).to be_truthy
+      end
+
+      it 'contains recent icons in config.yml' do
+        described_class.save_config_of_recent_icons('twitter')
+        described_class.save_config_of_recent_icons('github')
+        described_class.save_config_of_recent_icons('apple')
+
+        actual = described_class.load_config['recent_icons']
+        expect(actual).to eq(['apple', 'github', 'twitter'])
+      end
+    end
+
+    context 'when exists config.yml' do
+      before do
+        unless File.exist?(config_file_path)
+          open(config_file_path, 'w') { |f| YAML.dump({ 'version' => version }, f) }
+        end
+      end
+
+      it 'exists config.yml' do
+        expect(File.exist?(config_file_path)).to be_truthy
+        actual = described_class.save_config_of_recent_icons('apple')
+        expect(actual.instance_of?(File)).to be_truthy
+        expect(File.exist?(config_file_path)).to be_truthy
+      end
+
+      it 'contains recent icons in config.yml' do
+        described_class.save_config_of_recent_icons('twitter')
+        described_class.save_config_of_recent_icons('github')
+        described_class.save_config_of_recent_icons('apple')
+
+        actual = described_class.load_config['recent_icons']
+        expect(actual).to eq(['apple', 'github', 'twitter'])
+      end
+    end
+
+    context 'when raises an error' do
+      it 'returns nil' do
+        allow(described_class).to receive(:dump_config).and_raise
+
+        actual = described_class.save_config_of_recent_icons('apple')
+        expect(actual).to be_nil
+      end
+    end
   end
 
   describe '.url' do

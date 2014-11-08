@@ -72,7 +72,7 @@ class FontAwesome
 
     YAML.load_file(CONFIG_FILE_PATH)
   rescue StandardError
-    FileUtils.rm(CONFIG_FILE_PATH, :force => true)
+    FileUtils.rm(CONFIG_FILE_PATH, :force => true)  # FIXIME: remove
     nil
   end
 
@@ -87,6 +87,8 @@ class FontAwesome
     end
 
     dump_config(config_yaml)
+  rescue StandardError
+    nil
   end
 
   def self.url(icon_id)
