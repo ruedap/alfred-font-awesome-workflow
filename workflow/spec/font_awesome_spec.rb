@@ -44,8 +44,8 @@ describe FontAwesome do
   end
 
   describe '.glob_icons' do
-    it 'returns 549' do
-      expect(glob_icons.size).to eq(549)
+    it 'returns 593' do
+      expect(glob_icons.size).to eq(593)
     end
 
     it 'returns "adjust"' do
@@ -269,8 +269,8 @@ describe FontAwesome do
     context 'with unknown arguments' do
       let(:icons) { described_class.new.select!([], glob_icons) }
 
-      it 'returns 549' do
-        expect(icons.size).to eq(549)
+      it 'returns 593' do
+        expect(icons.size).to eq(593)
       end
 
       it 'must equal icon names' do
@@ -297,6 +297,15 @@ describe FontAwesome do
         expect(icon_ids).to eq(%w(angellist))
       end
     end
+
+    context 'with "medium"' do  # for ver.4.3.0
+      let(:icons) { described_class.new.select!(%w(medium), glob_icons) }
+
+      it 'must equal icon name' do
+        icon_ids = icons.map { |icon| icon.id }
+        expect(icon_ids).to eq(%w(medium))
+      end
+    end
   end
 
   describe '#sort_by_recent_icons' do
@@ -311,8 +320,8 @@ describe FontAwesome do
       it 'returns alphabetically icons' do
         actual = described_class.new.sort_by_recent_icons(glob_icons)
         expect(actual.first.id).to eq('adjust')
-        expect(actual[100].id).to eq('check-circle')
-        expect(actual[200].id).to eq('file-sound-o')
+        expect(actual[100].id).to eq('certificate')
+        expect(actual[200].id).to eq('file-code-o')
         expect(actual.last.id).to eq('youtube-square')
       end
     end
@@ -331,8 +340,8 @@ describe FontAwesome do
         expect(actual.first.id).to eq('apple')
         expect(actual[1].id).to eq('github')
         expect(actual[2].id).to eq('twitter')
-        expect(actual[100].id).to eq('chain-broken')
-        expect(actual[200].id).to eq('file-picture-o')
+        expect(actual[100].id).to eq('cc-stripe')
+        expect(actual[200].id).to eq('file-archive-o')
         expect(actual.last.id).to eq('youtube-square')
       end
     end

@@ -20,7 +20,7 @@ See also: [Font Awesome Workflow with Sketch 3 — QuickCast.](http://quick.as/4
 
 Download **[Font-Awesome.alfredworkflow](https://github.com/ruedap/alfred2-font-awesome-workflow/raw/master/Font-Awesome.alfredworkflow)** and import to [Alfred 2](http://www.alfredapp.com/) (require Powerpack).
 
-The current version is **Font Awesome 4.2.0** support. Previous versions are available [here](https://github.com/ruedap/alfred2-font-awesome-workflow/releases).
+The current version is **Font Awesome 4.3.0** support. Previous versions are available [here](https://github.com/ruedap/alfred2-font-awesome-workflow/releases).
 
 
 ## Usage
