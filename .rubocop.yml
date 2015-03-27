@@ -1,8 +1,0 @@
-AllCops:
-  Excludes:
-    - converter/**
-    - materials/**
-    - workflow/bundle/**
-
-HashSyntax:
-  EnforcedStyle: hash_rockets

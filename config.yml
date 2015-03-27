@@ -1,7 +1,0 @@
----
-bundle_id: com.ruedap.font-awesome
-# path is the relative path to the workflow in the project root
-path: workflow
-# If you are using Alfred's advanced Dropbox sync, indicate the path shown in
-# Alfred Preferences > Advanced > Syncing:
-dropbox: ~/Dropbox/Alfred
