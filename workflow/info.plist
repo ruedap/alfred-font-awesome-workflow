@@ -102,7 +102,7 @@
 				<key>escaping</key>
 				<integer>0</integer>
 				<key>script</key>
-				<string>/usr/bin/ruby ./press_enter.rb "{query}"</string>
+				<string>./faw convert --name {query}</string>
 				<key>type</key>
 				<integer>0</integer>
 			</dict>
