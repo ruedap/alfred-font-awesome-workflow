@@ -1,10 +1,2 @@
 .DS_Store
-<<<<<<< HEAD
-.sass-cache
-/workflow/.bundle
-/workflow/.ruby-version
-/workflow/bundle
-/workflow/coverage
-=======
-alfred2-font-awesome-workflow
->>>>>>> ecd2d99... move assets
+workflow/faw
