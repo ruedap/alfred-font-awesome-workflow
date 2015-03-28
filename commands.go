@@ -2,8 +2,9 @@ package main
 
 import (
 	"fmt"
-	"github.com/codegangsta/cli"
 	"html"
+
+	"github.com/codegangsta/cli"
 )
 
 var Commands = []cli.Command{
@@ -49,7 +50,8 @@ func doSearch(c *cli.Context) {
 		})
 	}
 
-	r.Print()
+	s := r.GetXMLString()
+	fmt.Print(s)
 }
 
 func doConvert(c *cli.Context) {

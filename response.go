@@ -2,7 +2,6 @@ package main
 
 import (
 	"encoding/xml"
-	"fmt"
 	"strings"
 )
 
@@ -15,10 +14,10 @@ type ResponseItem struct {
 	Valid    bool   `xml:"valid,attr"`
 	Arg      string `xml:"arg,attr"`
 	Uid      string `xml:"uid,attr"`
+	Unicode  string `xml:"unicode,attr"`
 	Title    string `xml:"title"`
 	Subtitle string `xml:"subtitle"`
 	Icon     string `xml:"icon"`
-	Unicode  string `xml:"unicode"`
 
 	XMLName struct{} `xml:"item"`
 }
@@ -38,9 +37,13 @@ func (r *Response) AddItem(item *ResponseItem) {
 	r.Items = append(r.Items, *item)
 }
 
-func (r *Response) Print() {
-	var x, _ = xml.Marshal(r)
-	fmt.Print(xmlHeader, string(x))
+func (r *Response) GetXMLString() string {
+	var x, err = xml.Marshal(r)
+	if err != nil {
+		panic(err) // FIXME
+	}
+
+	return xmlHeader + string(x)
 }
 
 func InitTerms(terms []string) {

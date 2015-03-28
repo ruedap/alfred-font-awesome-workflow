@@ -1,8 +1,37 @@
 package main
 
-import (
-	"testing"
-)
+import "testing"
+
+func TestResponseAddItem(t *testing.T) {
+	r := NewResponse()
+	r.AddItem(&ResponseItem{Title: "title-foo"})
+
+	if r.Items[0].Title != "title-foo" {
+		t.Error("failed to add item to new response")
+	}
+}
+
+func TestResponseGetXMLString(t *testing.T) {
+	r := NewResponse()
+	item := ResponseItem{
+		Valid:    true,
+		Uid:      "f000-uid",
+		Title:    "title-foo",
+		Subtitle: "Subtitle foo.",
+		Arg:      "arg-foo",
+		Icon:     "./icons/title-foo.png",
+		Unicode:  "f000-unicode",
+	}
+	r.AddItem(&item)
+
+	a := r.GetXMLString()
+	e := `<?xml version="1.0" encoding="UTF-8"?>
+<items><item valid="true" arg="arg-foo" uid="f000-uid" unicode="f000-unicode"><title>title-foo</title><subtitle>Subtitle foo.</subtitle><icon>./icons/title-foo.png</icon></item></items>`
+
+	if a != e {
+		t.Errorf("failed to get XML string: expected %v, got %v", a, e)
+	}
+}
 
 func TestResponseInitTerms(t *testing.T) {
 	terms := []string{"Foo-Foo", "BAR*BAR?", "バズ"}
@@ -35,14 +64,5 @@ func TestResponseContainTerms(t *testing.T) {
 
 	if ContainTerms([]string{"foo-bar"}, "foo--bar") {
 		t.Error("failed to match terms")
-	}
-}
-
-func TestResponseAddItem(t *testing.T) {
-	r := NewResponse()
-	r.AddItem(&ResponseItem{Title: "title-foo"})
-
-	if r.Items[0].Title != "title-foo" {
-		t.Error("failed to add item to new response")
 	}
 }
