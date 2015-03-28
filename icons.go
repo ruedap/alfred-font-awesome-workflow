@@ -3,13 +3,16 @@ package main
 import (
 	"io/ioutil"
 	"os"
+	"sort"
 
 	"gopkg.in/yaml.v2"
 )
 
-type Icons struct {
-	Icons []Icon
+type IconsYaml struct {
+	Icons Icons
 }
+
+type Icons []Icon
 
 type Icon struct {
 	Name       string
@@ -20,11 +23,7 @@ type Icon struct {
 	Categories []string
 }
 
-func NewIcons() *Icons {
-	return new(Icons).init()
-}
-
-func (ics *Icons) init() *Icons {
+func NewIcons() Icons {
 	path := os.Getenv("FAW_ICONS_YAML_PATH") // for testing
 	if path == "" {
 		path = "icons.yml" // default
@@ -35,19 +34,18 @@ func (ics *Icons) init() *Icons {
 		panic(err) // FIXME
 	}
 
-	err = yaml.Unmarshal([]byte(b), &ics)
+	var y IconsYaml
+	err = yaml.Unmarshal([]byte(b), &y)
 	if err != nil {
 		panic(err) // FIXME
 	}
 
-	return ics
+	return y.Icons.Sort()
 }
 
-func (ics *Icons) Find(terms []string) []Icon {
-	icons := NewIcons().Icons
-
-	var r []Icon
-	for _, icon := range icons {
+func (ics Icons) Find(terms []string) Icons {
+	var r Icons
+	for _, icon := range ics {
 		// FIXME: ContainTerms function dependency
 		if ContainTerms(terms, icon.Id) {
 			r = append(r, icon)
@@ -55,4 +53,24 @@ func (ics *Icons) Find(terms []string) []Icon {
 	}
 
 	return r
+}
+
+// Len for sort
+func (ics Icons) Len() int {
+	return len(ics)
+}
+
+// Less for sort
+func (ics Icons) Less(i, j int) bool {
+	return ics[i].Id < ics[j].Id
+}
+
+// Swap for sort
+func (ics Icons) Swap(i, j int) {
+	ics[i], ics[j] = ics[j], ics[i]
+}
+
+func (ics Icons) Sort() Icons {
+	sort.Sort(ics)
+	return ics
 }
