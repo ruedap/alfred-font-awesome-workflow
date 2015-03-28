@@ -20,6 +20,7 @@ type Icon struct {
 	Unicode    string
 	Created    string
 	Filter     []string
+	Aliases    []string
 	Categories []string
 }
 
