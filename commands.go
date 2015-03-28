@@ -41,11 +41,11 @@ func doSearch(c *cli.Context) {
 	for _, icon := range icons {
 		r.AddItem(&ResponseItem{
 			Valid:    true,
-			Uid:      icon.Unicode,
-			Title:    icon.Id,
-			Subtitle: "Paste class name: fa-" + icon.Id,
-			Arg:      icon.Id,
-			Icon:     "./icons/fa-" + icon.Id + ".png",
+			UID:      icon.Unicode,
+			Title:    icon.ID,
+			Subtitle: "Paste class name: fa-" + icon.ID,
+			Arg:      icon.ID,
+			Icon:     "./icons/fa-" + icon.ID + ".png",
 			Unicode:  icon.Unicode,
 		})
 	}

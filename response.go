@@ -13,7 +13,7 @@ type Response struct {
 type ResponseItem struct {
 	Valid    bool   `xml:"valid,attr"`
 	Arg      string `xml:"arg,attr"`
-	Uid      string `xml:"uid,attr"`
+	UID      string `xml:"uid,attr"`
 	Unicode  string `xml:"unicode,attr"`
 	Title    string `xml:"title"`
 	Subtitle string `xml:"subtitle"`

@@ -16,7 +16,7 @@ type Icons []Icon
 
 type Icon struct {
 	Name       string
-	Id         string
+	ID         string
 	Unicode    string
 	Created    string
 	Filter     []string
@@ -47,7 +47,7 @@ func (ics Icons) Find(terms []string) Icons {
 	var r Icons
 	for _, icon := range ics {
 		// FIXME: ContainTerms function dependency
-		if ContainTerms(terms, icon.Id) {
+		if ContainTerms(terms, icon.ID) {
 			r = append(r, icon)
 		}
 	}
@@ -62,7 +62,7 @@ func (ics Icons) Len() int {
 
 // Less for sort
 func (ics Icons) Less(i, j int) bool {
-	return ics[i].Id < ics[j].Id
+	return ics[i].ID < ics[j].ID
 }
 
 // Swap for sort

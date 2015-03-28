@@ -15,7 +15,7 @@ func TestResponseGetXMLString(t *testing.T) {
 	r := NewResponse()
 	item := ResponseItem{
 		Valid:    true,
-		Uid:      "f000-uid",
+		UID:      "f000-uid",
 		Title:    "title-foo",
 		Subtitle: "Subtitle foo.",
 		Arg:      "arg-foo",
