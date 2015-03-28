@@ -12,6 +12,16 @@ func TestIconsFind_countAll(t *testing.T) {
 	}
 }
 
+func TestIconsFind_countZero(t *testing.T) {
+	fi := findIcons([]string{"foo-bar-baz"})
+
+	ex := 0
+	ac := len(fi)
+	if ex != ac {
+		t.Errorf("failed to find icon: expected %v, got %v", ex, ac)
+	}
+}
+
 func TestIconsFind_firstID(t *testing.T) {
 	fi := findIcons([]string{""})
 
