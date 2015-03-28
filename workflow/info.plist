@@ -188,7 +188,7 @@
 				<key>escaping</key>
 				<integer>0</integer>
 				<key>script</key>
-				<string>/usr/bin/ruby ./press_shift_enter.rb "{query}"</string>
+				<string>./faw convert --code {query}</string>
 				<key>type</key>
 				<integer>0</integer>
 			</dict>

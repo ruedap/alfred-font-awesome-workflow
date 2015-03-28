@@ -22,6 +22,7 @@ var commandConvert = cli.Command{
 	Action: doConvert,
 	Flags: []cli.Flag{
 		cli.StringFlag{Name: "name", Usage: "Convert to CSS class name"},
+		cli.StringFlag{Name: "code", Usage: "Convert to character code"},
 	},
 }
 
@@ -40,11 +41,12 @@ func doSearch(c *cli.Context) {
 
 		r.AddItem(&ResponseItem{
 			Valid:    true,
-			Uid:      icon.Id,
+			Uid:      icon.Unicode,
 			Title:    icon.Id,
 			Subtitle: "Paste class name: fa-" + icon.Id,
 			Arg:      icon.Id,
 			Icon:     "./icons/fa-" + icon.Id + ".png",
+			Unicode:  icon.Unicode,
 		})
 	}
 
@@ -53,8 +55,22 @@ func doSearch(c *cli.Context) {
 
 func doConvert(c *cli.Context) {
 	name := c.String("name")
+	code := c.String("code")
 
 	if name != "" {
 		fmt.Print("fa-" + name)
+	}
+
+	if code != "" {
+		icons := LoadIcons()
+		var u string
+		for _, icon := range icons {
+			if MatchTerms([]string{code}, icon.Id) {
+				u = icon.Unicode
+				break
+			}
+		}
+
+		fmt.Print(u)
 	}
 }

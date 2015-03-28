@@ -18,6 +18,7 @@ type ResponseItem struct {
 	Title    string `xml:"title"`
 	Subtitle string `xml:"subtitle"`
 	Icon     string `xml:"icon"`
+	Unicode  string `xml:"unicode"`
 
 	XMLName struct{} `xml:"item"`
 }
