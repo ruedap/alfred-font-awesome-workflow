@@ -36,7 +36,7 @@ func doSearch(c *cli.Context) {
 	InitTerms(terms)
 
 	r := NewResponse()
-	icons := searchIcons(terms)
+	icons := NewIcons().Find(terms)
 
 	for _, icon := range icons {
 		r.AddItem(&ResponseItem{
@@ -59,18 +59,19 @@ func doConvert(c *cli.Context) {
 	code := c.String("code")
 	ref := c.String("ref")
 	url := c.String("url")
+	ics := NewIcons()
 
 	if name != "" {
 		fmt.Print("fa-" + name)
 	}
 
 	if code != "" {
-		icons := searchIcons([]string{code})
+		icons := ics.Find([]string{code})
 		fmt.Print(icons[0].Unicode)
 	}
 
 	if ref != "" {
-		icons := searchIcons([]string{ref})
+		icons := ics.Find([]string{ref})
 		str := html.UnescapeString("&#x" + icons[0].Unicode + ";")
 		fmt.Print(str)
 	}
@@ -78,17 +79,4 @@ func doConvert(c *cli.Context) {
 	if url != "" {
 		fmt.Print("http://fontawesome.io/icon/" + url + "/")
 	}
-}
-
-func searchIcons(terms []string) []Icon {
-	icons := NewIcons().Icons
-
-	var r []Icon
-	for _, icon := range icons {
-		if ContainTerms(terms, icon.Id) {
-			r = append(r, icon)
-		}
-	}
-
-	return r
 }
