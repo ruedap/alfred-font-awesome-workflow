@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"github.com/codegangsta/cli"
+	"html"
 )
 
 var Commands = []cli.Command{
@@ -23,6 +24,7 @@ var commandConvert = cli.Command{
 	Flags: []cli.Flag{
 		cli.StringFlag{Name: "name", Usage: "Convert to CSS class name"},
 		cli.StringFlag{Name: "code", Usage: "Convert to character code"},
+		cli.StringFlag{Name: "ref", Usage: "Convert to character reference"},
 		cli.StringFlag{Name: "url", Usage: "Convert to URL of official site"},
 	},
 }
@@ -33,13 +35,9 @@ func doSearch(c *cli.Context) {
 	InitTerms(terms)
 
 	r := NewResponse()
-	icons := LoadIcons()
+	icons := searchIcon(terms)
 
 	for _, icon := range icons {
-		if !MatchTerms(terms, icon.Id) {
-			continue
-		}
-
 		r.AddItem(&ResponseItem{
 			Valid:    true,
 			Uid:      icon.Unicode,
@@ -57,6 +55,7 @@ func doSearch(c *cli.Context) {
 func doConvert(c *cli.Context) {
 	name := c.String("name")
 	code := c.String("code")
+	ref := c.String("ref")
 	url := c.String("url")
 
 	if name != "" {
@@ -64,19 +63,29 @@ func doConvert(c *cli.Context) {
 	}
 
 	if code != "" {
-		icons := LoadIcons()
-		var u string
-		for _, icon := range icons {
-			if MatchTerms([]string{code}, icon.Id) {
-				u = icon.Unicode
-				break
-			}
-		}
+		icons := searchIcon([]string{code})
+		fmt.Print(icons[0].Unicode)
+	}
 
-		fmt.Print(u)
+	if ref != "" {
+		icons := searchIcon([]string{ref})
+		str := html.UnescapeString("&#x" + icons[0].Unicode + ";")
+		fmt.Print(str)
 	}
 
 	if url != "" {
 		fmt.Print("http://fontawesome.io/icon/" + url + "/")
 	}
+}
+
+func searchIcon(terms []string) []Icon {
+	icons := LoadIcons()
+	var r []Icon
+	for _, icon := range icons {
+		if MatchTerms(terms, icon.Id) {
+			r = append(r, icon)
+		}
+	}
+
+	return r
 }
