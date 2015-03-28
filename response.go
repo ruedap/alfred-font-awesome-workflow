@@ -25,10 +25,10 @@ type ResponseItem struct {
 const xmlHeader = `<?xml version="1.0" encoding="UTF-8"?>` + "\n"
 
 func NewResponse() *Response {
-	return new(Response).Init()
+	return new(Response).init()
 }
 
-func (r *Response) Init() *Response {
+func (r *Response) init() *Response {
 	r.Items = []ResponseItem{}
 	return r
 }

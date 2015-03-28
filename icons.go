@@ -1,8 +1,9 @@
 package main
 
 import (
-	"gopkg.in/yaml.v2"
 	"io/ioutil"
+
+	"gopkg.in/yaml.v2"
 )
 
 type Icons struct {
@@ -18,17 +19,20 @@ type Icon struct {
 	Categories []string
 }
 
-func LoadIcons() []Icon {
+func NewIcons() *Icons {
+	return new(Icons).init()
+}
+
+func (ics *Icons) init() *Icons {
 	b, err := ioutil.ReadFile("icons.yml")
 	if err != nil {
 		panic(err) // FIXME
 	}
 
-	icons := Icons{}
-	err = yaml.Unmarshal([]byte(b), &icons)
+	err = yaml.Unmarshal([]byte(b), &ics)
 	if err != nil {
 		panic(err) // FIXME
 	}
 
-	return icons.Icons
+	return ics
 }

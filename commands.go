@@ -36,7 +36,7 @@ func doSearch(c *cli.Context) {
 	InitTerms(terms)
 
 	r := NewResponse()
-	icons := searchIcon(terms)
+	icons := searchIcons(terms)
 
 	for _, icon := range icons {
 		r.AddItem(&ResponseItem{
@@ -65,12 +65,12 @@ func doConvert(c *cli.Context) {
 	}
 
 	if code != "" {
-		icons := searchIcon([]string{code})
+		icons := searchIcons([]string{code})
 		fmt.Print(icons[0].Unicode)
 	}
 
 	if ref != "" {
-		icons := searchIcon([]string{ref})
+		icons := searchIcons([]string{ref})
 		str := html.UnescapeString("&#x" + icons[0].Unicode + ";")
 		fmt.Print(str)
 	}
@@ -80,8 +80,9 @@ func doConvert(c *cli.Context) {
 	}
 }
 
-func searchIcon(terms []string) []Icon {
-	icons := LoadIcons()
+func searchIcons(terms []string) []Icon {
+	icons := NewIcons().Icons
+
 	var r []Icon
 	for _, icon := range icons {
 		if ContainTerms(terms, icon.Id) {
