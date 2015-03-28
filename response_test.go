@@ -37,3 +37,12 @@ func TestResponseContainTerms(t *testing.T) {
 		t.Error("failed to match terms")
 	}
 }
+
+func TestResponseAddItem(t *testing.T) {
+	r := NewResponse()
+	r.AddItem(&ResponseItem{Title: "title-foo"})
+
+	if r.Items[0].Title != "title-foo" {
+		t.Error("failed to add item to new response")
+	}
+}
