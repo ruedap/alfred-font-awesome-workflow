@@ -222,7 +222,7 @@
 				<key>escaping</key>
 				<integer>0</integer>
 				<key>script</key>
-				<string>/usr/bin/ruby ./press_cmd_enter.rb "{query}"</string>
+				<string>./faw convert --url {query}</string>
 				<key>type</key>
 				<integer>0</integer>
 			</dict>

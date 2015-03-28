@@ -23,6 +23,7 @@ var commandConvert = cli.Command{
 	Flags: []cli.Flag{
 		cli.StringFlag{Name: "name", Usage: "Convert to CSS class name"},
 		cli.StringFlag{Name: "code", Usage: "Convert to character code"},
+		cli.StringFlag{Name: "url", Usage: "Convert to URL of official site"},
 	},
 }
 
@@ -56,6 +57,7 @@ func doSearch(c *cli.Context) {
 func doConvert(c *cli.Context) {
 	name := c.String("name")
 	code := c.String("code")
+	url := c.String("url")
 
 	if name != "" {
 		fmt.Print("fa-" + name)
@@ -72,5 +74,9 @@ func doConvert(c *cli.Context) {
 		}
 
 		fmt.Print(u)
+	}
+
+	if url != "" {
+		fmt.Print("http://fontawesome.io/icon/" + url + "/")
 	}
 }
