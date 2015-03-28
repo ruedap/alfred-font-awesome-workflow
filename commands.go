@@ -82,7 +82,7 @@ func searchIcon(terms []string) []Icon {
 	icons := LoadIcons()
 	var r []Icon
 	for _, icon := range icons {
-		if MatchTerms(terms, icon.Id) {
+		if ContainTerms(terms, icon.Id) {
 			r = append(r, icon)
 		}
 	}

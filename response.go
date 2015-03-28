@@ -49,7 +49,7 @@ func InitTerms(terms []string) {
 	}
 }
 
-func MatchTerms(terms []string, name string) bool {
+func ContainTerms(terms []string, name string) bool {
 	n := strings.ToLower(name)
 
 	for _, t := range terms {
