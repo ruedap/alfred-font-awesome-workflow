@@ -2,6 +2,7 @@ package main
 
 import (
 	"io/ioutil"
+	"os"
 
 	"gopkg.in/yaml.v2"
 )
@@ -24,7 +25,12 @@ func NewIcons() *Icons {
 }
 
 func (ics *Icons) init() *Icons {
-	b, err := ioutil.ReadFile("icons.yml")
+	path := os.Getenv("FAW_ICONS_YAML_PATH") // for testing
+	if path == "" {
+		path = "icons.yml" // default
+	}
+
+	b, err := ioutil.ReadFile(path)
 	if err != nil {
 		panic(err) // FIXME
 	}
