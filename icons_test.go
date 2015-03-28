@@ -22,6 +22,16 @@ func TestIconsFind_countZero(t *testing.T) {
 	}
 }
 
+func TestIconsFind_countOne(t *testing.T) {
+	fi := findIcons([]string{"github-square"})
+
+	ex := 1
+	ac := len(fi)
+	if ex != ac {
+		t.Errorf("failed to find icon: expected %v, got %v", ex, ac)
+	}
+}
+
 func TestIconsFind_firstID(t *testing.T) {
 	fi := findIcons([]string{""})
 
