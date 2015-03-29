@@ -124,28 +124,6 @@ func TestIconsFind_aliases(t *testing.T) {
 	}
 }
 
-func TestIconsFind_filter(t *testing.T) {
-	fi := iconsFindHelper([]string{"menu"})
-
-	ex := "bars"
-	ac := fi[0].ID
-	if ex != ac {
-		t.Errorf("failed to find icon: expected %v, got %v", ex, ac)
-	}
-
-	ex2 := "sort-desc"
-	ac2 := fi[len(fi)-1].ID
-	if ex2 != ac2 {
-		t.Errorf("failed to find icon: expected %v, got %v", ex2, ac2)
-	}
-
-	ex3 := 6
-	ac3 := len(fi)
-	if ex3 != ac3 {
-		t.Errorf("failed to find icon: expected %v, got %v", ex3, ac3)
-	}
-}
-
 func iconsFindHelper(terms []string) Icons {
 	return NewIcons().Find(terms)
 }
