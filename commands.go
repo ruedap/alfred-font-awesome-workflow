@@ -81,30 +81,36 @@ func (cmd *Command) execFind(terms []string) int {
 	return ExitCodeOK
 }
 
-func (cmd *Command) execPut(flags map[string]string) {
+func (cmd *Command) execPut(flags map[string]string) int {
 	name := flags["name"]
 	code := flags["code"]
 	ref := flags["ref"]
 	url := flags["url"]
 	ics := NewIcons()
 	ost := cmd.outStream
+	var err error
 
 	if name != "" {
-		fmt.Fprint(ost, "fa-"+name)
+		_, err = fmt.Fprint(ost, "fa-"+name)
 	}
 
 	if code != "" {
 		icons := ics.Find([]string{code})
-		fmt.Fprint(ost, icons[0].Unicode)
+		_, err = fmt.Fprint(ost, icons[0].Unicode)
 	}
 
 	if ref != "" {
 		icons := ics.Find([]string{ref})
 		str := html.UnescapeString("&#x" + icons[0].Unicode + ";")
-		fmt.Fprint(ost, str)
+		_, err = fmt.Fprint(ost, str)
 	}
 
 	if url != "" {
-		fmt.Fprint(ost, "http://fontawesome.io/icon/"+url+"/")
+		_, err = fmt.Fprint(ost, "http://fontawesome.io/icon/"+url+"/")
 	}
+
+	if err != nil {
+		return ExitCodeError
+	}
+	return ExitCodeOK
 }
