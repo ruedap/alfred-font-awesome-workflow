@@ -9,6 +9,13 @@ import (
 	"github.com/codegangsta/cli"
 )
 
+// Exit codes.
+const (
+	ExitCodeOK int = 0
+
+	ExitCodeError = 10 + iota
+)
+
 type Command struct {
 	outStream, errStream io.Writer
 }
@@ -48,7 +55,7 @@ var commandPut = cli.Command{
 	},
 }
 
-func (cmd *Command) execFind(terms []string) {
+func (cmd *Command) execFind(terms []string) int {
 	InitTerms(terms)
 
 	r := NewResponse()
@@ -67,7 +74,11 @@ func (cmd *Command) execFind(terms []string) {
 	}
 
 	s := r.GetXMLString()
-	fmt.Fprint(cmd.outStream, s)
+	_, err := fmt.Fprint(cmd.outStream, s)
+	if s == "" || err != nil {
+		return ExitCodeError
+	}
+	return ExitCodeOK
 }
 
 func (cmd *Command) execPut(flags map[string]string) {
