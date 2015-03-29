@@ -26,8 +26,7 @@ func TestResponseGetXMLString(t *testing.T) {
 
 	actual := r.GetXMLString()
 
-	expected := `<?xml version="1.0" encoding="UTF-8"?>
-<items><item valid="true" arg="arg-foo" uid="f000-uid" unicode="f000-unicode"><title>title-foo</title><subtitle>Subtitle foo.</subtitle><icon>./icons/title-foo.png</icon></item></items>`
+	expected := `<?xml version="1.0" encoding="UTF-8"?><items><item valid="true" arg="arg-foo" uid="f000-uid" unicode="f000-unicode"><title>title-foo</title><subtitle>Subtitle foo.</subtitle><icon>./icons/title-foo.png</icon></item></items>`
 	if actual != expected {
 		t.Errorf("expected %v to eq %v", actual, expected)
 	}

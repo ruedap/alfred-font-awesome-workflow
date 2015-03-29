@@ -22,7 +22,7 @@ type ResponseItem struct {
 	XMLName struct{} `xml:"item"`
 }
 
-const xmlHeader = `<?xml version="1.0" encoding="UTF-8"?>` + "\n"
+const xmlHeader = `<?xml version="1.0" encoding="UTF-8"?>`
 
 func NewResponse() *Response {
 	return new(Response).init()
