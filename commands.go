@@ -43,7 +43,7 @@ func doSearch(c *cli.Context) {
 			Valid:    true,
 			UID:      icon.Unicode,
 			Title:    icon.ID,
-			Subtitle: "Paste class name: fa-" + icon.ID,
+			Subtitle: "Keywords: " + IconsKeywords(icon),
 			Arg:      icon.ID,
 			Icon:     "./icons/fa-" + icon.ID + ".png",
 			Unicode:  icon.Unicode,

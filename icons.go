@@ -4,6 +4,7 @@ import (
 	"io/ioutil"
 	"os"
 	"sort"
+	"strings"
 
 	"gopkg.in/yaml.v2"
 )
@@ -44,6 +45,20 @@ func NewIcons() Icons {
 	return y.Icons.Sort()
 }
 
+func IconsKeywords(icon Icon) string {
+	keywords := []string{icon.ID}
+
+	if len(icon.Aliases) > 0 {
+		keywords = append(keywords, icon.Aliases...)
+	}
+
+	if len(icon.Filter) > 0 {
+		keywords = append(keywords, icon.Filter...)
+	}
+
+	return strings.Join(keywords, ", ")
+}
+
 func (ics Icons) Find(terms []string) Icons {
 	var foundIcons Icons
 
@@ -54,6 +69,11 @@ func (ics Icons) Find(terms []string) Icons {
 		}
 
 		if ics.FindBy(icon.Aliases, terms) {
+			foundIcons = append(foundIcons, icon)
+			continue
+		}
+
+		if ics.FindBy(icon.Filter, terms) {
 			foundIcons = append(foundIcons, icon)
 			continue
 		}
