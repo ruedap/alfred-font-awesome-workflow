@@ -133,7 +133,7 @@
 				<key>runningsubtext</key>
 				<string>...</string>
 				<key>script</key>
-				<string>./faw search {query}</string>
+				<string>./faw find {query}</string>
 				<key>subtext</key>
 				<string>Font Awesome Workflow</string>
 				<key>title</key>

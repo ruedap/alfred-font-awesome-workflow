@@ -8,14 +8,16 @@ import (
 )
 
 var Commands = []cli.Command{
-	commandSearch,
+	commandFind,
 	commandConvert,
 }
 
-var commandSearch = cli.Command{
-	Name:   "search",
-	Usage:  "Search through Font Awesome icons",
-	Action: doSearch,
+var commandFind = cli.Command{
+	Name:  "find",
+	Usage: "Search through Font Awesome icons",
+	Action: func(c *cli.Context) {
+		commandFindExec(c.Args())
+	},
 }
 
 var commandConvert = cli.Command{
@@ -30,9 +32,7 @@ var commandConvert = cli.Command{
 	},
 }
 
-func doSearch(c *cli.Context) {
-	terms := c.Args()
-
+func commandFindExec(terms []string) {
 	InitTerms(terms)
 
 	r := NewResponse()

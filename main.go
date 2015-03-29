@@ -1,11 +1,12 @@
 package main
 
 import (
-	"github.com/codegangsta/cli"
 	"os"
+
+	"github.com/codegangsta/cli"
 )
 
-const Version = "0.1.0"
+const Version string = "0.1.0"
 
 func main() {
 	app := cli.NewApp()
