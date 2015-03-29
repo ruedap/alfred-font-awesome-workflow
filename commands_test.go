@@ -39,3 +39,20 @@ func TestCommandsExecPut_name(t *testing.T) {
 		t.Errorf("expected %v to eq %v", actual, expected)
 	}
 }
+
+func TestCommandsExecPut_code(t *testing.T) {
+	outStream, errStream := new(bytes.Buffer), new(bytes.Buffer)
+	cmd := &Command{outStream: outStream, errStream: errStream}
+	flags := map[string]string{"code": "apple"}
+
+	status := cmd.execPut(flags)
+	if status != ExitCodeOK {
+		t.Errorf("ExitStatus=%d, want %d", status, ExitCodeOK)
+	}
+
+	actual := outStream.String()
+	expected := "f179"
+	if !strings.Contains(actual, expected) {
+		t.Errorf("expected %v to eq %v", actual, expected)
+	}
+}
