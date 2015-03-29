@@ -3,7 +3,7 @@ package main
 import "testing"
 
 func TestIconsFind_countAll(t *testing.T) {
-	fi := findIcons([]string{""})
+	fi := iconsFindHelper([]string{""})
 
 	ex := 519
 	ac := len(fi)
@@ -13,7 +13,7 @@ func TestIconsFind_countAll(t *testing.T) {
 }
 
 func TestIconsFind_countZero(t *testing.T) {
-	fi := findIcons([]string{"foo-bar-baz"})
+	fi := iconsFindHelper([]string{"foo-bar-baz"})
 
 	ex := 0
 	ac := len(fi)
@@ -23,7 +23,7 @@ func TestIconsFind_countZero(t *testing.T) {
 }
 
 func TestIconsFind_countOne(t *testing.T) {
-	fi := findIcons([]string{"github-square"})
+	fi := iconsFindHelper([]string{"github-square"})
 
 	ex := 1
 	ac := len(fi)
@@ -33,7 +33,7 @@ func TestIconsFind_countOne(t *testing.T) {
 }
 
 func TestIconsFind_countTwo(t *testing.T) {
-	fi := findIcons([]string{"github-"})
+	fi := iconsFindHelper([]string{"github-"})
 
 	ex := 2
 	ac := len(fi)
@@ -43,7 +43,7 @@ func TestIconsFind_countTwo(t *testing.T) {
 }
 
 func TestIconsFind_firstID(t *testing.T) {
-	fi := findIcons([]string{""})
+	fi := iconsFindHelper([]string{""})
 
 	ex := "adjust"
 	ac := fi[0].ID
@@ -53,7 +53,7 @@ func TestIconsFind_firstID(t *testing.T) {
 }
 
 func TestIconsFind_lastID(t *testing.T) {
-	fi := findIcons([]string{""})
+	fi := iconsFindHelper([]string{""})
 
 	ex := "youtube-square"
 	ac := fi[len(fi)-1].ID
@@ -63,7 +63,7 @@ func TestIconsFind_lastID(t *testing.T) {
 }
 
 func TestIconsFind_taxi(t *testing.T) {
-	fi := findIcons([]string{"taxi"})
+	fi := iconsFindHelper([]string{"taxi"})
 
 	ex := "Taxi"
 	ac := fi[0].Name
@@ -108,6 +108,6 @@ func TestIconsFind_taxi(t *testing.T) {
 	}
 }
 
-func findIcons(terms []string) Icons {
+func iconsFindHelper(terms []string) Icons {
 	return NewIcons().Find(terms)
 }
