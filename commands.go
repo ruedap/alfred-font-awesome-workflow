@@ -3,9 +3,15 @@ package main
 import (
 	"fmt"
 	"html"
+	"io"
+	"os"
 
 	"github.com/codegangsta/cli"
 )
+
+type Command struct {
+	outStream, errStream io.Writer
+}
 
 var Commands = []cli.Command{
 	commandFind,
@@ -16,7 +22,8 @@ var commandFind = cli.Command{
 	Name:  "find",
 	Usage: "Search through Font Awesome icons",
 	Action: func(c *cli.Context) {
-		commandFindExec(c.Args())
+		cmd := &Command{outStream: os.Stdout, errStream: os.Stderr}
+		cmd.execFind(c.Args())
 	},
 }
 
@@ -30,7 +37,8 @@ var commandPut = cli.Command{
 			"ref":  c.String("ref"),
 			"url":  c.String("url"),
 		}
-		commandPutExec(flags)
+		cmd := &Command{outStream: os.Stdout, errStream: os.Stderr}
+		cmd.execPut(flags)
 	},
 	Flags: []cli.Flag{
 		cli.StringFlag{Name: "name", Usage: "CSS class name"},
@@ -40,7 +48,7 @@ var commandPut = cli.Command{
 	},
 }
 
-func commandFindExec(terms []string) {
+func (cmd *Command) execFind(terms []string) {
 	InitTerms(terms)
 
 	r := NewResponse()
@@ -59,32 +67,33 @@ func commandFindExec(terms []string) {
 	}
 
 	s := r.GetXMLString()
-	fmt.Print(s)
+	fmt.Fprint(cmd.outStream, s)
 }
 
-func commandPutExec(flags map[string]string) {
+func (cmd *Command) execPut(flags map[string]string) {
 	name := flags["name"]
 	code := flags["code"]
 	ref := flags["ref"]
 	url := flags["url"]
 	ics := NewIcons()
+	ost := cmd.outStream
 
 	if name != "" {
-		fmt.Print("fa-" + name)
+		fmt.Fprint(ost, "fa-"+name)
 	}
 
 	if code != "" {
 		icons := ics.Find([]string{code})
-		fmt.Print(icons[0].Unicode)
+		fmt.Fprint(ost, icons[0].Unicode)
 	}
 
 	if ref != "" {
 		icons := ics.Find([]string{ref})
 		str := html.UnescapeString("&#x" + icons[0].Unicode + ";")
-		fmt.Print(str)
+		fmt.Fprint(ost, str)
 	}
 
 	if url != "" {
-		fmt.Print("http://fontawesome.io/icon/" + url + "/")
+		fmt.Fprint(ost, "http://fontawesome.io/icon/"+url+"/")
 	}
 }
