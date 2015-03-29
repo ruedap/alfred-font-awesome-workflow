@@ -108,6 +108,22 @@ func TestIconsFind_taxi(t *testing.T) {
 	}
 }
 
+func TestIconsFind_aliases(t *testing.T) {
+	fi := iconsFindHelper([]string{"navicon"})
+
+	ex := "bars"
+	ac := fi[0].ID
+	if ex != ac {
+		t.Errorf("failed to find icon: expected %v, got %v", ex, ac)
+	}
+
+	ex2 := 1
+	ac2 := len(fi)
+	if ex2 != ac2 {
+		t.Errorf("failed to find icon: expected %v, got %v", ex2, ac2)
+	}
+}
+
 func iconsFindHelper(terms []string) Icons {
 	return NewIcons().Find(terms)
 }
