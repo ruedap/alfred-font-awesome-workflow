@@ -73,3 +73,20 @@ func TestCommandsExecPut_ref(t *testing.T) {
 		t.Errorf("expected %v to eq %v", actual, expected)
 	}
 }
+
+func TestCommandsExecPut_url(t *testing.T) {
+	outStream, errStream := new(bytes.Buffer), new(bytes.Buffer)
+	cmd := &Command{outStream: outStream, errStream: errStream}
+	flags := map[string]string{"url": "apple"}
+
+	status := cmd.execPut(flags)
+	if status != ExitCodeOK {
+		t.Errorf("ExitStatus=%d, want %d", status, ExitCodeOK)
+	}
+
+	actual := outStream.String()
+	expected := "http://fontawesome.io/icon/apple/"
+	if !strings.Contains(actual, expected) {
+		t.Errorf("expected %v to eq %v", actual, expected)
+	}
+}
