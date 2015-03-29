@@ -9,7 +9,7 @@ import (
 
 var Commands = []cli.Command{
 	commandFind,
-	commandConvert,
+	commandPut,
 }
 
 var commandFind = cli.Command{
@@ -20,15 +20,23 @@ var commandFind = cli.Command{
 	},
 }
 
-var commandConvert = cli.Command{
-	Name:   "convert",
-	Usage:  "Convert icon name to each format",
-	Action: doConvert,
+var commandPut = cli.Command{
+	Name:  "put",
+	Usage: "Put the icon into each format",
+	Action: func(c *cli.Context) {
+		flags := map[string]string{
+			"name": c.String("name"),
+			"code": c.String("code"),
+			"ref":  c.String("ref"),
+			"url":  c.String("url"),
+		}
+		commandPutExec(flags)
+	},
 	Flags: []cli.Flag{
-		cli.StringFlag{Name: "name", Usage: "Convert to CSS class name"},
-		cli.StringFlag{Name: "code", Usage: "Convert to character code"},
-		cli.StringFlag{Name: "ref", Usage: "Convert to character reference"},
-		cli.StringFlag{Name: "url", Usage: "Convert to URL of official site"},
+		cli.StringFlag{Name: "name", Usage: "CSS class name"},
+		cli.StringFlag{Name: "code", Usage: "Character code"},
+		cli.StringFlag{Name: "ref", Usage: "Character reference"},
+		cli.StringFlag{Name: "url", Usage: "URL of official site"},
 	},
 }
 
@@ -54,11 +62,11 @@ func commandFindExec(terms []string) {
 	fmt.Print(s)
 }
 
-func doConvert(c *cli.Context) {
-	name := c.String("name")
-	code := c.String("code")
-	ref := c.String("ref")
-	url := c.String("url")
+func commandPutExec(flags map[string]string) {
+	name := flags["name"]
+	code := flags["code"]
+	ref := flags["ref"]
+	url := flags["url"]
 	ics := NewIcons()
 
 	if name != "" {

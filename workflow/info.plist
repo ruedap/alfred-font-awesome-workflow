@@ -102,7 +102,7 @@
 				<key>escaping</key>
 				<integer>0</integer>
 				<key>script</key>
-				<string>./faw convert --name {query}</string>
+				<string>./faw put --name {query}</string>
 				<key>type</key>
 				<integer>0</integer>
 			</dict>
@@ -171,7 +171,7 @@
 				<key>escaping</key>
 				<integer>0</integer>
 				<key>script</key>
-				<string>./faw convert --ref {query}</string>
+				<string>./faw put --ref {query}</string>
 				<key>type</key>
 				<integer>0</integer>
 			</dict>
@@ -188,7 +188,7 @@
 				<key>escaping</key>
 				<integer>0</integer>
 				<key>script</key>
-				<string>./faw convert --code {query}</string>
+				<string>./faw put --code {query}</string>
 				<key>type</key>
 				<integer>0</integer>
 			</dict>
@@ -222,7 +222,7 @@
 				<key>escaping</key>
 				<integer>0</integer>
 				<key>script</key>
-				<string>./faw convert --url {query}</string>
+				<string>./faw put --url {query}</string>
 				<key>type</key>
 				<integer>0</integer>
 			</dict>
