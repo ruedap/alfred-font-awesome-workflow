@@ -24,12 +24,12 @@ func TestResponseGetXMLString(t *testing.T) {
 	}
 	r.AddItem(&item)
 
-	a := r.GetXMLString()
-	e := `<?xml version="1.0" encoding="UTF-8"?>
-<items><item valid="true" arg="arg-foo" uid="f000-uid" unicode="f000-unicode"><title>title-foo</title><subtitle>Subtitle foo.</subtitle><icon>./icons/title-foo.png</icon></item></items>`
+	actual := r.GetXMLString()
 
-	if a != e {
-		t.Errorf("failed to get XML string: expected %v, got %v", a, e)
+	expected := `<?xml version="1.0" encoding="UTF-8"?>
+<items><item valid="true" arg="arg-foo" uid="f000-uid" unicode="f000-unicode"><title>title-foo</title><subtitle>Subtitle foo.</subtitle><icon>./icons/title-foo.png</icon></item></items>`
+	if actual != expected {
+		t.Errorf("expected %v to eq %v", actual, expected)
 	}
 }
 

@@ -4,123 +4,121 @@ import "testing"
 
 func TestIconsFind_countAll(t *testing.T) {
 	fi := iconsFindHelper([]string{""})
+	actual := len(fi)
 
-	ex := 519
-	ac := len(fi)
-	if ex != ac {
-		t.Errorf("failed to find icon: expected %v, got %v", ex, ac)
+	expected := 519
+	if actual != expected {
+		t.Errorf("expected %v to eq %v", actual, expected)
 	}
 }
 
 func TestIconsFind_countZero(t *testing.T) {
 	fi := iconsFindHelper([]string{"foo-bar-baz"})
+	actual := len(fi)
 
-	ex := 0
-	ac := len(fi)
-	if ex != ac {
-		t.Errorf("failed to find icon: expected %v, got %v", ex, ac)
+	expected := 0
+	if actual != expected {
+		t.Errorf("expected %v to eq %v", actual, expected)
 	}
 }
 
 func TestIconsFind_countOne(t *testing.T) {
 	fi := iconsFindHelper([]string{"github-square"})
+	actual := len(fi)
 
-	ex := 1
-	ac := len(fi)
-	if ex != ac {
-		t.Errorf("failed to find icon: expected %v, got %v", ex, ac)
+	expected := 1
+	if actual != expected {
+		t.Errorf("expected %v to eq %v", actual, expected)
 	}
 }
 
 func TestIconsFind_countTwo(t *testing.T) {
 	fi := iconsFindHelper([]string{"github-"})
+	actual := len(fi)
 
-	ex := 2
-	ac := len(fi)
-	if ex != ac {
-		t.Errorf("failed to find icon: expected %v, got %v", ex, ac)
+	expected := 2
+	if actual != expected {
+		t.Errorf("expected %v to eq %v", actual, expected)
 	}
 }
 
 func TestIconsFind_firstID(t *testing.T) {
 	fi := iconsFindHelper([]string{""})
+	actual := fi[0].ID
 
-	ex := "adjust"
-	ac := fi[0].ID
-	if ex != ac {
-		t.Errorf("failed to find icon: expected %v, got %v", ex, ac)
+	expected := "adjust"
+	if actual != expected {
+		t.Errorf("expected %v to eq %v", actual, expected)
 	}
 }
 
 func TestIconsFind_lastID(t *testing.T) {
 	fi := iconsFindHelper([]string{""})
+	actual := fi[len(fi)-1].ID
 
-	ex := "youtube-square"
-	ac := fi[len(fi)-1].ID
-	if ex != ac {
-		t.Errorf("failed to find icon: expected %v, got %v", ex, ac)
+	expected := "youtube-square"
+	if actual != expected {
+		t.Errorf("expected %v to eq %v", actual, expected)
 	}
 }
 
 func TestIconsFind_taxi(t *testing.T) {
 	fi := iconsFindHelper([]string{"taxi"})
+	actual := fi[0].Name
 
-	ex := "Taxi"
-	ac := fi[0].Name
-	if ex != ac {
-		t.Errorf("failed to find icon: expected %v, got %v", ex, ac)
+	expected := "Taxi"
+	if actual != expected {
+		t.Errorf("expected %v to eq %v", actual, expected)
 	}
 
-	ex = "taxi"
-	ac = fi[0].ID
-	if ex != ac {
-		t.Errorf("failed to find icon: expected %v, got %v", ex, ac)
+	actual = fi[0].ID
+	expected = "taxi"
+	if actual != expected {
+		t.Errorf("expected %v to eq %v", actual, expected)
 	}
 
-	ex = "f1ba"
-	ac = fi[0].Unicode
-	if ex != ac {
-		t.Errorf("failed to find icon: expected %v, got %v", ex, ac)
+	actual = fi[0].Unicode
+	expected = "f1ba"
+	if actual != expected {
+		t.Errorf("expected %v to eq %v", actual, expected)
 	}
 
-	ex = "4.1"
-	ac = fi[0].Created
-	if ex != ac {
-		t.Errorf("failed to find icon: expected %v, got %v", ex, ac)
+	actual = fi[0].Created
+	expected = "4.1"
+	if actual != expected {
+		t.Errorf("expected %v to eq %v", actual, expected)
 	}
 
-	ex = "cab"
-	ac = fi[0].Aliases[0]
-	if ex != ac {
-		t.Errorf("failed to find icon: expected %v, got %v", ex, ac)
+	actual = fi[0].Aliases[0]
+	expected = "cab"
+	if actual != expected {
+		t.Errorf("expected %v to eq %v", actual, expected)
 	}
 
-	ex = "vehicle"
-	ac = fi[0].Filter[0]
-	if ex != ac {
-		t.Errorf("failed to find icon: expected %v, got %v", ex, ac)
+	actual = fi[0].Filter[0]
+	expected = "vehicle"
+	if actual != expected {
+		t.Errorf("expected %v to eq %v", actual, expected)
 	}
 
-	ex = "Web Application Icons"
-	ac = fi[0].Categories[0]
-	if ex != ac {
-		t.Errorf("failed to find icon: expected %v, got %v", ex, ac)
+	actual = fi[0].Categories[0]
+	expected = "Web Application Icons"
+	if actual != expected {
+		t.Errorf("expected %v to eq %v", actual, expected)
 	}
 }
 
 func TestIconsFind_aliases(t *testing.T) {
 	fi := iconsFindHelper([]string{"navicon"})
+	actual := fi[0].ID
 
-	ex := "bars"
-	ac := fi[0].ID
-	if ex != ac {
-		t.Errorf("failed to find icon: expected %v, got %v", ex, ac)
+	expected := "bars"
+	if actual != expected {
+		t.Errorf("expected %v to eq %v", actual, expected)
 	}
 
-	ex2 := 1
-	ac2 := len(fi)
-	if ex2 != ac2 {
-		t.Errorf("failed to find icon: expected %v, got %v", ex2, ac2)
+	if len(fi) != 1 {
+		t.Errorf("expected %v to eq %v", len(fi), 1)
 	}
 }
 
