@@ -6,7 +6,7 @@ import (
 	"testing"
 )
 
-func TestCommandsExecFind(t *testing.T) {
+func TestCommands_Find(t *testing.T) {
 	outStream, errStream := new(bytes.Buffer), new(bytes.Buffer)
 	cmd := &Command{outStream: outStream, errStream: errStream}
 	terms := []string{"app"}
@@ -23,7 +23,7 @@ func TestCommandsExecFind(t *testing.T) {
 	}
 }
 
-func TestCommandsExecPut_name(t *testing.T) {
+func TestCommands_Put_NameFlag(t *testing.T) {
 	outStream, errStream := new(bytes.Buffer), new(bytes.Buffer)
 	cmd := &Command{outStream: outStream, errStream: errStream}
 	flags := map[string]string{"name": "apple"}
@@ -40,7 +40,7 @@ func TestCommandsExecPut_name(t *testing.T) {
 	}
 }
 
-func TestCommandsExecPut_code(t *testing.T) {
+func TestCommands_Put_CodeFlag(t *testing.T) {
 	outStream, errStream := new(bytes.Buffer), new(bytes.Buffer)
 	cmd := &Command{outStream: outStream, errStream: errStream}
 	flags := map[string]string{"code": "apple"}
@@ -57,7 +57,7 @@ func TestCommandsExecPut_code(t *testing.T) {
 	}
 }
 
-func TestCommandsExecPut_ref(t *testing.T) {
+func TestCommands_Put_RefFlag(t *testing.T) {
 	outStream, errStream := new(bytes.Buffer), new(bytes.Buffer)
 	cmd := &Command{outStream: outStream, errStream: errStream}
 	flags := map[string]string{"ref": "apple"}
@@ -74,7 +74,7 @@ func TestCommandsExecPut_ref(t *testing.T) {
 	}
 }
 
-func TestCommandsExecPut_url(t *testing.T) {
+func TestCommands_Put_URLFlag(t *testing.T) {
 	outStream, errStream := new(bytes.Buffer), new(bytes.Buffer)
 	cmd := &Command{outStream: outStream, errStream: errStream}
 	flags := map[string]string{"url": "apple"}

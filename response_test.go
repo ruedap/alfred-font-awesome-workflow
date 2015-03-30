@@ -2,7 +2,7 @@ package main
 
 import "testing"
 
-func TestResponseAddItem(t *testing.T) {
+func TestResponse_AddItem(t *testing.T) {
 	r := NewResponse()
 	r.AddItem(&ResponseItem{Title: "title-foo"})
 
@@ -11,7 +11,7 @@ func TestResponseAddItem(t *testing.T) {
 	}
 }
 
-func TestResponseGetXMLString(t *testing.T) {
+func TestResponse_GetXMLString(t *testing.T) {
 	r := NewResponse()
 	item := ResponseItem{
 		Valid:    true,
@@ -32,7 +32,7 @@ func TestResponseGetXMLString(t *testing.T) {
 	}
 }
 
-func TestResponseInitTerms(t *testing.T) {
+func TestResponse_InitTerms(t *testing.T) {
 	terms := []string{"Foo-Foo", "BAR*BAR?", "バズ"}
 	InitTerms(terms)
 	if terms[0] != "foo-foo" {
@@ -48,7 +48,7 @@ func TestResponseInitTerms(t *testing.T) {
 	}
 }
 
-func TestResponseContainTerms(t *testing.T) {
+func TestResponse_ContainTerms(t *testing.T) {
 	if !ContainTerms([]string{"foo-bar"}, "FOO-Bar") {
 		t.Error("failed to match terms")
 	}
