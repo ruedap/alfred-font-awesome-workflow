@@ -49,15 +49,3 @@ func (r *Response) ToXML() string {
 
 	return xmlHeader + string(x)
 }
-
-func ContainTerms(terms []string, name string) bool {
-	n := strings.ToLower(name)
-
-	for _, t := range terms {
-		if !strings.Contains(n, t) {
-			return false
-		}
-	}
-
-	return true
-}

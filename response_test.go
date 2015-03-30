@@ -51,21 +51,3 @@ func TestResponse_ToXML(t *testing.T) {
 		t.Errorf("expected %v to eq %v", actual, expected)
 	}
 }
-
-func TestResponse_ContainTerms(t *testing.T) {
-	if !ContainTerms([]string{"foo-bar"}, "FOO-Bar") {
-		t.Error("failed to match terms")
-	}
-
-	if !ContainTerms([]string{"foo-bar"}, "1000foo-bar2000") {
-		t.Error("failed to match terms")
-	}
-
-	if !ContainTerms([]string{"foo", "oops"}, "foops") {
-		t.Error("failed to match terms")
-	}
-
-	if ContainTerms([]string{"foo-bar"}, "foo--bar") {
-		t.Error("failed to match terms")
-	}
-}

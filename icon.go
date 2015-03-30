@@ -12,6 +12,10 @@ type Icon struct {
 	Categories []string
 }
 
+func (ic *Icon) Contains(terms []string) bool {
+	return ic.containID(terms) || ic.containAlias(terms)
+}
+
 func (ic *Icon) containID(terms []string) bool {
 	for _, term := range terms {
 		if !strings.Contains(ic.ID, term) {

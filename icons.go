@@ -37,31 +37,13 @@ func NewIcons() Icons {
 func (ics Icons) Find(terms []string) Icons {
 	var foundIcons Icons
 
-	for _, icon := range ics {
-
-		if ContainTerms(terms, icon.ID) {
-			foundIcons = append(foundIcons, icon)
-			continue
-		}
-
-		if ics.FindBy(icon.Aliases, terms) {
-			foundIcons = append(foundIcons, icon)
-			continue
+	for _, ic := range ics {
+		if ic.Contains(terms) {
+			foundIcons = append(foundIcons, ic)
 		}
 	}
 
 	return foundIcons
-}
-
-func (ics Icons) FindBy(keywords, terms []string) bool {
-	for _, k := range keywords {
-		// FIXME: ContainTerms function dependency
-		if ContainTerms(terms, k) {
-			return true
-		}
-	}
-
-	return false
 }
 
 // Len for sort
