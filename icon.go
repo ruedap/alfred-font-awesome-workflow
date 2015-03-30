@@ -21,3 +21,26 @@ func (ic *Icon) containID(terms []string) bool {
 
 	return true
 }
+
+// TODO: Refactoring
+func (ic *Icon) containAlias(terms []string) bool {
+	if len(ic.Aliases) == 0 {
+		return false
+	}
+
+	b := true
+	for _, alias := range ic.Aliases {
+		b = true
+		for _, term := range terms {
+			if !strings.Contains(alias, term) {
+				b = false
+			}
+		}
+
+		if b {
+			break
+		}
+	}
+
+	return b
+}
