@@ -8,6 +8,7 @@ import (
 	"gopkg.in/yaml.v2"
 )
 
+// TODO: Refactoring
 type IconsYaml struct {
 	Icons Icons
 }
