@@ -16,7 +16,7 @@ exec:
 	@$(FAW_EXEC_CMD) put -url apple
 	@echo
 build:
-	go build -o ./workflow/faw
+	go build -ldflags '-s -w' -o ./workflow/faw
 test:
 	go test -v
 clean:
