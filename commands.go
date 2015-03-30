@@ -56,10 +56,8 @@ var commandPut = cli.Command{
 }
 
 func (cmd *Command) Find(terms []string) int {
-	InitTerms(terms)
-
-	r := NewResponse()
-	icons := NewIcons().Find(terms)
+	r := NewResponse(terms)
+	icons := NewIcons().Find(r.Terms)
 
 	for _, icon := range icons {
 		r.AddItem(&ResponseItem{
@@ -73,9 +71,10 @@ func (cmd *Command) Find(terms []string) int {
 		})
 	}
 
-	s := r.ToXML()
-	_, err := fmt.Fprint(cmd.outStream, s)
-	if s == "" || err != nil {
+	xml := r.ToXML()
+	_, err := fmt.Fprint(cmd.outStream, xml)
+
+	if xml == "" || err != nil {
 		return ExitCodeError
 	}
 	return ExitCodeOK

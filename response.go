@@ -7,6 +7,7 @@ import (
 
 type Response struct {
 	Items   []ResponseItem
+	Terms   []string `xml:"-"`
 	XMLName struct{} `xml:"items"`
 }
 
@@ -24,9 +25,15 @@ type ResponseItem struct {
 
 const xmlHeader = `<?xml version="1.0" encoding="UTF-8"?>`
 
-func NewResponse() *Response {
+func NewResponse(terms []string) *Response {
 	r := new(Response)
 	r.Items = []ResponseItem{}
+
+	for i, t := range terms {
+		terms[i] = strings.ToLower(t)
+	}
+	r.Terms = terms
+
 	return r
 }
 
@@ -41,12 +48,6 @@ func (r *Response) ToXML() string {
 	}
 
 	return xmlHeader + string(x)
-}
-
-func InitTerms(terms []string) {
-	for i, t := range terms {
-		terms[i] = strings.ToLower(t)
-	}
 }
 
 func ContainTerms(terms []string, name string) bool {
