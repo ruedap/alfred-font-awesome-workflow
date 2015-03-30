@@ -30,7 +30,7 @@ var commandFind = cli.Command{
 	Usage: "Search through Font Awesome icons",
 	Action: func(c *cli.Context) {
 		cmd := &Command{outStream: os.Stdout, errStream: os.Stderr}
-		cmd.execFind(c.Args())
+		cmd.Find(c.Args())
 	},
 }
 
@@ -45,7 +45,7 @@ var commandPut = cli.Command{
 			"url":  c.String("url"),
 		}
 		cmd := &Command{outStream: os.Stdout, errStream: os.Stderr}
-		cmd.execPut(flags)
+		cmd.Put(flags)
 	},
 	Flags: []cli.Flag{
 		cli.StringFlag{Name: "name", Usage: "CSS class name"},
@@ -55,7 +55,7 @@ var commandPut = cli.Command{
 	},
 }
 
-func (cmd *Command) execFind(terms []string) int {
+func (cmd *Command) Find(terms []string) int {
 	InitTerms(terms)
 
 	r := NewResponse()
@@ -81,7 +81,7 @@ func (cmd *Command) execFind(terms []string) int {
 	return ExitCodeOK
 }
 
-func (cmd *Command) execPut(flags map[string]string) int {
+func (cmd *Command) Put(flags map[string]string) int {
 	name := flags["name"]
 	code := flags["code"]
 	ref := flags["ref"]

@@ -11,7 +11,7 @@ func TestCommandsExecFind(t *testing.T) {
 	cmd := &Command{outStream: outStream, errStream: errStream}
 	terms := []string{"app"}
 
-	status := cmd.execFind(terms)
+	status := cmd.Find(terms)
 	if status != ExitCodeOK {
 		t.Errorf("ExitStatus=%d, want %d", status, ExitCodeOK)
 	}
@@ -28,7 +28,7 @@ func TestCommandsExecPut_name(t *testing.T) {
 	cmd := &Command{outStream: outStream, errStream: errStream}
 	flags := map[string]string{"name": "apple"}
 
-	status := cmd.execPut(flags)
+	status := cmd.Put(flags)
 	if status != ExitCodeOK {
 		t.Errorf("ExitStatus=%d, want %d", status, ExitCodeOK)
 	}
@@ -45,7 +45,7 @@ func TestCommandsExecPut_code(t *testing.T) {
 	cmd := &Command{outStream: outStream, errStream: errStream}
 	flags := map[string]string{"code": "apple"}
 
-	status := cmd.execPut(flags)
+	status := cmd.Put(flags)
 	if status != ExitCodeOK {
 		t.Errorf("ExitStatus=%d, want %d", status, ExitCodeOK)
 	}
@@ -62,7 +62,7 @@ func TestCommandsExecPut_ref(t *testing.T) {
 	cmd := &Command{outStream: outStream, errStream: errStream}
 	flags := map[string]string{"ref": "apple"}
 
-	status := cmd.execPut(flags)
+	status := cmd.Put(flags)
 	if status != ExitCodeOK {
 		t.Errorf("ExitStatus=%d, want %d", status, ExitCodeOK)
 	}
@@ -79,7 +79,7 @@ func TestCommandsExecPut_url(t *testing.T) {
 	cmd := &Command{outStream: outStream, errStream: errStream}
 	flags := map[string]string{"url": "apple"}
 
-	status := cmd.execPut(flags)
+	status := cmd.Put(flags)
 	if status != ExitCodeOK {
 		t.Errorf("ExitStatus=%d, want %d", status, ExitCodeOK)
 	}
