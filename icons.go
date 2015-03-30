@@ -14,16 +14,6 @@ type IconsYaml struct {
 
 type Icons []Icon
 
-type Icon struct {
-	Name       string
-	ID         string
-	Unicode    string
-	Created    string
-	Filter     []string
-	Aliases    []string
-	Categories []string
-}
-
 func NewIcons() Icons {
 	path := os.Getenv("FAW_ICONS_YAML_PATH") // for testing
 	if path == "" {
@@ -48,6 +38,7 @@ func (ics Icons) Find(terms []string) Icons {
 	var foundIcons Icons
 
 	for _, icon := range ics {
+
 		if ContainTerms(terms, icon.ID) {
 			foundIcons = append(foundIcons, icon)
 			continue
