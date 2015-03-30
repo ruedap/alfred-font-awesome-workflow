@@ -73,7 +73,7 @@ func (cmd *Command) Find(terms []string) int {
 		})
 	}
 
-	s := r.GetXMLString()
+	s := r.ToXML()
 	_, err := fmt.Fprint(cmd.outStream, s)
 	if s == "" || err != nil {
 		return ExitCodeError

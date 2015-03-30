@@ -11,7 +11,7 @@ func TestResponse_AddItem(t *testing.T) {
 	}
 }
 
-func TestResponse_GetXMLString(t *testing.T) {
+func TestResponse_ToXML(t *testing.T) {
 	r := NewResponse()
 	item := ResponseItem{
 		Valid:    true,
@@ -24,7 +24,7 @@ func TestResponse_GetXMLString(t *testing.T) {
 	}
 	r.AddItem(&item)
 
-	actual := r.GetXMLString()
+	actual := r.ToXML()
 
 	expected := `<?xml version="1.0" encoding="UTF-8"?><items><item valid="true" arg="arg-foo" uid="f000-uid" unicode="f000-unicode"><title>title-foo</title><subtitle>Subtitle foo.</subtitle><icon>./icons/title-foo.png</icon></item></items>`
 	if actual != expected {

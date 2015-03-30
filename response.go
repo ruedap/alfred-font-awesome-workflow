@@ -34,7 +34,7 @@ func (r *Response) AddItem(item *ResponseItem) {
 	r.Items = append(r.Items, *item)
 }
 
-func (r *Response) GetXMLString() string {
+func (r *Response) ToXML() string {
 	var x, err = xml.Marshal(r)
 	if err != nil {
 		panic(err) // FIXME
