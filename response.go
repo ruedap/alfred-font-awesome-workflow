@@ -37,8 +37,9 @@ func NewResponse(terms []string) *Response {
 	return r
 }
 
-func (r *Response) AddItem(item *ResponseItem) {
+func (r *Response) AddItem(item *ResponseItem) *Response {
 	r.Items = append(r.Items, *item)
+	return r
 }
 
 func (r *Response) ToXML() string {
