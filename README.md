@@ -2,7 +2,6 @@
 
 [![Build Status](http://img.shields.io/travis/ruedap/alfred2-font-awesome-workflow.svg?style=flat-square)](https://travis-ci.org/ruedap/alfred2-font-awesome-workflow)
 [![Coverage Status](http://img.shields.io/coveralls/ruedap/alfred2-font-awesome-workflow/master.svg?style=flat-square)](https://coveralls.io/r/ruedap/alfred2-font-awesome-workflow)
-[![Code Climate](http://img.shields.io/codeclimate/github/ruedap/alfred2-font-awesome-workflow.svg?style=flat-square)](https://codeclimate.com/github/ruedap/alfred2-font-awesome-workflow)
 [![Latest Version](http://img.shields.io/github/release/ruedap/alfred2-font-awesome-workflow.svg?style=flat-square)](https://github.com/ruedap/alfred2-font-awesome-workflow/releases)
 [![License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](http://ruedap.mit-license.org/2015)
 
