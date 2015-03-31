@@ -4,7 +4,7 @@
 [![Coverage Status](http://img.shields.io/coveralls/ruedap/alfred2-font-awesome-workflow/master.svg?style=flat-square)](https://coveralls.io/r/ruedap/alfred2-font-awesome-workflow)
 [![Code Climate](http://img.shields.io/codeclimate/github/ruedap/alfred2-font-awesome-workflow.svg?style=flat-square)](https://codeclimate.com/github/ruedap/alfred2-font-awesome-workflow)
 [![Latest Version](http://img.shields.io/github/release/ruedap/alfred2-font-awesome-workflow.svg?style=flat-square)](https://github.com/ruedap/alfred2-font-awesome-workflow/releases)
-[![License](http://img.shields.io/badge/license-GPL-blue.svg?style=flat-square)](http://www.gnu.org/copyleft/gpl.html)
+[![License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](http://ruedap.mit-license.org/2015)
 
 You can incremental search for [Font Awesome icons](http://fontawesome.io/icons/) and paste it to front most app.
 
@@ -64,9 +64,10 @@ See details changes for each version in the [release notes](https://github.com/r
     * [Font AwesomeをKeynoteやIllustratorで使う](http://takanomasahiro.tumblr.com/post/78678195177/font-awesome-keynote-illustrator)
 
 
+
 ## License
 
-GNU General Public License version 3
+Released under the [MIT license](http://ruedap.mit-license.org/2015).
 
 
 ## Author
