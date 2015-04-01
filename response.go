@@ -23,8 +23,6 @@ type ResponseItem struct {
 	XMLName struct{} `xml:"item"`
 }
 
-const xmlHeader = `<?xml version="1.0" encoding="UTF-8"?>`
-
 func NewResponse(terms []string) *Response {
 	r := new(Response)
 	r.Items = []ResponseItem{}
@@ -48,5 +46,5 @@ func (r *Response) ToXML() string {
 		panic(err) // FIXME
 	}
 
-	return xmlHeader + string(x)
+	return xml.Header + string(x)
 }
