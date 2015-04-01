@@ -93,7 +93,7 @@
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
-	<string>Font Awesome 4.3.0.0</string>
+	<string>Font Awesome 4.3.0.1</string>
 	<key>objects</key>
 	<array>
 		<dict>
@@ -102,7 +102,7 @@
 				<key>escaping</key>
 				<integer>0</integer>
 				<key>script</key>
-				<string>/usr/bin/ruby ./press_enter.rb "{query}"</string>
+				<string>./faw put --name {query}</string>
 				<key>type</key>
 				<integer>0</integer>
 			</dict>
@@ -122,10 +122,18 @@
 				<integer>62</integer>
 				<key>keyword</key>
 				<string>fa</string>
+				<key>queuedelaycustom</key>
+				<integer>1</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<false/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
 				<key>runningsubtext</key>
 				<string>...</string>
 				<key>script</key>
-				<string>/usr/bin/ruby ./main.rb {query}</string>
+				<string>./faw find {query}</string>
 				<key>subtext</key>
 				<string>Font Awesome Workflow</string>
 				<key>title</key>
@@ -163,7 +171,7 @@
 				<key>escaping</key>
 				<integer>0</integer>
 				<key>script</key>
-				<string>/usr/bin/ruby ./press_ctrl_enter.rb "{query}"</string>
+				<string>./faw put --ref {query}</string>
 				<key>type</key>
 				<integer>0</integer>
 			</dict>
@@ -180,7 +188,7 @@
 				<key>escaping</key>
 				<integer>0</integer>
 				<key>script</key>
-				<string>/usr/bin/ruby ./press_shift_enter.rb "{query}"</string>
+				<string>./faw put --code {query}</string>
 				<key>type</key>
 				<integer>0</integer>
 			</dict>
@@ -214,7 +222,7 @@
 				<key>escaping</key>
 				<integer>0</integer>
 				<key>script</key>
-				<string>/usr/bin/ruby ./press_cmd_enter.rb "{query}"</string>
+				<string>./faw put --url {query}</string>
 				<key>type</key>
 				<integer>0</integer>
 			</dict>
