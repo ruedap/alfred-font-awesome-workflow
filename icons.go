@@ -16,15 +16,11 @@ type IconsYaml struct {
 type Icons []Icon
 
 func NewIcons() Icons {
-	path := iconsYamlPath()
-
-	b, err := ioutil.ReadFile(path)
-	if err != nil {
-		panic(err) // FIXME
-	}
+	p := iconsYamlPath()
+	b, _ := iconsReadYaml(p) // FIXME: error handling
 
 	var y IconsYaml
-	err = yaml.Unmarshal([]byte(b), &y)
+	err := yaml.Unmarshal([]byte(b), &y)
 	if err != nil {
 		panic(err) // FIXME
 	}
@@ -39,6 +35,10 @@ func iconsYamlPath() string {
 	}
 
 	return path
+}
+
+func iconsReadYaml(path string) ([]byte, error) {
+	return ioutil.ReadFile(path)
 }
 
 func (ics Icons) Find(terms []string) Icons {

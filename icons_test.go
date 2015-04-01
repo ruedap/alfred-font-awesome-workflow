@@ -1,6 +1,10 @@
 package main
 
-import "testing"
+import (
+	"io/ioutil"
+	"reflect"
+	"testing"
+)
 
 func testIconsHelper_Find(terms []string) Icons {
 	return NewIcons().Find(terms)
@@ -22,6 +26,25 @@ func TestIcons_iconsYamlPath_ProductionEnv(t *testing.T) {
 	expected := "icons.yml"
 	if actual != expected {
 		t.Errorf("expected %v to eq %v", actual, expected)
+	}
+}
+
+func TestIcons_iconsReadYaml(t *testing.T) {
+	path := "workflow/icons.yml"
+	actual, _ := iconsReadYaml(path)
+
+	expected, _ := ioutil.ReadFile(path)
+	if !reflect.DeepEqual(actual, expected) {
+		t.Error("failed to read file")
+	}
+}
+
+func TestIcons_iconsReadYaml_Error(t *testing.T) {
+	path := ""
+	_, err := iconsReadYaml(path)
+
+	if err == nil {
+		t.Error("expected error, but nil")
 	}
 }
 
