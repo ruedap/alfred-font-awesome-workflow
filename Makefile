@@ -4,7 +4,9 @@ WORKFLOW_DIR = ~/Dropbox/Alfred/Alfred.alfredpreferences/workflows
 BUNDLE_ID = com.ruedap.font-awesome
 FAW_CLI_CMD = FAW_ICONS_YAML_PATH=workflow/icons.yml ./workflow/faw
 
-ci: deps build cli test
+default: build cli test
+
+ci: deps build cli coveralls
 
 cli:
 	@echo "--> Running CLI commands"
@@ -19,18 +21,30 @@ cli:
 	@$(FAW_CLI_CMD) put -url apple
 	@echo
 
+coveralls:
+	@echo "--> Testing packages and sending coverage report"
+	@goveralls -v -service=travis-ci
+
 deps:
 	@echo "--> Installing build dependencies"
-	go get -d -v ./... $(DEPS)
+	go get -d ./... $(DEPS)
+	go get github.com/axw/gocov/gocov
+	go get golang.org/x/tools/cmd/cover
+	go get github.com/mattn/goveralls
 
 build:
 	@echo "--> Compiling packages and dependencies"
 	@mkdir -p ./workflow/
 	go build -ldflags '-s -w' -o ./workflow/faw
 
+cov:
+	@echo "--> Reporting coverages"
+	@gocov test | gocov report
+
+
 test:
 	@echo "--> Testing packages"
-	go test -v
+	@go test -v -cover
 
 clean:
 	@echo "--> Cleaning workflow files"
