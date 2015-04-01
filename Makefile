@@ -46,6 +46,10 @@ test:
 	@echo "--> Testing packages"
 	@go test -v -cover
 
+bench:
+	@echo "--> Benchmarking packages"
+	@go test -bench .
+
 clean:
 	@echo "--> Cleaning workflow files"
 	@- rm ./workflow/faw
