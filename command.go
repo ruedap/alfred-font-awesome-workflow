@@ -1,6 +1,7 @@
 package main
 
 import (
+	"errors"
 	"fmt"
 	"html"
 	"io"
@@ -51,23 +52,20 @@ func (cmd *Command) Put(flags map[string]string) int {
 	ost := cmd.outStream
 	var err error
 
-	if name != "" {
+	switch {
+	case name != "":
 		_, err = fmt.Fprint(ost, "fa-"+name)
-	}
-
-	if code != "" {
+	case code != "":
 		icons := ics.Find([]string{code})
 		_, err = fmt.Fprint(ost, icons[0].Unicode)
-	}
-
-	if ref != "" {
+	case ref != "":
 		icons := ics.Find([]string{ref})
 		str := html.UnescapeString("&#x" + icons[0].Unicode + ";")
 		_, err = fmt.Fprint(ost, str)
-	}
-
-	if url != "" {
+	case url != "":
 		_, err = fmt.Fprint(ost, "http://fontawesome.io/icon/"+url+"/")
+	default:
+		err = errors.New("invalid flag argument")
 	}
 
 	if err != nil {
