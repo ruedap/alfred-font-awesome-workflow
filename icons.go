@@ -16,10 +16,7 @@ type IconsYaml struct {
 type Icons []Icon
 
 func NewIcons() Icons {
-	path := os.Getenv("FAW_ICONS_YAML_PATH") // for testing
-	if path == "" {
-		path = "icons.yml" // default
-	}
+	path := iconsYamlPath()
 
 	b, err := ioutil.ReadFile(path)
 	if err != nil {
@@ -33,6 +30,15 @@ func NewIcons() Icons {
 	}
 
 	return y.Icons.Sort()
+}
+
+func iconsYamlPath() string {
+	path := os.Getenv("FAW_ICONS_YAML_PATH") // for test env
+	if path == "" {
+		path = "icons.yml" // default
+	}
+
+	return path
 }
 
 func (ics Icons) Find(terms []string) Icons {

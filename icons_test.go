@@ -6,6 +6,25 @@ func testIconsHelper_Find(terms []string) Icons {
 	return NewIcons().Find(terms)
 }
 
+func TestIcons_iconsYamlPath_TestEnv(t *testing.T) {
+	actual := iconsYamlPath()
+	expected := "workflow/icons.yml"
+	if actual != expected {
+		t.Errorf("expected %v to eq %v", actual, expected)
+	}
+}
+
+func TestIcons_iconsYamlPath_ProductionEnv(t *testing.T) {
+	resetEnv := setTestEnvHelper("FAW_ICONS_YAML_PATH", "")
+	defer resetEnv()
+
+	actual := iconsYamlPath()
+	expected := "icons.yml"
+	if actual != expected {
+		t.Errorf("expected %v to eq %v", actual, expected)
+	}
+}
+
 func TestIcons_Find_AllIcons(t *testing.T) {
 	fi := testIconsHelper_Find([]string{""})
 
