@@ -48,6 +48,31 @@ func TestIcons_iconsReadYaml_Error(t *testing.T) {
 	}
 }
 
+func TestIcons_iconsUnmarshalYaml(t *testing.T) {
+	b := []byte(`
+icons:
+  - name:       Glass
+    id:         glass
+    unicode:    f000
+    created:    1.0
+    filter:
+      - martini
+`)
+	actual, _ := iconsUnmarshalYaml(b)
+
+	icon := Icon{
+		Name:    "Glass",
+		ID:      "glass",
+		Unicode: "f000",
+		Created: "1.0",
+		Filter:  []string{"martini"},
+	}
+	expected := IconsYaml{Icons{icon}}
+	if !reflect.DeepEqual(actual, expected) {
+		t.Errorf("expected %v to eq %v", actual, expected)
+	}
+}
+
 func TestIcons_Find_AllIcons(t *testing.T) {
 	fi := testIconsHelper_Find([]string{""})
 

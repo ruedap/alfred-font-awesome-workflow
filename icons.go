@@ -17,13 +17,8 @@ type Icons []Icon
 
 func NewIcons() Icons {
 	p := iconsYamlPath()
-	b, _ := iconsReadYaml(p) // FIXME: error handling
-
-	var y IconsYaml
-	err := yaml.Unmarshal([]byte(b), &y)
-	if err != nil {
-		panic(err) // FIXME
-	}
+	b, _ := iconsReadYaml(p)      // FIXME: error handling
+	y, _ := iconsUnmarshalYaml(b) // FIXME: error handling
 
 	return y.Icons.Sort()
 }
@@ -39,6 +34,12 @@ func iconsYamlPath() string {
 
 func iconsReadYaml(path string) ([]byte, error) {
 	return ioutil.ReadFile(path)
+}
+
+func iconsUnmarshalYaml(b []byte) (IconsYaml, error) {
+	var y IconsYaml
+	err := yaml.Unmarshal([]byte(b), &y)
+	return y, err
 }
 
 func (ics Icons) Find(terms []string) Icons {
