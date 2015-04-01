@@ -2,12 +2,12 @@ package main
 
 import "testing"
 
-func testIcons_Find(terms []string) Icons {
+func testIconsHelper_Find(terms []string) Icons {
 	return NewIcons().Find(terms)
 }
 
 func TestIcons_Find_AllIcons(t *testing.T) {
-	fi := testIcons_Find([]string{""})
+	fi := testIconsHelper_Find([]string{""})
 
 	actual := len(fi)
 	expected := 519
@@ -17,7 +17,7 @@ func TestIcons_Find_AllIcons(t *testing.T) {
 }
 
 func TestIcons_Find_ZeroIcon(t *testing.T) {
-	fi := testIcons_Find([]string{"foo-bar-baz"})
+	fi := testIconsHelper_Find([]string{"foo-bar-baz"})
 
 	actual := len(fi)
 	expected := 0
@@ -27,7 +27,7 @@ func TestIcons_Find_ZeroIcon(t *testing.T) {
 }
 
 func TestIcons_Find_OneIcon(t *testing.T) {
-	fi := testIcons_Find([]string{"github-square"})
+	fi := testIconsHelper_Find([]string{"github-square"})
 
 	actual := len(fi)
 	expected := 1
@@ -37,7 +37,7 @@ func TestIcons_Find_OneIcon(t *testing.T) {
 }
 
 func TestIcons_Find_TwoIcons(t *testing.T) {
-	fi := testIcons_Find([]string{"github-"})
+	fi := testIconsHelper_Find([]string{"github-"})
 
 	actual := len(fi)
 	expected := 2
@@ -47,7 +47,7 @@ func TestIcons_Find_TwoIcons(t *testing.T) {
 }
 
 func TestIcons_Find_FirstIcon(t *testing.T) {
-	fi := testIcons_Find([]string{""})
+	fi := testIconsHelper_Find([]string{""})
 
 	actual := fi[0].ID
 	expected := "adjust"
@@ -57,7 +57,7 @@ func TestIcons_Find_FirstIcon(t *testing.T) {
 }
 
 func TestIcons_Find_LastIcon(t *testing.T) {
-	fi := testIcons_Find([]string{""})
+	fi := testIconsHelper_Find([]string{""})
 
 	actual := fi[len(fi)-1].ID
 	expected := "youtube-square"
@@ -67,7 +67,7 @@ func TestIcons_Find_LastIcon(t *testing.T) {
 }
 
 func TestIcons_Find_TaxiIcon(t *testing.T) {
-	fi := testIcons_Find([]string{"taxi"})
+	fi := testIconsHelper_Find([]string{"taxi"})
 
 	actual := fi[0].Name
 	expected := "Taxi"
@@ -113,7 +113,7 @@ func TestIcons_Find_TaxiIcon(t *testing.T) {
 }
 
 func TestIcons_Find_Aliases(t *testing.T) {
-	fi := testIcons_Find([]string{"navicon"})
+	fi := testIconsHelper_Find([]string{"navicon"})
 
 	actual := fi[0].ID
 	expected := "bars"
