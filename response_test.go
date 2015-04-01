@@ -46,3 +46,13 @@ func TestResponse_ToXML(t *testing.T) {
 		t.Errorf("expected %v to eq %v", actual, expected)
 	}
 }
+
+func TestResponse_ToXML_Blank(t *testing.T) {
+	r := NewResponse([]string{})
+
+	actual := r.ToXML()
+	expected := `<?xml version="1.0" encoding="UTF-8"?><items></items>`
+	if actual != expected {
+		t.Errorf("expected %v to eq %v", actual, expected)
+	}
+}
