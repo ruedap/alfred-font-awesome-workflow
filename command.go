@@ -34,12 +34,16 @@ func (cmd *Command) Find(terms []string) int {
 		})
 	}
 
-	xml := r.ToXML()
-	_, err := fmt.Fprint(cmd.outStream, xml)
-
-	if xml == "" || err != nil {
+	xml, err := r.ToXML()
+	if err != nil {
 		return ExitCodeError
 	}
+
+	_, err = fmt.Fprint(cmd.outStream, xml)
+	if err != nil {
+		return ExitCodeError
+	}
+
 	return ExitCodeOK
 }
 

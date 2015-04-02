@@ -40,11 +40,7 @@ func (r *Response) AddItem(item *ResponseItem) *Response {
 	return r
 }
 
-func (r *Response) ToXML() string {
+func (r *Response) ToXML() (string, error) {
 	var x, err = xml.Marshal(r)
-	if err != nil {
-		panic(err) // FIXME
-	}
-
-	return xml.Header + string(x)
+	return xml.Header + string(x), err
 }

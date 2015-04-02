@@ -40,7 +40,12 @@ func TestResponse_ToXML(t *testing.T) {
 	}
 	r.AddItem(&item)
 
-	actual := r.ToXML()
+	actual, err := r.ToXML()
+	if err != nil {
+		t.Error("failed to convert to XML")
+		return
+	}
+
 	expected := `<?xml version="1.0" encoding="UTF-8"?>
 <items><item valid="true" arg="arg-foo" uid="f000-uid" unicode="f000-unicode"><title>title-foo</title><subtitle>Subtitle foo.</subtitle><icon>./icons/title-foo.png</icon></item></items>`
 	if actual != expected {
@@ -51,7 +56,12 @@ func TestResponse_ToXML(t *testing.T) {
 func TestResponse_ToXML_Blank(t *testing.T) {
 	r := NewResponse([]string{})
 
-	actual := r.ToXML()
+	actual, err := r.ToXML()
+	if err != nil {
+		t.Error("failed to convert to XML")
+		return
+	}
+
 	expected := `<?xml version="1.0" encoding="UTF-8"?>
 <items></items>`
 	if actual != expected {
