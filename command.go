@@ -14,11 +14,11 @@ const (
 	ExitCodeError = 10 + iota
 )
 
-type Command struct {
+type command struct {
 	outStream, errStream io.Writer
 }
 
-func (cmd *Command) Find(terms []string) int {
+func (cmd *command) Find(terms []string) int {
 	r := NewResponse(terms)
 	icons := NewIcons().Find(r.Terms)
 
@@ -47,7 +47,7 @@ func (cmd *Command) Find(terms []string) int {
 	return ExitCodeOK
 }
 
-func (cmd *Command) Put(flags map[string]string) int {
+func (cmd *command) Put(flags map[string]string) int {
 	name := flags["name"]
 	code := flags["code"]
 	ref := flags["ref"]

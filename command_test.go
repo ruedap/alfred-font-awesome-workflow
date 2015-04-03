@@ -8,7 +8,7 @@ import (
 
 func TestCommand_Find(t *testing.T) {
 	outStream, errStream := new(bytes.Buffer), new(bytes.Buffer)
-	cmd := &Command{outStream: outStream, errStream: errStream}
+	cmd := &command{outStream: outStream, errStream: errStream}
 	terms := []string{"app"}
 
 	status := cmd.Find(terms)
@@ -26,7 +26,7 @@ func TestCommand_Find(t *testing.T) {
 
 func TestCommand_Put_NameFlag(t *testing.T) {
 	outStream, errStream := new(bytes.Buffer), new(bytes.Buffer)
-	cmd := &Command{outStream: outStream, errStream: errStream}
+	cmd := &command{outStream: outStream, errStream: errStream}
 	flags := map[string]string{"name": "apple"}
 
 	status := cmd.Put(flags)
@@ -43,7 +43,7 @@ func TestCommand_Put_NameFlag(t *testing.T) {
 
 func TestCommand_Put_CodeFlag(t *testing.T) {
 	outStream, errStream := new(bytes.Buffer), new(bytes.Buffer)
-	cmd := &Command{outStream: outStream, errStream: errStream}
+	cmd := &command{outStream: outStream, errStream: errStream}
 	flags := map[string]string{"code": "apple"}
 
 	status := cmd.Put(flags)
@@ -60,7 +60,7 @@ func TestCommand_Put_CodeFlag(t *testing.T) {
 
 func TestCommand_Put_RefFlag(t *testing.T) {
 	outStream, errStream := new(bytes.Buffer), new(bytes.Buffer)
-	cmd := &Command{outStream: outStream, errStream: errStream}
+	cmd := &command{outStream: outStream, errStream: errStream}
 	flags := map[string]string{"ref": "apple"}
 
 	status := cmd.Put(flags)
@@ -77,7 +77,7 @@ func TestCommand_Put_RefFlag(t *testing.T) {
 
 func TestCommand_Put_URLFlag(t *testing.T) {
 	outStream, errStream := new(bytes.Buffer), new(bytes.Buffer)
-	cmd := &Command{outStream: outStream, errStream: errStream}
+	cmd := &command{outStream: outStream, errStream: errStream}
 	flags := map[string]string{"url": "apple"}
 
 	status := cmd.Put(flags)
