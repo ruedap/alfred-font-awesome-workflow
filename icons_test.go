@@ -7,7 +7,7 @@ import (
 )
 
 func testIconsHelper_Find(terms []string) icons {
-	return NewIcons().Find(terms)
+	return newIcons().Find(terms)
 }
 
 func TestIcons_iconsYamlPath_TestEnv(t *testing.T) {

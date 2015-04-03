@@ -15,7 +15,7 @@ type iconsYaml struct {
 
 type icons []icon
 
-func NewIcons() icons {
+func newIcons() icons {
 	p := iconsYamlPath()
 	b, _ := iconsReadYaml(p)      // FIXME: error handling
 	y, _ := iconsUnmarshalYaml(b) // FIXME: error handling

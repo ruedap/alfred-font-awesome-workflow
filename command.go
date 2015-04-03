@@ -20,7 +20,7 @@ type command struct {
 
 func (cmd *command) find(terms []string) int {
 	r := NewResponse(terms)
-	icons := NewIcons().Find(r.Terms)
+	icons := newIcons().Find(r.Terms)
 
 	for _, icon := range icons {
 		r.AddItem(&ResponseItem{
@@ -52,7 +52,7 @@ func (cmd *command) put(flags map[string]string) int {
 	code := flags["code"]
 	ref := flags["ref"]
 	url := flags["url"]
-	ics := NewIcons()
+	ics := newIcons()
 	ost := cmd.outStream
 	var err error
 
