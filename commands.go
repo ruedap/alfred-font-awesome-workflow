@@ -31,7 +31,7 @@ var commandsPut = cli.Command{
 			"url":  c.String("url"),
 		}
 		cmd := &command{outStream: os.Stdout, errStream: os.Stderr}
-		cmd.Put(flags)
+		cmd.put(flags)
 	},
 	Flags: []cli.Flag{
 		cli.StringFlag{Name: "name", Usage: "CSS class name"},

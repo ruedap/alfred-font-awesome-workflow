@@ -24,12 +24,12 @@ func TestCommand_find(t *testing.T) {
 	}
 }
 
-func TestCommand_Put_NameFlag(t *testing.T) {
+func TestCommand_put_NameFlag(t *testing.T) {
 	outStream, errStream := new(bytes.Buffer), new(bytes.Buffer)
 	cmd := &command{outStream: outStream, errStream: errStream}
 	flags := map[string]string{"name": "apple"}
 
-	status := cmd.Put(flags)
+	status := cmd.put(flags)
 	if status != ExitCodeOK {
 		t.Errorf("ExitStatus=%d, want %d", status, ExitCodeOK)
 	}
@@ -41,12 +41,12 @@ func TestCommand_Put_NameFlag(t *testing.T) {
 	}
 }
 
-func TestCommand_Put_CodeFlag(t *testing.T) {
+func TestCommand_put_CodeFlag(t *testing.T) {
 	outStream, errStream := new(bytes.Buffer), new(bytes.Buffer)
 	cmd := &command{outStream: outStream, errStream: errStream}
 	flags := map[string]string{"code": "apple"}
 
-	status := cmd.Put(flags)
+	status := cmd.put(flags)
 	if status != ExitCodeOK {
 		t.Errorf("ExitStatus=%d, want %d", status, ExitCodeOK)
 	}
@@ -58,12 +58,12 @@ func TestCommand_Put_CodeFlag(t *testing.T) {
 	}
 }
 
-func TestCommand_Put_RefFlag(t *testing.T) {
+func TestCommand_put_RefFlag(t *testing.T) {
 	outStream, errStream := new(bytes.Buffer), new(bytes.Buffer)
 	cmd := &command{outStream: outStream, errStream: errStream}
 	flags := map[string]string{"ref": "apple"}
 
-	status := cmd.Put(flags)
+	status := cmd.put(flags)
 	if status != ExitCodeOK {
 		t.Errorf("ExitStatus=%d, want %d", status, ExitCodeOK)
 	}
@@ -75,12 +75,12 @@ func TestCommand_Put_RefFlag(t *testing.T) {
 	}
 }
 
-func TestCommand_Put_URLFlag(t *testing.T) {
+func TestCommand_put_URLFlag(t *testing.T) {
 	outStream, errStream := new(bytes.Buffer), new(bytes.Buffer)
 	cmd := &command{outStream: outStream, errStream: errStream}
 	flags := map[string]string{"url": "apple"}
 
-	status := cmd.Put(flags)
+	status := cmd.put(flags)
 	if status != ExitCodeOK {
 		t.Errorf("ExitStatus=%d, want %d", status, ExitCodeOK)
 	}

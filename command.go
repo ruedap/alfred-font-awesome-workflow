@@ -47,7 +47,7 @@ func (cmd *command) find(terms []string) int {
 	return ExitCodeOK
 }
 
-func (cmd *command) Put(flags map[string]string) int {
+func (cmd *command) put(flags map[string]string) int {
 	name := flags["name"]
 	code := flags["code"]
 	ref := flags["ref"]
