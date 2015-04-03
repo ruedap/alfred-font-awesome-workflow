@@ -15,6 +15,6 @@ func main() {
 	app.Usage = "Font Awesome Workflow for Alfred"
 	app.Author = "ruedap"
 	app.Email = "ruedap@ruedap.com"
-	app.Commands = Commands
+	app.Commands = commands
 	app.Run(os.Args)
 }

@@ -6,7 +6,7 @@ import (
 	"github.com/codegangsta/cli"
 )
 
-var Commands = []cli.Command{
+var commands = []cli.Command{
 	commandsFind,
 	commandsPut,
 }
