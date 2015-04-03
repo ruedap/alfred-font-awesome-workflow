@@ -42,7 +42,7 @@ func iconsUnmarshalYaml(b []byte) (iconsYaml, error) {
 	return y, err
 }
 
-func (ics icons) Find(terms []string) icons {
+func (ics icons) find(terms []string) icons {
 	var foundIcons icons
 
 	for _, ic := range ics {

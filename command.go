@@ -20,7 +20,7 @@ type command struct {
 
 func (cmd *command) find(terms []string) int {
 	r := NewResponse(terms)
-	icons := newIcons().Find(r.Terms)
+	icons := newIcons().find(r.Terms)
 
 	for _, icon := range icons {
 		r.AddItem(&ResponseItem{
@@ -60,10 +60,10 @@ func (cmd *command) put(flags map[string]string) int {
 	case name != "":
 		_, err = fmt.Fprint(ost, "fa-"+name)
 	case code != "":
-		icons := ics.Find([]string{code})
+		icons := ics.find([]string{code})
 		_, err = fmt.Fprint(ost, icons[0].Unicode)
 	case ref != "":
-		icons := ics.Find([]string{ref})
+		icons := ics.find([]string{ref})
 		str := html.UnescapeString("&#x" + icons[0].Unicode + ";")
 		_, err = fmt.Fprint(ost, str)
 	case url != "":
