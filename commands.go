@@ -16,7 +16,7 @@ var commandsFind = cli.Command{
 	Usage: "Search through Font Awesome icons",
 	Action: func(c *cli.Context) {
 		cmd := &command{outStream: os.Stdout, errStream: os.Stderr}
-		cmd.Find(c.Args())
+		cmd.find(c.Args())
 	},
 }
 

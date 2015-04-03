@@ -18,7 +18,7 @@ type command struct {
 	outStream, errStream io.Writer
 }
 
-func (cmd *command) Find(terms []string) int {
+func (cmd *command) find(terms []string) int {
 	r := NewResponse(terms)
 	icons := NewIcons().Find(r.Terms)
 

@@ -6,12 +6,12 @@ import (
 	"testing"
 )
 
-func TestCommand_Find(t *testing.T) {
+func TestCommand_find(t *testing.T) {
 	outStream, errStream := new(bytes.Buffer), new(bytes.Buffer)
 	cmd := &command{outStream: outStream, errStream: errStream}
 	terms := []string{"app"}
 
-	status := cmd.Find(terms)
+	status := cmd.find(terms)
 	if status != ExitCodeOK {
 		t.Errorf("ExitStatus=%d, want %d", status, ExitCodeOK)
 	}
