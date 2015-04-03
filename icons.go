@@ -10,12 +10,12 @@ import (
 
 // TODO: Refactoring
 type iconsYaml struct {
-	Icons Icons
+	Icons icons
 }
 
-type Icons []icon
+type icons []icon
 
-func NewIcons() Icons {
+func NewIcons() icons {
 	p := iconsYamlPath()
 	b, _ := iconsReadYaml(p)      // FIXME: error handling
 	y, _ := iconsUnmarshalYaml(b) // FIXME: error handling
@@ -42,8 +42,8 @@ func iconsUnmarshalYaml(b []byte) (iconsYaml, error) {
 	return y, err
 }
 
-func (ics Icons) Find(terms []string) Icons {
-	var foundIcons Icons
+func (ics icons) Find(terms []string) icons {
+	var foundIcons icons
 
 	for _, ic := range ics {
 		if ic.contains(terms) {
@@ -55,21 +55,21 @@ func (ics Icons) Find(terms []string) Icons {
 }
 
 // Len for sort
-func (ics Icons) Len() int {
+func (ics icons) Len() int {
 	return len(ics)
 }
 
 // Less for sort
-func (ics Icons) Less(i, j int) bool {
+func (ics icons) Less(i, j int) bool {
 	return ics[i].ID < ics[j].ID
 }
 
 // Swap for sort
-func (ics Icons) Swap(i, j int) {
+func (ics icons) Swap(i, j int) {
 	ics[i], ics[j] = ics[j], ics[i]
 }
 
-func (ics Icons) Sort() Icons {
+func (ics icons) Sort() icons {
 	sort.Sort(ics)
 	return ics
 }

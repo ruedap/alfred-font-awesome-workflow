@@ -6,7 +6,7 @@ import (
 	"testing"
 )
 
-func testIconsHelper_Find(terms []string) Icons {
+func testIconsHelper_Find(terms []string) icons {
 	return NewIcons().Find(terms)
 }
 
@@ -67,7 +67,7 @@ icons:
 		Created: "1.0",
 		Filter:  []string{"martini"},
 	}
-	expected := iconsYaml{Icons{icon}}
+	expected := iconsYaml{icons{icon}}
 	if !reflect.DeepEqual(actual, expected) {
 		t.Errorf("expected %v to eq %v", actual, expected)
 	}
