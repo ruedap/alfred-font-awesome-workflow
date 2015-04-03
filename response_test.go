@@ -5,10 +5,10 @@ import (
 	"testing"
 )
 
-func TestResponse_NewResponse_Terms(t *testing.T) {
+func TestResponse_newResponse(t *testing.T) {
 	terms := []string{"Foo-Foo", "!BAR*BAR?", "バズ"}
 
-	actual := NewResponse(terms).Terms
+	actual := newResponse(terms).Terms
 	expected := []string{"foo-foo", "!bar*bar?", "バズ"}
 
 	if !reflect.DeepEqual(actual, expected) {
@@ -17,7 +17,7 @@ func TestResponse_NewResponse_Terms(t *testing.T) {
 }
 
 func TestResponse_AddItem(t *testing.T) {
-	r := NewResponse([]string{})
+	r := newResponse([]string{})
 
 	actual := r.AddItem(&responseItem{Title: "title-foo"}).Items
 	expected := []responseItem{responseItem{Title: "title-foo"}}
@@ -28,7 +28,7 @@ func TestResponse_AddItem(t *testing.T) {
 }
 
 func TestResponse_ToXML(t *testing.T) {
-	r := NewResponse([]string{})
+	r := newResponse([]string{})
 	item := responseItem{
 		Valid:    true,
 		UID:      "f000-uid",
@@ -54,7 +54,7 @@ func TestResponse_ToXML(t *testing.T) {
 }
 
 func TestResponse_ToXML_Blank(t *testing.T) {
-	r := NewResponse([]string{})
+	r := newResponse([]string{})
 
 	actual, err := r.ToXML()
 	if err != nil {

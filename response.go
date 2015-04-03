@@ -23,7 +23,7 @@ type responseItem struct {
 	XMLName struct{} `xml:"item"`
 }
 
-func NewResponse(terms []string) *response {
+func newResponse(terms []string) *response {
 	r := new(response)
 	r.Items = []responseItem{}
 

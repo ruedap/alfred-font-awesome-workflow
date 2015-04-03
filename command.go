@@ -19,7 +19,7 @@ type command struct {
 }
 
 func (cmd *command) find(terms []string) int {
-	r := NewResponse(terms)
+	r := newResponse(terms)
 	icons := newIcons().find(r.Terms)
 
 	for _, icon := range icons {
