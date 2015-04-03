@@ -6,7 +6,7 @@ import (
 	"testing"
 )
 
-func testIconsHelper_find(terms []string) icons {
+func testIconsFindHelper(terms []string) icons {
 	return newIcons().find(terms)
 }
 
@@ -74,7 +74,7 @@ icons:
 }
 
 func TestIcons_find_AllIcons(t *testing.T) {
-	fi := testIconsHelper_find([]string{""})
+	fi := testIconsFindHelper([]string{""})
 
 	actual := len(fi)
 	expected := 519
@@ -84,7 +84,7 @@ func TestIcons_find_AllIcons(t *testing.T) {
 }
 
 func TestIcons_find_ZeroIcon(t *testing.T) {
-	fi := testIconsHelper_find([]string{"foo-bar-baz"})
+	fi := testIconsFindHelper([]string{"foo-bar-baz"})
 
 	actual := len(fi)
 	expected := 0
@@ -94,7 +94,7 @@ func TestIcons_find_ZeroIcon(t *testing.T) {
 }
 
 func TestIcons_find_OneIcon(t *testing.T) {
-	fi := testIconsHelper_find([]string{"github-square"})
+	fi := testIconsFindHelper([]string{"github-square"})
 
 	actual := len(fi)
 	expected := 1
@@ -104,7 +104,7 @@ func TestIcons_find_OneIcon(t *testing.T) {
 }
 
 func TestIcons_find_TwoIcons(t *testing.T) {
-	fi := testIconsHelper_find([]string{"github-"})
+	fi := testIconsFindHelper([]string{"github-"})
 
 	actual := len(fi)
 	expected := 2
@@ -114,7 +114,7 @@ func TestIcons_find_TwoIcons(t *testing.T) {
 }
 
 func TestIcons_find_FirstIcon(t *testing.T) {
-	fi := testIconsHelper_find([]string{""})
+	fi := testIconsFindHelper([]string{""})
 
 	actual := fi[0].ID
 	expected := "adjust"
@@ -124,7 +124,7 @@ func TestIcons_find_FirstIcon(t *testing.T) {
 }
 
 func TestIcons_find_LastIcon(t *testing.T) {
-	fi := testIconsHelper_find([]string{""})
+	fi := testIconsFindHelper([]string{""})
 
 	actual := fi[len(fi)-1].ID
 	expected := "youtube-square"
@@ -134,7 +134,7 @@ func TestIcons_find_LastIcon(t *testing.T) {
 }
 
 func TestIcons_find_TaxiIcon(t *testing.T) {
-	fi := testIconsHelper_find([]string{"taxi"})
+	fi := testIconsFindHelper([]string{"taxi"})
 
 	actual := fi[0].Name
 	expected := "Taxi"
@@ -180,7 +180,7 @@ func TestIcons_find_TaxiIcon(t *testing.T) {
 }
 
 func TestIcons_find_Aliases(t *testing.T) {
-	fi := testIconsHelper_find([]string{"navicon"})
+	fi := testIconsFindHelper([]string{"navicon"})
 
 	actual := fi[0].ID
 	expected := "bars"
