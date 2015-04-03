@@ -19,8 +19,8 @@ func TestResponse_NewResponse_Terms(t *testing.T) {
 func TestResponse_AddItem(t *testing.T) {
 	r := NewResponse([]string{})
 
-	actual := r.AddItem(&ResponseItem{Title: "title-foo"}).Items
-	expected := []ResponseItem{ResponseItem{Title: "title-foo"}}
+	actual := r.AddItem(&responseItem{Title: "title-foo"}).Items
+	expected := []responseItem{responseItem{Title: "title-foo"}}
 
 	if !reflect.DeepEqual(actual, expected) {
 		t.Errorf("expected %v to eq %v", actual, expected)
@@ -29,7 +29,7 @@ func TestResponse_AddItem(t *testing.T) {
 
 func TestResponse_ToXML(t *testing.T) {
 	r := NewResponse([]string{})
-	item := ResponseItem{
+	item := responseItem{
 		Valid:    true,
 		UID:      "f000-uid",
 		Title:    "title-foo",

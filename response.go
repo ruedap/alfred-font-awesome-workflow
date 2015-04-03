@@ -6,12 +6,12 @@ import (
 )
 
 type response struct {
-	Items   []ResponseItem
+	Items   []responseItem
 	Terms   []string `xml:"-"`
 	XMLName struct{} `xml:"items"`
 }
 
-type ResponseItem struct {
+type responseItem struct {
 	Valid    bool   `xml:"valid,attr"`
 	Arg      string `xml:"arg,attr"`
 	UID      string `xml:"uid,attr"`
@@ -25,7 +25,7 @@ type ResponseItem struct {
 
 func NewResponse(terms []string) *response {
 	r := new(response)
-	r.Items = []ResponseItem{}
+	r.Items = []responseItem{}
 
 	for i, t := range terms {
 		terms[i] = strings.ToLower(t)
@@ -35,7 +35,7 @@ func NewResponse(terms []string) *response {
 	return r
 }
 
-func (r *response) AddItem(item *ResponseItem) *response {
+func (r *response) AddItem(item *responseItem) *response {
 	r.Items = append(r.Items, *item)
 	return r
 }
