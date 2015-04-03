@@ -5,7 +5,7 @@ import (
 	"strings"
 )
 
-type Response struct {
+type response struct {
 	Items   []ResponseItem
 	Terms   []string `xml:"-"`
 	XMLName struct{} `xml:"items"`
@@ -23,8 +23,8 @@ type ResponseItem struct {
 	XMLName struct{} `xml:"item"`
 }
 
-func NewResponse(terms []string) *Response {
-	r := new(Response)
+func NewResponse(terms []string) *response {
+	r := new(response)
 	r.Items = []ResponseItem{}
 
 	for i, t := range terms {
@@ -35,12 +35,12 @@ func NewResponse(terms []string) *Response {
 	return r
 }
 
-func (r *Response) AddItem(item *ResponseItem) *Response {
+func (r *response) AddItem(item *ResponseItem) *response {
 	r.Items = append(r.Items, *item)
 	return r
 }
 
-func (r *Response) ToXML() (string, error) {
+func (r *response) ToXML() (string, error) {
 	var x, err = xml.Marshal(r)
 	return xml.Header + string(x), err
 }
