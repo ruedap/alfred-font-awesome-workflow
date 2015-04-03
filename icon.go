@@ -12,7 +12,7 @@ type icon struct {
 	Categories []string
 }
 
-func (ic *icon) Contains(terms []string) bool {
+func (ic *icon) contains(terms []string) bool {
 	return ic.containID(terms) || ic.containAlias(terms)
 }
 

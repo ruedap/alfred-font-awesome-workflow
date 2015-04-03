@@ -46,7 +46,7 @@ func (ics Icons) Find(terms []string) Icons {
 	var foundIcons Icons
 
 	for _, ic := range ics {
-		if ic.Contains(terms) {
+		if ic.contains(terms) {
 			foundIcons = append(foundIcons, ic)
 		}
 	}
