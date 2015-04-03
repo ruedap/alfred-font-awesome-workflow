@@ -40,7 +40,7 @@ func (r *response) addItem(item *responseItem) *response {
 	return r
 }
 
-func (r *response) ToXML() (string, error) {
+func (r *response) toXML() (string, error) {
 	var x, err = xml.Marshal(r)
 	return xml.Header + string(x), err
 }

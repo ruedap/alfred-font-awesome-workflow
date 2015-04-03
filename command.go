@@ -34,7 +34,7 @@ func (cmd *command) find(terms []string) int {
 		})
 	}
 
-	xml, err := r.ToXML()
+	xml, err := r.toXML()
 	if err != nil {
 		return ExitCodeError
 	}

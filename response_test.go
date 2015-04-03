@@ -27,7 +27,7 @@ func TestResponse_addItem(t *testing.T) {
 	}
 }
 
-func TestResponse_ToXML(t *testing.T) {
+func TestResponse_toXML(t *testing.T) {
 	r := newResponse([]string{})
 	item := responseItem{
 		Valid:    true,
@@ -40,7 +40,7 @@ func TestResponse_ToXML(t *testing.T) {
 	}
 	r.addItem(&item)
 
-	actual, err := r.ToXML()
+	actual, err := r.toXML()
 	if err != nil {
 		t.Error("failed to convert to XML")
 		return
@@ -53,10 +53,10 @@ func TestResponse_ToXML(t *testing.T) {
 	}
 }
 
-func TestResponse_ToXML_Blank(t *testing.T) {
+func TestResponse_toXML_Blank(t *testing.T) {
 	r := newResponse([]string{})
 
-	actual, err := r.ToXML()
+	actual, err := r.toXML()
 	if err != nil {
 		t.Error("failed to convert to XML")
 		return
