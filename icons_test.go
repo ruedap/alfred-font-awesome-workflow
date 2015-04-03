@@ -67,7 +67,7 @@ icons:
 		Created: "1.0",
 		Filter:  []string{"martini"},
 	}
-	expected := IconsYaml{Icons{icon}}
+	expected := iconsYaml{Icons{icon}}
 	if !reflect.DeepEqual(actual, expected) {
 		t.Errorf("expected %v to eq %v", actual, expected)
 	}

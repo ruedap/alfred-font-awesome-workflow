@@ -9,7 +9,7 @@ import (
 )
 
 // TODO: Refactoring
-type IconsYaml struct {
+type iconsYaml struct {
 	Icons Icons
 }
 
@@ -36,8 +36,8 @@ func iconsReadYaml(path string) ([]byte, error) {
 	return ioutil.ReadFile(path)
 }
 
-func iconsUnmarshalYaml(b []byte) (IconsYaml, error) {
-	var y IconsYaml
+func iconsUnmarshalYaml(b []byte) (iconsYaml, error) {
+	var y iconsYaml
 	err := yaml.Unmarshal([]byte(b), &y)
 	return y, err
 }
