@@ -23,7 +23,7 @@ func (cmd *command) find(terms []string) int {
 	icons := newIcons().find(r.Terms)
 
 	for _, icon := range icons {
-		r.AddItem(&responseItem{
+		r.addItem(&responseItem{
 			Valid:    true,
 			UID:      icon.Unicode,
 			Title:    icon.ID,

@@ -35,7 +35,7 @@ func newResponse(terms []string) *response {
 	return r
 }
 
-func (r *response) AddItem(item *responseItem) *response {
+func (r *response) addItem(item *responseItem) *response {
 	r.Items = append(r.Items, *item)
 	return r
 }

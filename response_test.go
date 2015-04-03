@@ -16,10 +16,10 @@ func TestResponse_newResponse(t *testing.T) {
 	}
 }
 
-func TestResponse_AddItem(t *testing.T) {
+func TestResponse_addItem(t *testing.T) {
 	r := newResponse([]string{})
 
-	actual := r.AddItem(&responseItem{Title: "title-foo"}).Items
+	actual := r.addItem(&responseItem{Title: "title-foo"}).Items
 	expected := []responseItem{responseItem{Title: "title-foo"}}
 
 	if !reflect.DeepEqual(actual, expected) {
@@ -38,7 +38,7 @@ func TestResponse_ToXML(t *testing.T) {
 		Icon:     "./icons/title-foo.png",
 		Unicode:  "f000-unicode",
 	}
-	r.AddItem(&item)
+	r.addItem(&item)
 
 	actual, err := r.ToXML()
 	if err != nil {
