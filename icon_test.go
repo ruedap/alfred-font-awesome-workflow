@@ -3,7 +3,7 @@ package main
 import "testing"
 
 func TestIcon_containID(t *testing.T) {
-	ic := Icon{
+	ic := icon{
 		ID:      "caret-square-o-left",
 		Aliases: []string{"foo-left", "bar-baz-left"},
 	}
@@ -31,7 +31,7 @@ func TestIcon_containID(t *testing.T) {
 }
 
 func TestIcon_containAlias(t *testing.T) {
-	ic := Icon{
+	ic := icon{
 		ID:      "caret-square-o-left",
 		Aliases: []string{"foo-left", "bar-baz-left"},
 	}
@@ -57,7 +57,7 @@ func TestIcon_containAlias(t *testing.T) {
 		t.Errorf("expected %v to eq %v", actual, expected)
 	}
 
-	ic = Icon{
+	ic = icon{
 		ID:      "caret-square-o-left",
 		Aliases: []string{},
 	}

@@ -13,7 +13,7 @@ type IconsYaml struct {
 	Icons Icons
 }
 
-type Icons []Icon
+type Icons []icon
 
 func NewIcons() Icons {
 	p := iconsYamlPath()

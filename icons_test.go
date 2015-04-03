@@ -60,7 +60,7 @@ icons:
 `)
 	actual, _ := iconsUnmarshalYaml(b)
 
-	icon := Icon{
+	icon := icon{
 		Name:    "Glass",
 		ID:      "glass",
 		Unicode: "f000",
