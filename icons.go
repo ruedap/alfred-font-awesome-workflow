@@ -4,6 +4,7 @@ import (
 	"io/ioutil"
 	"os"
 	"sort"
+	"sync"
 
 	"gopkg.in/yaml.v2"
 )
@@ -44,12 +45,18 @@ func iconsUnmarshalYaml(b []byte) (iconsYaml, error) {
 
 func (ics icons) find(terms []string) icons {
 	var foundIcons icons
+	var wg sync.WaitGroup
 
 	for _, ic := range ics {
-		if ic.contains(terms) {
-			foundIcons = append(foundIcons, ic)
-		}
+		wg.Add(1)
+		go func(ic icon) {
+			if ic.contains(terms) {
+				foundIcons = append(foundIcons, ic)
+			}
+			wg.Done()
+		}(ic)
 	}
+	wg.Wait()
 
 	return foundIcons
 }
