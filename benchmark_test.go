@@ -17,3 +17,14 @@ func BenchmarkIcons_find(b *testing.B) {
 		ics.find(terms)
 	}
 }
+
+func BenchmarkIcons_Sort(b *testing.B) {
+	p := iconsYamlPath()
+	by, _ := iconsReadYaml(p)
+	y, _ := iconsUnmarshalYaml(by)
+	b.ResetTimer()
+
+	for i := 0; i < b.N; i++ {
+		y.Icons.Sort()
+	}
+}
