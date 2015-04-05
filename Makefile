@@ -48,7 +48,7 @@ test:
 
 bench:
 	@echo "--> Benchmarking packages"
-	@go test -bench .
+	@go test -bench . -benchtime 2s -benchmem
 
 clean:
 	@echo "--> Cleaning workflow files"
