@@ -8,6 +8,15 @@ func BenchmarkIcons_newIcons(b *testing.B) {
 	}
 }
 
+func BenchmarkIcons_iconsReadYaml(b *testing.B) {
+	p := iconsYamlPath()
+	b.ResetTimer()
+
+	for i := 0; i < b.N; i++ {
+		iconsReadYaml(p)
+	}
+}
+
 func BenchmarkIcons_find(b *testing.B) {
 	ics := newIcons()
 	terms := []string{"a", "b", "c"}
