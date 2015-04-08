@@ -6,10 +6,9 @@ import (
 )
 
 func TestResponse_newResponse(t *testing.T) {
-	terms := []string{"Foo-Foo", "!BAR*BAR?", "バズ"}
-
-	actual := newResponse(terms).Terms
-	expected := []string{"foo-foo", "!bar*bar?", "バズ"}
+	actual := newResponse()
+	expected := new(response)
+	expected.Items = []responseItem{}
 
 	if !reflect.DeepEqual(actual, expected) {
 		t.Errorf("expected %v to eq %v", actual, expected)
@@ -17,7 +16,7 @@ func TestResponse_newResponse(t *testing.T) {
 }
 
 func TestResponse_addItem(t *testing.T) {
-	r := newResponse([]string{})
+	r := newResponse()
 
 	actual := r.addItem(&responseItem{Title: "title-foo"}).Items
 	expected := []responseItem{responseItem{Title: "title-foo"}}
@@ -28,7 +27,7 @@ func TestResponse_addItem(t *testing.T) {
 }
 
 func TestResponse_toXML(t *testing.T) {
-	r := newResponse([]string{})
+	r := newResponse()
 	item := responseItem{
 		Valid:    true,
 		UID:      "f000-uid",
@@ -54,7 +53,7 @@ func TestResponse_toXML(t *testing.T) {
 }
 
 func TestResponse_toXML_Blank(t *testing.T) {
-	r := newResponse([]string{})
+	r := newResponse()
 
 	actual, err := r.toXML()
 	if err != nil {

@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"html"
 	"io"
+	"strings"
 )
 
 // Exit codes.
@@ -19,8 +20,12 @@ type command struct {
 }
 
 func (cmd *command) find(terms []string) int {
-	r := newResponse(terms)
-	icons := newIcons().find(r.Terms)
+	for i, t := range terms {
+		terms[i] = strings.ToLower(t)
+	}
+
+	r := newResponse()
+	icons := newIcons().find(terms)
 
 	for _, icon := range icons {
 		r.addItem(&responseItem{

@@ -1,13 +1,9 @@
 package main
 
-import (
-	"encoding/xml"
-	"strings"
-)
+import "encoding/xml"
 
 type response struct {
 	Items   []responseItem
-	Terms   []string `xml:"-"`
 	XMLName struct{} `xml:"items"`
 }
 
@@ -23,14 +19,9 @@ type responseItem struct {
 	XMLName struct{} `xml:"item"`
 }
 
-func newResponse(terms []string) *response {
+func newResponse() *response {
 	r := new(response)
 	r.Items = []responseItem{}
-
-	for i, t := range terms {
-		terms[i] = strings.ToLower(t)
-	}
-	r.Terms = terms
 
 	return r
 }
