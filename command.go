@@ -45,11 +45,13 @@ func (cmd *command) find(terms []string) int {
 
 	xml, err := r.ToXML()
 	if err != nil {
+		fmt.Fprint(cmd.outStream, errorXML(err))
 		return ExitCodeError
 	}
 
 	_, err = fmt.Fprint(cmd.outStream, xml)
 	if err != nil {
+		fmt.Fprint(cmd.outStream, errorXML(err))
 		return ExitCodeError
 	}
 
@@ -85,4 +87,12 @@ func (cmd *command) put(flags map[string]string) int {
 		return ExitCodeError
 	}
 	return ExitCodeOK
+}
+
+func errorXML(err error) string {
+	return alfred.ErrorXML(
+		"Error: "+err.Error(),
+		"Font Awesome Workflow",
+		"Error: "+err.Error(),
+	)
 }

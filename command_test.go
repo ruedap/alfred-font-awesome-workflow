@@ -2,6 +2,7 @@ package main
 
 import (
 	"bytes"
+	"errors"
 	"strings"
 	"testing"
 )
@@ -87,6 +88,16 @@ func TestCommand_put_URLFlag(t *testing.T) {
 
 	actual := outStream.String()
 	expected := "http://fontawesome.io/icon/apple/"
+	if !strings.Contains(actual, expected) {
+		t.Errorf("expected %v to eq %v", actual, expected)
+	}
+}
+
+func TestCommand_errorXML(t *testing.T) {
+	err := errors.New("foo")
+	actual := errorXML(err)
+	expected := `<?xml version="1.0" encoding="UTF-8"?>
+<items><item valid="false" arg="Error: foo" uid="error"><title>Error: foo</title><subtitle>Font Awesome Workflow</subtitle><icon>/System/Library/CoreServices/CoreTypes.bundle/Contents/Resources/AlertStopIcon.icns</icon></item></items>`
 	if !strings.Contains(actual, expected) {
 		t.Errorf("expected %v to eq %v", actual, expected)
 	}
