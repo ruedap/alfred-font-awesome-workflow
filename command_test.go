@@ -18,7 +18,7 @@ func TestCommand_find(t *testing.T) {
 
 	actual := outStream.String()
 	expected := `<?xml version="1.0" encoding="UTF-8"?>
-<items><item valid="true" arg="apple" uid="f179" unicode="f179"><title>apple</title><subtitle>Paste class name: fa-apple</subtitle><icon>./icons/fa-apple.png</icon></item><item valid="true" arg="whatsapp" uid="f232" unicode="f232"><title>whatsapp</title><subtitle>Paste class name: fa-whatsapp</subtitle><icon>./icons/fa-whatsapp.png</icon></item></items>`
+<items><item valid="true" arg="apple" uid="f179"><title>apple</title><subtitle>Paste class name: fa-apple</subtitle><icon>./icons/fa-apple.png</icon><unicode>f179</unicode></item><item valid="true" arg="whatsapp" uid="f232"><title>whatsapp</title><subtitle>Paste class name: fa-whatsapp</subtitle><icon>./icons/fa-whatsapp.png</icon><unicode>f232</unicode></item></items>`
 	if !strings.Contains(actual, expected) {
 		t.Errorf("expected %v to eq %v", actual, expected)
 	}

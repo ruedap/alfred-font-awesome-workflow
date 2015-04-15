@@ -6,6 +6,8 @@ import (
 	"html"
 	"io"
 	"strings"
+
+	"github.com/ruedap/go-alfred"
 )
 
 // Exit codes.
@@ -24,22 +26,24 @@ func (cmd *command) find(terms []string) int {
 		terms[i] = strings.ToLower(t)
 	}
 
-	r := newResponse()
+	r := alfred.NewResponse()
 	icons := newIcons().find(terms)
 
 	for _, icon := range icons {
-		r.addItem(&responseItem{
+		r.AddItem(&alfred.ResponseItem{
 			Valid:    true,
 			UID:      icon.Unicode,
 			Title:    icon.ID,
 			Subtitle: "Paste class name: fa-" + icon.ID,
 			Arg:      icon.ID,
 			Icon:     "./icons/fa-" + icon.ID + ".png",
-			Unicode:  icon.Unicode,
+			Extra: map[string]string{
+				"Unicode": icon.Unicode,
+			},
 		})
 	}
 
-	xml, err := r.toXML()
+	xml, err := r.ToXML()
 	if err != nil {
 		return ExitCodeError
 	}
