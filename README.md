@@ -7,13 +7,13 @@
 
 You can incremental search for [Font Awesome icons](http://fontawesome.io/icons/) and paste it to front most app.
 
-#### for coding HTML/CSS
+#### :pencil: for coding HTML/CSS
 ![screencast.gif](https://github.com/ruedap/alfred2-font-awesome-workflow/raw/master/screenshots/screencast.gif)
 
-#### for designing in Photoshop, Illustrator, Sketch 3, Keynote, etc
+#### :art: for designing in Photoshop, Illustrator, Sketch 3, Keynote, etc
 ![screencast-illustrator.gif](https://github.com/ruedap/alfred2-font-awesome-workflow/raw/master/screenshots/screencast-illustrator.gif)
 
-See also: [Font Awesome Workflow with Sketch 3 — QuickCast.](http://quick.as/46rbfrqr)
+:gem: See also: [Font Awesome Workflow with Sketch 3 — QuickCast.](http://quick.as/46rbfrqr)
 
 
 ## Installation
