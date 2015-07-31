@@ -77,7 +77,7 @@ func TestIcons_find_AllIcons(t *testing.T) {
 	fi := testIconsFindHelper([]string{""})
 
 	actual := len(fi)
-	expected := 519
+	expected := 585
 	if actual != expected {
 		t.Errorf("expected %v to eq %v", actual, expected)
 	}
@@ -117,7 +117,7 @@ func TestIcons_find_FirstIcon(t *testing.T) {
 	fi := testIconsFindHelper([]string{""})
 
 	actual := fi[0].ID
-	expected := "adjust"
+	expected := "500px"
 	if actual != expected {
 		t.Errorf("expected %v to eq %v", actual, expected)
 	}
