@@ -7,10 +7,13 @@ import (
 	"testing"
 )
 
+// Maintain tests for the `plus` icon
+// https://github.com/ruedap/alfred2-font-awesome-workflow/issues/74
+
 func TestCommand_find(t *testing.T) {
 	outStream, errStream := new(bytes.Buffer), new(bytes.Buffer)
 	cmd := &command{outStream: outStream, errStream: errStream}
-	terms := []string{"app"}
+	terms := []string{"plu"} // `plus`
 
 	status := cmd.find(terms)
 	if status != ExitCodeOK {
@@ -19,7 +22,7 @@ func TestCommand_find(t *testing.T) {
 
 	actual := outStream.String()
 	expected := `<?xml version="1.0" encoding="UTF-8"?>
-<items><item valid="true" arg="apple" uid="f179"><title>apple</title><subtitle>Paste class name: fa-apple</subtitle><icon>./icons/fa-apple.png</icon><unicode>f179</unicode></item><item valid="true" arg="whatsapp" uid="f232"><title>whatsapp</title><subtitle>Paste class name: fa-whatsapp</subtitle><icon>./icons/fa-whatsapp.png</icon><unicode>f232</unicode></item></items>`
+<items><item valid="true" arg="calendar-plus-o" uid="f271"><title>calendar-plus-o</title><subtitle>Paste class name: fa-calendar-plus-o</subtitle><icon>./icons/fa-calendar-plus-o.png</icon><unicode>f271</unicode></item><item valid="true" arg="cart-plus" uid="f217"><title>cart-plus</title><subtitle>Paste class name: fa-cart-plus</subtitle><icon>./icons/fa-cart-plus.png</icon><unicode>f217</unicode></item><item valid="true" arg="google-plus" uid="f0d5"><title>google-plus</title><subtitle>Paste class name: fa-google-plus</subtitle><icon>./icons/fa-google-plus.png</icon><unicode>f0d5</unicode></item><item valid="true" arg="google-plus-square" uid="f0d4"><title>google-plus-square</title><subtitle>Paste class name: fa-google-plus-square</subtitle><icon>./icons/fa-google-plus-square.png</icon><unicode>f0d4</unicode></item><item valid="true" arg="plug" uid="f1e6"><title>plug</title><subtitle>Paste class name: fa-plug</subtitle><icon>./icons/fa-plug.png</icon><unicode>f1e6</unicode></item><item valid="true" arg="plus" uid="f067"><title>plus</title><subtitle>Paste class name: fa-plus</subtitle><icon>./icons/fa-plus.png</icon><unicode>f067</unicode></item><item valid="true" arg="plus-circle" uid="f055"><title>plus-circle</title><subtitle>Paste class name: fa-plus-circle</subtitle><icon>./icons/fa-plus-circle.png</icon><unicode>f055</unicode></item><item valid="true" arg="plus-square" uid="f0fe"><title>plus-square</title><subtitle>Paste class name: fa-plus-square</subtitle><icon>./icons/fa-plus-square.png</icon><unicode>f0fe</unicode></item><item valid="true" arg="plus-square-o" uid="f196"><title>plus-square-o</title><subtitle>Paste class name: fa-plus-square-o</subtitle><icon>./icons/fa-plus-square-o.png</icon><unicode>f196</unicode></item><item valid="true" arg="search-plus" uid="f00e"><title>search-plus</title><subtitle>Paste class name: fa-search-plus</subtitle><icon>./icons/fa-search-plus.png</icon><unicode>f00e</unicode></item><item valid="true" arg="user-plus" uid="f234"><title>user-plus</title><subtitle>Paste class name: fa-user-plus</subtitle><icon>./icons/fa-user-plus.png</icon><unicode>f234</unicode></item></items>`
 	if !strings.Contains(actual, expected) {
 		t.Errorf("expected %v to eq %v", actual, expected)
 	}
@@ -28,7 +31,7 @@ func TestCommand_find(t *testing.T) {
 func TestCommand_put_NameFlag(t *testing.T) {
 	outStream, errStream := new(bytes.Buffer), new(bytes.Buffer)
 	cmd := &command{outStream: outStream, errStream: errStream}
-	flags := map[string]string{"name": "apple"}
+	flags := map[string]string{"name": "f067"}
 
 	status := cmd.put(flags)
 	if status != ExitCodeOK {
@@ -45,7 +48,7 @@ func TestCommand_put_NameFlag(t *testing.T) {
 func TestCommand_put_CodeFlag(t *testing.T) {
 	outStream, errStream := new(bytes.Buffer), new(bytes.Buffer)
 	cmd := &command{outStream: outStream, errStream: errStream}
-	flags := map[string]string{"code": "apple"}
+	flags := map[string]string{"code": "plus"}
 
 	status := cmd.put(flags)
 	if status != ExitCodeOK {
@@ -53,7 +56,7 @@ func TestCommand_put_CodeFlag(t *testing.T) {
 	}
 
 	actual := outStream.String()
-	expected := "f179"
+	expected := "f067"
 	if !strings.Contains(actual, expected) {
 		t.Errorf("expected %v to eq %v", actual, expected)
 	}
@@ -62,7 +65,7 @@ func TestCommand_put_CodeFlag(t *testing.T) {
 func TestCommand_put_RefFlag(t *testing.T) {
 	outStream, errStream := new(bytes.Buffer), new(bytes.Buffer)
 	cmd := &command{outStream: outStream, errStream: errStream}
-	flags := map[string]string{"ref": "apple"}
+	flags := map[string]string{"ref": "plus"}
 
 	status := cmd.put(flags)
 	if status != ExitCodeOK {
@@ -70,7 +73,7 @@ func TestCommand_put_RefFlag(t *testing.T) {
 	}
 
 	actual := outStream.String()
-	expected := ""
+	expected := ""
 	if !strings.Contains(actual, expected) {
 		t.Errorf("expected %v to eq %v", actual, expected)
 	}
@@ -79,7 +82,7 @@ func TestCommand_put_RefFlag(t *testing.T) {
 func TestCommand_put_URLFlag(t *testing.T) {
 	outStream, errStream := new(bytes.Buffer), new(bytes.Buffer)
 	cmd := &command{outStream: outStream, errStream: errStream}
-	flags := map[string]string{"url": "apple"}
+	flags := map[string]string{"url": "plus"}
 
 	status := cmd.put(flags)
 	if status != ExitCodeOK {
@@ -87,7 +90,7 @@ func TestCommand_put_URLFlag(t *testing.T) {
 	}
 
 	actual := outStream.String()
-	expected := "http://fontawesome.io/icon/apple/"
+	expected := "http://fontawesome.io/icon/plus/"
 	if !strings.Contains(actual, expected) {
 		t.Errorf("expected %v to eq %v", actual, expected)
 	}

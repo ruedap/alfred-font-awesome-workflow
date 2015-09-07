@@ -179,6 +179,35 @@ func TestIcons_find_TaxiIcon(t *testing.T) {
 	}
 }
 
+// for https://github.com/ruedap/alfred2-font-awesome-workflow/issues/74
+func TestIcons_find_PlusIcon(t *testing.T) {
+	fi := testIconsFindHelper([]string{"plus"})[4]
+
+	actual := fi.Name
+	expected := "plus"
+	if actual != expected {
+		t.Errorf("expected %v to eq %v", actual, expected)
+	}
+
+	actual = fi.ID
+	expected = "plus"
+	if actual != expected {
+		t.Errorf("expected %v to eq %v", actual, expected)
+	}
+
+	actual = fi.Unicode
+	expected = "f067"
+	if actual != expected {
+		t.Errorf("expected %v to eq %v", actual, expected)
+	}
+
+	actual = fi.Created
+	expected = "1.0"
+	if actual != expected {
+		t.Errorf("expected %v to eq %v", actual, expected)
+	}
+}
+
 func TestIcons_find_Aliases(t *testing.T) {
 	fi := testIconsFindHelper([]string{"navicon"})
 
