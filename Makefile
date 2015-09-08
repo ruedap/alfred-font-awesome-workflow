@@ -60,6 +60,7 @@ link:
 
 unlink:
 	@echo "--> Unlinking workflow files"
+	@echo "*** There is no problem even if it has come up with errors. ***"
 	@- rm $(WORKFLOW_DIR)/$(BUNDLE_ID)
 	@- rm ./workflow/workflow
 
