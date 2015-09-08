@@ -10,15 +10,15 @@ ci: deps build cli coveralls
 
 cli:
 	@echo "--> Running CLI commands"
-	@$(FAW_CLI_CMD) find apple
+	@$(FAW_CLI_CMD) find plus
 	@echo
-	@$(FAW_CLI_CMD) put -name apple
+	@$(FAW_CLI_CMD) put -name f067
 	@echo
-	@$(FAW_CLI_CMD) put -code apple
+	@$(FAW_CLI_CMD) put -code f067
 	@echo
-	@$(FAW_CLI_CMD) put -ref apple
+	@$(FAW_CLI_CMD) put -ref f067
 	@echo
-	@$(FAW_CLI_CMD) put -url apple
+	@$(FAW_CLI_CMD) put -url f067
 	@echo
 
 coveralls:
