@@ -192,3 +192,17 @@ func TestIcons_find_Aliases(t *testing.T) {
 		t.Errorf("expected %v to eq %v", len(fi), 1)
 	}
 }
+
+func TestIcons_findByUnicode(t *testing.T) {
+	fi := newIcons().findByUnicode("f067")
+
+	actual := fi[0].ID
+	expected := "plus"
+	if actual != expected {
+		t.Errorf("expected %v to eq %v", actual, expected)
+	}
+
+	if len(fi) != 1 {
+		t.Errorf("expected %v to eq %v", len(fi), 1)
+	}
+}

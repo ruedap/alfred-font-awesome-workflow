@@ -35,7 +35,7 @@ func (cmd *command) find(terms []string) int {
 			UID:      icon.Unicode,
 			Title:    icon.ID,
 			Subtitle: "Paste class name: fa-" + icon.ID,
-			Arg:      icon.ID,
+			Arg:      icon.Unicode,
 			Icon:     "./icons/fa-" + icon.ID + ".png",
 			Extra: map[string]string{
 				"Unicode": icon.Unicode,
@@ -69,16 +69,18 @@ func (cmd *command) put(flags map[string]string) int {
 
 	switch {
 	case name != "":
-		_, err = fmt.Fprint(ost, "fa-"+name)
+		icon := ics.findByUnicode(name)[0]
+		_, err = fmt.Fprint(ost, "fa-"+icon.ID)
 	case code != "":
-		icons := ics.find([]string{code})
-		_, err = fmt.Fprint(ost, icons[0].Unicode)
+		icon := ics.findByUnicode(code)[0]
+		_, err = fmt.Fprint(ost, icon.Unicode)
 	case ref != "":
-		icons := ics.find([]string{ref})
-		str := html.UnescapeString("&#x" + icons[0].Unicode + ";")
+		icon := ics.findByUnicode(ref)[0]
+		str := html.UnescapeString("&#x" + icon.Unicode + ";")
 		_, err = fmt.Fprint(ost, str)
 	case url != "":
-		_, err = fmt.Fprint(ost, "http://fontawesome.io/icon/"+url+"/")
+		icon := ics.findByUnicode(url)[0]
+		_, err = fmt.Fprint(ost, "http://fontawesome.io/icon/"+icon.ID+"/")
 	default:
 		err = errors.New("invalid flag argument")
 	}

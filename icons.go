@@ -54,6 +54,19 @@ func (ics icons) find(terms []string) icons {
 	return foundIcons
 }
 
+// TODO: Refactoring 1. return value 2. error handling
+func (ics icons) findByUnicode(unicode string) icons {
+	var foundIcons icons
+
+	for _, ic := range ics {
+		if ic.Unicode == unicode {
+			foundIcons = append(foundIcons, ic)
+		}
+	}
+
+	return foundIcons
+}
+
 // Len for sort
 func (ics icons) Len() int {
 	return len(ics)
