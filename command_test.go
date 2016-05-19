@@ -8,7 +8,7 @@ import (
 )
 
 // Maintain tests for the `plus` icon
-// https://github.com/ruedap/alfred2-font-awesome-workflow/issues/74
+// https://github.com/ruedap/alfred-font-awesome-workflow/issues/74
 
 func TestCommand_find(t *testing.T) {
 	outStream, errStream := new(bytes.Buffer), new(bytes.Buffer)

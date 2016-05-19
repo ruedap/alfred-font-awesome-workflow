@@ -245,7 +245,7 @@
 		</dict>
 	</array>
 	<key>readme</key>
-	<string>https://github.com/ruedap/alfred2-font-awesome-workflow</string>
+	<string>https://github.com/ruedap/alfred-font-awesome-workflow</string>
 	<key>uidata</key>
 	<dict>
 		<key>06116C11-3F9B-438E-A515-7D3CA35574BE</key>
@@ -285,6 +285,6 @@
 		</dict>
 	</dict>
 	<key>webaddress</key>
-	<string>https://github.com/ruedap/alfred2-font-awesome-workflow</string>
+	<string>https://github.com/ruedap/alfred-font-awesome-workflow</string>
 </dict>
 </plist>

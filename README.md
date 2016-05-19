@@ -1,26 +1,26 @@
-# Font Awesome Workflow for Alfred 2
+# Font Awesome Workflow for Alfred 2 & 3
 
-[![Build Status](http://img.shields.io/travis/ruedap/alfred2-font-awesome-workflow.svg?style=flat-square)](https://travis-ci.org/ruedap/alfred2-font-awesome-workflow)
-[![Coverage Status](http://img.shields.io/coveralls/ruedap/alfred2-font-awesome-workflow/master.svg?style=flat-square)](https://coveralls.io/r/ruedap/alfred2-font-awesome-workflow)
-[![Latest Version](http://img.shields.io/github/release/ruedap/alfred2-font-awesome-workflow.svg?style=flat-square)](https://github.com/ruedap/alfred2-font-awesome-workflow/releases)
+[![Build Status](http://img.shields.io/travis/ruedap/alfred-font-awesome-workflow.svg?style=flat-square)](https://travis-ci.org/ruedap/alfred-font-awesome-workflow)
+[![Coverage Status](http://img.shields.io/coveralls/ruedap/alfred-font-awesome-workflow/master.svg?style=flat-square)](https://coveralls.io/r/ruedap/alfred-font-awesome-workflow)
+[![Latest Version](http://img.shields.io/github/release/ruedap/alfred-font-awesome-workflow.svg?style=flat-square)](https://github.com/ruedap/alfred-font-awesome-workflow/releases)
 [![License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](http://ruedap.mit-license.org/2015)
 
 You can incremental search for [Font Awesome icons](http://fontawesome.io/icons/) and paste it to front most app.
 
 #### :pencil: for coding HTML/CSS
-![screencast.gif](https://github.com/ruedap/alfred2-font-awesome-workflow/raw/master/screenshots/screencast.gif)
+![screencast.gif](https://github.com/ruedap/alfred-font-awesome-workflow/raw/master/screenshots/screencast.gif)
 
 #### :art: for designing in Photoshop, Illustrator, Sketch 3, Keynote, etc
-![screencast-illustrator.gif](https://github.com/ruedap/alfred2-font-awesome-workflow/raw/master/screenshots/screencast-illustrator.gif)
+![screencast-illustrator.gif](https://github.com/ruedap/alfred-font-awesome-workflow/raw/master/screenshots/screencast-illustrator.gif)
 
 :gem: See also: [Font Awesome Workflow with Sketch 3 — QuickCast.](http://quick.as/46rbfrqr)
 
 
 ## Installation
 
-Download **[Font-Awesome.alfredworkflow](https://github.com/ruedap/alfred2-font-awesome-workflow/raw/master/Font-Awesome.alfredworkflow)** and import to [Alfred 2](http://www.alfredapp.com/) (require Powerpack).
+Download **[Font-Awesome.alfredworkflow](https://github.com/ruedap/alfred-font-awesome-workflow/raw/master/Font-Awesome.alfredworkflow)** and import to [Alfred 2 or 3](http://www.alfredapp.com/) (require Powerpack).
 
-The current version is **Font Awesome 4.6.3** support. Previous versions are available [here](https://github.com/ruedap/alfred2-font-awesome-workflow/releases).
+The current version is **Font Awesome 4.6.3** support. Previous versions are available [here](https://github.com/ruedap/alfred-font-awesome-workflow/releases).
 
 
 ## Usage
@@ -32,19 +32,19 @@ The current version is **Font Awesome 4.6.3** support. Previous versions are ava
 * `Shift + Enter`: Paste character code (e.g. `f18e`)
 * `Command + Enter`: Open in browser (e.g. <http://fontawesome.io/icon/arrow-circle-o-right>)
 
-![Workflow](https://github.com/ruedap/alfred2-font-awesome-workflow/raw/master/screenshots/workflow.png)
+![Workflow](https://github.com/ruedap/alfred-font-awesome-workflow/raw/master/screenshots/workflow.png)
 
 
 ## Option
 
 **Disable pasting**: Turn off "Automatically paste to front most app" in Workflows Preferences.
 
-![Disable pasting](https://github.com/ruedap/alfred2-font-awesome-workflow/raw/master/screenshots/option-disable-pasting.png)
+![Disable pasting](https://github.com/ruedap/alfred-font-awesome-workflow/raw/master/screenshots/option-disable-pasting.png)
 
 
 ## Changelog
 
-See details changes for each version in the [release notes](https://github.com/ruedap/alfred2-font-awesome-workflow/releases).
+See details changes for each version in the [release notes](https://github.com/ruedap/alfred-font-awesome-workflow/releases).
 
 
 ## Links
