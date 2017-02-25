@@ -20,7 +20,7 @@ You can incremental search for [Font Awesome icons](http://fontawesome.io/icons/
 
 Download **[Font-Awesome.alfredworkflow](https://github.com/ruedap/alfred-font-awesome-workflow/raw/master/Font-Awesome.alfredworkflow)** and import to [Alfred 2 or 3](http://www.alfredapp.com/) (require Powerpack).
 
-The current version is **Font Awesome 4.6.3** support. Previous versions are available [here](https://github.com/ruedap/alfred-font-awesome-workflow/releases).
+The current version is **Font Awesome 4.7.0** support. Previous versions are available [here](https://github.com/ruedap/alfred-font-awesome-workflow/releases).
 
 
 ## Usage
