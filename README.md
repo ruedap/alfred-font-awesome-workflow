@@ -55,13 +55,6 @@ See details changes for each version in the [release notes](https://github.com/r
 * [Automating Front-end Workflow // Speaker Deck](https://speakerdeck.com/addyosmani/automating-front-end-workflow)
 * [Font Awesome Workflow with Sketch 3 — QuickCast.](http://quick.as/46rbfrqr)
 * [Sketch 3 - Insert Font Awesone icons w/ Alfred workflow — QuickCast.](http://quick.as/dvxup47)
-* Articles in Japanese
-    * [Font Awesomeのアイコンフォントを検索できるAlfred 2のWorkflowを作ってみた](http://blog.ruedap.com/2013/08/07/alfred2-font-awesome-workflow)
-    * [Font Awesome 4.0に対応したAlfred Workflowをリリースしました](http://blog.ruedap.com/2013/10/25/alfred-workflow-for-font-awesome-4)
-    * [フロントエンド開発者向けのAlfred Workflow](http://blog.ruedap.com/2013/10/30/alfred-workflow-for-front-end-developers)
-    * [Font Awesome WorkflowがPhotoshopやIllustratorでもペースト可能に](http://blog.ruedap.com/2013/11/18/font-awesome-workflow-for-web-designers)
-    * [Font AwesomeをKeynoteやIllustratorで使う](http://takanomasahiro.tumblr.com/post/78678195177/font-awesome-keynote-illustrator)
-
 
 
 ## License
