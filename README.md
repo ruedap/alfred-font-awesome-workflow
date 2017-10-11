@@ -57,6 +57,16 @@ See details changes for each version in the [release notes](https://github.com/r
 * [Sketch 3 - Insert Font Awesone icons w/ Alfred workflow — QuickCast.](http://quick.as/dvxup47)
 
 
+## Development
+
+``` sh
+$ make deps
+$ make build
+$ make cli
+$ make test
+$ make link
+```
+
 ## License
 
 Released under the [MIT license](http://ruedap.mit-license.org/2015).
