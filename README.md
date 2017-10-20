@@ -5,7 +5,7 @@
 [![Latest Version](http://img.shields.io/github/release/ruedap/alfred-font-awesome-workflow.svg?style=flat-square)](https://github.com/ruedap/alfred-font-awesome-workflow/releases)
 [![License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](http://ruedap.mit-license.org/2015)
 
-You can incremental search for [Font Awesome icons](http://fontawesome.io/icons/) and paste it to front most app.
+You can incrementally search for [Font Awesome icons](http://fontawesome.io/icons/) and paste it to front most app.
 
 #### :pencil: for coding HTML/CSS
 ![screencast.gif](https://github.com/ruedap/alfred-font-awesome-workflow/raw/master/screenshots/screencast.gif)
@@ -18,9 +18,9 @@ You can incremental search for [Font Awesome icons](http://fontawesome.io/icons/
 
 ## Installation
 
-Download **[Font-Awesome.alfredworkflow](https://github.com/ruedap/alfred-font-awesome-workflow/raw/master/Font-Awesome.alfredworkflow)** and import to [Alfred 2 or 3](http://www.alfredapp.com/) (require Powerpack).
+Download **[Font-Awesome.alfredworkflow](https://github.com/ruedap/alfred-font-awesome-workflow/raw/master/Font-Awesome.alfredworkflow)** and import to [Alfred 2 or 3](http://www.alfredapp.com/) (requires Powerpack).
 
-The current version is **Font Awesome 4.7.0** support. Previous versions are available [here](https://github.com/ruedap/alfred-font-awesome-workflow/releases).
+The current supported version is **Font Awesome 4.7.0**. Previous versions are available [here](https://github.com/ruedap/alfred-font-awesome-workflow/releases).
 
 
 ## Usage
@@ -35,9 +35,9 @@ The current version is **Font Awesome 4.7.0** support. Previous versions are ava
 ![Workflow](https://github.com/ruedap/alfred-font-awesome-workflow/raw/master/screenshots/workflow.png)
 
 
-## Option
+## Options
 
-**Disable pasting**: Turn off "Automatically paste to front most app" in Workflows Preferences.
+**Disable pasting**: Turn off "Automatically paste to front most app" in Workflow's Preferences.
 
 ![Disable pasting](https://github.com/ruedap/alfred-font-awesome-workflow/raw/master/screenshots/option-disable-pasting.png)
 
