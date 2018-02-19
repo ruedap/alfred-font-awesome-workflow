@@ -36,7 +36,7 @@ func (cmd *command) find(terms []string) int {
 			Title:    icon.ID,
 			Subtitle: "Paste class name: fa-" + icon.ID,
 			Arg:      icon.Unicode,
-			Icon:     "./icons/fa-" + icon.ID + ".png",
+			Icon:     "./icons/" + icon.ID + ".png",
 			Extra: map[string]string{
 				"Unicode": icon.Unicode,
 			},
