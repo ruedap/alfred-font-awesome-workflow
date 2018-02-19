@@ -1,16 +1,16 @@
-# Font Awesome Workflow for Alfred 2 & 3
+# Font Awesome Workflow for Alfred 3
 
 [![Build Status](http://img.shields.io/travis/ruedap/alfred-font-awesome-workflow.svg?style=flat-square)](https://travis-ci.org/ruedap/alfred-font-awesome-workflow)
 [![Coverage Status](http://img.shields.io/coveralls/ruedap/alfred-font-awesome-workflow/master.svg?style=flat-square)](https://coveralls.io/r/ruedap/alfred-font-awesome-workflow)
 [![Latest Version](http://img.shields.io/github/release/ruedap/alfred-font-awesome-workflow.svg?style=flat-square)](https://github.com/ruedap/alfred-font-awesome-workflow/releases)
 [![License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](http://ruedap.mit-license.org/2015)
 
-You can incrementally search for [Font Awesome icons](http://fontawesome.io/icons/) and paste it to front most app.
+You can incrementally search for [Font Awesome icons](https://fontawesome.com/icons?d=gallery&m=free) and paste it to front most app.
 
 #### :pencil: for coding HTML/CSS
 ![screencast.gif](https://github.com/ruedap/alfred-font-awesome-workflow/raw/master/screenshots/screencast.gif)
 
-#### :art: for designing in Photoshop, Illustrator, Sketch 3, Keynote, etc
+#### :art: for designing in Photoshop, Illustrator, Sketch, Keynote, etc
 ![screencast-illustrator.gif](https://github.com/ruedap/alfred-font-awesome-workflow/raw/master/screenshots/screencast-illustrator.gif)
 
 :gem: See also: [Font Awesome Workflow with Sketch 3 — QuickCast.](http://quick.as/46rbfrqr)
@@ -20,12 +20,12 @@ You can incrementally search for [Font Awesome icons](http://fontawesome.io/icon
 
 Download **[Font-Awesome.alfredworkflow](https://github.com/ruedap/alfred-font-awesome-workflow/raw/master/Font-Awesome.alfredworkflow)** and import to [Alfred 2 or 3](http://www.alfredapp.com/) (requires Powerpack).
 
-The current supported version is **Font Awesome 4.7.0**. Previous versions are available [here](https://github.com/ruedap/alfred-font-awesome-workflow/releases).
+The current supported version is **Font Awesome 5.0.6 Free**. Previous versions are available [here](https://github.com/ruedap/alfred-font-awesome-workflow/releases).
 
 
 ## Usage
 
-**Keyword** `fa`: Search through [Font Awesome icons](http://fontawesome.io/icons/).
+**Keyword** `fa`: Search through [Font Awesome icons](https://fontawesome.com/icons?d=gallery&m=free).
 
 * `Enter`: Paste class name (**for coding HTML/CSS**. e.g. `fa-arrow-circle-o-right`)
 * `Ctrl + Enter`: Paste character reference (**for designing in Photoshop, Illustrator, etc**)
