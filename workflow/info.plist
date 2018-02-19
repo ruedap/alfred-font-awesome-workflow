@@ -15,6 +15,8 @@
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+				<key>vitoclose</key>
+				<false/>
 			</dict>
 		</array>
 		<key>21557827-8003-42B7-A042-16D4C9278FEC</key>
@@ -26,6 +28,8 @@
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+				<key>vitoclose</key>
+				<false/>
 			</dict>
 			<dict>
 				<key>destinationuid</key>
@@ -34,6 +38,8 @@
 				<integer>262144</integer>
 				<key>modifiersubtext</key>
 				<string>Paste character reference</string>
+				<key>vitoclose</key>
+				<false/>
 			</dict>
 			<dict>
 				<key>destinationuid</key>
@@ -42,6 +48,8 @@
 				<integer>131072</integer>
 				<key>modifiersubtext</key>
 				<string>Paste character code</string>
+				<key>vitoclose</key>
+				<false/>
 			</dict>
 			<dict>
 				<key>destinationuid</key>
@@ -50,6 +58,8 @@
 				<integer>1048576</integer>
 				<key>modifiersubtext</key>
 				<string>Open in browser</string>
+				<key>vitoclose</key>
+				<false/>
 			</dict>
 		</array>
 		<key>2D5AC270-69DB-4E00-BE29-B7F4927E632A</key>
@@ -61,6 +71,8 @@
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+				<key>vitoclose</key>
+				<false/>
 			</dict>
 		</array>
 		<key>8EEB02DD-09BA-4657-A9D8-ACE675D342BC</key>
@@ -72,6 +84,8 @@
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+				<key>vitoclose</key>
+				<false/>
 			</dict>
 		</array>
 		<key>CE9A7E05-0277-46D5-941F-E5DEC7D9F6F7</key>
@@ -83,6 +97,8 @@
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+				<key>vitoclose</key>
+				<false/>
 			</dict>
 		</array>
 	</dict>
@@ -93,7 +109,7 @@
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
-	<string>Font Awesome 4.7.0.1</string>
+	<string>Font Awesome 5.0.6.0</string>
 	<key>objects</key>
 	<array>
 		<dict>
@@ -105,6 +121,10 @@
 				<integer>0</integer>
 				<key>script</key>
 				<string>./faw put --name {query}</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
 				<key>type</key>
 				<integer>0</integer>
 			</dict>
@@ -113,11 +133,17 @@
 			<key>uid</key>
 			<string>2D5AC270-69DB-4E00-BE29-B7F4927E632A</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
 				<key>argumenttype</key>
 				<integer>1</integer>
 				<key>escaping</key>
@@ -136,6 +162,10 @@
 				<string>...</string>
 				<key>script</key>
 				<string>./faw find {query}</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
 				<key>subtext</key>
 				<string>Font Awesome Workflow</string>
 				<key>title</key>
@@ -150,7 +180,7 @@
 			<key>uid</key>
 			<string>21557827-8003-42B7-A042-16D4C9278FEC</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -159,13 +189,15 @@
 				<true/>
 				<key>clipboardtext</key>
 				<string>{query}</string>
+				<key>transient</key>
+				<false/>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.output.clipboard</string>
 			<key>uid</key>
 			<string>8CBC1CA3-D946-4766-9551-505842A4BE52</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -176,6 +208,10 @@
 				<integer>0</integer>
 				<key>script</key>
 				<string>./faw put --ref {query}</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
 				<key>type</key>
 				<integer>0</integer>
 			</dict>
@@ -184,7 +220,7 @@
 			<key>uid</key>
 			<string>8EEB02DD-09BA-4657-A9D8-ACE675D342BC</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -195,6 +231,10 @@
 				<integer>0</integer>
 				<key>script</key>
 				<string>./faw put --code {query}</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
 				<key>type</key>
 				<integer>0</integer>
 			</dict>
@@ -203,7 +243,7 @@
 			<key>uid</key>
 			<string>CE9A7E05-0277-46D5-941F-E5DEC7D9F6F7</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -214,15 +254,19 @@
 				<integer>0</integer>
 				<key>script</key>
 				<string>open {query}</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
 				<key>type</key>
 				<integer>0</integer>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.output.script</string>
+			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
 			<string>61DCB2DD-8EF7-447E-BED3-63AA4B73235C</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -233,6 +277,10 @@
 				<integer>0</integer>
 				<key>script</key>
 				<string>./faw put --url {query}</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
 				<key>type</key>
 				<integer>0</integer>
 			</dict>
@@ -241,7 +289,7 @@
 			<key>uid</key>
 			<string>06116C11-3F9B-438E-A515-7D3CA35574BE</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>2</integer>
 		</dict>
 	</array>
 	<key>readme</key>
@@ -250,36 +298,50 @@
 	<dict>
 		<key>06116C11-3F9B-438E-A515-7D3CA35574BE</key>
 		<dict>
+			<key>xpos</key>
+			<integer>500</integer>
 			<key>ypos</key>
 			<real>340</real>
 		</dict>
 		<key>21557827-8003-42B7-A042-16D4C9278FEC</key>
 		<dict>
+			<key>xpos</key>
+			<integer>300</integer>
 			<key>ypos</key>
 			<real>120</real>
 		</dict>
 		<key>2D5AC270-69DB-4E00-BE29-B7F4927E632A</key>
 		<dict>
+			<key>xpos</key>
+			<integer>500</integer>
 			<key>ypos</key>
 			<real>10</real>
 		</dict>
 		<key>61DCB2DD-8EF7-447E-BED3-63AA4B73235C</key>
 		<dict>
+			<key>xpos</key>
+			<integer>700</integer>
 			<key>ypos</key>
 			<real>340</real>
 		</dict>
 		<key>8CBC1CA3-D946-4766-9551-505842A4BE52</key>
 		<dict>
+			<key>xpos</key>
+			<integer>700</integer>
 			<key>ypos</key>
 			<real>120</real>
 		</dict>
 		<key>8EEB02DD-09BA-4657-A9D8-ACE675D342BC</key>
 		<dict>
+			<key>xpos</key>
+			<integer>500</integer>
 			<key>ypos</key>
 			<real>120</real>
 		</dict>
 		<key>CE9A7E05-0277-46D5-941F-E5DEC7D9F6F7</key>
 		<dict>
+			<key>xpos</key>
+			<integer>500</integer>
 			<key>ypos</key>
 			<real>230</real>
 		</dict>
