@@ -51,21 +51,26 @@ func TestIcons_iconsReadYaml_Error(t *testing.T) {
 func TestIcons_iconsUnmarshalYaml(t *testing.T) {
 	b := []byte(`
 icons:
-  - name:       Glass
-    id:         glass
-    unicode:    f000
-    created:    1.0
-    filter:
-      - martini
+- name: Accessible Icon
+  id: accessible-icon
+  unicode: f368
+  created: 5.0.0
+  filter:
+  - accessibility
+  - wheelchair
+  - handicap
+  - person
+  - wheelchair-alt
+  categories: unknown
 `)
 	actual, _ := iconsUnmarshalYaml(b)
 
 	icon := icon{
-		Name:    "Glass",
-		ID:      "glass",
-		Unicode: "f000",
-		Created: "1.0",
-		Filter:  []string{"martini"},
+		Name:    "Accessible Icon",
+		ID:      "accessible-icon",
+		Unicode: "f368",
+		Created: "5.0.0",
+		Filter:  []string{"accessibility", "wheelchair", "handicap", "person", "wheelchair-alt"},
 	}
 	expected := iconsYaml{icons{icon}}
 	if !reflect.DeepEqual(actual, expected) {
@@ -77,7 +82,7 @@ func TestIcons_find_AllIcons(t *testing.T) {
 	fi := testIconsFindHelper([]string{""})
 
 	actual := len(fi)
-	expected := 675
+	expected := 813
 	if actual != expected {
 		t.Errorf("expected %v to eq %v", actual, expected)
 	}
@@ -160,11 +165,11 @@ func TestIcons_find_TaxiIcon(t *testing.T) {
 		t.Errorf("expected %v to eq %v", actual, expected)
 	}
 
-	actual = fi[0].Aliases[0]
-	expected = "cab"
-	if actual != expected {
-		t.Errorf("expected %v to eq %v", actual, expected)
-	}
+	// actual = fi[0].Aliases[0]
+	// expected = "cab"
+	// if actual != expected {
+	// 	t.Errorf("expected %v to eq %v", actual, expected)
+	// }
 
 	actual = fi[0].Filter[0]
 	expected = "vehicle"
@@ -172,26 +177,26 @@ func TestIcons_find_TaxiIcon(t *testing.T) {
 		t.Errorf("expected %v to eq %v", actual, expected)
 	}
 
-	actual = fi[0].Categories[0]
-	expected = "Web Application Icons"
-	if actual != expected {
-		t.Errorf("expected %v to eq %v", actual, expected)
-	}
+	// actual = fi[0].Categories[0]
+	// expected = "Web Application Icons"
+	// if actual != expected {
+	// 	t.Errorf("expected %v to eq %v", actual, expected)
+	// }
 }
 
-func TestIcons_find_Aliases(t *testing.T) {
-	fi := testIconsFindHelper([]string{"navicon"})
+// func TestIcons_find_Aliases(t *testing.T) {
+// 	fi := testIconsFindHelper([]string{"navicon"})
 
-	actual := fi[0].ID
-	expected := "bars"
-	if actual != expected {
-		t.Errorf("expected %v to eq %v", actual, expected)
-	}
+// 	actual := fi[0].ID
+// 	expected := "bars"
+// 	if actual != expected {
+// 		t.Errorf("expected %v to eq %v", actual, expected)
+// 	}
 
-	if len(fi) != 1 {
-		t.Errorf("expected %v to eq %v", len(fi), 1)
-	}
-}
+// 	if len(fi) != 1 {
+// 		t.Errorf("expected %v to eq %v", len(fi), 1)
+// 	}
+// }
 
 func TestIcons_findByUnicode(t *testing.T) {
 	fi := newIcons().findByUnicode("f067")
