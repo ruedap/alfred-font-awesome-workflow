@@ -267,6 +267,7 @@ icons:
   filter:
   - box
   - storage
+  - package
   categories: unknown
 - name: Alternate Arrow Circle Down
   id: arrow-alt-circle-down
@@ -480,6 +481,17 @@ icons:
   - stop
   - abort
   - cancel
+  - ban
+  - prohibit
+  categories: unknown
+- name: Band-Aid
+  id: band-aid
+  unicode: f462
+  created: 5.0.7
+  filter:
+  - bandage
+  - ouch
+  - boo boo
   categories: unknown
 - name: Bandcamp
   id: bandcamp
@@ -535,6 +547,7 @@ icons:
   created: '4.4'
   filter:
   - power
+  - status
   categories: unknown
 - name: Battery Full
   id: battery-full
@@ -542,6 +555,7 @@ icons:
   created: '4.4'
   filter:
   - power
+  - status
   categories: unknown
 - name: Battery 1/2 Full
   id: battery-half
@@ -549,6 +563,7 @@ icons:
   created: '4.4'
   filter:
   - power
+  - status
   categories: unknown
 - name: Battery 1/4 Full
   id: battery-quarter
@@ -556,6 +571,7 @@ icons:
   created: '4.4'
   filter:
   - power
+  - status
   categories: unknown
 - name: Battery 3/4 Full
   id: battery-three-quarters
@@ -563,6 +579,7 @@ icons:
   created: '4.4'
   filter:
   - power
+  - status
   categories: unknown
 - name: Bed
   id: bed
@@ -617,6 +634,7 @@ icons:
   filter:
   - vehicle
   - bike
+  - gears
   categories: unknown
 - name: BIMobject
   id: bimobject
@@ -737,6 +755,18 @@ icons:
   id: bowling-ball
   unicode: f436
   created: 5.0.5
+  filter: []
+  categories: unknown
+- name: Box
+  id: box
+  unicode: f466
+  created: 5.0.7
+  filter: []
+  categories: unknown
+- name: Boxes
+  id: boxes
+  unicode: f468
+  created: 5.0.7
   filter: []
   categories: unknown
 - name: Braille
@@ -1086,6 +1116,7 @@ icons:
   - graph
   - analytics
   - line-chart
+  - dashboard
   categories: unknown
 - name: Pie Chart
   id: chart-pie
@@ -1109,6 +1140,7 @@ icons:
   - confirm
   - tick
   - ok
+  - select
   categories: unknown
 - name: Check Circle
   id: check-circle
@@ -1121,6 +1153,7 @@ icons:
   - accept
   - confirm
   - ok
+  - select
   categories: unknown
 - name: Check Square
   id: check-square
@@ -1134,6 +1167,7 @@ icons:
   - accept
   - confirm
   - ok
+  - select
   categories: unknown
 - name: Chess
   id: chess
@@ -1284,6 +1318,18 @@ icons:
   filter:
   - paste
   categories: unknown
+- name: Clipboard Check
+  id: clipboard-check
+  unicode: f46c
+  created: 5.0.7
+  filter: []
+  categories: unknown
+- name: Clipboard List
+  id: clipboard-list
+  unicode: f46d
+  created: 5.0.7
+  filter: []
+  categories: unknown
 - name: Clock
   id: clock
   unicode: f017
@@ -1316,14 +1362,14 @@ icons:
   filter:
   - save
   categories: unknown
-- name: Cloud Download-alt
+- name: Cloud Download Alternate
   id: cloud-download-alt
   unicode: f381
   created: 5.0.0
   filter:
   - cloud-download
   categories: unknown
-- name: Cloud Upload-alt
+- name: Cloud Upload Alternate
   id: cloud-upload-alt
   unicode: f382
   created: 5.0.0
@@ -1408,6 +1454,7 @@ icons:
   created: '1'
   filter:
   - settings
+  - gears
   categories: unknown
 - name: Columns
   id: columns
@@ -1416,6 +1463,7 @@ icons:
   filter:
   - split
   - panes
+  - dashboard
   categories: unknown
 - name: comment
   id: comment
@@ -1545,7 +1593,8 @@ icons:
   id: crop
   unicode: f125
   created: '3.1'
-  filter: []
+  filter:
+  - design
   categories: unknown
 - name: Crosshairs
   id: crosshairs
@@ -1553,6 +1602,7 @@ icons:
   created: '1'
   filter:
   - picker
+  - gpd
   categories: unknown
 - name: CSS 3 Logo
   id: css3
@@ -1571,13 +1621,15 @@ icons:
   id: cube
   unicode: f1b2
   created: '4.1'
-  filter: []
+  filter:
+  - package
   categories: unknown
 - name: Cubes
   id: cubes
   unicode: f1b3
   created: '4.1'
-  filter: []
+  filter:
+  - packages
   categories: unknown
 - name: Cut
   id: cut
@@ -1646,6 +1698,7 @@ icons:
   - computer
   - demo
   - device
+  - pc
   categories: unknown
 - name: deviantART
   id: deviantart
@@ -1677,6 +1730,14 @@ icons:
   created: 5.0.0
   filter: []
   categories: unknown
+- name: DNA
+  id: dna
+  unicode: f471
+  created: 5.0.7
+  filter:
+  - double helix
+  - helix
+  categories: unknown
 - name: DocHub
   id: dochub
   unicode: f394
@@ -1695,7 +1756,19 @@ icons:
   created: '3.2'
   filter:
   - usd
-  - usd
+  - price
+  categories: unknown
+- name: Dolly
+  id: dolly
+  unicode: f472
+  created: 5.0.7
+  filter: []
+  categories: unknown
+- name: Dolly Flatbed
+  id: dolly-flatbed
+  unicode: f474
+  created: 5.0.7
+  filter: []
   categories: unknown
 - name: Dot Circle
   id: dot-circle
@@ -1901,6 +1974,7 @@ icons:
   - arrows
   - arrow
   - exchange
+  - swap
   categories: unknown
 - name: exclamation
   id: exclamation
@@ -1913,6 +1987,7 @@ icons:
   - notification
   - notify
   - alert
+  - danger
   categories: unknown
 - name: Exclamation Circle
   id: exclamation-circle
@@ -1925,6 +2000,7 @@ icons:
   - notification
   - notify
   - alert
+  - danger
   categories: unknown
 - name: Exclamation Triangle
   id: exclamation-triangle
@@ -1937,6 +2013,7 @@ icons:
   - notification
   - notify
   - alert
+  - danger
   categories: unknown
 - name: Expand
   id: expand
@@ -2070,6 +2147,7 @@ icons:
   created: '3.2'
   filter:
   - woman
+  - human
   - user
   - person
   - profile
@@ -2198,6 +2276,12 @@ icons:
   filter:
   - browser
   categories: unknown
+- name: First Aid
+  id: first-aid
+  unicode: f479
+  created: 5.0.7
+  filter: []
+  categories: unknown
 - name: First Order
   id: first-order
   unicode: f2b0
@@ -2316,13 +2400,15 @@ icons:
   id: fort-awesome
   unicode: f286
   created: '4.5'
-  filter: []
+  filter:
+  - castle
   categories: unknown
 - name: Alternate Fort Awesome
   id: fort-awesome-alt
   unicode: f3a3
   created: 5.0.0
-  filter: []
+  filter:
+  - castle
   categories: unknown
 - name: Forumbee
   id: forumbee
@@ -2388,6 +2474,7 @@ icons:
   - judge
   - lawyer
   - opinion
+  - hammer
   categories: unknown
 - name: Gem
   id: gem
@@ -2522,6 +2609,7 @@ icons:
   - location
   - coordinates
   - country
+  - gps
   categories: unknown
 - name: Gofore
   id: gofore
@@ -2722,7 +2810,8 @@ icons:
   id: hand-pointer
   unicode: f25a
   created: '4.4'
-  filter: []
+  filter:
+  - select
   categories: unknown
 - name: Rock (Hand)
   id: hand-rock
@@ -2797,6 +2886,7 @@ icons:
   created: '4.3'
   filter:
   - ekg
+  - vital signs
   categories: unknown
 - name: Hips
   id: hips
@@ -2842,6 +2932,14 @@ icons:
   created: '3'
   filter:
   - building
+  - medical center
+  - emergency room
+  categories: unknown
+- name: Hospital Symbol
+  id: hospital-symbol
+  unicode: f47e
+  created: 5.0.7
+  filter: []
   categories: unknown
 - name: Hotjar
   id: hotjar
@@ -3102,6 +3200,7 @@ icons:
   - demo
   - computer
   - device
+  - pc
   categories: unknown
 - name: Laravel
   id: laravel
@@ -3149,14 +3248,14 @@ icons:
   created: 5.0.0
   filter: []
   categories: unknown
-- name: Level Down-alt
+- name: Level Down Alternate
   id: level-down-alt
   unicode: f3be
   created: 5.0.0
   filter:
   - level-down
   categories: unknown
-- name: Level Up-alt
+- name: Level Up Alternate
   id: level-up-alt
   unicode: f3bf
   created: 5.0.0
@@ -3227,7 +3326,7 @@ icons:
   - turkish
   - try
   categories: unknown
-- name: list
+- name: List
   id: list
   unicode: f03a
   created: '1'
@@ -3240,7 +3339,7 @@ icons:
   - done
   - todo
   categories: unknown
-- name: list-alt
+- name: List Alternate
   id: list-alt
   unicode: f022
   created: '1'
@@ -3288,6 +3387,7 @@ icons:
   - address
   - place
   - where
+  - gps
   categories: unknown
 - name: lock
   id: lock
@@ -3378,6 +3478,7 @@ icons:
   created: '3.2'
   filter:
   - man
+  - human
   - user
   - person
   - profile
@@ -3402,13 +3503,15 @@ icons:
   - travel
   - where
   - place
+  - gps
   categories: unknown
-- name: Map Marker-alt
+- name: Map Marker Alternate
   id: map-marker-alt
   unicode: f3c5
   created: 5.0.0
   filter:
   - map-marker
+  - gps
   categories: unknown
 - name: Map Pin
   id: map-pin
@@ -3634,12 +3737,18 @@ icons:
   created: 5.0.0
   filter: []
   categories: unknown
-- name: Money Bill-alt
+- name: Money Bill Alternate
   id: money-bill-alt
   unicode: f3d1
   created: 5.0.0
   filter:
+  - cash
   - money
+  - buy
+  - checkout
+  - purchase
+  - payment
+  - price
   categories: unknown
 - name: Moon
   id: moon
@@ -3662,7 +3771,8 @@ icons:
   id: mouse-pointer
   unicode: f245
   created: '4.4'
-  filter: []
+  filter:
+  - select
   categories: unknown
 - name: Music
   id: music
@@ -3690,6 +3800,7 @@ icons:
   created: '4.2'
   filter:
   - press
+  - article
   categories: unknown
 - name: Nintendo Switch
   id: nintendo-switch
@@ -3731,13 +3842,15 @@ icons:
   id: object-group
   unicode: f247
   created: '4.4'
-  filter: []
+  filter:
+  - design
   categories: unknown
 - name: Object Ungroup
   id: object-ungroup
   unicode: f248
   created: '4.4'
-  filter: []
+  filter:
+  - design
   categories: unknown
 - name: Odnoklassniki
   id: odnoklassniki
@@ -3815,6 +3928,12 @@ icons:
   id: palfed
   unicode: f3d8
   created: 5.0.0
+  filter: []
+  categories: unknown
+- name: Pallet
+  id: pallet
+  unicode: f482
+  created: 5.0.7
   filter: []
   categories: unknown
 - name: Paper Plane
@@ -3895,6 +4014,7 @@ icons:
   - edit
   - update
   - pencil
+  - design
   categories: unknown
 - name: Percent
   id: percent
@@ -3974,6 +4094,14 @@ icons:
   unicode: f1a7
   created: '4.1'
   filter: []
+  categories: unknown
+- name: Pills
+  id: pills
+  unicode: f484
+  created: 5.0.7
+  filter:
+  - medicine
+  - drugs
   categories: unknown
 - name: Pinterest
   id: pinterest
@@ -4308,6 +4436,7 @@ icons:
   - refresh
   - reload
   - share
+  - swap
   categories: unknown
 - name: road
   id: road
@@ -4509,6 +4638,12 @@ icons:
   - boat
   - sea
   categories: unknown
+- name: Shipping Fast
+  id: shipping-fast
+  unicode: f48b
+  created: 5.0.7
+  filter: []
+  categories: unknown
 - name: Shirts in Bulk
   id: shirtsinbulk
   unicode: f214
@@ -4584,6 +4719,7 @@ icons:
   filter:
   - graph
   - bars
+  - status
   categories: unknown
 - name: SimplyBuilt
   id: simplybuilt
@@ -5040,6 +5176,14 @@ icons:
   - reload
   - refresh
   categories: unknown
+- name: Syringe
+  id: syringe
+  unicode: f48e
+  created: 5.0.7
+  filter:
+  - immunizations
+  - needle
+  categories: unknown
 - name: table
   id: table
   unicode: f0ce
@@ -5076,6 +5220,7 @@ icons:
   created: 5.0.0
   filter:
   - tachometer
+  - dashboard
   categories: unknown
 - name: tag
   id: tag
@@ -5187,35 +5332,48 @@ icons:
   created: '4.6'
   filter: []
   categories: unknown
+- name: Thermometer
+  id: thermometer
+  unicode: f491
+  created: 5.0.7
+  filter:
+  - temperature
+  - fever
+  categories: unknown
 - name: Thermometer Empty
   id: thermometer-empty
   unicode: f2cb
   created: '4.7'
-  filter: []
+  filter:
+  - status
   categories: unknown
 - name: Thermometer Full
   id: thermometer-full
   unicode: f2c7
   created: '4.7'
-  filter: []
+  filter:
+  - status
   categories: unknown
 - name: Thermometer 1/2 Full
   id: thermometer-half
   unicode: f2c9
   created: '4.7'
-  filter: []
+  filter:
+  - status
   categories: unknown
 - name: Thermometer 1/4 Full
   id: thermometer-quarter
   unicode: f2ca
   created: '4.7'
-  filter: []
+  filter:
+  - status
   categories: unknown
 - name: Thermometer 3/4 Full
   id: thermometer-three-quarters
   unicode: f2c8
   created: '4.7'
-  filter: []
+  filter:
+  - status
   categories: unknown
 - name: thumbs-down
   id: thumbs-down
@@ -5291,13 +5449,15 @@ icons:
   id: toggle-off
   unicode: f204
   created: '4.2'
-  filter: []
+  filter:
+  - switch
   categories: unknown
 - name: Toggle On
   id: toggle-on
   unicode: f205
   created: '4.2'
-  filter: []
+  filter:
+  - switch
   categories: unknown
 - name: Trademark
   id: trademark
@@ -5492,7 +5652,9 @@ icons:
   id: university
   unicode: f19c
   created: '4.1'
-  filter: []
+  filter:
+  - bank
+  - institution
   categories: unknown
 - name: unlink
   id: unlink
@@ -5551,12 +5713,18 @@ icons:
   - man
   - head
   - profile
+  - account
   categories: unknown
 - name: User Circle
   id: user-circle
   unicode: f2bd
   created: '4.7'
-  filter: []
+  filter:
+  - person
+  - man
+  - head
+  - profile
+  - account
   categories: unknown
 - name: user-md
   id: user-md
@@ -5567,6 +5735,8 @@ icons:
   - profile
   - medical
   - nurse
+  - job
+  - occupation
   categories: unknown
 - name: Add User
   id: user-plus
@@ -5768,11 +5938,24 @@ icons:
   created: 5.0.0
   filter: []
   categories: unknown
+- name: Warehouse
+  id: warehouse
+  unicode: f494
+  created: 5.0.7
+  filter: []
+  categories: unknown
 - name: Weibo
   id: weibo
   unicode: f18a
   created: '3.2'
   filter: []
+  categories: unknown
+- name: Weight
+  id: weight
+  unicode: f496
+  created: 5.0.7
+  filter:
+  - scale
   categories: unknown
 - name: Weixin (WeChat)
   id: weixin
@@ -5896,6 +6079,7 @@ icons:
   - fix
   - update
   - spanner
+  - tool
   categories: unknown
 - name: Xbox
   id: xbox
