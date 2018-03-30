@@ -80,7 +80,7 @@ func (cmd *command) put(flags map[string]string) int {
 		_, err = fmt.Fprint(ost, str)
 	case url != "":
 		icon := ics.findByUnicode(url)[0]
-		_, err = fmt.Fprint(ost, "http://fontawesome.io/icon/"+icon.ID+"/")
+		_, err = fmt.Fprint(ost, "https://fontawesome.com/icons/"+icon.ID)
 	default:
 		err = errors.New("invalid flag argument")
 	}

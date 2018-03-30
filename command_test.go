@@ -90,7 +90,7 @@ func TestCommand_put_URLFlag(t *testing.T) {
 	}
 
 	actual := outStream.String()
-	expected := "http://fontawesome.io/icon/plus/"
+	expected := "https://fontawesome.com/icons/plus"
 	if !strings.Contains(actual, expected) {
 		t.Errorf("expected %v to eq %v", actual, expected)
 	}
