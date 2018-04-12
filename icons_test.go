@@ -82,7 +82,7 @@ func TestIcons_find_AllIcons(t *testing.T) {
 	fi := testIconsFindHelper([]string{""})
 
 	actual := len(fi)
-	expected := 873
+	expected := 875
 	if actual != expected {
 		t.Errorf("expected %v to eq %v", actual, expected)
 	}
