@@ -3363,6 +3363,12 @@ icons:
   created: 5.0.0
   filter: []
   categories: unknown
+- name: Java
+  id: java
+  unicode: f4e4
+  created: 5.0.10
+  filter: []
+  categories: unknown
 - name: Jenkis
   id: jenkins
   unicode: f3b6
@@ -4389,6 +4395,12 @@ icons:
   id: pied-piper-alt
   unicode: f1a8
   created: '4.1'
+  filter: []
+  categories: unknown
+- name: Pied Piper-hat
+  id: pied-piper-hat
+  unicode: f4e5
+  created: 5.0.10
   filter: []
   categories: unknown
 - name: Pied Piper PP Logo (Old)
