@@ -1684,6 +1684,78 @@ icons:
   created: '4.4'
   filter: []
   categories: unknown
+- name: Creative Commons Attribution
+  id: creative-commons-by
+  unicode: f4e7
+  created: 5.0.11
+  filter: []
+  categories: unknown
+- name: Creative Commons Noncommercial
+  id: creative-commons-nc
+  unicode: f4e8
+  created: 5.0.11
+  filter: []
+  categories: unknown
+- name: Creative Commons Noncommercial (Euro Sign)
+  id: creative-commons-nc-eu
+  unicode: f4e9
+  created: 5.0.11
+  filter: []
+  categories: unknown
+- name: Creative Commons Noncommercial (Yen Sign)
+  id: creative-commons-nc-jp
+  unicode: f4ea
+  created: 5.0.11
+  filter: []
+  categories: unknown
+- name: Creative Commons No Derivative Works
+  id: creative-commons-nd
+  unicode: f4eb
+  created: 5.0.11
+  filter: []
+  categories: unknown
+- name: Creative Commons Public Domain
+  id: creative-commons-pd
+  unicode: f4ec
+  created: 5.0.11
+  filter: []
+  categories: unknown
+- name: Creative Commons Public Domain Alternate
+  id: creative-commons-pd-alt
+  unicode: f4ed
+  created: 5.0.11
+  filter: []
+  categories: unknown
+- name: Creative Commons Remix
+  id: creative-commons-remix
+  unicode: f4ee
+  created: 5.0.11
+  filter: []
+  categories: unknown
+- name: Creative Commons Share Alike
+  id: creative-commons-sa
+  unicode: f4ef
+  created: 5.0.11
+  filter: []
+  categories: unknown
+- name: Creative Commons Sampling
+  id: creative-commons-sampling
+  unicode: f4f0
+  created: 5.0.11
+  filter: []
+  categories: unknown
+- name: Creative Commons Sampling +
+  id: creative-commons-sampling-plus
+  unicode: f4f1
+  created: 5.0.11
+  filter: []
+  categories: unknown
+- name: Creative Commons Share
+  id: creative-commons-share
+  unicode: f4f2
+  created: 5.0.11
+  filter: []
+  categories: unknown
 - name: Credit Card
   id: credit-card
   unicode: f09d
@@ -1955,6 +2027,12 @@ icons:
   id: earlybirds
   unicode: f39a
   created: 5.0.0
+  filter: []
+  categories: unknown
+- name: eBay
+  id: ebay
+  unicode: f4f4
+  created: 5.0.11
   filter: []
   categories: unknown
 - name: Edge Browser
@@ -2471,6 +2549,12 @@ icons:
   created: '4.6'
   filter: []
   categories: unknown
+- name: Alternate First Order
+  id: first-order-alt
+  unicode: f50a
+  created: 5.0.12
+  filter: []
+  categories: unknown
 - name: firstdraft
   id: firstdraft
   unicode: f3a1
@@ -2563,6 +2647,12 @@ icons:
   created: 5.0.0
   filter: []
   categories: unknown
+- name: Font Awesome Full Logo
+  id: font-awesome-logo-full
+  unicode: f4e6
+  created: 5.0.11
+  filter: []
+  categories: unknown
 - name: Fonticons
   id: fonticons
   unicode: f280
@@ -2638,6 +2728,12 @@ icons:
   - disapprove
   - rating
   categories: unknown
+- name: Fulcrum
+  id: fulcrum
+  unicode: f50b
+  created: 5.0.12
+  filter: []
+  categories: unknown
 - name: Futbol
   id: futbol
   unicode: f1e3
@@ -2646,6 +2742,18 @@ icons:
   - soccer
   - football
   - ball
+  categories: unknown
+- name: Galactic Republic
+  id: galactic-republic
+  unicode: f50c
+  created: 5.0.12
+  filter: []
+  categories: unknown
+- name: Galactic Senate
+  id: galactic-senate
+  unicode: f50d
+  created: 5.0.12
+  filter: []
   categories: unknown
 - name: Gamepad
   id: gamepad
@@ -3369,6 +3477,12 @@ icons:
   created: 5.0.10
   filter: []
   categories: unknown
+- name: Jedi Order
+  id: jedi-order
+  unicode: f50e
+  created: 5.0.12
+  filter: []
+  categories: unknown
 - name: Jenkis
   id: jenkins
   unicode: f3b6
@@ -3412,6 +3526,12 @@ icons:
   filter:
   - unlock
   - password
+  categories: unknown
+- name: Keybase
+  id: keybase
+  unicode: f4f5
+  created: 5.0.11
+  filter: []
   categories: unknown
 - name: Keyboard
   id: keyboard
@@ -3748,6 +3868,12 @@ icons:
   - person
   - profile
   categories: unknown
+- name: Mandalorian
+  id: mandalorian
+  unicode: f50f
+  created: 5.0.12
+  filter: []
+  categories: unknown
 - name: Map
   id: map
   unicode: f279
@@ -3819,6 +3945,12 @@ icons:
   id: mars-stroke-v
   unicode: f22a
   created: '4.3'
+  filter: []
+  categories: unknown
+- name: Mastodon
+  id: mastodon
+  unicode: f4f6
+  created: 5.0.11
   filter: []
   categories: unknown
 - name: MaxCDN
@@ -4149,6 +4281,12 @@ icons:
   created: '4.4'
   filter: []
   categories: unknown
+- name: Old Republic
+  id: old-republic
+  unicode: f510
+  created: 5.0.12
+  filter: []
+  categories: unknown
 - name: OpenCart
   id: opencart
   unicode: f23d
@@ -4342,6 +4480,12 @@ icons:
   created: 5.0.0
   filter: []
   categories: unknown
+- name: Phoenix Squadron
+  id: phoenix-squadron
+  unicode: f511
+  created: 5.0.12
+  filter: []
+  categories: unknown
 - name: Phone
   id: phone
   unicode: f095
@@ -4531,6 +4675,12 @@ icons:
   created: 5.0.0
   filter: []
   categories: unknown
+- name: Portrait
+  id: portrait
+  unicode: f3e0
+  created: 5.0.0
+  filter: []
+  categories: unknown
 - name: Pound Sign
   id: pound-sign
   unicode: f154
@@ -4664,6 +4814,12 @@ icons:
   created: '3'
   filter: []
   categories: unknown
+- name: R Project
+  id: r-project
+  unicode: f4f7
+  created: 5.0.11
+  filter: []
+  categories: unknown
 - name: random
   id: random
   unicode: f074
@@ -4777,6 +4933,12 @@ icons:
   id: replyd
   unicode: f3e6
   created: 5.0.0
+  filter: []
+  categories: unknown
+- name: Researchgate
+  id: researchgate
+  unicode: f4f8
+  created: 5.0.11
   filter: []
   categories: unknown
 - name: Resolving
@@ -5124,6 +5286,12 @@ icons:
   - directory
   - hierarchy
   - organization
+  categories: unknown
+- name: Sith
+  id: sith
+  unicode: f512
+  created: 5.0.12
+  filter: []
   categories: unknown
 - name: skyatlas
   id: skyatlas
@@ -5686,6 +5854,12 @@ icons:
   - lyft
   - car service
   categories: unknown
+- name: TeamSpeak
+  id: teamspeak
+  unicode: f4f9
+  created: 5.0.11
+  filter: []
+  categories: unknown
 - name: Telegram
   id: telegram
   unicode: f2c6
@@ -5910,6 +6084,12 @@ icons:
   created: '4.2'
   filter:
   - switch
+  categories: unknown
+- name: Trade Federation
+  id: trade-federation
+  unicode: f513
+  created: 5.0.12
+  filter: []
   categories: unknown
 - name: Trademark
   id: trademark
@@ -6193,6 +6373,35 @@ icons:
   - profile
   - account
   categories: unknown
+- name: Alternate User
+  id: user-alt
+  unicode: f406
+  created: 5.0.0
+  filter:
+  - person
+  - man
+  - head
+  - profile
+  - account
+  categories: unknown
+- name: User Alt-slash
+  id: user-alt-slash
+  unicode: f4fa
+  created: 5.0.11
+  filter: []
+  categories: unknown
+- name: User Astronaut
+  id: user-astronaut
+  unicode: f4fb
+  created: 5.0.11
+  filter: []
+  categories: unknown
+- name: User Check
+  id: user-check
+  unicode: f4fc
+  created: 5.0.11
+  filter: []
+  categories: unknown
 - name: User Circle
   id: user-circle
   unicode: f2bd
@@ -6203,6 +6412,42 @@ icons:
   - head
   - profile
   - account
+  categories: unknown
+- name: User Clock
+  id: user-clock
+  unicode: f4fd
+  created: 5.0.11
+  filter: []
+  categories: unknown
+- name: User Cog
+  id: user-cog
+  unicode: f4fe
+  created: 5.0.11
+  filter: []
+  categories: unknown
+- name: User Edit
+  id: user-edit
+  unicode: f4ff
+  created: 5.0.11
+  filter: []
+  categories: unknown
+- name: User Friends
+  id: user-friends
+  unicode: f500
+  created: 5.0.11
+  filter: []
+  categories: unknown
+- name: User Graduate
+  id: user-graduate
+  unicode: f501
+  created: 5.0.11
+  filter: []
+  categories: unknown
+- name: User Lock
+  id: user-lock
+  unicode: f502
+  created: 5.0.11
+  filter: []
   categories: unknown
 - name: user-md
   id: user-md
@@ -6215,6 +6460,18 @@ icons:
   - nurse
   - job
   - occupation
+  categories: unknown
+- name: User Minus
+  id: user-minus
+  unicode: f503
+  created: 5.0.11
+  filter: []
+  categories: unknown
+- name: User Ninja
+  id: user-ninja
+  unicode: f504
+  created: 5.0.11
+  filter: []
   categories: unknown
 - name: Add User
   id: user-plus
@@ -6234,6 +6491,30 @@ icons:
   - incognito
   - privacy
   categories: unknown
+- name: User Shield
+  id: user-shield
+  unicode: f505
+  created: 5.0.11
+  filter: []
+  categories: unknown
+- name: User Slash
+  id: user-slash
+  unicode: f506
+  created: 5.0.11
+  filter: []
+  categories: unknown
+- name: User Tag
+  id: user-tag
+  unicode: f507
+  created: 5.0.11
+  filter: []
+  categories: unknown
+- name: User Tie
+  id: user-tie
+  unicode: f508
+  created: 5.0.11
+  filter: []
+  categories: unknown
 - name: Remove User
   id: user-times
   unicode: f235
@@ -6248,6 +6529,12 @@ icons:
   - people
   - profiles
   - persons
+  categories: unknown
+- name: Users Cog
+  id: users-cog
+  unicode: f509
+  created: 5.0.11
+  filter: []
   categories: unknown
 - name: us-Sunnah Foundation
   id: ussunnah
@@ -6537,6 +6824,12 @@ icons:
   id: wine-glass
   unicode: f4e3
   created: 5.0.9
+  filter: []
+  categories: unknown
+- name: Wolf Pack-battalion
+  id: wolf-pack-battalion
+  unicode: f514
+  created: 5.0.12
   filter: []
   categories: unknown
 - name: Won Sign
