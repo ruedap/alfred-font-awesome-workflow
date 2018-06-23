@@ -82,7 +82,7 @@ func TestIcons_find_AllIcons(t *testing.T) {
 	fi := testIconsFindHelper([]string{""})
 
 	actual := len(fi)
-	expected := 989
+	expected := 1111
 	if actual != expected {
 		t.Errorf("expected %v to eq %v", actual, expected)
 	}
@@ -165,14 +165,8 @@ func TestIcons_find_TaxiIcon(t *testing.T) {
 		t.Errorf("expected %v to eq %v", actual, expected)
 	}
 
-	// actual = fi[0].Aliases[0]
-	// expected = "cab"
-	// if actual != expected {
-	// 	t.Errorf("expected %v to eq %v", actual, expected)
-	// }
-
 	actual = fi[0].Filter[0]
-	expected = "vehicle"
+	expected = "cab"
 	if actual != expected {
 		t.Errorf("expected %v to eq %v", actual, expected)
 	}
