@@ -28,7 +28,7 @@ The current supported version is **Font Awesome 5.1.0 Free**. Previous versions 
 **Keyword** `fa`: Search through [Font Awesome icons](https://fontawesome.com/icons?d=gallery&m=free).
 
 * `Enter`: Paste class name (**for coding HTML/CSS**. e.g. `fa-arrow-circle-o-right`)
-* `Ctrl + Enter`: Paste character reference (**for designing in Photoshop, Illustrator, etc**)
+* `Ctrl + Enter`: Paste character name and ligatures shoud convert the letter into the correct symbol. (**for designing in Photoshop, Illustrator, etc**)
 * `Shift + Enter`: Paste character code (e.g. `f18e`)
 * `Command + Enter`: Open in browser (e.g. <http://fontawesome.io/icon/arrow-circle-o-right>)
 

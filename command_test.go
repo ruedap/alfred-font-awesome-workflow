@@ -73,7 +73,7 @@ func TestCommand_put_RefFlag(t *testing.T) {
 	}
 
 	actual := outStream.String()
-	expected := ""
+	expected := "plus"
 	if !strings.Contains(actual, expected) {
 		t.Errorf("expected %v to eq %v", actual, expected)
 	}

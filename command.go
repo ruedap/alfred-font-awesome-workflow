@@ -3,7 +3,6 @@ package main
 import (
 	"errors"
 	"fmt"
-	"html"
 	"io"
 	"strings"
 
@@ -76,8 +75,7 @@ func (cmd *command) put(flags map[string]string) int {
 		_, err = fmt.Fprint(ost, icon.Unicode)
 	case ref != "":
 		icon := ics.findByUnicode(ref)[0]
-		str := html.UnescapeString("&#x" + icon.Unicode + ";")
-		_, err = fmt.Fprint(ost, str)
+		_, err = fmt.Fprint(ost, icon.ID)
 	case url != "":
 		icon := ics.findByUnicode(url)[0]
 		_, err = fmt.Fprint(ost, "https://fontawesome.com/icons/"+icon.ID)
