@@ -60,6 +60,12 @@ icons:
   created: 5.0.0
   filter: []
   categories: unknown
+- name: Air Freshener
+  id: air-freshener
+  unicode: f5d0
+  created: 5.2.0
+  filter: []
+  categories: unknown
 - name: Algolia
   id: algolia
   unicode: f36c
@@ -232,7 +238,12 @@ icons:
   id: angry
   unicode: f556
   created: 5.1.0
-  filter: []
+  filter:
+  - disapprove
+  - emoticon
+  - face
+  - mad
+  - upset
   categories: unknown
 - name: Angry Creative
   id: angrycreative
@@ -273,6 +284,12 @@ icons:
   - fruit
   - osx
   categories: unknown
+- name: Fruit Apple
+  id: apple-alt
+  unicode: f5d1
+  created: 5.2.0
+  filter: []
+  categories: unknown
 - name: Apple Pay
   id: apple-pay
   unicode: f415
@@ -293,6 +310,7 @@ icons:
   unicode: f557
   created: 5.1.0
   filter:
+  - arc
   - monument
   - road
   - street
@@ -453,9 +471,16 @@ icons:
   created: 5.1.0
   filter:
   - book
+  - directions
   - geography
   - map
   - wayfinding
+  categories: unknown
+- name: Atom
+  id: atom
+  unicode: f5d2
+  created: 5.2.0
+  filter: []
   categories: unknown
 - name: Audible
   id: audible
@@ -491,7 +516,12 @@ icons:
   id: award
   unicode: f559
   created: 5.1.0
-  filter: []
+  filter:
+  - honor
+  - praise
+  - prize
+  - recognition
+  - ribbon
   categories: unknown
 - name: Amazon Web Services (AWS)
   id: aws
@@ -647,6 +677,8 @@ icons:
   unicode: f236
   created: '4.3'
   filter:
+  - lodging
+  - sleep
   - travel
   categories: unknown
 - name: beer
@@ -817,6 +849,12 @@ icons:
   created: '4.1'
   filter: []
   categories: unknown
+- name: Bone
+  id: bone
+  unicode: f5d7
+  created: 5.2.0
+  filter: []
+  categories: unknown
 - name: Bong
   id: bong
   unicode: f55c
@@ -842,9 +880,18 @@ icons:
   unicode: f518
   created: 5.0.13
   filter:
+  - flyer
   - notebook
   - open book
+  - pamphlet
   - reading
+  categories: unknown
+- name: Book Reader
+  id: book-reader
+  unicode: f5da
+  created: 5.2.0
+  filter:
+  - library
   categories: unknown
 - name: bookmark
   id: bookmark
@@ -882,6 +929,12 @@ icons:
   id: braille
   unicode: f2a1
   created: '4.6'
+  filter: []
+  categories: unknown
+- name: Brain
+  id: brain
+  unicode: f5dc
+  created: 5.2.0
   filter: []
   categories: unknown
 - name: Briefcase
@@ -924,6 +977,7 @@ icons:
   filter:
   - bristles
   - color
+  - handle
   - painting
   categories: unknown
 - name: BTC
@@ -1127,6 +1181,30 @@ icons:
   - transportation
   - vehicle
   categories: unknown
+- name: Car Alt
+  id: car-alt
+  unicode: f5de
+  created: 5.2.0
+  filter: []
+  categories: unknown
+- name: Car Battery
+  id: car-battery
+  unicode: f5df
+  created: 5.2.0
+  filter: []
+  categories: unknown
+- name: Car Crash
+  id: car-crash
+  unicode: f5e1
+  created: 5.2.0
+  filter: []
+  categories: unknown
+- name: Car Side
+  id: car-side
+  unicode: f5e4
+  created: 5.2.0
+  filter: []
+  categories: unknown
 - name: Caret Down
   id: caret-down
   unicode: f0d7
@@ -1316,6 +1394,12 @@ icons:
   - whiteboard
   - writing
   categories: unknown
+- name: Charging Station
+  id: charging-station
+  unicode: f5e7
+  created: 5.2.0
+  filter: []
+  categories: unknown
 - name: Area Chart
   id: chart-area
   unicode: f1fe
@@ -1395,7 +1479,21 @@ icons:
   id: check-double
   unicode: f560
   created: 5.1.0
-  filter: []
+  filter:
+  - accept
+  - agree
+  - checkmark
+  - confirm
+  - correct
+  - done
+  - notice
+  - notification
+  - notify
+  - ok
+  - select
+  - success
+  - tick
+  - todo
   categories: unknown
 - name: Check Square
   id: check-square
@@ -1872,13 +1970,27 @@ icons:
   id: cookie
   unicode: f563
   created: 5.1.0
-  filter: []
+  filter:
+  - baked good
+  - chips
+  - food
+  - snack
+  - sweet
+  - treat
   categories: unknown
 - name: Cookie Bite
   id: cookie-bite
   unicode: f564
   created: 5.1.0
-  filter: []
+  filter:
+  - baked good
+  - bitten
+  - chips
+  - eating
+  - food
+  - snack
+  - sweet
+  - treat
   categories: unknown
 - name: Copy
   id: copy
@@ -2234,6 +2346,12 @@ icons:
   created: 5.1.0
   filter: []
   categories: unknown
+- name: Directions
+  id: directions
+  unicode: f5eb
+  created: 5.2.0
+  filter: []
+  categories: unknown
 - name: Discord
   id: discord
   unicode: f392
@@ -2256,7 +2374,11 @@ icons:
   id: dizzy
   unicode: f567
   created: 5.1.0
-  filter: []
+  filter:
+  - dazed
+  - disapprove
+  - emoticon
+  - face
   categories: unknown
 - name: DNA
   id: dna
@@ -2283,7 +2405,7 @@ icons:
   unicode: f155
   created: '3.2'
   filter:
-  - "$"
+  - $
   - dollar-sign
   - money
   - price
@@ -2353,6 +2475,15 @@ icons:
   id: drafting-compass
   unicode: f568
   created: 5.1.0
+  filter:
+  - mechanical drawing
+  - plot
+  - plotting
+  categories: unknown
+- name: Draw Polygon
+  id: draw-polygon
+  unicode: f5ee
+  created: 5.2.0
   filter: []
   categories: unknown
 - name: Dribbble
@@ -2377,13 +2508,27 @@ icons:
   id: drum
   unicode: f569
   created: 5.1.0
-  filter: []
+  filter:
+  - instrument
+  - music
+  - percussion
+  - snare
+  - sound
   categories: unknown
 - name: Drum Steelpan
   id: drum-steelpan
   unicode: f56a
   created: 5.1.0
-  filter: []
+  filter:
+  - calypso
+  - instrument
+  - music
+  - percussion
+  - reggae
+  - snare
+  - sound
+  - steel
+  - tropical
   categories: unknown
 - name: Drupal Logo
   id: drupal
@@ -2484,6 +2629,12 @@ icons:
   - reorder
   - settings
   - ul
+  categories: unknown
+- name: Ello
+  id: ello
+  unicode: f5f1
+  created: 5.2.0
+  filter: []
   categories: unknown
 - name: Ember
   id: ember
@@ -2777,13 +2928,21 @@ icons:
   id: feather
   unicode: f52d
   created: 5.0.13
-  filter: []
+  filter:
+  - bird
+  - light
+  - plucked
+  - quill
   categories: unknown
 - name: Feather Alt
   id: feather-alt
   unicode: f56b
   created: 5.1.0
-  filter: []
+  filter:
+  - bird
+  - light
+  - plucked
+  - quill
   categories: unknown
 - name: Female
   id: female
@@ -2840,7 +2999,7 @@ icons:
   unicode: f1c6
   created: '4.1'
   filter:
-  - ".zip"
+  - .zip
   - bundle
   - compress
   - compression
@@ -2914,7 +3073,7 @@ icons:
   unicode: f571
   created: 5.1.0
   filter:
-  - "$"
+  - $
   - bill
   - document
   - dollar-sign
@@ -2988,13 +3147,23 @@ icons:
   id: fill
   unicode: f575
   created: 5.1.0
-  filter: []
+  filter:
+  - bucket
+  - color
+  - paint
+  - paint bucket
   categories: unknown
 - name: Fill Drip
   id: fill-drip
   unicode: f576
   created: 5.1.0
-  filter: []
+  filter:
+  - bucket
+  - color
+  - drop
+  - paint
+  - paint bucket
+  - spill
   categories: unknown
 - name: Film
   id: film
@@ -3015,7 +3184,15 @@ icons:
   id: fingerprint
   unicode: f577
   created: 5.1.0
-  filter: []
+  filter:
+  - human
+  - id
+  - identification
+  - lock
+  - smudge
+  - touch
+  - unique
+  - unlock
   categories: unknown
 - name: fire
   id: fire
@@ -3115,7 +3292,10 @@ icons:
   id: flushed
   unicode: f579
   created: 5.1.0
-  filter: []
+  filter:
+  - embarrassed
+  - emoticon
+  - face
   categories: unknown
 - name: Fly
   id: fly
@@ -3258,7 +3438,12 @@ icons:
   id: frown-open
   unicode: f57a
   created: 5.1.0
-  filter: []
+  filter:
+  - disapprove
+  - emoticon
+  - face
+  - rating
+  - sad
   categories: unknown
 - name: Fulcrum
   id: fulcrum
@@ -3643,85 +3828,135 @@ icons:
   id: grimace
   unicode: f57f
   created: 5.1.0
-  filter: []
+  filter:
+  - cringe
+  - emoticon
+  - face
   categories: unknown
 - name: Grinning Face
   id: grin
   unicode: f580
   created: 5.1.0
-  filter: []
+  filter:
+  - emoticon
+  - face
+  - laugh
+  - smile
   categories: unknown
 - name: Alternate Grinning Face
   id: grin-alt
   unicode: f581
   created: 5.1.0
-  filter: []
+  filter:
+  - emoticon
+  - face
+  - laugh
+  - smile
   categories: unknown
 - name: Grinning Face With Smiling Eyes
   id: grin-beam
   unicode: f582
   created: 5.1.0
-  filter: []
+  filter:
+  - emoticon
+  - face
+  - laugh
+  - smile
   categories: unknown
 - name: Grinning Face With Sweat
   id: grin-beam-sweat
   unicode: f583
   created: 5.1.0
-  filter: []
+  filter:
+  - emoticon
+  - face
+  - smile
   categories: unknown
 - name: Smiling Face With Heart-Eyes
   id: grin-hearts
   unicode: f584
   created: 5.1.0
-  filter: []
+  filter:
+  - emoticon
+  - face
+  - love
+  - smile
   categories: unknown
 - name: Grinning Squinting Face
   id: grin-squint
   unicode: f585
   created: 5.1.0
-  filter: []
+  filter:
+  - emoticon
+  - face
+  - laugh
+  - smile
   categories: unknown
 - name: Rolling on the Floor Laughing
   id: grin-squint-tears
   unicode: f586
   created: 5.1.0
-  filter: []
+  filter:
+  - emoticon
+  - face
+  - happy
+  - smile
   categories: unknown
 - name: Star-Struck
   id: grin-stars
   unicode: f587
   created: 5.1.0
-  filter: []
+  filter:
+  - emoticon
+  - face
+  - star-struck
   categories: unknown
 - name: Face With Tears of Joy
   id: grin-tears
   unicode: f588
   created: 5.1.0
-  filter: []
+  filter:
+  - LOL
+  - emoticon
+  - face
   categories: unknown
 - name: Face With Tongue
   id: grin-tongue
   unicode: f589
   created: 5.1.0
-  filter: []
+  filter:
+  - LOL
+  - emoticon
+  - face
   categories: unknown
 - name: Squinting Face With Tongue
   id: grin-tongue-squint
   unicode: f58a
   created: 5.1.0
-  filter: []
+  filter:
+  - LOL
+  - emoticon
+  - face
   categories: unknown
 - name: Winking Face With Tongue
   id: grin-tongue-wink
   unicode: f58b
   created: 5.1.0
-  filter: []
+  filter:
+  - LOL
+  - emoticon
+  - face
   categories: unknown
 - name: Grinning Winking Face
   id: grin-wink
   unicode: f58c
   created: 5.1.0
-  filter: []
+  filter:
+  - emoticon
+  - face
+  - flirt
+  - laugh
+  - smile
   categories: unknown
 - name: Grip Horizontal
   id: grip-horizontal
@@ -3729,6 +3964,8 @@ icons:
   created: 5.1.0
   filter:
   - affordance
+  - drag
+  - drop
   - grab
   - handle
   categories: unknown
@@ -3738,6 +3975,8 @@ icons:
   created: 5.1.0
   filter:
   - affordance
+  - drag
+  - drop
   - grab
   - handle
   categories: unknown
@@ -3779,6 +4018,12 @@ icons:
   created: 5.0.0
   filter: []
   categories: unknown
+- name: Hackerrank
+  id: hackerrank
+  unicode: f5f7
+  created: 5.2.0
+  filter: []
+  categories: unknown
 - name: Hand Holding
   id: hand-holding
   unicode: f4bd
@@ -3796,7 +4041,7 @@ icons:
   unicode: f4c0
   created: 5.0.9
   filter:
-  - "$"
+  - $
   - dollar sign
   - donation
   - giving
@@ -3954,13 +4199,28 @@ icons:
   id: headphones-alt
   unicode: f58f
   created: 5.1.0
-  filter: []
+  filter:
+  - audio
+  - listen
+  - music
+  - sound
+  - speaker
   categories: unknown
 - name: Headset
   id: headset
   unicode: f590
   created: 5.1.0
-  filter: []
+  filter:
+  - audio
+  - gamer
+  - gaming
+  - listen
+  - live chat
+  - microphone
+  - shot caller
+  - sound
+  - support
+  - telemarketer
   categories: unknown
 - name: Heart
   id: heart
@@ -4333,6 +4593,12 @@ icons:
   created: '4.1'
   filter: []
   categories: unknown
+- name: Kaggle
+  id: kaggle
+  unicode: f5fa
+  created: 5.2.0
+  filter: []
+  categories: unknown
 - name: key
   id: key
   unicode: f084
@@ -4377,19 +4643,34 @@ icons:
   id: kiss
   unicode: f596
   created: 5.1.0
-  filter: []
+  filter:
+  - beso
+  - emoticon
+  - face
+  - love
+  - smooch
   categories: unknown
 - name: Kissing Face With Smiling Eyes
   id: kiss-beam
   unicode: f597
   created: 5.1.0
-  filter: []
+  filter:
+  - beso
+  - emoticon
+  - face
+  - love
+  - smooch
   categories: unknown
 - name: Face Blowing a Kiss
   id: kiss-wink-heart
   unicode: f598
   created: 5.1.0
-  filter: []
+  filter:
+  - beso
+  - emoticon
+  - face
+  - love
+  - smooch
   categories: unknown
 - name: Kiwi Bird
   id: kiwi-bird
@@ -4407,7 +4688,13 @@ icons:
   id: language
   unicode: f1ab
   created: '4.1'
-  filter: []
+  filter:
+  - dialect
+  - idiom
+  - localize
+  - speech
+  - translate
+  - vernacular
   categories: unknown
 - name: Laptop
   id: laptop
@@ -4425,6 +4712,12 @@ icons:
   - machine
   - pc
   - pc
+  categories: unknown
+- name: Laptop Code
+  id: laptop-code
+  unicode: f5fc
+  created: 5.2.0
+  filter: []
   categories: unknown
 - name: Laravel
   id: laravel
@@ -4448,25 +4741,45 @@ icons:
   id: laugh
   unicode: f599
   created: 5.1.0
-  filter: []
+  filter:
+  - LOL
+  - emoticon
+  - face
+  - laugh
   categories: unknown
 - name: Laugh Face with Beaming Eyes
   id: laugh-beam
   unicode: f59a
   created: 5.1.0
-  filter: []
+  filter:
+  - LOL
+  - emoticon
+  - face
   categories: unknown
 - name: Laughing Squinting Face
   id: laugh-squint
   unicode: f59b
   created: 5.1.0
-  filter: []
+  filter:
+  - LOL
+  - emoticon
+  - face
   categories: unknown
 - name: Laughing Winking Face
   id: laugh-wink
   unicode: f59c
   created: 5.1.0
-  filter: []
+  filter:
+  - LOL
+  - emoticon
+  - face
+  categories: unknown
+- name: Layer Group
+  id: layer-group
+  unicode: f5fd
+  created: 5.2.0
+  filter:
+  - layers
   categories: unknown
 - name: leaf
   id: leaf
@@ -4871,6 +5184,12 @@ icons:
   created: '4.4'
   filter: []
   categories: unknown
+- name: Markdown
+  id: markdown
+  unicode: f60f
+  created: 5.2.0
+  filter: []
+  categories: unknown
 - name: Marker
   id: marker
   unicode: f5a1
@@ -4991,13 +5310,21 @@ icons:
   id: meh-blank
   unicode: f5a4
   created: 5.1.0
-  filter: []
+  filter:
+  - emoticon
+  - face
+  - neutral
+  - rating
   categories: unknown
 - name: Face With Rolling Eyes
   id: meh-rolling-eyes
   unicode: f5a5
   created: 5.1.0
-  filter: []
+  filter:
+  - emoticon
+  - face
+  - neutral
+  - rating
   categories: unknown
 - name: Memory
   id: memory
@@ -5061,6 +5388,12 @@ icons:
   - record
   - sound
   - voice
+  categories: unknown
+- name: Microscope
+  id: microscope
+  unicode: f610
+  created: 5.2.0
+  filter: []
   categories: unknown
 - name: Microsoft
   id: microsoft
@@ -5281,6 +5614,12 @@ icons:
   created: 5.0.0
   filter: []
   categories: unknown
+- name: Neos
+  id: neos
+  unicode: f612
+  created: 5.2.0
+  filter: []
+  categories: unknown
 - name: Neuter
   id: neuter
   unicode: f22c
@@ -5373,6 +5712,12 @@ icons:
   id: odnoklassniki-square
   unicode: f264
   created: '4.4'
+  filter: []
+  categories: unknown
+- name: Oil Can
+  id: oil-can
+  unicode: f613
+  created: 5.2.0
   filter: []
   categories: unknown
 - name: Old Republic
@@ -5888,6 +6233,12 @@ icons:
   created: 5.0.0
   filter: []
   categories: unknown
+- name: Poop
+  id: poop
+  unicode: f619
+  created: 5.2.0
+  filter: []
+  categories: unknown
 - name: Portrait
   id: portrait
   unicode: f3e0
@@ -6201,6 +6552,12 @@ icons:
   - share
   - swap
   categories: unknown
+- name: Rev.io
+  id: rev
+  unicode: f5b2
+  created: 5.1.0
+  filter: []
+  categories: unknown
 - name: Ribbon
   id: ribbon
   unicode: f4d6
@@ -6241,6 +6598,12 @@ icons:
   id: rockrms
   unicode: f3e9
   created: 5.0.0
+  filter: []
+  categories: unknown
+- name: Route
+  id: route
+  unicode: f4d7
+  created: 5.0.9
   filter: []
   categories: unknown
 - name: rss
@@ -6302,13 +6665,21 @@ icons:
   id: sad-cry
   unicode: f5b3
   created: 5.1.0
-  filter: []
+  filter:
+  - emoticon
+  - face
+  - tear
+  - tears
   categories: unknown
 - name: Loudly Crying Face
   id: sad-tear
   unicode: f5b4
   created: 5.1.0
-  filter: []
+  filter:
+  - emoticon
+  - face
+  - tear
+  - tears
   categories: unknown
 - name: Safari
   id: safari
@@ -6431,6 +6802,15 @@ icons:
   unicode: f3ec
   created: 5.0.0
   filter: []
+  categories: unknown
+- name: Shapes
+  id: shapes
+  unicode: f61f
+  created: 5.2.0
+  filter:
+  - circle
+  - square
+  - triangle
   categories: unknown
 - name: Share
   id: share
@@ -6704,13 +7084,19 @@ icons:
   id: smile-beam
   unicode: f5b8
   created: 5.1.0
-  filter: []
+  filter:
+  - emoticon
+  - face
+  - happy
   categories: unknown
 - name: Winking Face
   id: smile-wink
   unicode: f4da
   created: 5.1.0
-  filter: []
+  filter:
+  - emoticon
+  - face
+  - happy
   categories: unknown
 - name: Smoking
   id: smoking
@@ -6966,6 +7352,12 @@ icons:
   - star-half-empty
   - star-half-full
   categories: unknown
+- name: Star Of-life
+  id: star-of-life
+  unicode: f621
+  created: 5.2.0
+  filter: []
+  categories: unknown
 - name: StayLinked
   id: staylinked
   unicode: f3f5
@@ -7196,7 +7588,10 @@ icons:
   id: surprise
   unicode: f5c2
   created: 5.1.0
-  filter: []
+  filter:
+  - emoticon
+  - face
+  - shocked
   categories: unknown
 - name: Swatchbook
   id: swatchbook
@@ -7357,6 +7752,18 @@ icons:
   created: 5.0.11
   filter: []
   categories: unknown
+- name: Teeth
+  id: teeth
+  unicode: f62e
+  created: 5.2.0
+  filter: []
+  categories: unknown
+- name: Teeth Open
+  id: teeth-open
+  unicode: f62f
+  created: 5.2.0
+  filter: []
+  categories: unknown
 - name: Telegram
   id: telegram
   unicode: f2c6
@@ -7429,6 +7836,12 @@ icons:
   - ol
   - todo
   - ul
+  categories: unknown
+- name: Theater Masks
+  id: theater-masks
+  unicode: f630
+  created: 5.2.0
+  filter: []
   categories: unknown
 - name: Themeco
   id: themeco
@@ -7584,7 +7997,10 @@ icons:
   id: tired
   unicode: f5c8
   created: 5.1.0
-  filter: []
+  filter:
+  - emoticon
+  - face
+  - grumpy
   categories: unknown
 - name: Toggle Off
   id: toggle-off
@@ -7616,7 +8032,12 @@ icons:
   id: tooth
   unicode: f5c9
   created: 5.1.0
-  filter: []
+  filter:
+  - bicuspid
+  - dental
+  - molar
+  - mouth
+  - teeth
   categories: unknown
 - name: Trade Federation
   id: trade-federation
@@ -7628,6 +8049,12 @@ icons:
   id: trademark
   unicode: f25c
   created: '4.4'
+  filter: []
+  categories: unknown
+- name: Traffic Light
+  id: traffic-light
+  unicode: f637
+  created: 5.2.0
   filter: []
   categories: unknown
 - name: Train
@@ -7717,10 +8144,22 @@ icons:
   created: 5.0.9
   filter: []
   categories: unknown
+- name: Truck Monster
+  id: truck-monster
+  unicode: f63b
+  created: 5.2.0
+  filter: []
+  categories: unknown
 - name: Truck Moving
   id: truck-moving
   unicode: f4df
   created: 5.0.9
+  filter: []
+  categories: unknown
+- name: Truck Side
+  id: truck-pickup
+  unicode: f63c
+  created: 5.2.0
   filter: []
   categories: unknown
 - name: T-Shirt
@@ -8151,7 +8590,10 @@ icons:
   id: vector-square
   unicode: f5cb
   created: 5.1.0
-  filter: []
+  filter:
+  - anchors
+  - lines
+  - object
   categories: unknown
 - name: Venus
   id: venus
@@ -8591,5 +9033,11 @@ icons:
   id: youtube-square
   unicode: f431
   created: 5.0.3
+  filter: []
+  categories: unknown
+- name: Zhihu
+  id: zhihu
+  unicode: f63f
+  created: 5.2.0
   filter: []
   categories: unknown

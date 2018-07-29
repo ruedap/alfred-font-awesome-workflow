@@ -5,7 +5,7 @@
 [![Latest Version](http://img.shields.io/github/release/ruedap/alfred-font-awesome-workflow.svg?style=flat-square)](https://github.com/ruedap/alfred-font-awesome-workflow/releases)
 [![License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](http://ruedap.mit-license.org/2015)
 
-You can incrementally search for [Font Awesome icons](https://fontawesome.com/icons?d=gallery&m=free) and paste it to front most app.
+You can incrementally search for [Font Awesome icons](https://fontawesome.com/changelog/latest) and paste it to front most app.
 
 #### :pencil: for coding HTML/CSS
 
@@ -21,7 +21,7 @@ You can incrementally search for [Font Awesome icons](https://fontawesome.com/ic
 
 Download **[Font-Awesome.alfredworkflow](https://github.com/ruedap/alfred-font-awesome-workflow/raw/master/Font-Awesome.alfredworkflow)** and import to [Alfred 2 or 3](http://www.alfredapp.com/) (requires Powerpack).
 
-The current supported version is **Font Awesome 5.1.0 Free**. Previous versions are available [here](https://github.com/ruedap/alfred-font-awesome-workflow/releases).
+The current supported version is **Font Awesome 5.2.0 Free**. Previous versions are available [here](https://github.com/ruedap/alfred-font-awesome-workflow/releases).
 
 ## Usage
 
