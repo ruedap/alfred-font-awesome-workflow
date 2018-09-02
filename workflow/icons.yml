@@ -23,6 +23,12 @@ icons:
   created: 5.0.0
   filter: []
   categories: unknown
+- name: Ad
+  id: ad
+  unicode: f641
+  created: 5.3.0
+  filter: []
+  categories: unknown
 - name: Address Book
   id: address-book
   unicode: f2b9
@@ -100,6 +106,12 @@ icons:
   created: '1'
   filter:
   - text
+  categories: unknown
+- name: Alipay
+  id: alipay
+  unicode: f642
+  created: 5.3.0
+  filter: []
   categories: unknown
 - name: Allergies
   id: allergies
@@ -256,6 +268,19 @@ icons:
   unicode: f420
   created: 5.0.0
   filter: []
+  categories: unknown
+- name: Ankh
+  id: ankh
+  unicode: f644
+  created: 5.3.0
+  filter:
+  - amulet
+  - copper
+  - coptic christianity
+  - copts
+  - crux ansata
+  - egyptian
+  - venus
   categories: unknown
 - name: App Store
   id: app-store
@@ -480,7 +505,10 @@ icons:
   id: atom
   unicode: f5d2
   created: 5.2.0
-  filter: []
+  filter:
+  - atheism
+  - chemistry
+  - science
   categories: unknown
 - name: Audible
   id: audible
@@ -731,6 +759,15 @@ icons:
   - path
   - vector
   categories: unknown
+- name: Bible
+  id: bible
+  unicode: f647
+  created: 5.3.0
+  filter:
+  - book
+  - catholicism
+  - christianity
+  categories: unknown
 - name: Bicycle
   id: bicycle
   unicode: f206
@@ -935,7 +972,14 @@ icons:
   id: brain
   unicode: f5dc
   created: 5.2.0
-  filter: []
+  filter:
+  - cerebellum
+  - gray matter
+  - intellect
+  - medulla oblongata
+  - mind
+  - noodle
+  - wit
   categories: unknown
 - name: Briefcase
   id: briefcase
@@ -1056,6 +1100,17 @@ icons:
   - transportation
   - vehicle
   categories: unknown
+- name: Business Time
+  id: business-time
+  unicode: f64a
+  created: 5.3.0
+  filter:
+  - briefcase
+  - business socks
+  - clock
+  - flight of the conchords
+  - wednesday
+  categories: unknown
 - name: BuySellAds
   id: buysellads
   unicode: f20d
@@ -1112,19 +1167,28 @@ icons:
   id: calendar-minus
   unicode: f272
   created: '4.4'
-  filter: []
+  filter:
+  - delete
+  - remove
   categories: unknown
 - name: Calendar Plus
   id: calendar-plus
   unicode: f271
   created: '4.4'
-  filter: []
+  filter:
+  - add
+  - create
+  - new
   categories: unknown
 - name: Calendar Times
   id: calendar-times
   unicode: f273
   created: '4.4'
-  filter: []
+  filter:
+  - archive
+  - delete
+  - remove
+  - x
   categories: unknown
 - name: camera
   id: camera
@@ -1292,6 +1356,8 @@ icons:
   created: '4.3'
   filter:
   - add
+  - create
+  - new
   - shopping
   categories: unknown
 - name: Amazon Pay Credit Card
@@ -1663,6 +1729,17 @@ icons:
   filter:
   - circle-o-notch
   categories: unknown
+- name: City
+  id: city
+  unicode: f64f
+  created: 5.3.0
+  filter:
+  - buildings
+  - busy
+  - skyscrapers
+  - urban
+  - windows
+  categories: unknown
 - name: Clipboard
   id: clipboard
   unicode: f328
@@ -1885,6 +1962,12 @@ icons:
   - speech
   - texting
   categories: unknown
+- name: Comment Dollar
+  id: comment-dollar
+  unicode: f651
+  created: 5.3.0
+  filter: []
+  categories: unknown
 - name: Comment Dots
   id: comment-dots
   unicode: f4ad
@@ -1912,6 +1995,12 @@ icons:
   - sms
   - speech
   - texting
+  categories: unknown
+- name: Comments Dollar
+  id: comments-dollar
+  unicode: f653
+  created: 5.3.0
+  filter: []
   categories: unknown
 - name: Compact Disc
   id: compact-disc
@@ -2124,6 +2213,14 @@ icons:
   created: 5.1.0
   filter: []
   categories: unknown
+- name: Cross
+  id: cross
+  unicode: f654
+  created: 5.3.0
+  filter:
+  - catholicism
+  - christianity
+  categories: unknown
 - name: Crosshairs
   id: crosshairs
   unicode: f05b
@@ -2251,6 +2348,15 @@ icons:
   unicode: f1bd
   created: '4.1'
   filter: []
+  categories: unknown
+- name: Dharmachakra
+  id: dharmachakra
+  unicode: f655
+  created: 5.3.0
+  filter:
+  - buddhism
+  - buddhist
+  - wheel of dharma
   categories: unknown
 - name: Diagnoses
   id: diagnoses
@@ -2456,7 +2562,11 @@ icons:
   id: dove
   unicode: f4ba
   created: 5.0.9
-  filter: []
+  filter:
+  - animal
+  - bird
+  - flying
+  - peace
   categories: unknown
 - name: Download
   id: download
@@ -2673,6 +2783,12 @@ icons:
   - message
   - notification
   - support
+  categories: unknown
+- name: Envelope Open-text
+  id: envelope-open-text
+  unicode: f658
+  created: 5.3.0
+  filter: []
   categories: unknown
 - name: Envelope Square
   id: envelope-square
@@ -3307,13 +3423,31 @@ icons:
   id: folder
   unicode: f07b
   created: '1'
-  filter: []
+  filter: 
+  categories: unknown
+- name: Folder Minus
+  id: folder-minus
+  unicode: f65d
+  created: 5.3.0
+  filter:
+  - archive
+  - delete
+  - remove
   categories: unknown
 - name: Folder Open
   id: folder-open
   unicode: f07c
   created: '1'
   filter: []
+  categories: unknown
+- name: Folder Plus
+  id: folder-plus
+  unicode: f65e
+  created: 5.3.0
+  filter:
+  - add
+  - create
+  - new
   categories: unknown
 - name: font
   id: font
@@ -3449,6 +3583,12 @@ icons:
   id: fulcrum
   unicode: f50b
   created: 5.0.12
+  filter: []
+  categories: unknown
+- name: Funnel Dollar
+  id: funnel-dollar
+  unicode: f662
+  created: 5.3.0
   filter: []
   categories: unknown
 - name: Futbol
@@ -3787,6 +3927,17 @@ icons:
   created: '4.2'
   filter: []
   categories: unknown
+- name: Gopuram
+  id: gopuram
+  unicode: f664
+  created: 5.3.0
+  filter:
+  - building
+  - entrance
+  - hinduism
+  - temple
+  - tower
+  categories: unknown
 - name: Graduation Cap
   id: graduation-cap
   unicode: f19d
@@ -4024,6 +4175,19 @@ icons:
   created: 5.2.0
   filter: []
   categories: unknown
+- name: Hamsa
+  id: hamsa
+  unicode: f665
+  created: 5.3.0
+  filter:
+  - amulet
+  - christianity
+  - islam
+  - jewish
+  - judaism
+  - muslim
+  - protection
+  categories: unknown
 - name: Hand Holding
   id: hand-holding
   unicode: f4bd
@@ -4163,6 +4327,15 @@ icons:
   unicode: f292
   created: '4.5'
   filter: []
+  categories: unknown
+- name: Haykal
+  id: haykal
+  unicode: f666
+  created: 5.3.0
+  filter:
+  - bahai
+  - bahá'í
+  - star
   categories: unknown
 - name: HDD
   id: hdd
@@ -4536,11 +4709,19 @@ icons:
   created: 5.0.10
   filter: []
   categories: unknown
+- name: Jedi
+  id: jedi
+  unicode: f669
+  created: 5.3.0
+  filter:
+  - star wars
+  categories: unknown
 - name: Jedi Order
   id: jedi-order
   unicode: f50e
   created: 5.0.12
-  filter: []
+  filter:
+  - star wars
   categories: unknown
 - name: Jenkis
   id: jenkins
@@ -4575,6 +4756,16 @@ icons:
   created: '4.1'
   filter: []
   categories: unknown
+- name: Journal of the Whills
+  id: journal-whills
+  unicode: f66a
+  created: 5.3.0
+  filter:
+  - book
+  - jedi
+  - star wars
+  - the force
+  categories: unknown
 - name: JavaScript (JS)
   id: js
   unicode: f3b8
@@ -4592,6 +4783,16 @@ icons:
   unicode: f1cc
   created: '4.1'
   filter: []
+  categories: unknown
+- name: Kaaba
+  id: kaaba
+  unicode: f66b
+  created: 5.3.0
+  filter:
+  - building
+  - cube
+  - islam
+  - muslim
   categories: unknown
 - name: Kaggle
   id: kaggle
@@ -4626,6 +4827,16 @@ icons:
   unicode: f3ba
   created: 5.0.0
   filter: []
+  categories: unknown
+- name: Khanda
+  id: khanda
+  unicode: f66d
+  created: 5.3.0
+  filter:
+  - chakkar
+  - sikh
+  - sikhism
+  - sword
   categories: unknown
 - name: Kickstarter
   id: kickstarter
@@ -4683,6 +4894,15 @@ icons:
   unicode: f42f
   created: 5.0.2
   filter: []
+  categories: unknown
+- name: Landmark
+  id: landmark
+  unicode: f66f
+  created: 5.3.0
+  filter:
+  - building
+  - historic
+  - memoroable
   categories: unknown
 - name: Language
   id: language
@@ -5051,6 +5271,12 @@ icons:
   created: '1'
   filter: []
   categories: unknown
+- name: Mail Bulk
+  id: mail-bulk
+  unicode: f674
+  created: 5.3.0
+  filter: []
+  categories: unknown
 - name: Mailchimp
   id: mailchimp
   unicode: f59e
@@ -5334,6 +5560,16 @@ icons:
   - DIMM
   - RAM
   categories: unknown
+- name: Menorah
+  id: menorah
+  unicode: f676
+  created: 5.3.0
+  filter:
+  - candle
+  - jewish
+  - judaism
+  - light
+  categories: unknown
 - name: Mercury
   id: mercury
   unicode: f223
@@ -5583,6 +5819,15 @@ icons:
   - mix
   - spices
   categories: unknown
+- name: Mosque
+  id: mosque
+  unicode: f678
+  created: 5.3.0
+  filter:
+  - building
+  - islam
+  - muslim
+  categories: unknown
 - name: Motorcycle
   id: motorcycle
   unicode: f21c
@@ -5726,6 +5971,16 @@ icons:
   created: 5.0.12
   filter: []
   categories: unknown
+- name: Om
+  id: om
+  unicode: f679
+  created: 5.3.0
+  filter:
+  - buddhism
+  - hinduism
+  - jainism
+  - mantra
+  categories: unknown
 - name: OpenCart
   id: opencart
   unicode: f23d
@@ -5859,6 +6114,16 @@ icons:
   - identification
   - issued
   categories: unknown
+- name: Pastafarianism
+  id: pastafarianism
+  unicode: f67b
+  created: 5.3.0
+  filter:
+  - agnosticism
+  - atheism
+  - flying spaghetti monster
+  - fsm
+  categories: unknown
 - name: Paste
   id: paste
   unicode: f0ea
@@ -5897,6 +6162,12 @@ icons:
   id: paypal
   unicode: f1ed
   created: '4.2'
+  filter: []
+  categories: unknown
+- name: Peace
+  id: peace
+  unicode: f67c
+  created: 5.3.0
   filter: []
   categories: unknown
 - name: Pen
@@ -6113,6 +6384,12 @@ icons:
   created: '2'
   filter: []
   categories: unknown
+- name: Place Of Worship
+  id: place-of-worship
+  unicode: f67f
+  created: 5.3.0
+  filter: []
+  categories: unknown
 - name: plane
   id: plane
   unicode: f072
@@ -6227,6 +6504,18 @@ icons:
   created: '4.7'
   filter: []
   categories: unknown
+- name: Poll
+  id: poll
+  unicode: f681
+  created: 5.3.0
+  filter: []
+  categories: unknown
+- name: Poll H
+  id: poll-h
+  unicode: f682
+  created: 5.3.0
+  filter: []
+  categories: unknown
 - name: Poo
   id: poo
   unicode: f2fe
@@ -6261,6 +6550,18 @@ icons:
   - 'on'
   - reboot
   - restart
+  categories: unknown
+- name: Pray
+  id: pray
+  unicode: f683
+  created: 5.3.0
+  filter: []
+  categories: unknown
+- name: Praying Hands
+  id: praying-hands
+  unicode: f684
+  created: 5.3.0
+  filter: []
   categories: unknown
 - name: Prescription
   id: prescription
@@ -6400,6 +6701,15 @@ icons:
   created: '3'
   filter: []
   categories: unknown
+- name: Quran
+  id: quran
+  unicode: f687
+  created: 5.3.0
+  filter:
+  - book
+  - islam
+  - muslim
+  categories: unknown
 - name: R Project
   id: r-project
   unicode: f4f7
@@ -6483,7 +6793,8 @@ icons:
   created: '1'
   filter:
   - forward
-  - repeat
+  - refresh
+  - reload
   - repeat
   categories: unknown
 - name: Alternate Redo
@@ -6492,6 +6803,8 @@ icons:
   created: 5.0.0
   filter:
   - forward
+  - refresh
+  - reload
   - repeat
   categories: unknown
 - name: Registered Trademark
@@ -6743,12 +7056,23 @@ icons:
   - preview
   - zoom
   categories: unknown
+- name: Search Dollar
+  id: search-dollar
+  unicode: f688
+  created: 5.3.0
+  filter: []
+  categories: unknown
+- name: Search Location
+  id: search-location
+  unicode: f689
+  created: 5.3.0
+  filter: []
+  categories: unknown
 - name: Search Minus
   id: search-minus
   unicode: f010
   created: '1'
   filter:
-  - magnify
   - minify
   - smaller
   - zoom
@@ -7139,6 +7463,16 @@ icons:
   created: '4.7'
   filter: []
   categories: unknown
+- name: Socks
+  id: socks
+  unicode: f696
+  created: 5.3.0
+  filter:
+  - business socks
+  - business time
+  - flight of the conchords
+  - wednesday
+  categories: unknown
 - name: Solar Panel
   id: solar-panel
   unicode: f5ba
@@ -7291,6 +7625,12 @@ icons:
   created: 5.0.5
   filter: []
   categories: unknown
+- name: Square Root Alternate
+  id: square-root-alt
+  unicode: f698
+  created: 5.3.0
+  filter: []
+  categories: unknown
 - name: Squarespace
   id: squarespace
   unicode: f5be
@@ -7328,6 +7668,14 @@ icons:
   - rating
   - score
   categories: unknown
+- name: Star and Crescent
+  id: star-and-crescent
+  unicode: f699
+  created: 5.3.0
+  filter:
+  - islam
+  - muslim
+  categories: unknown
 - name: star-half
   id: star-half
   unicode: f089
@@ -7352,7 +7700,15 @@ icons:
   - star-half-empty
   - star-half-full
   categories: unknown
-- name: Star Of-life
+- name: Star of David
+  id: star-of-david
+  unicode: f69a
+  created: 5.3.0
+  filter:
+  - jewish
+  - judaism
+  categories: unknown
+- name: Star of Life
   id: star-of-life
   unicode: f621
   created: 5.2.0
@@ -7619,6 +7975,17 @@ icons:
   - recreation
   - water
   categories: unknown
+- name: Synagogue
+  id: synagogue
+  unicode: f69b
+  created: 5.3.0
+  filter:
+  - building
+  - jewish
+  - judaism
+  - star of david
+  - temple
+  categories: unknown
 - name: Sync
   id: sync
   unicode: f021
@@ -7837,6 +8204,12 @@ icons:
   - todo
   - ul
   categories: unknown
+- name: The Red Yeti
+  id: the-red-yeti
+  unicode: f69d
+  created: 5.3.0
+  filter: []
+  categories: unknown
 - name: Theater Masks
   id: theater-masks
   unicode: f630
@@ -8038,6 +8411,23 @@ icons:
   - molar
   - mouth
   - teeth
+  categories: unknown
+- name: Torah
+  id: torah
+  unicode: f6a0
+  created: 5.3.0
+  filter:
+  - book
+  - jewish
+  - judaism
+  categories: unknown
+- name: Torii Gate
+  id: torii-gate
+  unicode: f6a1
+  created: 5.3.0
+  filter:
+  - building
+  - shintoism
   categories: unknown
 - name: Trade Federation
   id: trade-federation
@@ -8472,7 +8862,9 @@ icons:
   id: user-minus
   unicode: f503
   created: 5.0.11
-  filter: []
+  filter:
+  - delete
+  - remove
   categories: unknown
 - name: User Ninja
   id: user-ninja
@@ -8484,7 +8876,7 @@ icons:
   - dangerous
   - sneaky
   categories: unknown
-- name: Add User
+- name: User Plus
   id: user-plus
   unicode: f234
   created: '4.3'
@@ -8537,7 +8929,11 @@ icons:
   id: user-times
   unicode: f235
   created: '4.3'
-  filter: []
+  filter:
+  - archive
+  - delete
+  - remove
+  - x
   categories: unknown
 - name: Users
   id: users
@@ -8670,6 +9066,16 @@ icons:
   created: 5.0.9
   filter: []
   categories: unknown
+- name: Vihara
+  id: vihara
+  unicode: f6a7
+  created: 5.3.0
+  filter:
+  - buddhism
+  - buddhist
+  - building
+  - monastery
+  categories: unknown
 - name: Vimeo
   id: vimeo
   unicode: f40a
@@ -8713,7 +9119,7 @@ icons:
   created: 5.0.5
   filter: []
   categories: unknown
-- name: volume-down
+- name: Volume Down
   id: volume-down
   unicode: f027
   created: '1'
@@ -8725,7 +9131,7 @@ icons:
   - sound
   - speaker
   categories: unknown
-- name: volume-off
+- name: Volume Off
   id: volume-off
   unicode: f026
   created: '1'
@@ -8735,7 +9141,7 @@ icons:
   - mute
   - sound
   categories: unknown
-- name: volume-up
+- name: Volume Up
   id: volume-up
   unicode: f028
   created: '1'
@@ -9012,6 +9418,15 @@ icons:
   filter:
   - jpy
   - jpy
+  categories: unknown
+- name: Yin Yang
+  id: yin-yang
+  unicode: f6ad
+  created: 5.3.0
+  filter:
+  - daoism
+  - opposites
+  - taoism
   categories: unknown
 - name: Yoast
   id: yoast
