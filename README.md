@@ -46,10 +46,11 @@ See details changes for each version in the [release notes](https://github.com/r
 
 ## Links
 
-* [Can I import FontAwesome icons in Sketch 3? - Quora](http://www.quora.com/Can-I-import-FontAwesome-icons-in-Sketch-3)
-  * [Quickly search and insert icons to Sketch using Alfed - YouTube](https://www.youtube.com/watch?v=nEFW_NmC-TA)
+* [Syntax.fm Podcast Episode 11 - Our favourite Productivity Hacks](https://syntax.fm/show/011/our-favourite-productivity-hacks)
 * [Hidden Productivity Secrets With Alfred | Smashing Coding](http://coding.smashingmagazine.com/2013/10/25/hidden-productivity-secrets-with-alfred/)
 * [Automating Front-end Workflow // Speaker Deck](https://speakerdeck.com/addyosmani/automating-front-end-workflow)
+* [Can I import FontAwesome icons in Sketch 3? - Quora](http://www.quora.com/Can-I-import-FontAwesome-icons-in-Sketch-3)
+  * [Quickly search and insert icons to Sketch using Alfed - YouTube](https://www.youtube.com/watch?v=nEFW_NmC-TA)
 * [Font Awesome Workflow with Sketch 3 — QuickCast.](http://quick.as/46rbfrqr)
 * [Sketch 3 - Insert Font Awesone icons w/ Alfred workflow — QuickCast.](http://quick.as/dvxup47)
 
