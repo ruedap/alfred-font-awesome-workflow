@@ -328,12 +328,12 @@ icons:
   unicode: f5d1
   created: 5.2.0
   filter:
-  - autumn
   - fall
   - food
   - fruit
   - fuji
   - macintosh
+  - seasonal
   categories: unknown
 - name: Apple Pay
   id: apple-pay
@@ -957,6 +957,7 @@ icons:
   - evil
   - fantasy
   - halloween
+  - holiday
   - read
   - skull
   - spell
@@ -1066,6 +1067,7 @@ icons:
   - firebolt
   - fly
   - halloween
+  - holiday
   - nimbus 2000
   - quidditch
   - sweep
@@ -1272,10 +1274,10 @@ icons:
   unicode: f6bb
   created: 5.4.0
   filter:
-  - autumn
   - camping
   - fall
   - outdoors
+  - seasonal
   - tent
   categories: unknown
 - name: Cannabis
@@ -1438,6 +1440,7 @@ icons:
   filter:
   - feline
   - halloween
+  - holiday
   - kitten
   - kitty
   - meow
@@ -1838,7 +1841,7 @@ icons:
   filter:
   - paste
   categories: unknown
-- name: Clipboard Check
+- name: Clipboard with Check
   id: clipboard-check
   unicode: f46c
   created: 5.0.7
@@ -1907,28 +1910,65 @@ icons:
   unicode: f381
   created: 5.0.0
   filter:
-  - cloud-download
+  - import
+  categories: unknown
+- name: Cloud with (a chance of) Meatball
+  id: cloud-meatball
+  unicode: f73b
+  created: 5.5.0
+  filter: []
   categories: unknown
 - name: Cloud with Moon
   id: cloud-moon
   unicode: f6c3
   created: 5.4.0
   filter:
+  - crescent
   - evening
   - halloween
+  - holiday
+  - lunar
   - night
   - sky
+  categories: unknown
+- name: Cloud with Moon and Rain
+  id: cloud-moon-rain
+  unicode: f73c
+  created: 5.5.0
+  filter: []
+  categories: unknown
+- name: Cloud with Rain
+  id: cloud-rain
+  unicode: f73d
+  created: 5.5.0
+  filter:
+  - precipitation
+  categories: unknown
+- name: Cloud with Heavy Showers
+  id: cloud-showers-heavy
+  unicode: f740
+  created: 5.5.0
+  filter:
+  - precipitation
+  - rain
+  - storm
   categories: unknown
 - name: Cloud with Sun
   id: cloud-sun
   unicode: f6c4
   created: 5.4.0
   filter:
-  - autumn
   - day
   - daytime
   - fall
   - outdoors
+  - seasonal
+  categories: unknown
+- name: Cloud with Sun and Rain
+  id: cloud-sun-rain
+  unicode: f743
+  created: 5.5.0
+  filter: []
   categories: unknown
 - name: Alternate Cloud Upload
   id: cloud-upload-alt
@@ -2004,7 +2044,6 @@ icons:
   unicode: f0f4
   created: '3'
   filter:
-  - autumn
   - beverage
   - breakfast
   - cafe
@@ -2012,6 +2051,7 @@ icons:
   - fall
   - morning
   - mug
+  - seasonal
   - tea
   categories: unknown
 - name: cog
@@ -2375,6 +2415,7 @@ icons:
   - bullfrog
   - fauna
   - halloween
+  - holiday
   - toad
   categories: unknown
 - name: Crown
@@ -2429,6 +2470,18 @@ icons:
   created: 5.0.0
   filter: []
   categories: unknown
+- name: D&D Beyond
+  id: d-and-d-beyond
+  unicode: f6ca
+  created: 5.4.0
+  filter:
+  - Dungeons & Dragons
+  - d&d
+  - dnd
+  - fantasy
+  - gaming
+  - tabletop
+  categories: unknown
 - name: DashCube
   id: dashcube
   unicode: f210
@@ -2452,6 +2505,21 @@ icons:
   unicode: f1a5
   created: '4.1'
   filter: []
+  categories: unknown
+- name: Democrat
+  id: democrat
+  unicode: f747
+  created: 5.5.0
+  filter:
+  - american
+  - democratic party
+  - donkey
+  - election
+  - left
+  - left-wing
+  - liberal
+  - politics
+  - usa
   categories: unknown
 - name: deploy.dog
   id: deploydog
@@ -3620,10 +3688,13 @@ icons:
   unicode: f024
   created: '1'
   filter:
+  - country
   - notice
   - notification
   - notify
+  - pole
   - report
+  - symbol
   categories: unknown
 - name: flag-checkered
   id: flag-checkered
@@ -3633,7 +3704,22 @@ icons:
   - notice
   - notification
   - notify
+  - pole
+  - racing
   - report
+  - symbol
+  categories: unknown
+- name: United States of America Flag
+  id: flag-usa
+  unicode: f74d
+  created: 5.5.0
+  filter:
+  - betsy ross
+  - country
+  - old glory
+  - stars
+  - stripes
+  - symbol
   categories: unknown
 - name: Flask
   id: flask
@@ -3753,9 +3839,9 @@ icons:
   unicode: f44e
   created: 5.0.5
   filter:
-  - autumn
   - fall
   - pigskin
+  - seasonal
   categories: unknown
 - name: Fort Awesome
   id: fort-awesome
@@ -3866,13 +3952,16 @@ icons:
   id: galactic-republic
   unicode: f50c
   created: 5.0.12
-  filter: []
+  filter:
+  - politics
+  - star wars
   categories: unknown
 - name: Galactic Senate
   id: galactic-senate
   unicode: f50d
   created: 5.0.12
-  filter: []
+  filter:
+  - star wars
   categories: unknown
 - name: Gamepad
   id: gamepad
@@ -3938,6 +4027,7 @@ icons:
   - clyde
   - floating
   - halloween
+  - holiday
   - inky
   - pinky
   - spirit
@@ -4640,6 +4730,7 @@ icons:
   - dnd
   - fantasy
   - halloween
+  - holiday
   - mage
   - magic
   - pointy
@@ -4757,11 +4848,11 @@ icons:
   created: 5.4.0
   filter:
   - activity
-  - autumn
   - backpack
   - fall
   - fitness
   - outdoors
+  - seasonal
   - walking
   categories: unknown
 - name: Hippo
@@ -4895,7 +4986,7 @@ icons:
   created: '4.4'
   filter: []
   categories: unknown
-- name: House Damage
+- name: Damaged House
   id: house-damage
   unicode: f6f1
   created: 5.4.0
@@ -5267,6 +5358,7 @@ icons:
   - building
   - historic
   - memoroable
+  - politics
   categories: unknown
 - name: Language
   id: language
@@ -5831,6 +5923,7 @@ icons:
   - costume
   - disguise
   - halloween
+  - holiday
   - secret
   - super hero
   categories: unknown
@@ -5954,6 +6047,12 @@ icons:
   created: '4.3'
   filter:
   - transgender
+  categories: unknown
+- name: Meteor
+  id: meteor
+  unicode: f753
+  created: 5.5.0
+  filter: []
   categories: unknown
 - name: Microchip
   id: microchip
@@ -6183,7 +6282,9 @@ icons:
   created: '3.2'
   filter:
   - contrast
+  - crescent
   - darker
+  - lunar
   - night
   categories: unknown
 - name: Mortar Pestle
@@ -6360,7 +6461,9 @@ icons:
   id: old-republic
   unicode: f510
   created: 5.0.12
-  filter: []
+  filter:
+  - politics
+  - star wars
   categories: unknown
 - name: Om
   id: om
@@ -6679,6 +6782,19 @@ icons:
   created: 5.0.0
   filter: []
   categories: unknown
+- name: Person Entering Booth
+  id: person-booth
+  unicode: f756
+  created: 5.5.0
+  filter:
+  - changing
+  - changing room
+  - election
+  - human
+  - person
+  - vote
+  - voting
+  categories: unknown
 - name: Phabricator
   id: phabricator
   unicode: f3db
@@ -6926,19 +7042,36 @@ icons:
   id: poll
   unicode: f681
   created: 5.3.0
-  filter: []
+  filter:
+  - results
+  - survey
+  - vote
+  - voting
   categories: unknown
 - name: Poll H
   id: poll-h
   unicode: f682
   created: 5.3.0
-  filter: []
+  filter:
+  - results
+  - survey
+  - vote
+  - voting
   categories: unknown
 - name: Poo
   id: poo
   unicode: f2fe
   created: 5.0.0
   filter: []
+  categories: unknown
+- name: Poo Storm
+  id: poo-storm
+  unicode: f75a
+  created: 5.5.0
+  filter:
+  - mess
+  - poop
+  - shit
   categories: unknown
 - name: Poop
   id: poop
@@ -7133,6 +7266,12 @@ icons:
   created: 5.0.11
   filter: []
   categories: unknown
+- name: Rainbow
+  id: rainbow
+  unicode: f75b
+  created: 5.5.0
+  filter: []
+  categories: unknown
 - name: random
   id: random
   unicode: f074
@@ -7151,6 +7290,12 @@ icons:
   id: react
   unicode: f41b
   created: 5.0.0
+  filter: []
+  categories: unknown
+- name: ReactEurope
+  id: reacteurope
+  unicode: f75d
+  created: 5.5.0
   filter: []
   categories: unknown
 - name: ReadMe
@@ -7230,12 +7375,6 @@ icons:
   created: '4.4'
   filter: []
   categories: unknown
-- name: Rendact
-  id: rendact
-  unicode: f3e4
-  created: 5.0.0
-  filter: []
-  categories: unknown
 - name: Renren
   id: renren
   unicode: f18b
@@ -7259,6 +7398,21 @@ icons:
   unicode: f3e6
   created: 5.0.0
   filter: []
+  categories: unknown
+- name: Republican
+  id: republican
+  unicode: f75e
+  created: 5.5.0
+  filter:
+  - american
+  - conservative
+  - election
+  - elephant
+  - politics
+  - republican party
+  - right
+  - right-wing
+  - usa
   categories: unknown
 - name: Researchgate
   id: researchgate
@@ -7820,6 +7974,7 @@ icons:
   - dnd
   - fantasy
   - halloween
+  - holiday
   - jolly-roger
   - pirate
   - poison
@@ -7907,6 +8062,13 @@ icons:
   - face
   - happy
   categories: unknown
+- name: Smog
+  id: smog
+  unicode: f75f
+  created: 5.5.0
+  filter:
+  - dragon
+  categories: unknown
 - name: Smoking
   id: smoking
   unicode: f48d
@@ -7946,7 +8108,10 @@ icons:
   id: snowflake
   unicode: f2dc
   created: '4.7'
-  filter: []
+  filter:
+  - precipitation
+  - seasonal
+  - winter
   categories: unknown
 - name: Socks
   id: socks
@@ -8082,6 +8247,7 @@ icons:
   - crawl
   - eight
   - halloween
+  - holiday
   categories: unknown
 - name: Spinner
   id: spinner
@@ -8417,6 +8583,9 @@ icons:
   - contrast
   - day
   - lighter
+  - sol
+  - solar
+  - star
   - weather
   categories: unknown
 - name: Superpowers
@@ -8641,6 +8810,24 @@ icons:
   created: 5.0.0
   filter: []
   categories: unknown
+- name: High Temperature
+  id: temperature-high
+  unicode: f769
+  created: 5.5.0
+  filter:
+  - mercury
+  - thermometer
+  - warm
+  categories: unknown
+- name: Low Temperature
+  id: temperature-low
+  unicode: f76b
+  created: 5.5.0
+  filter:
+  - cool
+  - mercury
+  - thermometer
+  categories: unknown
 - name: Tencent Weibo
   id: tencent-weibo
   unicode: f1d5
@@ -8731,7 +8918,8 @@ icons:
   unicode: f491
   created: 5.0.7
   filter:
-  - fever
+  - mercury
+  - status
   - temperature
   categories: unknown
 - name: Thermometer Empty
@@ -8739,35 +8927,52 @@ icons:
   unicode: f2cb
   created: '4.7'
   filter:
+  - mercury
   - status
+  - temperature
   categories: unknown
 - name: Thermometer Full
   id: thermometer-full
   unicode: f2c7
   created: '4.7'
   filter:
+  - fever
+  - mercury
   - status
+  - temperature
   categories: unknown
 - name: Thermometer 1/2 Full
   id: thermometer-half
   unicode: f2c9
   created: '4.7'
   filter:
+  - mercury
   - status
+  - temperature
   categories: unknown
 - name: Thermometer 1/4 Full
   id: thermometer-quarter
   unicode: f2ca
   created: '4.7'
   filter:
+  - mercury
   - status
+  - temperature
   categories: unknown
 - name: Thermometer 3/4 Full
   id: thermometer-three-quarters
   unicode: f2c8
   created: '4.7'
   filter:
+  - mercury
   - status
+  - temperature
+  categories: unknown
+- name: Think Peaks
+  id: think-peaks
+  unicode: f731
+  created: 5.4.2
+  filter: []
   categories: unknown
 - name: thumbs-down
   id: thumbs-down
@@ -8894,6 +9099,7 @@ icons:
   filter:
   - bathroom
   - halloween
+  - holiday
   - lavatory
   - prank
   - restroom
@@ -9012,13 +9218,13 @@ icons:
   unicode: f1bb
   created: '4.1'
   filter:
-  - autumn
   - bark
   - fall
   - flora
   - forest
   - nature
   - plant
+  - seasonal
   categories: unknown
 - name: Trello
   id: trello
@@ -9276,6 +9482,7 @@ icons:
   - account
   - avatar
   - head
+  - human
   - man
   - person
   - profile
@@ -9288,6 +9495,7 @@ icons:
   - account
   - avatar
   - head
+  - human
   - man
   - person
   - profile
@@ -9323,6 +9531,7 @@ icons:
   - account
   - avatar
   - head
+  - human
   - man
   - person
   - profile
@@ -9696,6 +9905,27 @@ icons:
   - sound
   - speaker
   categories: unknown
+- name: Vote Yea
+  id: vote-yea
+  unicode: f772
+  created: 5.5.0
+  filter:
+  - accept
+  - cast
+  - election
+  - politics
+  - positive
+  - 'yes'
+  categories: unknown
+- name: Cardboard VR
+  id: vr-cardboard
+  unicode: f729
+  created: 5.4.0
+  filter:
+  - google
+  - reality
+  - virtual
+  categories: unknown
 - name: Vue.js
   id: vuejs
   unicode: f41f
@@ -9718,6 +9948,12 @@ icons:
   id: warehouse
   unicode: f494
   created: 5.0.7
+  filter: []
+  categories: unknown
+- name: Water
+  id: water
+  unicode: f773
+  created: 5.5.0
   filter: []
   categories: unknown
 - name: Weebly
@@ -9800,10 +10036,10 @@ icons:
   created: 5.4.0
   filter:
   - air
-  - autumn
   - blow
   - breeze
   - fall
+  - seasonal
   categories: unknown
 - name: Window Close
   id: window-close
@@ -9928,6 +10164,13 @@ icons:
   unicode: f298
   created: '4.6'
   filter: []
+  categories: unknown
+- name: wpressr
+  id: wpressr
+  unicode: f3e4
+  created: 5.4.2
+  filter:
+  - rendact
   categories: unknown
 - name: Wrench
   id: wrench
