@@ -67,6 +67,18 @@ icons:
   created: '3.2'
   filter: []
   categories: unknown
+- name: Adobe
+  id: adobe
+  unicode: f778
+  created: 5.6.0
+  filter:
+  - acrobat
+  - app
+  - design
+  - illustrator
+  - indesign
+  - photoshop
+  categories: unknown
 - name: Adversal
   id: adversal
   unicode: f36a
@@ -320,7 +332,10 @@ icons:
   filter:
   - food
   - fruit
+  - ios
   - mac
+  - operating system
+  - os
   - osx
   categories: unknown
 - name: Fruit Apple
@@ -483,6 +498,12 @@ icons:
   - arrows-v
   - resize
   categories: unknown
+- name: Artstation
+  id: artstation
+  unicode: f77a
+  created: 5.6.0
+  filter: []
+  categories: unknown
 - name: Assistive Listening Systems
   id: assistive-listening-systems
   unicode: f2a2
@@ -520,6 +541,12 @@ icons:
   - geography
   - map
   - wayfinding
+  categories: unknown
+- name: Atlassian
+  id: atlassian
+  unicode: f77b
+  created: 5.6.0
+  filter: []
   categories: unknown
 - name: Atom
   id: atom
@@ -576,6 +603,33 @@ icons:
   unicode: f375
   created: 5.0.0
   filter: []
+  categories: unknown
+- name: Baby
+  id: baby
+  unicode: f77c
+  created: 5.6.0
+  filter:
+  - diaper
+  - human
+  - infant
+  - kid
+  - offspring
+  - person
+  - sprout
+  categories: unknown
+- name: Baby Carriage
+  id: baby-carriage
+  unicode: f77d
+  created: 5.6.0
+  filter:
+  - buggy
+  - carrier
+  - infant
+  - push
+  - stroller
+  - transportation
+  - walk
+  - wheels
   categories: unknown
 - name: Backspace
   id: backspace
@@ -767,7 +821,13 @@ icons:
   id: bell-slash
   unicode: f1f6
   created: '4.2'
-  filter: []
+  filter:
+  - alert
+  - cancel
+  - disabled
+  - notification
+  - 'off'
+  - reminder
   categories: unknown
 - name: Bezier Curve
   id: bezier-curve
@@ -811,6 +871,16 @@ icons:
   created: '4.2'
   filter: []
   categories: unknown
+- name: Biohazard
+  id: biohazard
+  unicode: f780
+  created: 5.6.0
+  filter:
+  - danger
+  - dangerous
+  - medical
+  - waste
+  categories: unknown
 - name: Birthday Cake
   id: birthday-cake
   unicode: f1fd
@@ -822,6 +892,7 @@ icons:
   unicode: f171
   created: '3.2'
   filter:
+  - atlassian
   - bitbucket-square
   - git
   categories: unknown
@@ -868,7 +939,25 @@ icons:
   id: blind
   unicode: f29d
   created: '4.6'
-  filter: []
+  filter:
+  - cane
+  - disability
+  - person
+  - sight
+  categories: unknown
+- name: Blog
+  id: blog
+  unicode: f781
+  created: 5.6.0
+  filter:
+  - journal
+  - log
+  - online
+  - personal
+  - post
+  - web 2.0
+  - wordpress
+  - writing
   categories: unknown
 - name: Blogger
   id: blogger
@@ -1216,11 +1305,31 @@ icons:
   - appointment
   - confirm
   - correct
+  - date
   - done
+  - event
   - ok
+  - schedule
   - select
   - success
+  - time
   - todo
+  - when
+  categories: unknown
+- name: Calendar with Day Focus
+  id: calendar-day
+  unicode: f783
+  created: 5.6.0
+  filter:
+  - date
+  - detail
+  - event
+  - focus
+  - schedule
+  - single day
+  - time
+  - today
+  - when
   categories: unknown
 - name: Calendar Minus
   id: calendar-minus
@@ -1251,6 +1360,21 @@ icons:
   - remove
   - x
   categories: unknown
+- name: Calendar with Week Focus
+  id: calendar-week
+  unicode: f784
+  created: 5.6.0
+  filter:
+  - date
+  - detail
+  - event
+  - focus
+  - schedule
+  - single week
+  - time
+  - today
+  - when
+  categories: unknown
 - name: camera
   id: camera
   unicode: f030
@@ -1279,6 +1403,31 @@ icons:
   - outdoors
   - seasonal
   - tent
+  categories: unknown
+- name: Canadian Maple Leaf
+  id: canadian-maple-leaf
+  unicode: f785
+  created: 5.6.0
+  filter:
+  - canada
+  - flag
+  - flora
+  - nature
+  - plant
+  categories: unknown
+- name: Candy Cane
+  id: candy-cane
+  unicode: f786
+  created: 5.6.0
+  filter:
+  - candy
+  - christmas
+  - food
+  - holiday
+  - mint
+  - peppermint
+  - striped
+  - xmas
   categories: unknown
 - name: Cannabis
   id: cannabis
@@ -1415,6 +1564,17 @@ icons:
   - arrow
   - triangle up
   categories: unknown
+- name: Carrot
+  id: carrot
+  unicode: f787
+  created: 5.6.0
+  filter:
+  - bugs bunny
+  - food
+  - holiday
+  - orange
+  - vegetable
+  categories: unknown
 - name: Shopping Cart Arrow Down
   id: cart-arrow-down
   unicode: f218
@@ -1432,6 +1592,23 @@ icons:
   - new
   - positive
   - shopping
+  categories: unknown
+- name: Cash Register
+  id: cash-register
+  unicode: f788
+  created: 5.6.0
+  filter:
+  - buy
+  - cha-ching
+  - change
+  - checkout
+  - commerce
+  - leaerboard
+  - machine
+  - pay
+  - payment
+  - purchase
+  - store
   categories: unknown
 - name: Cat
   id: cat
@@ -1513,6 +1690,15 @@ icons:
   created: 5.0.0
   filter: []
   categories: unknown
+- name: Centos
+  id: centos
+  unicode: f789
+  created: 5.6.0
+  filter:
+  - linux
+  - operating system
+  - os
+  categories: unknown
 - name: certificate
   id: certificate
   unicode: f0a3
@@ -1586,7 +1772,9 @@ icons:
   - activity
   - analytics
   - dashboard
+  - gain
   - graph
+  - increase
   - line-chart
   categories: unknown
 - name: Pie Chart
@@ -2188,6 +2376,20 @@ icons:
   - merge
   - smaller
   categories: unknown
+- name: Alternate Compress Arrows
+  id: compress-arrows-alt
+  unicode: f78c
+  created: 5.6.0
+  filter:
+  - arrows-alt
+  - collapse
+  - fullscreen
+  - minimize
+  - move
+  - resize
+  - shrink
+  - smaller
+  categories: unknown
 - name: Concierge Bell
   id: concierge-bell
   unicode: f562
@@ -2197,6 +2399,13 @@ icons:
   - hotel
   - service
   - support
+  categories: unknown
+- name: Confluence
+  id: confluence
+  unicode: f78d
+  created: 5.6.0
+  filter:
+  - atlassian
   categories: unknown
 - name: Connect Develop
   id: connectdevelop
@@ -2308,7 +2517,7 @@ icons:
   created: 5.0.11
   filter: []
   categories: unknown
-- name: Creative Commons Public Domain Alternate
+- name: Alternate Creative Commons Public Domain
   id: creative-commons-pd-alt
   unicode: f4ed
   created: 5.0.11
@@ -2569,10 +2778,26 @@ icons:
   - buddhist
   - wheel of dharma
   categories: unknown
+- name: DHL
+  id: dhl
+  unicode: f790
+  created: 5.6.0
+  filter:
+  - Dalsey, Hillblom and Lynn
+  - german
+  - package
+  - shipping
+  categories: unknown
 - name: Diagnoses
   id: diagnoses
   unicode: f470
   created: 5.0.7
+  filter: []
+  categories: unknown
+- name: Diaspora
+  id: diaspora
+  unicode: f791
+  created: 5.6.0
   filter: []
   categories: unknown
 - name: Dice
@@ -2925,12 +3150,41 @@ icons:
   - weight
   - weight-lifting
   categories: unknown
+- name: Dumpster
+  id: dumpster
+  unicode: f793
+  created: 5.6.0
+  filter:
+  - alley
+  - bin
+  - commercial
+  - trash
+  - waste
+  categories: unknown
+- name: Dumpster Fire
+  id: dumpster-fire
+  unicode: f794
+  created: 5.6.0
+  filter:
+  - alley
+  - bin
+  - commercial
+  - danger
+  - dangerous
+  - euphemism
+  - flame
+  - heat
+  - hot
+  - trash
+  - waste
+  categories: unknown
 - name: Dungeon
   id: dungeon
   unicode: f6d9
   created: 5.4.0
   filter:
   - Dungeons & Dragons
+  - building
   - d&d
   - dnd
   - door
@@ -3116,6 +3370,20 @@ icons:
   unicode: f42e
   created: 5.0.2
   filter: []
+  categories: unknown
+- name: Ethernet
+  id: ethernet
+  unicode: f796
+  created: 5.6.0
+  filter:
+  - cable
+  - cat 5
+  - cat 6
+  - connection
+  - hardware
+  - internet
+  - network
+  - wired
   categories: unknown
 - name: Etsy
   id: etsy
@@ -3353,6 +3621,24 @@ icons:
   - plucked
   - quill
   categories: unknown
+- name: FedEx
+  id: fedex
+  unicode: f797
+  created: 5.6.0
+  filter:
+  - Federal Express
+  - package
+  - shipping
+  categories: unknown
+- name: Fedora
+  id: fedora
+  unicode: f798
+  created: 5.6.0
+  filter:
+  - linux
+  - operating system
+  - os
+  categories: unknown
 - name: Female
   id: female
   unicode: f182
@@ -3379,6 +3665,15 @@ icons:
   - top gun
   - transportation
   - travel
+  categories: unknown
+- name: Figma
+  id: figma
+  unicode: f799
+  created: 5.6.0
+  filter:
+  - app
+  - design
+  - interface
   categories: unknown
 - name: File
   id: file
@@ -3614,6 +3909,17 @@ icons:
   id: fire
   unicode: f06d
   created: '1'
+  filter:
+  - caliente
+  - flame
+  - heat
+  - hot
+  - popular
+  categories: unknown
+- name: Alternate Fire
+  id: fire-alt
+  unicode: f7e4
+  created: 5.6.3
   filter:
   - caliente
   - flame
@@ -4037,11 +4343,28 @@ icons:
   unicode: f06b
   created: '1'
   filter:
+  - christmas
   - generosity
   - giving
+  - holiday
   - party
   - present
   - wrapped
+  - xmas
+  categories: unknown
+- name: Gifts
+  id: gifts
+  unicode: f79c
+  created: 5.6.0
+  filter:
+  - christmas
+  - generosity
+  - giving
+  - holiday
+  - party
+  - present
+  - wrapped
+  - xmas
   categories: unknown
 - name: Git
   id: git
@@ -4095,6 +4418,23 @@ icons:
   created: 5.0.0
   filter: []
   categories: unknown
+- name: Glass Cheers
+  id: glass-cheers
+  unicode: f79f
+  created: 5.6.0
+  filter:
+  - alcohol
+  - bar
+  - beverage
+  - celebration
+  - champagne
+  - clink
+  - drink
+  - holiday
+  - new year's eve
+  - party
+  - toast
+  categories: unknown
 - name: Martini Glass
   id: glass-martini
   unicode: f000
@@ -4104,15 +4444,26 @@ icons:
   - bar
   - beverage
   - drink
-  - glass
   - liquor
-  - martini
   categories: unknown
 - name: Alternate Glass Martini
   id: glass-martini-alt
   unicode: f57b
   created: 5.1.0
   filter: []
+  categories: unknown
+- name: Glass Whiskey
+  id: glass-whiskey
+  unicode: f7a0
+  created: 5.6.0
+  filter:
+  - alcohol
+  - bar
+  - beverage
+  - drink
+  - liquor
+  - neat
+  - seasonal
   categories: unknown
 - name: Glasses
   id: glasses
@@ -4206,6 +4557,27 @@ icons:
   id: globe-asia
   unicode: f57e
   created: 5.1.0
+  filter:
+  - all
+  - country
+  - earth
+  - global
+  - gps
+  - language
+  - localize
+  - location
+  - map
+  - online
+  - place
+  - planet
+  - translate
+  - travel
+  - world
+  categories: unknown
+- name: Globe with Europe shown
+  id: globe-europe
+  unicode: f7a2
+  created: 5.6.0
   filter:
   - all
   - country
@@ -4487,6 +4859,28 @@ icons:
   - grab
   - handle
   categories: unknown
+- name: Grip Lines
+  id: grip-lines
+  unicode: f7a4
+  created: 5.6.0
+  filter:
+  - affordance
+  - drag
+  - drop
+  - grab
+  - handle
+  categories: unknown
+- name: Grip Lines Vertical
+  id: grip-lines-vertical
+  unicode: f7a5
+  created: 5.6.0
+  filter:
+  - affordance
+  - drag
+  - drop
+  - grab
+  - handle
+  categories: unknown
 - name: Grip Vertical
   id: grip-vertical
   unicode: f58e
@@ -4509,6 +4903,19 @@ icons:
   unicode: f3ad
   created: 5.0.0
   filter: []
+  categories: unknown
+- name: Guitar
+  id: guitar
+  unicode: f7a6
+  created: 5.6.0
+  filter:
+  - acoustic
+  - instrument
+  - music
+  - rock
+  - rock and roll
+  - song
+  - strings
   categories: unknown
 - name: Gulp
   id: gulp
@@ -4723,13 +5130,14 @@ icons:
   created: 5.4.0
   filter:
   - Dungeons & Dragons
+  - accessory
   - buckle
-  - cloth
   - clothing
   - d&d
   - dnd
   - fantasy
   - halloween
+  - head
   - holiday
   - mage
   - magic
@@ -4810,6 +5218,22 @@ icons:
   - favorite
   - like
   - love
+  - relationship
+  categories: unknown
+- name: Heart Broken
+  id: heart-broken
+  unicode: f7a9
+  created: 5.6.0
+  filter:
+  - breakup
+  - crushed
+  - dislike
+  - dumped
+  - grief
+  - love
+  - lovesick
+  - relationship
+  - sad
   categories: unknown
 - name: Heartbeat
   id: heartbeat
@@ -4852,6 +5276,7 @@ icons:
   - fall
   - fitness
   - outdoors
+  - person
   - seasonal
   - walking
   categories: unknown
@@ -4888,11 +5313,28 @@ icons:
   created: 5.0.5
   filter: []
   categories: unknown
+- name: Holly Berry
+  id: holly-berry
+  unicode: f7aa
+  created: 5.6.0
+  filter:
+  - catwoman
+  - christmas
+  - decoration
+  - flora
+  - halle
+  - holiday
+  - ororo munroe
+  - plant
+  - storm
+  - xmas
+  categories: unknown
 - name: home
   id: home
   unicode: f015
   created: '1'
   filter:
+  - building
   - house
   - main
   categories: unknown
@@ -4912,6 +5354,16 @@ icons:
   id: horse
   unicode: f6f0
   created: 5.4.0
+  filter:
+  - equus
+  - fauna
+  - mammmal
+  - neigh
+  categories: unknown
+- name: Horse Head
+  id: horse-head
+  unicode: f7ab
+  created: 5.6.0
   filter:
   - equus
   - fauna
@@ -4991,6 +5443,7 @@ icons:
   unicode: f6f1
   created: 5.4.0
   filter:
+  - building
   - devastation
   - home
   categories: unknown
@@ -5025,6 +5478,18 @@ icons:
   created: '4.4'
   filter: []
   categories: unknown
+- name: Icicles
+  id: icicles
+  unicode: f7ad
+  created: 5.6.0
+  filter:
+  - cold
+  - frozen
+  - hanging
+  - ice
+  - seasonal
+  - sharp
+  categories: unknown
 - name: Identification Badge
   id: id-badge
   unicode: f2c1
@@ -5046,6 +5511,19 @@ icons:
   created: 5.0.7
   filter:
   - demographics
+  categories: unknown
+- name: Igloo
+  id: igloo
+  unicode: f7ae
+  created: 5.6.0
+  filter:
+  - dome
+  - dwelling
+  - eskimo
+  - home
+  - house
+  - ice
+  - seasonal
   categories: unknown
 - name: Image
   id: image
@@ -5088,6 +5566,7 @@ icons:
   unicode: f275
   created: '4.4'
   filter:
+  - building
   - factory
   - manufacturing
   categories: unknown
@@ -5123,6 +5602,15 @@ icons:
   created: '4.6'
   filter: []
   categories: unknown
+- name: Intercom
+  id: intercom
+  unicode: f7af
+  created: 5.6.0
+  filter:
+  - app
+  - customer
+  - messenger
+  categories: unknown
 - name: Internet-explorer
   id: internet-explorer
   unicode: f26b
@@ -5130,6 +5618,15 @@ icons:
   filter:
   - browser
   - ie
+  categories: unknown
+- name: InVision
+  id: invision
+  unicode: f7b0
+  created: 5.6.0
+  filter:
+  - app
+  - design
+  - interface
   categories: unknown
 - name: ioxhost
   id: ioxhost
@@ -5181,6 +5678,13 @@ icons:
   unicode: f3b6
   created: 5.0.0
   filter: []
+  categories: unknown
+- name: Jira
+  id: jira
+  unicode: f7b1
+  created: 5.6.0
+  filter:
+  - atlassian
   categories: unknown
 - name: Joget
   id: joget
@@ -6029,6 +6533,14 @@ icons:
   filter:
   - DIMM
   - RAM
+  - hardware
+  - technology
+  categories: unknown
+- name: Mendeley
+  id: mendeley
+  unicode: f7b3
+  created: 5.6.0
+  filter: []
   categories: unknown
 - name: Menorah
   id: menorah
@@ -6150,6 +6662,18 @@ icons:
   - negative
   - remove
   - trash
+  categories: unknown
+- name: Mitten
+  id: mitten
+  unicode: f7b5
+  created: 5.6.0
+  filter:
+  - clothing
+  - cold
+  - hands
+  - knitted
+  - seasonal
+  - warmth
   categories: unknown
 - name: Mix
   id: mix
@@ -6330,6 +6854,21 @@ icons:
   created: '4.4'
   filter:
   - select
+  categories: unknown
+- name: Mug Hot
+  id: mug-hot
+  unicode: f7b6
+  created: 5.6.0
+  filter:
+  - caliente
+  - cocoa
+  - coffee
+  - cup
+  - drink
+  - holiday
+  - steam
+  - tea
+  - warmth
   categories: unknown
 - name: Music
   id: music
@@ -6915,11 +7454,16 @@ icons:
   created: '2'
   filter: []
   categories: unknown
-- name: Place Of Worship
+- name: Place of Worship
   id: place-of-worship
   unicode: f67f
   created: 5.3.0
-  filter: []
+  filter:
+  - building
+  - church
+  - holy
+  - mosque
+  - synagogue
   categories: unknown
 - name: plane
   id: plane
@@ -7069,6 +7613,10 @@ icons:
   unicode: f75a
   created: 5.5.0
   filter:
+  - bolt
+  - cloud
+  - euphemism
+  - lightning
   - mess
   - poop
   - shit
@@ -7266,6 +7814,32 @@ icons:
   created: 5.0.11
   filter: []
   categories: unknown
+- name: Radiation
+  id: radiation
+  unicode: f7b9
+  created: 5.6.0
+  filter:
+  - danger
+  - dangerous
+  - deadly
+  - hazard
+  - nuclear
+  - radioactive
+  - warning
+  categories: unknown
+- name: Alternate Radiation
+  id: radiation-alt
+  unicode: f7ba
+  created: 5.6.0
+  filter:
+  - danger
+  - dangerous
+  - deadly
+  - hazard
+  - nuclear
+  - radioactive
+  - warning
+  categories: unknown
 - name: Rainbow
   id: rainbow
   unicode: f75b
@@ -7279,6 +7853,12 @@ icons:
   filter:
   - shuffle
   - sort
+  categories: unknown
+- name: Raspberry Pi
+  id: raspberry-pi
+  unicode: f7bb
+  created: 5.6.0
+  filter: []
   categories: unknown
 - name: Ravelry
   id: ravelry
@@ -7348,6 +7928,15 @@ icons:
   unicode: f1a2
   created: '4.1'
   filter: []
+  categories: unknown
+- name: Redhat
+  id: redhat
+  unicode: f7bc
+  created: 5.6.0
+  filter:
+  - linux
+  - operating system
+  - os
   categories: unknown
 - name: Redo
   id: redo
@@ -7425,6 +8014,19 @@ icons:
   unicode: f3e7
   created: 5.0.0
   filter: []
+  categories: unknown
+- name: Restroom
+  id: restroom
+  unicode: f7bd
+  created: 5.6.0
+  filter:
+  - bathroom
+  - john
+  - loo
+  - potty
+  - washroom
+  - waste
+  - wc
   categories: unknown
 - name: Retweet
   id: retweet
@@ -7557,6 +8159,7 @@ icons:
   created: 5.4.0
   filter:
   - jog
+  - person
   - sprint
   categories: unknown
 - name: Indian Rupee Sign
@@ -7600,6 +8203,28 @@ icons:
   created: 5.0.0
   filter: []
   categories: unknown
+- name: Satellite
+  id: satellite
+  unicode: f7bf
+  created: 5.6.0
+  filter:
+  - communications
+  - hardware
+  - orbit
+  - space
+  categories: unknown
+- name: Satellite Dish
+  id: satellite-dish
+  unicode: f7c0
+  created: 5.6.0
+  filter:
+  - SETI
+  - communications
+  - hardware
+  - receiver
+  - saucer
+  - signal
+  categories: unknown
 - name: Save
   id: save
   unicode: f0c7
@@ -7618,7 +8243,8 @@ icons:
   id: school
   unicode: f549
   created: 5.0.13
-  filter: []
+  filter:
+  - building
   categories: unknown
 - name: Screwdriver
   id: screwdriver
@@ -7648,6 +8274,12 @@ icons:
   - dnd
   - fantasy
   - paper
+  categories: unknown
+- name: Sd Card
+  id: sd-card
+  unicode: f7c2
+  created: 5.6.0
+  filter: []
   categories: unknown
 - name: Search
   id: search
@@ -7920,6 +8552,18 @@ icons:
   - name
   - writing
   categories: unknown
+- name: SIM Card
+  id: sim-card
+  unicode: f7c4
+  created: 5.6.0
+  filter:
+  - hard drive
+  - hardware
+  - portable
+  - storage
+  - technology
+  - tiny
+  categories: unknown
 - name: SimplyBuilt
   id: simplybuilt
   unicode: f215
@@ -7948,6 +8592,53 @@ icons:
   unicode: f512
   created: 5.0.12
   filter: []
+  categories: unknown
+- name: Skating
+  id: skating
+  unicode: f7c5
+  created: 5.6.0
+  filter:
+  - activity
+  - figure skating
+  - fitness
+  - ice
+  - person
+  - seasonal
+  categories: unknown
+- name: Sketch
+  id: sketch
+  unicode: f7c6
+  created: 5.6.0
+  filter:
+  - app
+  - design
+  - interface
+  categories: unknown
+- name: Skiing
+  id: skiing
+  unicode: f7c9
+  created: 5.6.0
+  filter:
+  - activity
+  - downhill
+  - fast
+  - fitness
+  - outdoors
+  - person
+  - seasonal
+  - slalom
+  categories: unknown
+- name: Skiing Nordic
+  id: skiing-nordic
+  unicode: f7ca
+  created: 5.6.0
+  filter:
+  - activity
+  - cross country
+  - fitness
+  - outdoors
+  - person
+  - seasonal
   categories: unknown
 - name: Skull
   id: skull
@@ -8016,6 +8707,19 @@ icons:
   unicode: f715
   created: 5.4.0
   filter: []
+  categories: unknown
+- name: Sleigh
+  id: sleigh
+  unicode: f7cc
+  created: 5.6.0
+  filter:
+  - christmas
+  - claus
+  - fly
+  - holiday
+  - santa
+  - sled
+  - xmas
   categories: unknown
 - name: Horizontal Sliders
   id: sliders-h
@@ -8086,6 +8790,20 @@ icons:
   - no smoking
   - non-smoking
   categories: unknown
+- name: SMS
+  id: sms
+  unicode: f7cd
+  created: 5.6.0
+  filter:
+  - chat
+  - conversation
+  - message
+  - mobile
+  - notification
+  - phone
+  - sms
+  - texting
+  categories: unknown
 - name: Snapchat
   id: snapchat
   unicode: f2ab
@@ -8104,6 +8822,17 @@ icons:
   created: '4.6'
   filter: []
   categories: unknown
+- name: Snowboarding
+  id: snowboarding
+  unicode: f7ce
+  created: 5.6.0
+  filter:
+  - activity
+  - fitness
+  - outdoors
+  - person
+  - seasonal
+  categories: unknown
 - name: Snowflake
   id: snowflake
   unicode: f2dc
@@ -8113,6 +8842,24 @@ icons:
   - seasonal
   - winter
   categories: unknown
+- name: Snowman
+  id: snowman
+  unicode: f7d0
+  created: 5.6.0
+  filter:
+  - decoration
+  - frost
+  - holiday
+  categories: unknown
+- name: Snowplow
+  id: snowplow
+  unicode: f7d2
+  created: 5.6.0
+  filter:
+  - clean up
+  - cold
+  - seasonal
+  categories: unknown
 - name: Socks
   id: socks
   unicode: f696
@@ -8120,6 +8867,7 @@ icons:
   filter:
   - business socks
   - business time
+  - clothing
   - flight of the conchords
   - wednesday
   categories: unknown
@@ -8209,6 +8957,12 @@ icons:
   created: '4.1'
   filter: []
   categories: unknown
+- name: Sourcetree
+  id: sourcetree
+  unicode: f7d3
+  created: 5.6.0
+  filter: []
+  categories: unknown
 - name: Spa
   id: spa
   unicode: f5bb
@@ -8289,7 +9043,7 @@ icons:
   created: 5.0.5
   filter: []
   categories: unknown
-- name: Square Root Alternate
+- name: Alternate Square Root
   id: square-root-alt
   unicode: f698
   created: 5.3.0
@@ -8616,6 +9370,15 @@ icons:
   - face
   - shocked
   categories: unknown
+- name: Suse
+  id: suse
+  unicode: f7d6
+  created: 5.6.0
+  filter:
+  - linux
+  - operating system
+  - os
+  categories: unknown
 - name: Swatchbook
   id: swatchbook
   unicode: f5c3
@@ -8833,6 +9596,16 @@ icons:
   unicode: f1d5
   created: '4.1'
   filter: []
+  categories: unknown
+- name: Tenge
+  id: tenge
+  unicode: f7d7
+  created: 5.6.0
+  filter:
+  - currency
+  - kazakhstan
+  - money
+  - price
   categories: unknown
 - name: Terminal
   id: terminal
@@ -9092,6 +9865,26 @@ icons:
   filter:
   - switch
   categories: unknown
+- name: Toilet
+  id: toilet
+  unicode: f7d8
+  created: 5.6.0
+  filter:
+  - bathroom
+  - flush
+  - john
+  - loo
+  - pee
+  - plumbing
+  - poop
+  - porcelain
+  - potty
+  - restroom
+  - throne
+  - washroom
+  - waste
+  - wc
+  categories: unknown
 - name: Toilet Paper
   id: toilet-paper
   unicode: f71e
@@ -9116,6 +9909,19 @@ icons:
   - repair
   - settings
   - tools
+  categories: unknown
+- name: Tools
+  id: tools
+  unicode: f7d9
+  created: 5.6.0
+  filter:
+  - admin
+  - fix
+  - repair
+  - screwdriver
+  - settings
+  - tools
+  - wrench
   categories: unknown
 - name: Tooth
   id: tooth
@@ -9178,6 +9984,17 @@ icons:
   - locomotive
   - railway
   categories: unknown
+- name: Tram
+  id: tram
+  unicode: f7da
+  created: 5.6.0
+  filter:
+  - crossing
+  - machine
+  - mountains
+  - seasonal
+  - transportation
+  categories: unknown
 - name: Transgender
   id: transgender
   unicode: f224
@@ -9230,7 +10047,8 @@ icons:
   id: trello
   unicode: f181
   created: '3.2'
-  filter: []
+  filter:
+  - atlassian
   categories: unknown
 - name: TripAdvisor
   id: tripadvisor
@@ -9261,7 +10079,10 @@ icons:
   id: truck-loading
   unicode: f4de
   created: 5.0.9
-  filter: []
+  filter:
+  - inventory
+  - moving
+  - rental
   categories: unknown
 - name: Truck Monster
   id: truck-monster
@@ -9273,7 +10094,9 @@ icons:
   id: truck-moving
   unicode: f4df
   created: 5.0.9
-  filter: []
+  filter:
+  - inventory
+  - rental
   categories: unknown
 - name: Truck Side
   id: truck-pickup
@@ -9286,7 +10109,6 @@ icons:
   unicode: f553
   created: 5.0.13
   filter:
-  - cloth
   - clothing
   categories: unknown
 - name: TTY
@@ -9350,6 +10172,15 @@ icons:
   unicode: f402
   created: 5.0.0
   filter: []
+  categories: unknown
+- name: Ubuntu
+  id: ubuntu
+  unicode: f7df
+  created: 5.6.0
+  filter:
+  - linux
+  - operating system
+  - os
   categories: unknown
 - name: UIkit
   id: uikit
@@ -9423,6 +10254,9 @@ icons:
   created: '4.1'
   filter:
   - bank
+  - building
+  - college
+  - higher education - students
   - institution
   categories: unknown
 - name: unlink
@@ -9467,6 +10301,15 @@ icons:
   filter:
   - export
   - publish
+  categories: unknown
+- name: UPS
+  id: ups
+  unicode: f7e0
+  created: 5.6.0
+  filter:
+  - United Parcel Service
+  - package
+  - shipping
   categories: unknown
 - name: USB
   id: usb
@@ -9552,7 +10395,12 @@ icons:
   id: user-edit
   unicode: f4ff
   created: 5.0.11
-  filter: []
+  filter:
+  - edit
+  - pen
+  - pencil
+  - update
+  - write
   categories: unknown
 - name: User Friends
   id: user-friends
@@ -9695,6 +10543,16 @@ icons:
   unicode: f509
   created: 5.0.11
   filter: []
+  categories: unknown
+- name: United States Postal Service
+  id: usps
+  unicode: f7e1
+  created: 5.6.0
+  filter:
+  - american
+  - package
+  - shipping
+  - usa
   categories: unknown
 - name: us-Sunnah Foundation
   id: ussunnah
@@ -9936,7 +10794,8 @@ icons:
   id: walking
   unicode: f554
   created: 5.0.13
-  filter: []
+  filter:
+  - person
   categories: unknown
 - name: Wallet
   id: wallet
@@ -9948,7 +10807,12 @@ icons:
   id: warehouse
   unicode: f494
   created: 5.0.7
-  filter: []
+  filter:
+  - building
+  - capacity
+  - garage
+  - inventory
+  - storage
   categories: unknown
 - name: Water
   id: water
@@ -10022,7 +10886,12 @@ icons:
   id: wifi
   unicode: f1eb
   created: '4.2'
-  filter: []
+  filter:
+  - connection
+  - hotspot
+  - internet
+  - network
+  - wireless
   categories: unknown
 - name: Wikipedia W
   id: wikipedia-w
@@ -10071,6 +10940,8 @@ icons:
   created: '3.2'
   filter:
   - microsoft
+  - operating system
+  - os
   categories: unknown
 - name: Wine Bottle
   id: wine-bottle
@@ -10233,6 +11104,12 @@ icons:
   created: 5.0.0
   filter: []
   categories: unknown
+- name: Yarn
+  id: yarn
+  unicode: f7e3
+  created: 5.6.0
+  filter: []
+  categories: unknown
 - name: Yelp
   id: yelp
   unicode: f1e9
@@ -10244,6 +11121,7 @@ icons:
   unicode: f157
   created: '3.2'
   filter:
+  - currency
   - jpy
   - money
   categories: unknown
