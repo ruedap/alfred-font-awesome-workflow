@@ -330,7 +330,6 @@ icons:
   unicode: f179
   created: '3.2'
   filter:
-  - food
   - fruit
   - ios
   - mac
@@ -344,7 +343,6 @@ icons:
   created: 5.2.0
   filter:
   - fall
-  - food
   - fruit
   - fuji
   - macintosh
@@ -648,6 +646,18 @@ icons:
   filter:
   - previous
   - rewind
+  categories: unknown
+- name: Bacon
+  id: bacon
+  unicode: f7e5
+  created: 5.7.0
+  filter:
+  - breakfast
+  - ham
+  - meat
+  - pancetta
+  - pork
+  - vegan
   categories: unknown
 - name: Balance Scale
   id: balance-scale
@@ -1051,6 +1061,12 @@ icons:
   - skull
   - spell
   categories: unknown
+- name: Medical Book
+  id: book-medical
+  unicode: f7e6
+  created: 5.7.0
+  filter: []
+  categories: unknown
 - name: Book Open
   id: book-open
   unicode: f518
@@ -1119,6 +1135,24 @@ icons:
   - mind
   - noodle
   - wit
+  categories: unknown
+- name: Bread Slice
+  id: bread-slice
+  unicode: f7ec
+  created: 5.7.0
+  filter:
+  - bake
+  - bakery
+  - baking
+  - dough
+  - flour
+  - gluten
+  - grain
+  - sandwich
+  - sourdough
+  - toast
+  - wheat
+  - yeast
   categories: unknown
 - name: Briefcase
   id: briefcase
@@ -1220,7 +1254,13 @@ icons:
   unicode: f46a
   created: 5.0.7
   filter:
+  - caliente
   - energy
+  - fire
+  - flame
+  - gas
+  - heat
+  - hot
   categories: unknown
 - name: Büromöbel-Experte GmbH & Co. KG.
   id: buromobelexperte
@@ -1312,6 +1352,7 @@ icons:
   - schedule
   - select
   - success
+  - tick
   - time
   - todo
   - when
@@ -1422,7 +1463,6 @@ icons:
   filter:
   - candy
   - christmas
-  - food
   - holiday
   - mint
   - peppermint
@@ -1570,7 +1610,6 @@ icons:
   created: 5.6.0
   filter:
   - bugs bunny
-  - food
   - holiday
   - orange
   - vegetable
@@ -1820,6 +1859,7 @@ icons:
   - ok
   - select
   - success
+  - tick
   - todo
   - 'yes'
   categories: unknown
@@ -1857,8 +1897,23 @@ icons:
   - ok
   - select
   - success
+  - tick
   - todo
   - 'yes'
+  categories: unknown
+- name: Cheese
+  id: cheese
+  unicode: f7ef
+  created: 5.7.0
+  filter:
+  - cheddar
+  - curd
+  - gouda
+  - melt
+  - parmesan
+  - sandwich
+  - swiss
+  - wedge
   categories: unknown
 - name: Chess
   id: chess
@@ -2022,6 +2077,19 @@ icons:
   - urban
   - windows
   categories: unknown
+- name: Medical Clinic
+  id: clinic-medical
+  unicode: f7f2
+  created: 5.7.0
+  filter:
+  - doctor
+  - general practitioner
+  - hospital
+  - infirmary
+  - medicine
+  - office
+  - outpatient
+  categories: unknown
 - name: Clipboard
   id: clipboard
   unicode: f328
@@ -2041,6 +2109,7 @@ icons:
   - ok
   - select
   - success
+  - tick
   - todo
   - 'yes'
   categories: unknown
@@ -2056,6 +2125,7 @@ icons:
   - intinerary
   - ol
   - schedule
+  - tick
   - todo
   - ul
   categories: unknown
@@ -2098,7 +2168,7 @@ icons:
   unicode: f381
   created: 5.0.0
   filter:
-  - import
+  - export
   categories: unknown
 - name: Cloud with (a chance of) Meatball
   id: cloud-meatball
@@ -2317,6 +2387,15 @@ icons:
   created: 5.0.9
   filter: []
   categories: unknown
+- name: Alternate Medical Chat
+  id: comment-medical
+  unicode: f7f5
+  created: 5.7.0
+  filter:
+  - advice
+  - diagnose
+  - prescription
+  categories: unknown
 - name: Comment Slash
   id: comment-slash
   unicode: f4b3
@@ -2381,7 +2460,6 @@ icons:
   unicode: f78c
   created: 5.6.0
   filter:
-  - arrows-alt
   - collapse
   - fullscreen
   - minimize
@@ -2426,7 +2504,6 @@ icons:
   filter:
   - baked good
   - chips
-  - food
   - snack
   - sweet
   - treat
@@ -2440,7 +2517,6 @@ icons:
   - bitten
   - chips
   - eating
-  - food
   - snack
   - sweet
   - treat
@@ -2633,6 +2709,15 @@ icons:
   created: 5.0.13
   filter: []
   categories: unknown
+- name: Crutch
+  id: crutch
+  unicode: f7f7
+  created: 5.7.0
+  filter:
+  - cane
+  - injury
+  - wheelchair
+  categories: unknown
 - name: CSS 3 Logo
   id: css3
   unicode: f13c
@@ -2709,7 +2794,7 @@ icons:
   created: '4.6'
   filter: []
   categories: unknown
-- name: Delicious Logo
+- name: Delicious
   id: delicious
   unicode: f1a5
   created: '4.1'
@@ -2792,7 +2877,12 @@ icons:
   id: diagnoses
   unicode: f470
   created: 5.0.7
-  filter: []
+  filter:
+  - analyze
+  - detect
+  - diagnosis
+  - examine
+  - medicine
   categories: unknown
 - name: Diaspora
   id: diaspora
@@ -3050,7 +3140,7 @@ icons:
   unicode: f019
   created: '1'
   filter:
-  - import
+  - export
   categories: unknown
 - name: Draft2digital
   id: draft2digital
@@ -3131,7 +3221,14 @@ icons:
   id: drumstick-bite
   unicode: f6d7
   created: 5.4.0
-  filter: []
+  filter:
+  - bone
+  - chicken
+  - leg
+  - meat
+  - poultry
+  - seasonal
+  - turkey
   categories: unknown
 - name: Drupal Logo
   id: drupal
@@ -3228,6 +3325,16 @@ icons:
   - pencil
   - update
   - write
+  categories: unknown
+- name: Egg
+  id: egg
+  unicode: f7fb
+  created: 5.7.0
+  filter:
+  - breakfast
+  - chicken
+  - easter
+  - yolk
   categories: unknown
 - name: eject
   id: eject
@@ -3744,7 +3851,8 @@ icons:
   id: file-download
   unicode: f56d
   created: 5.1.0
-  filter: []
+  filter:
+  - export
   categories: unknown
 - name: Excel File
   id: file-excel
@@ -3756,7 +3864,8 @@ icons:
   id: file-export
   unicode: f56e
   created: 5.1.0
-  filter: []
+  filter:
+  - download
   categories: unknown
 - name: Image File
   id: file-image
@@ -3768,7 +3877,8 @@ icons:
   id: file-import
   unicode: f56f
   created: 5.1.0
-  filter: []
+  filter:
+  - upload
   categories: unknown
 - name: File Invoice
   id: file-invoice
@@ -3840,7 +3950,8 @@ icons:
   id: file-upload
   unicode: f574
   created: 5.1.0
-  filter: []
+  filter:
+  - import
   categories: unknown
 - name: Video File
   id: file-video
@@ -3971,6 +4082,7 @@ icons:
   filter:
   - fauna
   - gold
+  - seafood
   - swimming
   categories: unknown
 - name: Raised Fist
@@ -4949,6 +5061,22 @@ icons:
   created: 5.2.0
   filter: []
   categories: unknown
+- name: Hamburger
+  id: hamburger
+  unicode: f805
+  created: 5.7.0
+  filter:
+  - bacon
+  - beef
+  - burger
+  - burger king
+  - cheeseburger
+  - fast food
+  - grill
+  - ground beef
+  - mcdonalds
+  - sandwich
+  categories: unknown
 - name: Hammer
   id: hammer
   unicode: f6e3
@@ -5002,6 +5130,16 @@ icons:
   unicode: f258
   created: '4.4'
   filter: []
+  categories: unknown
+- name: Hand with Middle Finger Raised
+  id: hand-middle-finger
+  unicode: f806
+  created: 5.7.0
+  filter:
+  - flip the bird
+  - gesture
+  - hate
+  - rude
   categories: unknown
 - name: Paper (Hand)
   id: hand-paper
@@ -5117,6 +5255,16 @@ icons:
   - jewish
   - judaism
   - light
+  categories: unknown
+- name: Hard Hat
+  id: hard-hat
+  unicode: f807
+  created: 5.7.0
+  filter:
+  - construction
+  - hardhat
+  - helmet
+  - safety
   categories: unknown
 - name: Hashtag
   id: hashtag
@@ -5400,6 +5548,22 @@ icons:
   created: 5.1.0
   filter: []
   categories: unknown
+- name: Hot Dog
+  id: hotdog
+  unicode: f80f
+  created: 5.7.0
+  filter:
+  - bun
+  - chili
+  - frankfurt
+  - frankfurter
+  - kosher
+  - polish
+  - sandwich
+  - sausage
+  - vienna
+  - weiner
+  categories: unknown
 - name: Hotel
   id: hotel
   unicode: f594
@@ -5477,6 +5641,20 @@ icons:
   unicode: f246
   created: '4.4'
   filter: []
+  categories: unknown
+- name: Ice Cream
+  id: ice-cream
+  unicode: f810
+  created: 5.7.0
+  filter:
+  - chocolate
+  - cone
+  - dessert
+  - frozen
+  - scoop
+  - sorbet
+  - vanilla
+  - yogurt
   categories: unknown
 - name: Icicles
   id: icicles
@@ -5898,6 +6076,15 @@ icons:
   created: 5.2.0
   filter: []
   categories: unknown
+- name: Laptop Medical
+  id: laptop-medical
+  unicode: f812
+  created: 5.7.0
+  filter:
+  - ehr
+  - electronic health records
+  - history
+  categories: unknown
 - name: Laravel
   id: laravel
   unicode: f3bd
@@ -5981,7 +6168,10 @@ icons:
   unicode: f094
   created: '1'
   filter:
-  - food
+  - citrus
+  - lemonade
+  - lime
+  - tart
   categories: unknown
 - name: Less
   id: less
@@ -7077,6 +7267,15 @@ icons:
   - plant
   - tree
   categories: unknown
+- name: Pager
+  id: pager
+  unicode: f815
+  created: 5.7.0
+  filter:
+  - beeper
+  - cellphone
+  - communication
+  categories: unknown
 - name: Paint Brush
   id: paint-brush
   unicode: f1fc
@@ -7303,6 +7502,21 @@ icons:
   filter:
   - movers
   categories: unknown
+- name: Hot Pepper
+  id: pepper-hot
+  unicode: f816
+  created: 5.7.0
+  filter:
+  - buffalo wings
+  - capsicum
+  - chili
+  - chilli
+  - habanero
+  - jalapeno
+  - mexican
+  - spicy
+  - tabasco
+  categories: unknown
 - name: Percent
   id: percent
   unicode: f295
@@ -7453,6 +7667,22 @@ icons:
   unicode: f0d3
   created: '2'
   filter: []
+  categories: unknown
+- name: Pizza Slice
+  id: pizza-slice
+  unicode: f818
+  created: 5.7.0
+  filter:
+  - cheese
+  - chicago
+  - italian
+  - mozzarella
+  - new york
+  - pepperoni
+  - pie
+  - slice
+  - teenage mutant ninja turtles
+  - tomato
   categories: unknown
 - name: Place of Worship
   id: place-of-worship
@@ -9271,7 +9501,6 @@ icons:
   created: 5.0.13
   filter:
   - dessert
-  - food
   - sweets
   - waffle
   categories: unknown
@@ -9522,11 +9751,14 @@ icons:
   unicode: f0ae
   created: '2'
   filter:
+  - checklist
   - downloading
   - downloads
   - loading
   - progress
+  - project management
   - settings
+  - to do
   categories: unknown
 - name: Taxi
   id: taxi
@@ -10030,6 +10262,26 @@ icons:
   - trash
   - trash-o
   categories: unknown
+- name: Trash Restore
+  id: trash-restore
+  unicode: f829
+  created: 5.7.0
+  filter:
+  - back
+  - control z
+  - oops
+  - undo
+  categories: unknown
+- name: Alternative Trash Restore
+  id: trash-restore-alt
+  unicode: f82a
+  created: 5.7.0
+  filter:
+  - back
+  - control z
+  - oops
+  - undo
+  categories: unknown
 - name: Tree
   id: tree
   unicode: f1bb
@@ -10299,7 +10551,7 @@ icons:
   unicode: f093
   created: '1'
   filter:
-  - export
+  - import
   - publish
   categories: unknown
 - name: UPS
@@ -10435,17 +10687,18 @@ icons:
   created: 5.0.11
   filter: []
   categories: unknown
-- name: user-md
+- name: Doctor
   id: user-md
   unicode: f0f0
   created: '2'
   filter:
-  - doctor
   - job
   - medical
   - nurse
   - occupation
+  - physician
   - profile
+  - surgeon
   categories: unknown
 - name: User Minus
   id: user-minus
@@ -10466,6 +10719,16 @@ icons:
   - dangerous
   - deadly
   - sneaky
+  categories: unknown
+- name: Nurse
+  id: user-nurse
+  unicode: f82f
+  created: 5.7.0
+  filter:
+  - doctor
+  - midwife
+  - practitioner
+  - surgeon
   categories: unknown
 - name: User Plus
   id: user-plus
