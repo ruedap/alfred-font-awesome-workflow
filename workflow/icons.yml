@@ -2224,7 +2224,7 @@ icons:
   - todo
   - 'yes'
   categories: unknown
-- name: Check Double
+- name: Double Check
   id: check-double
   unicode: f560
   created: 5.1.0
@@ -5338,6 +5338,12 @@ icons:
   id: git
   unicode: f1d3
   created: '4.1'
+  filter: []
+  categories: unknown
+- name: Git Alt
+  id: git-alt
+  unicode: f841
+  created: 5.8.2
   filter: []
   categories: unknown
 - name: Git Square
@@ -10977,6 +10983,12 @@ icons:
   id: stack-overflow
   unicode: f16c
   created: '3.2'
+  filter: []
+  categories: unknown
+- name: Stackpath
+  id: stackpath
+  unicode: f842
+  created: 5.8.2
   filter: []
   categories: unknown
 - name: Stamp
