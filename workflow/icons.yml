@@ -787,6 +787,28 @@ icons:
   - measure
   - weight
   categories: unknown
+- name: Balance Scale (Left-Weighted)
+  id: balance-scale-left
+  unicode: f515
+  created: 5.0.13
+  filter:
+  - justice
+  - legal
+  - measure
+  - unbalanced
+  - weight
+  categories: unknown
+- name: Balance Scale (Right-Weighted)
+  id: balance-scale-right
+  unicode: f516
+  created: 5.0.13
+  filter:
+  - justice
+  - legal
+  - measure
+  - unbalanced
+  - weight
+  categories: unknown
 - name: ban
   id: ban
   unicode: f05e
@@ -1027,6 +1049,18 @@ icons:
   - pedal
   - transportation
   - vehicle
+  categories: unknown
+- name: Biking
+  id: biking
+  unicode: f84a
+  created: 5.9.0
+  filter:
+  - bicycle
+  - bike
+  - cycle
+  - cycling
+  - ride
+  - wheel
   categories: unknown
 - name: BIMobject
   id: bimobject
@@ -1319,6 +1353,34 @@ icons:
   id: bootstrap
   unicode: f836
   created: 5.8.0
+  filter: []
+  categories: unknown
+- name: Border All
+  id: border-all
+  unicode: f84c
+  created: 5.9.0
+  filter:
+  - cell
+  - grid
+  - outline
+  - stroke
+  - table
+  categories: unknown
+- name: Border None
+  id: border-none
+  unicode: f850
+  created: 5.9.0
+  filter:
+  - cell
+  - grid
+  - outline
+  - stroke
+  - table
+  categories: unknown
+- name: Border Style
+  id: border-style
+  unicode: f853
+  created: 5.9.0
   filter: []
   categories: unknown
 - name: Bowling Ball
@@ -2282,8 +2344,11 @@ icons:
   created: 5.0.5
   filter:
   - board
+  - castle
   - checkmate
   - game
+  - king
+  - rook
   - strategy
   - tournament
   categories: unknown
@@ -4385,6 +4450,18 @@ icons:
   created: '1'
   filter:
   - social network
+  categories: unknown
+- name: Fan
+  id: fan
+  unicode: f863
+  created: 5.9.0
+  filter:
+  - ac
+  - air conditioning
+  - blade
+  - blower
+  - cool
+  - hot
   categories: unknown
 - name: Fantasy Flight-games
   id: fantasy-flight-games
@@ -6659,6 +6736,19 @@ icons:
   - seasonal
   - sharp
   categories: unknown
+- name: Icons
+  id: icons
+  unicode: f86d
+  created: 5.9.0
+  filter:
+  - bolt
+  - emoji
+  - heart
+  - image
+  - music
+  - photo
+  - symbols
+  categories: unknown
 - name: Identification Badge
   id: id-badge
   unicode: f2c1
@@ -8342,12 +8432,6 @@ icons:
   created: 5.1.0
   filter: []
   categories: unknown
-- name: Nintendo Switch
-  id: nintendo-switch
-  unicode: f418
-  created: 5.0.0
-  filter: []
-  categories: unknown
 - name: Node.js
   id: node
   unicode: f419
@@ -8920,6 +9004,18 @@ icons:
   - telephone
   - voice
   categories: unknown
+- name: Alternate Phone
+  id: phone-alt
+  unicode: f879
+  created: 5.9.0
+  filter:
+  - call
+  - earphone
+  - number
+  - support
+  - telephone
+  - voice
+  categories: unknown
 - name: Phone Slash
   id: phone-slash
   unicode: f3dd
@@ -8946,6 +9042,18 @@ icons:
   - telephone
   - voice
   categories: unknown
+- name: Alternate Phone Square
+  id: phone-square-alt
+  unicode: f87b
+  created: 5.9.0
+  filter:
+  - call
+  - earphone
+  - number
+  - support
+  - telephone
+  - voice
+  categories: unknown
 - name: Phone Volume
   id: phone-volume
   unicode: f2a0
@@ -8959,6 +9067,17 @@ icons:
   - telephone
   - voice
   - volume-control-phone
+  categories: unknown
+- name: Photo Video
+  id: photo-video
+  unicode: f87c
+  created: 5.9.0
+  filter:
+  - av
+  - film
+  - image
+  - library
+  - media
   categories: unknown
 - name: PHP
   id: php
@@ -9660,6 +9779,18 @@ icons:
   - copyright
   - mark
   - trademark
+  categories: unknown
+- name: Remove Format
+  id: remove-format
+  unicode: f87d
+  created: 5.9.0
+  filter:
+  - cancel
+  - font
+  - format
+  - remove
+  - style
+  - text
   categories: unknown
 - name: Renren
   id: renren
@@ -10766,20 +10897,46 @@ icons:
   - filter
   - order
   categories: unknown
-- name: Sort Alpha Down
+- name: Sort Alphabetical Down
   id: sort-alpha-down
   unicode: f15d
   created: '3.2'
   filter:
+  - alphabetical
+  - arrange
   - filter
   - order
   - sort-alpha-asc
   categories: unknown
-- name: Sort Alpha Up
+- name: Alternate Sort Alphabetical Down
+  id: sort-alpha-down-alt
+  unicode: f881
+  created: 5.9.0
+  filter:
+  - alphabetical
+  - arrange
+  - filter
+  - order
+  - sort-alpha-asc
+  categories: unknown
+- name: Sort Alphabetical Up
   id: sort-alpha-up
   unicode: f15e
   created: '3.2'
   filter:
+  - alphabetical
+  - arrange
+  - filter
+  - order
+  - sort-alpha-desc
+  categories: unknown
+- name: Alternate Sort Alphabetical Up
+  id: sort-alpha-up-alt
+  unicode: f882
+  created: 5.9.0
+  filter:
+  - alphabetical
+  - arrange
   - filter
   - order
   - sort-alpha-desc
@@ -10789,6 +10946,18 @@ icons:
   unicode: f160
   created: '3.2'
   filter:
+  - arrange
+  - filter
+  - number
+  - order
+  - sort-amount-asc
+  categories: unknown
+- name: Alternate Sort Amount Down
+  id: sort-amount-down-alt
+  unicode: f884
+  created: 5.9.0
+  filter:
+  - arrange
   - filter
   - order
   - sort-amount-asc
@@ -10798,6 +10967,17 @@ icons:
   unicode: f161
   created: '3.2'
   filter:
+  - arrange
+  - filter
+  - order
+  - sort-amount-desc
+  categories: unknown
+- name: Alternate Sort Amount Up
+  id: sort-amount-up-alt
+  unicode: f885
+  created: 5.9.0
+  filter:
+  - arrange
   - filter
   - order
   - sort-amount-desc
@@ -10818,6 +10998,18 @@ icons:
   unicode: f162
   created: '3.2'
   filter:
+  - arrange
+  - filter
+  - numbers
+  - order
+  - sort-numeric-asc
+  categories: unknown
+- name: Alternate Sort Numeric Down
+  id: sort-numeric-down-alt
+  unicode: f886
+  created: 5.9.0
+  filter:
+  - arrange
   - filter
   - numbers
   - order
@@ -10828,6 +11020,18 @@ icons:
   unicode: f163
   created: '3.2'
   filter:
+  - arrange
+  - filter
+  - numbers
+  - order
+  - sort-numeric-desc
+  categories: unknown
+- name: Alternate Sort Numeric Up
+  id: sort-numeric-up-alt
+  unicode: f887
+  created: 5.9.0
+  filter:
+  - arrange
   - filter
   - numbers
   - order
@@ -10889,6 +11093,17 @@ icons:
   unicode: f83c
   created: 5.8.0
   filter: []
+  categories: unknown
+- name: Spell Check
+  id: spell-check
+  unicode: f891
+  created: 5.9.0
+  filter:
+  - dictionary
+  - edit
+  - editor
+  - grammar
+  - text
   categories: unknown
 - name: Spider
   id: spider
@@ -11678,7 +11893,7 @@ icons:
   - text
   - type
   categories: unknown
-- name: text-width
+- name: Text Width
   id: text-width
   unicode: f035
   created: '1'
@@ -12023,6 +12238,7 @@ icons:
   - jewish
   - judaism
   - religion
+  - scroll
   categories: unknown
 - name: Torii Gate
   id: torii-gate
@@ -12967,6 +13183,16 @@ icons:
   unicode: f40b
   created: 5.0.0
   filter: []
+  categories: unknown
+- name: Voicemail
+  id: voicemail
+  unicode: f897
+  created: 5.9.0
+  filter:
+  - answer
+  - inbox
+  - message
+  - phone
   categories: unknown
 - name: Volleyball Ball
   id: volleyball-ball

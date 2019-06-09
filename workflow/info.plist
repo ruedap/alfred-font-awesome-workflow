@@ -109,7 +109,7 @@
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
-	<string>Font Awesome 5.8.2.0</string>
+	<string>Font Awesome 5.9.0.0</string>
 	<key>objects</key>
 	<array>
 		<dict>
@@ -142,6 +142,8 @@
 				<false/>
 				<key>alfredfiltersresultsmatchmode</key>
 				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
 				<key>argumenttrimmode</key>
 				<integer>0</integer>
 				<key>argumenttype</key>
@@ -180,7 +182,7 @@
 			<key>uid</key>
 			<string>21557827-8003-42B7-A042-16D4C9278FEC</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -197,7 +199,7 @@
 			<key>uid</key>
 			<string>8CBC1CA3-D946-4766-9551-505842A4BE52</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -346,6 +348,10 @@
 			<real>230</real>
 		</dict>
 	</dict>
+	<key>variablesdontexport</key>
+	<array/>
+	<key>version</key>
+	<string>5.9.0.0</string>
 	<key>webaddress</key>
 	<string>https://github.com/ruedap/alfred-font-awesome-workflow</string>
 </dict>
