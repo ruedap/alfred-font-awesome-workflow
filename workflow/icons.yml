@@ -3190,6 +3190,15 @@ icons:
   - register
   - trademark
   categories: unknown
+- name: Cotton Bureau
+  id: cotton-bureau
+  unicode: f89e
+  created: 5.10.0
+  filter:
+  - clothing
+  - t-shirts
+  - tshirts
+  categories: unknown
 - name: Couch
   id: couch
   unicode: f4b8
