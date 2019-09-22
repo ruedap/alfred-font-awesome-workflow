@@ -1633,6 +1633,12 @@ icons:
   - reminder
   - wednesday
   categories: unknown
+- name: Buy n Large
+  id: buy-n-large
+  unicode: f8a6
+  created: 5.11.0
+  filter: []
+  categories: unknown
 - name: BuySellAds
   id: buysellads
   unicode: f20d
@@ -5313,10 +5319,12 @@ icons:
   unicode: f11b
   created: '3.1'
   filter:
+  - arcade
   - controller
   - d-pad
   - joystick
   - video
+  - video game
   categories: unknown
 - name: Gas Pump
   id: gas-pump
@@ -6285,6 +6293,40 @@ icons:
   - pound
   - social media
   - tag
+  categories: unknown
+- name: Cowboy Hat
+  id: hat-cowboy
+  unicode: f8c0
+  created: 5.11.0
+  filter:
+  - buckaroo
+  - horse
+  - jackeroo
+  - john b.
+  - old west
+  - pardner
+  - ranch
+  - rancher
+  - rodeo
+  - western
+  - wrangler
+  categories: unknown
+- name: Cowboy Hat Side
+  id: hat-cowboy-side
+  unicode: f8c1
+  created: 5.11.0
+  filter:
+  - buckaroo
+  - horse
+  - jackeroo
+  - john b.
+  - old west
+  - pardner
+  - ranch
+  - rancher
+  - rodeo
+  - western
+  - wrangler
   categories: unknown
 - name: Wizard's Hat
   id: hat-wizard
@@ -7886,6 +7928,12 @@ icons:
   created: '3.1'
   filter: []
   categories: unknown
+- name: Material Design for Bootstrap
+  id: mdb
+  unicode: f8ca
+  created: 5.11.0
+  filter: []
+  categories: unknown
 - name: Medal
   id: medal
   unicode: f5a2
@@ -8357,6 +8405,17 @@ icons:
   - travel
   - view
   categories: unknown
+- name: Mouse
+  id: mouse
+  unicode: f8cc
+  created: 5.11.0
+  filter:
+  - click
+  - computer
+  - cursor
+  - input
+  - peripheral
+  categories: unknown
 - name: Mouse Pointer
   id: mouse-pointer
   unicode: f245
@@ -8578,6 +8637,12 @@ icons:
   id: optin-monster
   unicode: f23c
   created: '4.4'
+  filter: []
+  categories: unknown
+- name: ORCID
+  id: orcid
+  unicode: f8d2
+  created: 5.11.0
   filter: []
   categories: unknown
 - name: Open Source Initiative
@@ -9715,6 +9780,18 @@ icons:
   - money
   - pay
   - table
+  categories: unknown
+- name: Record Vinyl
+  id: record-vinyl
+  unicode: f8d9
+  created: 5.11.0
+  filter:
+  - LP
+  - album
+  - analog
+  - music
+  - phonograph
+  - sound
   categories: unknown
 - name: Recycle
   id: recycle
@@ -11606,6 +11683,12 @@ icons:
   - hue
   - palette
   categories: unknown
+- name: Swift
+  id: swift
+  unicode: f8e1
+  created: 5.11.0
+  filter: []
+  categories: unknown
 - name: Swimmer
   id: swimmer
   unicode: f5c4
@@ -12545,6 +12628,12 @@ icons:
   id: uikit
   unicode: f403
   created: 5.0.0
+  filter: []
+  categories: unknown
+- name: Umbraco
+  id: umbraco
+  unicode: f8e8
+  created: 5.11.0
   filter: []
   categories: unknown
 - name: Umbrella
