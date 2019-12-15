@@ -658,8 +658,12 @@ icons:
   filter:
   - atheism
   - chemistry
+  - electron
   - ion
+  - isotope
+  - neutron
   - nuclear
+  - proton
   - science
   categories: unknown
 - name: Audible
@@ -775,6 +779,15 @@ icons:
   - pancetta
   - pork
   - rasher
+  categories: unknown
+- name: Bahá'í
+  id: bahai
+  unicode: f666
+  created: 5.3.0
+  filter:
+  - bahai
+  - bahá'í
+  - star
   categories: unknown
 - name: Balance Scale
   id: balance-scale
@@ -962,6 +975,7 @@ icons:
   created: '4.3'
   filter:
   - lodging
+  - mattress
   - rest
   - sleep
   - travel
@@ -1932,6 +1946,17 @@ icons:
   - transportation
   - travel
   - vehicle
+  categories: unknown
+- name: Caravan
+  id: caravan
+  unicode: f8ff
+  created: 5.12.0
+  filter:
+  - camper
+  - motor home
+  - rv
+  - trailer
+  - travel
   categories: unknown
 - name: Caret Down
   id: caret-down
@@ -3095,6 +3120,19 @@ icons:
   id: compress
   unicode: f066
   created: 5.0.0
+  filter:
+  - collapse
+  - fullscreen
+  - minimize
+  - move
+  - resize
+  - shrink
+  - smaller
+  categories: unknown
+- name: Alternate Compress
+  id: compress-alt
+  unicode: f422
+  created: '1'
   filter:
   - collapse
   - fullscreen
@@ -4361,6 +4399,16 @@ icons:
   - enlarge
   - resize
   categories: unknown
+- name: Alternate Expand
+  id: expand-alt
+  unicode: f424
+  created: '1'
+  filter:
+  - arrow
+  - bigger
+  - enlarge
+  - resize
+  categories: unknown
 - name: Alternate Expand Arrows
   id: expand-arrows-alt
   unicode: f31e
@@ -4949,6 +4997,13 @@ icons:
   filter:
   - browser
   categories: unknown
+- name: Firefox Browser
+  id: firefox-browser
+  unicode: f907
+  created: 5.12.0
+  filter:
+  - browser
+  categories: unknown
 - name: First Aid
   id: first-aid
   unicode: f479
@@ -5222,7 +5277,7 @@ icons:
   created: '3.2'
   filter: []
   categories: unknown
-- name: Free Code Camp
+- name: freeCodeCamp
   id: free-code-camp
   unicode: f2c5
   created: '4.7'
@@ -6348,15 +6403,6 @@ icons:
   - pointy
   - witch
   categories: unknown
-- name: Haykal
-  id: haykal
-  unicode: f666
-  created: 5.3.0
-  filter:
-  - bahai
-  - bahá'í
-  - star
-  categories: unknown
 - name: HDD
   id: hdd
   unicode: f0a0
@@ -6834,6 +6880,12 @@ icons:
   - identification
   - issued
   - profile
+  categories: unknown
+- name: iDeal
+  id: ideal
+  unicode: f913
+  created: 5.12.0
+  filter: []
   categories: unknown
 - name: Igloo
   id: igloo
@@ -8067,6 +8119,12 @@ icons:
   - shooting star
   - space
   categories: unknown
+- name: Micro.blog
+  id: microblog
+  unicode: f91a
+  created: 5.12.0
+  filter: []
+  categories: unknown
 - name: Microchip
   id: microchip
   unicode: f2db
@@ -9165,13 +9223,13 @@ icons:
   created: '4.6'
   filter: []
   categories: unknown
-- name: Alternate Pied Piper Logo
+- name: Alternate Pied Piper Logo (Old)
   id: pied-piper-alt
   unicode: f1a8
   created: '4.1'
   filter: []
   categories: unknown
-- name: Pied Piper-hat
+- name: Pied Piper Hat (Old)
   id: pied-piper-hat
   unicode: f4e5
   created: 5.0.10
@@ -9182,6 +9240,12 @@ icons:
   id: pied-piper-pp
   unicode: f1a7
   created: '4.1'
+  filter: []
+  categories: unknown
+- name: Pied Piper Square Logo (Old)
+  id: pied-piper-square
+  unicode: f91e
+  created: 5.12.0
   filter: []
   categories: unknown
 - name: Piggy Bank
@@ -10205,6 +10269,7 @@ icons:
   - receiver
   - saucer
   - signal
+  - space
   categories: unknown
 - name: Save
   id: save
@@ -11166,6 +11231,7 @@ icons:
   - machine
   - nasa
   - rocket
+  - space
   - transportation
   categories: unknown
 - name: Speakap
@@ -12374,6 +12440,16 @@ icons:
   - signal
   - travel
   categories: unknown
+- name: Trailer
+  id: trailer
+  unicode: f941
+  created: 5.12.0
+  filter:
+  - carry
+  - haul
+  - moving
+  - travel
+  categories: unknown
 - name: Train
   id: train
   unicode: f238
@@ -12698,6 +12774,12 @@ icons:
   id: uniregistry
   unicode: f404
   created: 5.0.0
+  filter: []
+  categories: unknown
+- name: Unity 3D
+  id: unity
+  unicode: f949
+  created: 5.12.0
   filter: []
   categories: unknown
 - name: Universal Access
