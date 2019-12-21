@@ -1,7 +1,5 @@
 # Font Awesome Workflow for Alfred
 
-[![Build Status](http://img.shields.io/travis/ruedap/alfred-font-awesome-workflow.svg?style=flat-square)](https://travis-ci.org/ruedap/alfred-font-awesome-workflow)
-[![Coverage Status](http://img.shields.io/coveralls/ruedap/alfred-font-awesome-workflow/master.svg?style=flat-square)](https://coveralls.io/r/ruedap/alfred-font-awesome-workflow)
 [![Latest Version](http://img.shields.io/github/release/ruedap/alfred-font-awesome-workflow.svg?style=flat-square)](https://github.com/ruedap/alfred-font-awesome-workflow/releases)
 [![License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](http://ruedap.mit-license.org/2015)
 
@@ -21,7 +19,7 @@ You can incrementally search for [Font Awesome icons](https://fontawesome.com/ch
 
 Download **[Font-Awesome.alfredworkflow](https://github.com/ruedap/alfred-font-awesome-workflow/raw/master/Font-Awesome.alfredworkflow)** and import to [Alfred](http://www.alfredapp.com/) (requires Powerpack).
 
-The current supported version is **Font Awesome 5.11.1 Free**. Previous versions are available [here](https://github.com/ruedap/alfred-font-awesome-workflow/releases).
+The current supported version is **Font Awesome 5.12.0 Free**. Previous versions are available [here](https://github.com/ruedap/alfred-font-awesome-workflow/releases).
 
 ## Usage
 
