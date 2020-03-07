@@ -3519,6 +3519,12 @@ icons:
   - gaming
   - tabletop
   categories: unknown
+- name: dailymotion
+  id: dailymotion
+  unicode: f952
+  created: 5.12.1
+  filter: []
+  categories: unknown
 - name: DashCube
   id: dashcube
   unicode: f210
@@ -6996,6 +7002,12 @@ icons:
   created: '4.6'
   filter: []
   categories: unknown
+- name: Instagram Square
+  id: instagram-square
+  unicode: f955
+  created: 5.12.1
+  filter: []
+  categories: unknown
 - name: Intercom
   id: intercom
   unicode: f7af
@@ -8266,6 +8278,12 @@ icons:
   id: mixcloud
   unicode: f289
   created: '4.5'
+  filter: []
+  categories: unknown
+- name: Mixer
+  id: mixer
+  unicode: f956
+  created: 5.12.1
   filter: []
   categories: unknown
 - name: Mizuni
@@ -10553,6 +10571,12 @@ icons:
   - footprints
   - steps
   - walk
+  categories: unknown
+- name: Shopify
+  id: shopify
+  unicode: f957
+  created: 5.12.1
+  filter: []
   categories: unknown
 - name: Shopping Bag
   id: shopping-bag
