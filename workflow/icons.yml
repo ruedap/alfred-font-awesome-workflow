@@ -206,6 +206,7 @@ icons:
   unicode: f0f9
   created: '3'
   filter:
+  - covid-19
   - emergency
   - emt
   - er
@@ -1098,6 +1099,7 @@ icons:
   unicode: f780
   created: 5.6.0
   filter:
+  - covid-19
   - danger
   - dangerous
   - hazmat
@@ -1429,6 +1431,19 @@ icons:
   - package
   - storage
   - unpack
+  categories: unknown
+- name: Tissue Box
+  id: box-tissue
+  unicode: f95b
+  created: 5.13.0
+  filter:
+  - cough
+  - covid-19
+  - kleenex
+  - mucus
+  - nose
+  - sneeze
+  - snot
   categories: unknown
 - name: Boxes
   id: boxes
@@ -2606,6 +2621,7 @@ icons:
   unicode: f7f2
   created: 5.7.0
   filter:
+  - covid-19
   - doctor
   - general practitioner
   - hospital
@@ -3791,6 +3807,19 @@ icons:
   created: 5.0.0
   filter: []
   categories: unknown
+- name: Disease
+  id: disease
+  unicode: f7fa
+  created: 5.7.0
+  filter:
+  - bacteria
+  - cancer
+  - covid-19
+  - illness
+  - infection
+  - sickness
+  - virus
+  categories: unknown
 - name: Divide
   id: divide
   unicode: f529
@@ -4564,6 +4593,19 @@ icons:
   - end
   - last
   - next
+  categories: unknown
+- name: Faucet
+  id: faucet
+  unicode: f905
+  created: 5.12.0
+  filter:
+  - covid-19
+  - drip
+  - house
+  - hygiene
+  - kitchen
+  - sink
+  - water
   categories: unknown
 - name: Fax
   id: fax
@@ -6163,6 +6205,16 @@ icons:
   - lift
   - package
   categories: unknown
+- name: Hand Holding Medical Cross
+  id: hand-holding-medical
+  unicode: f95c
+  created: 5.13.0
+  filter:
+  - care
+  - covid-19
+  - donate
+  - help
+  categories: unknown
 - name: Hand Holding US Dollar
   id: hand-holding-usd
   unicode: f4c0
@@ -6176,6 +6228,17 @@ icons:
   - lift
   - money
   - price
+  categories: unknown
+- name: Hand Holding Water
+  id: hand-holding-water
+  unicode: f4c1
+  created: 5.0.9
+  filter:
+  - carry
+  - covid-19
+  - drought
+  - grow
+  - lift
   categories: unknown
 - name: Lizard (Hand)
   id: hand-lizard
@@ -6282,6 +6345,18 @@ icons:
   - game
   - roshambo
   categories: unknown
+- name: Hand Sparkles
+  id: hand-sparkles
+  unicode: f95d
+  created: 5.13.0
+  filter:
+  - clean
+  - covid-19
+  - hygiene
+  - magic
+  - soap
+  - wash
+  categories: unknown
 - name: Spock (Hand)
   id: hand-spock
   unicode: f259
@@ -6313,6 +6388,16 @@ icons:
   - partnership
   - volunteering
   categories: unknown
+- name: Hands Wash
+  id: hands-wash
+  unicode: f95e
+  created: 5.13.0
+  filter:
+  - covid-19
+  - hygiene
+  - soap
+  - wash
+  categories: unknown
 - name: Handshake
   id: handshake
   unicode: f2b5
@@ -6322,6 +6407,24 @@ icons:
   - greeting
   - meeting
   - partnership
+  categories: unknown
+- name: Handshake Alternate Slash
+  id: handshake-alt-slash
+  unicode: f95f
+  created: 5.13.0
+  filter:
+  - broken
+  - covid-19
+  - social distance
+  categories: unknown
+- name: Handshake Slash
+  id: handshake-slash
+  unicode: f960
+  created: 5.13.0
+  filter:
+  - broken
+  - covid-19
+  - social distance
   categories: unknown
 - name: Hanukiah
   id: hanukiah
@@ -6420,6 +6523,51 @@ icons:
   - machine
   - save
   - storage
+  categories: unknown
+- name: Head Side Cough
+  id: head-side-cough
+  unicode: f961
+  created: 5.13.0
+  filter:
+  - cough
+  - covid-19
+  - germs
+  - lungs
+  - respiratory
+  - sick
+  categories: unknown
+- name: Head Side-cough-slash
+  id: head-side-cough-slash
+  unicode: f962
+  created: 5.13.0
+  filter:
+  - cough
+  - covid-19
+  - germs
+  - lungs
+  - respiratory
+  - sick
+  categories: unknown
+- name: Head Side Mask
+  id: head-side-mask
+  unicode: f963
+  created: 5.13.0
+  filter:
+  - breath
+  - covid-19
+  - filter
+  - respirator
+  - virus
+  categories: unknown
+- name: Head Side Virus
+  id: head-side-virus
+  unicode: f964
+  created: 5.13.0
+  filter:
+  - cold
+  - covid-19
+  - flu
+  - sick
   categories: unknown
 - name: heading
   id: heading
@@ -6654,6 +6802,7 @@ icons:
   created: '3'
   filter:
   - building
+  - covid-19
   - emergency room
   - medical center
   categories: unknown
@@ -6663,6 +6812,7 @@ icons:
   created: 5.0.7
   filter:
   - building
+  - covid-19
   - emergency room
   - medical center
   categories: unknown
@@ -6672,8 +6822,20 @@ icons:
   created: 5.0.7
   filter:
   - clinic
+  - covid-19
   - emergency
   - map
+  categories: unknown
+- name: Hospital with User
+  id: hospital-user
+  unicode: f80d
+  created: 5.7.0
+  filter:
+  - covid-19
+  - doctor
+  - network
+  - patient
+  - primary care
   categories: unknown
 - name: Hot Tub
   id: hot-tub
@@ -6774,6 +6936,16 @@ icons:
   - disaster
   - home
   - insurance
+  categories: unknown
+- name: House User
+  id: house-user
+  unicode: f965
+  created: 5.13.0
+  filter:
+  - covid-19
+  - home
+  - isolation
+  - quarantine
   categories: unknown
 - name: Houzz
   id: houzz
@@ -7340,6 +7512,18 @@ icons:
   - machine
   - pc
   categories: unknown
+- name: Laptop House
+  id: laptop-house
+  unicode: f966
+  created: 5.13.0
+  filter:
+  - computer
+  - covid-19
+  - device
+  - office
+  - remote
+  - work from home
+  categories: unknown
 - name: Laptop Medical
   id: laptop-medical
   unicode: f812
@@ -7710,6 +7894,27 @@ icons:
   - baggage
   - suitcase
   - travel
+  categories: unknown
+- name: Lungs
+  id: lungs
+  unicode: f604
+  created: 5.2.0
+  filter:
+  - air
+  - breath
+  - covid-19
+  - organ
+  - respiratory
+  categories: unknown
+- name: Lungs Virus
+  id: lungs-virus
+  unicode: f967
+  created: 5.13.0
+  filter:
+  - breath
+  - covid-19
+  - respiratory
+  - sick
   categories: unknown
 - name: lyft
   id: lyft
@@ -8204,6 +8409,7 @@ icons:
   unicode: f610
   created: 5.2.0
   filter:
+  - covid-19
   - electron
   - lens
   - optics
@@ -9055,6 +9261,18 @@ icons:
   - pax
   - tabletop
   categories: unknown
+- name: People Arrows
+  id: people-arrows
+  unicode: f968
+  created: 5.13.0
+  filter:
+  - covid-19
+  - personal space
+  - social distance
+  - space
+  - spread
+  - users
+  categories: unknown
 - name: People Carry
   id: people-carry
   unicode: f4ce
@@ -9375,6 +9593,18 @@ icons:
   - travel
   - trip
   categories: unknown
+- name: Plane Slash
+  id: plane-slash
+  unicode: f969
+  created: 5.13.0
+  filter:
+  - airplane mode
+  - canceled
+  - covid-19
+  - delayed
+  - grounded
+  - travel
+  categories: unknown
 - name: play
   id: play
   unicode: f04b
@@ -9643,6 +9873,33 @@ icons:
   - graph
   - network
   - pert
+  categories: unknown
+- name: Pump Medical
+  id: pump-medical
+  unicode: f96a
+  created: 5.13.0
+  filter:
+  - anti-bacterial
+  - clean
+  - covid-19
+  - disinfect
+  - hygiene
+  - medical grade
+  - sanitizer
+  - soap
+  categories: unknown
+- name: Pump Soap
+  id: pump-soap
+  unicode: f96b
+  created: 5.13.0
+  filter:
+  - anti-bacterial
+  - clean
+  - covid-19
+  - disinfect
+  - hygiene
+  - sanitizer
+  - soap
   categories: unknown
 - name: Pushed
   id: pushed
@@ -10535,6 +10792,17 @@ icons:
   - security
   - winner
   categories: unknown
+- name: Shield Virus
+  id: shield-virus
+  unicode: f96c
+  created: 5.13.0
+  filter:
+  - antibodies
+  - barrier
+  - covid-19
+  - health
+  - protect
+  categories: unknown
 - name: Ship
   id: ship
   unicode: f21a
@@ -11041,6 +11309,17 @@ icons:
   - storm
   - winter
   categories: unknown
+- name: Soap
+  id: soap
+  unicode: f96e
+  created: 5.13.0
+  filter:
+  - bubbles
+  - clean
+  - covid-19
+  - hygiene
+  - wash
+  categories: unknown
 - name: Socks
   id: socks
   unicode: f696
@@ -11508,6 +11787,7 @@ icons:
   unicode: f0f1
   created: '3'
   filter:
+  - covid-19
   - diagnosis
   - doctor
   - general practitioner
@@ -11562,6 +11842,21 @@ icons:
   - reminder
   - time
   categories: unknown
+- name: Stopwatch 20
+  id: stopwatch-20
+  unicode: f96f
+  created: 5.13.0
+  filter:
+  - ABCs
+  - countdown
+  - covid-19
+  - happy birthday
+  - i will survive
+  - reminder
+  - seconds
+  - time
+  - timer
+  categories: unknown
 - name: Store
   id: store
   unicode: f54e
@@ -11579,6 +11874,30 @@ icons:
   filter:
   - building
   - buy
+  - purchase
+  - shopping
+  categories: unknown
+- name: Alternate Store Slash
+  id: store-alt-slash
+  unicode: f970
+  created: 5.13.0
+  filter:
+  - building
+  - buy
+  - closed
+  - covid-19
+  - purchase
+  - shopping
+  categories: unknown
+- name: Store Slash
+  id: store-slash
+  unicode: f971
+  created: 5.13.0
+  filter:
+  - building
+  - buy
+  - closed
+  - covid-19
   - purchase
   - shopping
   categories: unknown
@@ -11847,6 +12166,7 @@ icons:
   unicode: f48e
   created: 5.0.7
   filter:
+  - covid-19
   - doctor
   - immunizations
   - medical
@@ -12021,6 +12341,7 @@ icons:
   created: 5.5.0
   filter:
   - cook
+  - covid-19
   - mercury
   - summer
   - thermometer
@@ -12033,6 +12354,7 @@ icons:
   filter:
   - cold
   - cool
+  - covid-19
   - mercury
   - thermometer
   - winter
@@ -12152,6 +12474,7 @@ icons:
   unicode: f491
   created: 5.0.7
   filter:
+  - covid-19
   - mercury
   - status
   - temperature
@@ -12367,12 +12690,30 @@ icons:
   created: 5.4.0
   filter:
   - bathroom
+  - covid-19
   - halloween
   - holiday
   - lavatory
   - prank
   - restroom
   - roll
+  categories: unknown
+- name: Toilet Paper Slash
+  id: toilet-paper-slash
+  unicode: f972
+  created: 5.13.0
+  filter:
+  - bathroom
+  - covid-19
+  - halloween
+  - holiday
+  - lavatory
+  - leaves
+  - prank
+  - restroom
+  - roll
+  - trouble
+  - ut oh
   categories: unknown
 - name: Toolbox
   id: toolbox
@@ -13048,6 +13389,7 @@ icons:
   unicode: f0f0
   created: '2'
   filter:
+  - covid-19
   - job
   - medical
   - nurse
@@ -13081,6 +13423,7 @@ icons:
   unicode: f82f
   created: 5.7.0
   filter:
+  - covid-19
   - doctor
   - midwife
   - practitioner
@@ -13375,6 +13718,46 @@ icons:
   unicode: f1ca
   created: '4.1'
   filter: []
+  categories: unknown
+- name: Virus
+  id: virus
+  unicode: f974
+  created: 5.13.0
+  filter:
+  - bug
+  - covid-19
+  - flu
+  - health
+  - sick
+  - viral
+  categories: unknown
+- name: Virus Slash
+  id: virus-slash
+  unicode: f975
+  created: 5.13.0
+  filter:
+  - bug
+  - covid-19
+  - cure
+  - eliminate
+  - flu
+  - health
+  - sick
+  - viral
+  categories: unknown
+- name: Viruses
+  id: viruses
+  unicode: f976
+  created: 5.13.0
+  filter:
+  - bugs
+  - covid-19
+  - flu
+  - health
+  - multiply
+  - sick
+  - spread
+  - viral
   categories: unknown
 - name: VK
   id: vk
