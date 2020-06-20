@@ -781,6 +781,30 @@ icons:
   - pork
   - rasher
   categories: unknown
+- name: Bacteria
+  id: bacteria
+  unicode: f959
+  created: 5.13.0
+  filter:
+  - antibiotic
+  - antibody
+  - covid-19
+  - health
+  - organism
+  - sick
+  categories: unknown
+- name: Bacterium
+  id: bacterium
+  unicode: f95a
+  created: 5.13.0
+  filter:
+  - antibiotic
+  - antibody
+  - covid-19
+  - health
+  - organism
+  - sick
+  categories: unknown
 - name: Bahá'í
   id: bahai
   unicode: f666
@@ -3567,6 +3591,12 @@ icons:
   - hearing
   - sign language
   categories: unknown
+- name: Deezer
+  id: deezer
+  unicode: f977
+  created: 5.13.1
+  filter: []
+  categories: unknown
 - name: Delicious
   id: delicious
   unicode: f1a5
@@ -4149,6 +4179,12 @@ icons:
   - browser
   - ie
   categories: unknown
+- name: Edge Legacy Browser
+  id: edge-legacy
+  unicode: f978
+  created: 5.13.1
+  filter: []
+  categories: unknown
 - name: Edit
   id: edit
   unicode: f044
@@ -4429,9 +4465,9 @@ icons:
   unicode: f065
   created: 5.0.0
   filter:
-  - arrow
   - bigger
   - enlarge
+  - fullscreen
   - resize
   categories: unknown
 - name: Alternate Expand
@@ -4439,9 +4475,10 @@ icons:
   unicode: f424
   created: '1'
   filter:
-  - arrow
+  - arrows
   - bigger
   - enlarge
+  - fullscreen
   - resize
   categories: unknown
 - name: Alternate Expand Arrows
@@ -4449,9 +4486,9 @@ icons:
   unicode: f31e
   created: 5.0.0
   filter:
-  - arrows-alt
   - bigger
   - enlarge
+  - fullscreen
   - move
   - resize
   categories: unknown
@@ -5812,6 +5849,12 @@ icons:
   id: google-drive
   unicode: f3aa
   created: 5.0.0
+  filter: []
+  categories: unknown
+- name: Google Pay
+  id: google-pay
+  unicode: f979
+  created: 5.13.1
   filter: []
   categories: unknown
 - name: Google Play
@@ -10484,6 +10527,12 @@ icons:
   - inr
   - money
   categories: unknown
+- name: Rust
+  id: rust
+  unicode: f97a
+  created: 5.13.1
+  filter: []
+  categories: unknown
 - name: Crying Face
   id: sad-cry
   unicode: f5b3
@@ -10993,6 +11042,17 @@ icons:
   unicode: f215
   created: '4.3'
   filter: []
+  categories: unknown
+- name: Sink
+  id: sink
+  unicode: f96d
+  created: 5.13.0
+  filter:
+  - bathroom
+  - covid-19
+  - faucet
+  - kitchen
+  - wash
   categories: unknown
 - name: SISTRIX
   id: sistrix
@@ -12584,6 +12644,12 @@ icons:
   - support
   - ticket
   categories: unknown
+- name: TikTok
+  id: tiktok
+  unicode: f97b
+  created: 5.13.1
+  filter: []
+  categories: unknown
 - name: Times
   id: times
   unicode: f00d
@@ -13201,6 +13267,12 @@ icons:
   - private
   - protect
   categories: unknown
+- name: Unsplash
+  id: unsplash
+  unicode: f97c
+  created: 5.13.1
+  filter: []
+  categories: unknown
 - name: Untappd
   id: untappd
   unicode: f405
@@ -13532,6 +13604,21 @@ icons:
   - person
   - settings
   - team
+  categories: unknown
+- name: Users Slash
+  id: users-slash
+  unicode: f973
+  created: 5.13.0
+  filter:
+  - disband
+  - friends
+  - group
+  - people
+  - persons
+  - profiles
+  - separate
+  - team
+  - ungroup
   categories: unknown
 - name: United States Postal Service
   id: usps
