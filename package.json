@@ -2,7 +2,6 @@
   "name": "alfred-font-awesome-workflow",
   "private": true,
   "description": "You can incrementally search for Font Awesome icons and paste it to front most app.",
-  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -19,7 +18,10 @@
   "homepage": "https://github.com/ruedap/alfred-font-awesome-workflow#readme",
   "devDependencies": {
     "@vercel/ncc": "^0.23.0",
+    "cpx": "^1.5.0",
+    "mkdirp": "^1.0.4",
     "pkg": "^4.4.9",
+    "rimraf": "^3.0.2",
     "typescript": "^3.9.7"
   }
 }
