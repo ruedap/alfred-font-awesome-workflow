@@ -16,5 +16,10 @@
   "bugs": {
     "url": "https://github.com/ruedap/alfred-font-awesome-workflow/issues"
   },
-  "homepage": "https://github.com/ruedap/alfred-font-awesome-workflow#readme"
+  "homepage": "https://github.com/ruedap/alfred-font-awesome-workflow#readme",
+  "devDependencies": {
+    "@vercel/ncc": "^0.23.0",
+    "pkg": "^4.4.9",
+    "typescript": "^3.9.7"
+  }
 }
