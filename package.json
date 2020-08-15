@@ -12,7 +12,8 @@
     "compress": "cd ./dist && zip -r -q Font-Awesome.alfredworkflow ./",
     "build": "npm run clean && npm run compile && npm run package && npm run compress",
     "debug": "npm run build && open ./dist/Font-Awesome.alfredworkflow",
-    "test": "jest"
+    "test": "jest",
+    "fmt": "prettier --write ."
   },
   "repository": {
     "type": "git",
