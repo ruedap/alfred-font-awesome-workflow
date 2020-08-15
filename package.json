@@ -1,6 +1,9 @@
 {
   "name": "alfred-font-awesome-workflow",
   "private": true,
+  "engines": {
+    "node": "12.x"
+  },
   "description": "You can incrementally search for Font Awesome icons and paste it to front most app.",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
