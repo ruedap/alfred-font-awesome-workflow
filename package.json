@@ -25,6 +25,9 @@
     "mkdirp": "^1.0.4",
     "pkg": "^4.4.9",
     "rimraf": "^3.0.2",
-    "typescript": "^3.9.7"
+    "ts-loader": "^8.0.2",
+    "typescript": "^3.9.7",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
   }
 }
