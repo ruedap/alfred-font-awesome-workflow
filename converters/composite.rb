@@ -1,4 +1,4 @@
-png = Dir.glob("./workflow/icons/*.png")
+png = Dir.glob("./assets/icons/*.png")
 base_png = './converters/__base.png'
 puts `convert -size 128x128 xc:#ffffff #{base_png}`
 
