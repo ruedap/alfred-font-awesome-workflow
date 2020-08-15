@@ -1,5 +1,5 @@
-import { foo } from './index'
+import { foo } from "./index";
 
 test("foo()", () => {
-  expect(foo('yay')).toBe('foo yay')
+  expect(foo("yay")).toBe("foo yay");
 });
