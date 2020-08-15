@@ -13,7 +13,9 @@
     "build": "npm run clean && npm run compile && npm run package && npm run compress",
     "debug": "npm run build && open ./dist/Font-Awesome.alfredworkflow",
     "test": "jest",
-    "fmt": "prettier --write ."
+    "fmt": "prettier --write .",
+    "lint": "eslint . --ext 'ts,js'",
+    "lint:fix": "eslint . --fix --ext 'ts,js'"
   },
   "repository": {
     "type": "git",
