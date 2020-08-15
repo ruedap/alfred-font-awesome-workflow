@@ -7,10 +7,11 @@
   "description": "You can incrementally search for Font Awesome icons and paste it to front most app.",
   "scripts": {
     "clean": "rimraf ./dist && mkdirp ./dist && cpx './assets/**/*' ./dist",
-    "compile": "webpack",
+    "compile": "webpack --silent",
     "package": "pkg --targets macos --output ./dist/font-awesome-workflow ./dist/index.js",
-    "compress": "cd ./dist && zip -r Font-Awesome.alfredworkflow ./",
+    "compress": "cd ./dist && zip -r -q Font-Awesome.alfredworkflow ./",
     "build": "npm run clean && npm run compile && npm run package && npm run compress",
+    "debug": "npm run build && open ./dist/Font-Awesome.alfredworkflow",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
