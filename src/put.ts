@@ -13,3 +13,9 @@ export const putName = (query: Query): string | null => {
   if (!icon) return null;
   return `fa-${icon.name}`;
 };
+
+export const putCode = (query: Query): string | null => {
+  const icon = getIconObject(query);
+  if (!icon) return null;
+  return icon.unicode;
+};
