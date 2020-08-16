@@ -3,11 +3,13 @@ export const getArgs = (): string[] => {
   return args;
 };
 
-const findFlag = "--find";
+type Args = string[];
+type Flag = string;
 
-export const isFind = (args: string[]): boolean => args.includes(findFlag);
+export const includesFlag = (args: Args, flag: Flag): boolean =>
+  args.includes(flag);
 
-export const getFindArgsString = (args: string[]): string => {
-  const index = args.findIndex((value) => value === findFlag);
+export const getFlagArgs = (args: Args, flag: string): string => {
+  const index = args.findIndex((value) => value === flag);
   return args.slice(index + 1).join(" ");
 };

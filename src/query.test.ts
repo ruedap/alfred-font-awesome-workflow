@@ -1,4 +1,4 @@
-import { getArgs, isFind, getFindArgsString } from "./query";
+import { getArgs, includesFlag, getFlagArgs } from "./query";
 
 describe("getArg()", () => {
   test("empty argv", () => {
@@ -27,12 +27,14 @@ describe("getArg()", () => {
   });
 });
 
-describe("isFind()", () => {
+describe("includesFlag()", () => {
+  const FLAG_FIND = "--find";
+
   test("empty argv", () => {
     process.argv = ["node", "jest"];
 
     const args = getArgs();
-    const actual = isFind(args);
+    const actual = includesFlag(args, FLAG_FIND);
     expect(actual).toBeFalsy();
   });
 
@@ -40,7 +42,7 @@ describe("isFind()", () => {
     process.argv = ["node", "jest", "--findd"];
 
     const args = getArgs();
-    const actual = isFind(args);
+    const actual = includesFlag(args, FLAG_FIND);
     expect(actual).toBeFalsy();
   });
 
@@ -48,7 +50,7 @@ describe("isFind()", () => {
     process.argv = ["node", "jest", "--find"];
 
     const args = getArgs();
-    const actual = isFind(args);
+    const actual = includesFlag(args, FLAG_FIND);
     expect(actual).toBeTruthy();
   });
 
@@ -56,17 +58,19 @@ describe("isFind()", () => {
     process.argv = ["node", "jest", "--find", "foo"];
 
     const args = getArgs();
-    const actual = isFind(args);
+    const actual = includesFlag(args, FLAG_FIND);
     expect(actual).toBeTruthy();
   });
 });
 
-describe("getFindArgsString()", () => {
+describe("getFlagArgs()", () => {
+  const FLAG_FIND = "--find";
+
   test("--find", () => {
     process.argv = ["node", "jest", "--find"];
 
     const args = getArgs();
-    const actual = getFindArgsString(args);
+    const actual = getFlagArgs(args, FLAG_FIND);
     expect(actual).toStrictEqual("");
   });
 
@@ -74,7 +78,7 @@ describe("getFindArgsString()", () => {
     process.argv = ["node", "jest", "--find", "foo"];
 
     const args = getArgs();
-    const actual = getFindArgsString(args);
+    const actual = getFlagArgs(args, FLAG_FIND);
     expect(actual).toStrictEqual("foo");
   });
 
@@ -82,7 +86,7 @@ describe("getFindArgsString()", () => {
     process.argv = ["node", "jest", "--find", "foo", "bar"];
 
     const args = getArgs();
-    const actual = getFindArgsString(args);
+    const actual = getFlagArgs(args, FLAG_FIND);
     expect(actual).toStrictEqual("foo bar");
   });
 });
