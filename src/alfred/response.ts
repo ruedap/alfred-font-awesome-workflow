@@ -24,7 +24,7 @@ type TItem = Readonly<{
   subtitle: string;
   arg?: string; // recommended
   icon: {
-    type: "fileicon" | "filetype";
+    type?: "fileicon" | "filetype";
     path: string;
   };
   valid?: boolean;
