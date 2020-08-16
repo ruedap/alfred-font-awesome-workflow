@@ -14,6 +14,7 @@
     "exec": "npm run clean && npm run compile && node ./dist/index.js",
     "debug": "npm run build && open ./dist/Font-Awesome.alfredworkflow",
     "test": "jest",
+    "test:watch": "jest --watchAll",
     "fmt": "prettier --write .",
     "lint": "eslint . --ext 'ts,js'",
     "lint:fix": "eslint . --fix --ext 'ts,js'",
