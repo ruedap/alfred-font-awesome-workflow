@@ -25,3 +25,9 @@ export const putRef = (query: Query): string | null => {
   if (!icon) return null;
   return icon.name;
 };
+
+export const putUrl = (query: Query): string | null => {
+  const icon = getIconObject(query);
+  if (!icon) return null;
+  return `https://fontawesome.com/icons/${icon.name}`;
+};
