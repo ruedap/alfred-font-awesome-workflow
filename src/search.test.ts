@@ -1,4 +1,4 @@
-import { search } from "./search";
+import { search, toJson } from "./search";
 import { TIconsObject } from "./assets/icons_object";
 
 describe("search()", () => {
@@ -103,6 +103,40 @@ describe("search()", () => {
     ];
 
     expect(actual.length).toBe(2);
+    expect(actual).toStrictEqual(expected);
+  });
+});
+
+describe("toJson()", () => {
+  test("", () => {
+    const searchResult = [
+      {
+        item: {
+          free: ["free"],
+          label: "label",
+          name: "BBBCCC",
+          search: { terms: ["222", "444", "666"] },
+          unicode: "unicode",
+        },
+        refIndex: 1,
+        score: 0.001,
+      },
+      {
+        item: {
+          free: ["free"],
+          label: "label",
+          name: "AAABBB",
+          search: { terms: ["111", "222", "333"] },
+          unicode: "unicode",
+        },
+        refIndex: 0,
+        score: 0.03,
+      },
+    ];
+    const actual = toJson(searchResult);
+    const expected =
+      '{"items":[{"uid":"BBBCCC","title":"BBBCCC","subtitle":"BBBCCC","arg":"unicode","icon":{"path":"./icons/BBBCCC.png"}},{"uid":"AAABBB","title":"AAABBB","subtitle":"AAABBB","arg":"unicode","icon":{"path":"./icons/AAABBB.png"}}]}';
+
     expect(actual).toStrictEqual(expected);
   });
 });
