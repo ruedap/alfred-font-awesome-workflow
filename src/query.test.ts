@@ -1,4 +1,4 @@
-import { getArgs, isFind } from "./query";
+import { getArgs, isFind, getFindArgsString } from "./query";
 
 describe("getArg()", () => {
   test("empty argv", () => {
@@ -58,5 +58,31 @@ describe("isFind()", () => {
     const args = getArgs();
     const actual = isFind(args);
     expect(actual).toBeTruthy();
+  });
+});
+
+describe("getFindArgsString()", () => {
+  test("--find", () => {
+    process.argv = ["node", "jest", "--find"];
+
+    const args = getArgs();
+    const actual = getFindArgsString(args);
+    expect(actual).toStrictEqual("");
+  });
+
+  test("--find foo", () => {
+    process.argv = ["node", "jest", "--find", "foo"];
+
+    const args = getArgs();
+    const actual = getFindArgsString(args);
+    expect(actual).toStrictEqual("foo");
+  });
+
+  test("--find foo bar", () => {
+    process.argv = ["node", "jest", "--find", "foo", "bar"];
+
+    const args = getArgs();
+    const actual = getFindArgsString(args);
+    expect(actual).toStrictEqual("foo bar");
   });
 });
