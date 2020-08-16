@@ -9,8 +9,20 @@ type TSearchResult = Readonly<{
   score: number;
 }>;
 
-export const search = (list: TIconsObject, keys: string[], query: string) => {
-  if (!query) return list;
+export const search = (
+  list: TIconsObject,
+  keys: string[],
+  query: string
+): TSearchResult[] => {
+  if (!query) {
+    return list.map((item, i) => {
+      return {
+        item: item,
+        refIndex: i,
+        score: 0,
+      };
+    }) as TSearchResult[];
+  }
 
   const options = {
     includeScore: true,

@@ -36,10 +36,46 @@ describe("search()", () => {
     const keys = ["name", "search.terms"];
     const query = "";
     const actual = search(list, keys, query);
+    const expected = [
+      {
+        item: {
+          free: ["free"],
+          label: "label",
+          name: "AAABBB",
+          search: { terms: ["111", "222", "333"] },
+          unicode: "unicode",
+        },
+        refIndex: 0,
+        score: 0,
+      },
+      {
+        item: {
+          free: ["free"],
+          label: "label",
+          name: "BBBCCC",
+          search: { terms: ["222", "444", "666"] },
+          unicode: "unicode",
+        },
+        refIndex: 1,
+        score: 0,
+      },
+      {
+        item: {
+          free: ["free"],
+          label: "label",
+          name: "CCCDDD",
+          search: { terms: ["333", "666", "999"] },
+          unicode: "unicode",
+        },
+        refIndex: 2,
+        score: 0,
+      },
+    ];
 
     expect(actual.length).toBe(3);
-    expect(actual).toStrictEqual(list);
+    expect(actual).toStrictEqual(expected);
   });
+
   test("name key", () => {
     const keys = ["name", "search.terms"];
     const query = "BBB";
