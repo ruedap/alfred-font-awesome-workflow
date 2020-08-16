@@ -1,4 +1,4 @@
-import { putName, putCode } from "./put";
+import { putName, putCode, putRef } from "./put";
 
 describe("putName()", () => {
   test("empty", () => {
@@ -27,5 +27,22 @@ describe("putCode()", () => {
   test("edge-legacy", () => {
     const actual = putCode("edge-legacy");
     expect(actual).toBe("f978");
+  });
+});
+
+describe("putRef()", () => {
+  test("empty", () => {
+    const actual = putRef("");
+    expect(actual).toBe(null);
+  });
+
+  test("font-awesome", () => {
+    const actual = putRef("font-awesome");
+    expect(actual).toBe("font-awesome");
+  });
+
+  test("font-awesome", () => {
+    const actual = putRef("font-awesome-alt");
+    expect(actual).toBe("font-awesome-alt");
   });
 });
