@@ -1,11 +1,12 @@
 import { getArgs, includesFlag, getFlagArgs } from "./query";
 import { getAllIconsObject } from "./assets/icons_object";
 import { search, toJson } from "./search";
-import { putName, putCode } from "./put";
+import { putName, putCode, putRef } from "./put";
 
 const FLAG_FIND = "--find";
 const FLAG_PUT_NAME = "--put-name";
 const FLAG_PUT_CODE = "--put-code";
+const FLAG_PUT_REF = "--put-ref";
 
 const main = () => {
   const args = getArgs();
@@ -29,6 +30,13 @@ const main = () => {
   if (includesFlag(args, FLAG_PUT_CODE)) {
     const query = getFlagArgs(args, FLAG_PUT_CODE);
     const result = putCode(query);
+    result && console.log(result);
+    return;
+  }
+
+  if (includesFlag(args, FLAG_PUT_REF)) {
+    const query = getFlagArgs(args, FLAG_PUT_REF);
+    const result = putRef(query);
     result && console.log(result);
     return;
   }

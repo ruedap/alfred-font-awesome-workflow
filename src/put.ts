@@ -19,3 +19,9 @@ export const putCode = (query: Query): string | null => {
   if (!icon) return null;
   return icon.unicode;
 };
+
+export const putRef = (query: Query): string | null => {
+  const icon = getIconObject(query);
+  if (!icon) return null;
+  return icon.name;
+};
