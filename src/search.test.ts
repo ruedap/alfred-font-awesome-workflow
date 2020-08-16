@@ -171,7 +171,7 @@ describe("toJson()", () => {
     ];
     const actual = toJson(searchResult);
     const expected =
-      '{"items":[{"uid":"BBBCCC","title":"BBBCCC","subtitle":"BBBCCC","arg":"unicode","icon":{"path":"./icons/BBBCCC.png"}},{"uid":"AAABBB","title":"AAABBB","subtitle":"AAABBB","arg":"unicode","icon":{"path":"./icons/AAABBB.png"}}]}';
+      '{"items":[{"uid":"BBBCCC","title":"BBBCCC","subtitle":"BBBCCC","arg":"BBBCCC","icon":{"path":"./icons/BBBCCC.png"}},{"uid":"AAABBB","title":"AAABBB","subtitle":"AAABBB","arg":"AAABBB","icon":{"path":"./icons/AAABBB.png"}}]}';
 
     expect(actual).toStrictEqual(expected);
   });

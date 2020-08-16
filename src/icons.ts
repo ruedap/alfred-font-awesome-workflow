@@ -6,7 +6,7 @@ export const toResponseItem = (iconObject: TIconObject): TResponseItem => {
     uid: iconObject.name,
     title: iconObject.name,
     subtitle: iconObject.name,
-    arg: iconObject.unicode,
+    arg: iconObject.name,
     icon: {
       path: `./icons/${iconObject.name}.png`,
     },

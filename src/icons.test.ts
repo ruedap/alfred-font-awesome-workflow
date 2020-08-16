@@ -15,7 +15,7 @@ test("toResponseItem()", () => {
     uid: "font-awesome",
     title: "font-awesome",
     subtitle: "font-awesome",
-    arg: "f2b4",
+    arg: "font-awesome",
     icon: { path: "./icons/font-awesome.png" },
   };
   expect(actual).toStrictEqual(expected);
@@ -27,7 +27,7 @@ test("getAllIcons()", () => {
 
   const faIcon = allIcons.items.find((icon) => icon.uid === "font-awesome");
   const faIconExpected = {
-    arg: "f2b4",
+    arg: "font-awesome",
     icon: { path: "./icons/font-awesome.png" },
     subtitle: "font-awesome",
     title: "font-awesome",
