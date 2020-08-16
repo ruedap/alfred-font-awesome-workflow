@@ -31,11 +31,14 @@ export const getAllIconsJson = (): TIconsJson => {
   return IconsJson as TIconsJson;
 };
 
-type TIconObject = Pick<TIconJson, "search" | "unicode" | "label" | "free"> & {
+export type TIconObject = Pick<
+  TIconJson,
+  "search" | "unicode" | "label" | "free"
+> & {
   name: string;
 };
 
-type TIconsObject = TIconObject[];
+export type TIconsObject = TIconObject[];
 
 export const getAllIconsObject = (): TIconsObject => {
   return Object.entries(IconsJson as TIconsJson).map(([key, value]) => {
