@@ -1,4 +1,4 @@
-import { putName, putCode, putRef } from "./put";
+import { putName, putCode, putRef, putUrl } from "./put";
 
 describe("putName()", () => {
   test("empty", () => {
@@ -44,5 +44,17 @@ describe("putRef()", () => {
   test("font-awesome", () => {
     const actual = putRef("font-awesome-alt");
     expect(actual).toBe("font-awesome-alt");
+  });
+});
+
+describe("putUrl()", () => {
+  test("empty", () => {
+    const actual = putUrl("");
+    expect(actual).toBe(null);
+  });
+
+  test("font-awesome", () => {
+    const actual = putUrl("font-awesome");
+    expect(actual).toBe("https://fontawesome.com/icons/font-awesome");
   });
 });
