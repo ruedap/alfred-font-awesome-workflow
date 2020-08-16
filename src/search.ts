@@ -1,5 +1,5 @@
 import Fuse from "fuse.js";
-import { TIconObject, TIconsObject } from "./assets/icons_object";
+import { TIconObject } from "./assets/icons_object";
 import { toResponseItem } from "./icons";
 import { TResponse, TResponseItem } from "./alfred/response";
 
@@ -10,7 +10,7 @@ type TSearchResult = Readonly<{
 }>;
 
 export const search = (
-  list: TIconsObject,
+  list: TIconObject[],
   keys: string[],
   query: string
 ): TSearchResult[] => {

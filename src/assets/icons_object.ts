@@ -38,9 +38,7 @@ export type TIconObject = Pick<
   name: string;
 };
 
-export type TIconsObject = TIconObject[];
-
-export const getAllIconsObject = (): TIconsObject => {
+export const getAllIconsObject = (): TIconObject[] => {
   return Object.entries(IconsJson as TIconsJson).map(([key, value]) => {
     return {
       name: key,

@@ -19,10 +19,10 @@ type TText = Readonly<{
 }>;
 
 export type TResponseItem = Readonly<{
-  uid?: string;
+  uid: string;
   title: string;
   subtitle: string;
-  arg?: string; // recommended
+  arg: string; // recommended
   icon: {
     type?: "fileicon" | "filetype";
     path: string;
