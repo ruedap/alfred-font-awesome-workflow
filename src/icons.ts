@@ -5,7 +5,7 @@ export const toResponseItem = (iconObject: TIconObject): TResponseItem => {
   return {
     uid: iconObject.name,
     title: iconObject.name,
-    subtitle: iconObject.name,
+    subtitle: `Paste class name: fa-${iconObject.name}`,
     arg: iconObject.name,
     icon: {
       path: `./icons/${iconObject.name}.png`,

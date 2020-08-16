@@ -14,7 +14,7 @@ test("toResponseItem()", () => {
   const expected = {
     uid: "font-awesome",
     title: "font-awesome",
-    subtitle: "font-awesome",
+    subtitle: "Paste class name: fa-font-awesome",
     arg: "font-awesome",
     icon: { path: "./icons/font-awesome.png" },
   };
@@ -29,7 +29,7 @@ test("getAllIcons()", () => {
   const faIconExpected = {
     arg: "font-awesome",
     icon: { path: "./icons/font-awesome.png" },
-    subtitle: "font-awesome",
+    subtitle: "Paste class name: fa-font-awesome",
     title: "font-awesome",
     uid: "font-awesome",
   };
