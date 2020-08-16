@@ -11,6 +11,7 @@
     "package": "pkg --targets macos --output ./dist/font-awesome-workflow ./dist/index.js",
     "compress": "cd ./dist && zip -r -q Font-Awesome.alfredworkflow ./",
     "build": "npm run clean && npm run compile && npm run package && npm run compress",
+    "exec": "npm run clean && npm run compile && node ./dist/index.js",
     "debug": "npm run build && open ./dist/Font-Awesome.alfredworkflow",
     "test": "jest",
     "fmt": "prettier --write .",
