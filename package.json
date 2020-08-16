@@ -6,7 +6,7 @@
   },
   "description": "You can incrementally search for Font Awesome icons and paste it to front most app.",
   "scripts": {
-    "clean": "rimraf ./dist && mkdirp ./dist && cpx './assets/**/*' ./dist",
+    "clean": "rimraf ./dist && mkdirp ./dist && cpx './assets/{icons/*,icon.png,info.plist}' ./dist",
     "compile": "webpack",
     "package": "pkg --targets macos --output ./dist/font-awesome-workflow ./dist/index.js",
     "compress": "cd ./dist && zip -r -q Font-Awesome.alfredworkflow ./",
