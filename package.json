@@ -17,6 +17,7 @@
     "fmt": "prettier --write .",
     "lint": "eslint . --ext 'ts,js'",
     "lint:fix": "eslint . --fix --ext 'ts,js'",
+    "tsc": "tsc --noEmit",
     "check": "npm run lint:fix && npm run fmt"
   },
   "repository": {
