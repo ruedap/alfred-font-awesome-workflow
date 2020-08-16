@@ -18,7 +18,7 @@ type TText = Readonly<{
   largetype: string;
 }>;
 
-type TItem = Readonly<{
+export type TResponseItem = Readonly<{
   uid?: string;
   title: string;
   subtitle: string;
@@ -37,7 +37,7 @@ type TItem = Readonly<{
 }>;
 
 export type TResponse = Readonly<{
-  items: TItem[];
+  items: TResponseItem[];
 }>;
 
 export const toJson = (response: TResponse): string => {
