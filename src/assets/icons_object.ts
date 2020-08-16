@@ -1,6 +1,6 @@
 import IconsJson from "@/assets/icons.json";
 
-type TIcon = Readonly<{
+type TIconJson = Readonly<{
   changes: string[];
   ligatures: string[];
   search: {
@@ -23,10 +23,29 @@ type TIcon = Readonly<{
   free: string[];
 }>;
 
-type TIcons = Readonly<{
-  [key: string]: TIcon;
+type TIconsJson = Readonly<{
+  [key: string]: TIconJson;
 }>;
 
-export const getIconsObject = (): TIcons => {
-  return IconsJson as TIcons;
+export const getAllIconsJson = (): TIconsJson => {
+  return IconsJson as TIconsJson;
+};
+
+type TIconObject = Pick<TIconJson, "search" | "unicode" | "label" | "free"> & {
+  name: string;
+};
+
+type TIconsObject = TIconObject[];
+
+export const getAllIconsObject = (): TIconsObject => {
+  return Object.entries(IconsJson as TIconsJson).map(([key, value]) => {
+    return {
+      name: key,
+      label: value.label,
+      unicode: value.unicode,
+      search: value.search,
+      styles: value.styles,
+      free: value.free,
+    } as TIconObject;
+  });
 };

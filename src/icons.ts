@@ -1,17 +1,17 @@
-import { getIconsObject } from "./assets/icons_object";
+import { getAllIconsObject } from "./assets/icons_object";
 import { TResponse } from "./alfred/response";
 
 export const getAllIcons = (): TResponse => {
-  const iconObject = getIconsObject();
+  const iconObject = getAllIconsObject();
 
-  const allIcons = Object.entries(iconObject).map(([key, value]) => {
+  const allIcons = iconObject.map((value) => {
     return {
-      uid: key,
-      title: key,
-      subtitle: key,
+      uid: value.name,
+      title: value.name,
+      subtitle: value.name,
       arg: value.unicode,
       icon: {
-        path: `./icons/${key}.png`,
+        path: `./icons/${value.name}.png`,
       },
     };
   });

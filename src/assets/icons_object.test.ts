@@ -1,7 +1,7 @@
-import { getIconsObject } from "./icons_object";
+import { getAllIconsJson, getAllIconsObject } from "./icons_object";
 
-test("getIconsJson()", () => {
-  const obj = getIconsObject();
+test("getAllIconsObjectOriginal()", () => {
+  const obj = getAllIconsJson();
   expect(Object.keys(obj).length).toBe(1448);
 
   const faIcon = obj["font-awesome"];
@@ -26,6 +26,22 @@ test("getIconsJson()", () => {
     },
     unicode: "f2b4",
     voted: false,
+  };
+  expect(faIcon).toStrictEqual(faIconExpected);
+});
+
+test("getAllIconsObject()", () => {
+  const obj = getAllIconsObject();
+  expect(obj.length).toBe(1448);
+
+  const faIcon = obj.find((icon) => icon.name === "font-awesome");
+  const faIconExpected = {
+    name: "font-awesome",
+    free: ["brands"],
+    label: "Font Awesome",
+    search: { terms: ["meanpath"] },
+    styles: ["brands"],
+    unicode: "f2b4",
   };
   expect(faIcon).toStrictEqual(faIconExpected);
 });
