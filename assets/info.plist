@@ -120,7 +120,7 @@
 				<key>escaping</key>
 				<integer>0</integer>
 				<key>script</key>
-				<string>./font-awesome-workflow put --name {query}</string>
+				<string>./font-awesome-workflow --put-name {query}</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -163,7 +163,7 @@
 				<key>runningsubtext</key>
 				<string>...</string>
 				<key>script</key>
-				<string>./font-awesome-workflow find {query}</string>
+				<string>./font-awesome-workflow --find {query}</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -209,7 +209,7 @@
 				<key>escaping</key>
 				<integer>0</integer>
 				<key>script</key>
-				<string>./font-awesome-workflow put --ref {query}</string>
+				<string>./font-awesome-workflow --put-ref {query}</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -232,7 +232,7 @@
 				<key>escaping</key>
 				<integer>0</integer>
 				<key>script</key>
-				<string>./font-awesome-workflow put --code {query}</string>
+				<string>./font-awesome-workflow --put-code {query}</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -278,7 +278,7 @@
 				<key>escaping</key>
 				<integer>0</integer>
 				<key>script</key>
-				<string>./font-awesome-workflow put --url {query}</string>
+				<string>./font-awesome-workflow --put-url {query}</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
