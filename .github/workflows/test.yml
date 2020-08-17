@@ -1,0 +1,25 @@
+name: Test
+on: [push]
+
+jobs:
+  build:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Use Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: '12.x'
+
+      - name: Install
+        run: npm i
+
+      - name: Test
+        run: npm t
+
+      - name: Build
+        run: npm run build
+
+      - name: Cmd
+        run: npm run cmd

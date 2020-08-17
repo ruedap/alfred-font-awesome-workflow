@@ -1,6 +1,6 @@
 require 'yaml'
 
-path = "./workflow/icons.yml"
+path = "./assets/icons.yml"
 yaml = YAML.load_file(path)
 icons = []
 
