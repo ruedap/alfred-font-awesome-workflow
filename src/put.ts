@@ -23,7 +23,8 @@ export const putCode = (query: Query): string | null => {
 export const putRef = (query: Query): string | null => {
   const icon = getIconObject(query);
   if (!icon) return null;
-  return icon.name;
+  const ref = String.fromCodePoint(parseInt(icon.unicode, 16));
+  return ref;
 };
 
 export const putUrl = (query: Query): string | null => {

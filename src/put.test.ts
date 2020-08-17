@@ -38,12 +38,21 @@ describe("putRef()", () => {
 
   test("font-awesome", () => {
     const actual = putRef("font-awesome");
-    expect(actual).toBe("font-awesome");
+    const expected = String.fromCodePoint(parseInt("f2b4", 16));
+    expect(actual).toStrictEqual(expected);
   });
 
-  test("font-awesome", () => {
-    const actual = putRef("font-awesome-alt");
-    expect(actual).toBe("font-awesome-alt");
+  // see: https://github.com/FortAwesome/Font-Awesome/blob/master/UPGRADING.md#512x513x-to-5140
+  xtest("edge-legacy", () => {
+    const actual = putCode("edge-legacy");
+    const expected = String.fromCodePoint(parseInt("f978", 16));
+    expect(actual).toStrictEqual(expected);
+  });
+
+  test("ad", () => {
+    const actual = putRef("ad");
+    const expected = String.fromCodePoint(parseInt("f641", 16));
+    expect(actual).toStrictEqual(expected);
   });
 });
 
