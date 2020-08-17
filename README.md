@@ -55,11 +55,10 @@ See details changes for each version in the [release notes](https://github.com/r
 ## Development
 
 ```sh
-$ make deps
-$ make build
-$ make cli
-$ make test
-$ make link
+$ npm i
+$ npm t
+$ npm run build
+$ npm run open
 ```
 
 ## License
