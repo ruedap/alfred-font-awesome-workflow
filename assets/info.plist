@@ -2,6 +2,18 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>name</key>
+	<string>Font Awesome 5.13.1.2</string>
+	<key>version</key>
+	<string>5.13.1.2</string>
+	<key>webaddress</key>
+	<string>https://github.com/ruedap/alfred-font-awesome-workflow</string>
+	<key>readme</key>
+	<string>https://github.com/ruedap/alfred-font-awesome-workflow</string>
+	<key>createdby</key>
+	<string>@ruedap</string>
+	<key>description</key>
+	<string>Search through Font Awesome icons</string>
 	<key>bundleid</key>
 	<string>com.ruedap.font-awesome</string>
 	<key>connections</key>
@@ -102,14 +114,8 @@
 			</dict>
 		</array>
 	</dict>
-	<key>createdby</key>
-	<string>@ruedap</string>
-	<key>description</key>
-	<string>Search through Font Awesome icons</string>
 	<key>disabled</key>
 	<false/>
-	<key>name</key>
-	<string>Font Awesome 5.13.1.1</string>
 	<key>objects</key>
 	<array>
 		<dict>
@@ -294,8 +300,6 @@
 			<integer>2</integer>
 		</dict>
 	</array>
-	<key>readme</key>
-	<string>https://github.com/ruedap/alfred-font-awesome-workflow</string>
 	<key>uidata</key>
 	<dict>
 		<key>06116C11-3F9B-438E-A515-7D3CA35574BE</key>
@@ -350,9 +354,5 @@
 	</dict>
 	<key>variablesdontexport</key>
 	<array/>
-	<key>version</key>
-	<string>5.13.1.1</string>
-	<key>webaddress</key>
-	<string>https://github.com/ruedap/alfred-font-awesome-workflow</string>
 </dict>
 </plist>
