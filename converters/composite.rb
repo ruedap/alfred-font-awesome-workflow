@@ -1,10 +1,10 @@
 png = Dir.glob("./assets/icons/*.png")
-base_png = './converters/__base.png'
-puts `convert -size 128x128 xc:#ffffff #{base_png}`
+temporary_png = './converters/__temp.png'
+puts `convert -size 128x128 xc:#ffffff #{temporary_png}`
 
 png.each do |p|
-  puts "composite -gravity center -compose over #{p} #{base_png} #{p}"
-  puts `composite -gravity center -compose over #{p} #{base_png} #{p}`
+  puts "composite -gravity center -compose over #{p} #{temporary_png} #{p}"
+  puts `composite -gravity center -compose over #{p} #{temporary_png} #{p}`
 end
 
-puts `rm #{base_png}`
+puts `rm #{temporary_png}`

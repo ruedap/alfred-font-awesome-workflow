@@ -24,9 +24,15 @@ describe("putCode()", () => {
   });
 
   // see: https://github.com/FortAwesome/Font-Awesome/blob/master/UPGRADING.md#512x513x-to-5140
+  test("box-tissue", () => {
+    const actual = putCode("box-tissue");
+    expect(actual).toBe("e05b");
+  });
+
+  // see: https://github.com/FortAwesome/Font-Awesome/blob/master/UPGRADING.md#512x513x-to-5140
   test("edge-legacy", () => {
     const actual = putCode("edge-legacy");
-    expect(actual).toBe("f978");
+    expect(actual).toBe("e078");
   });
 });
 
