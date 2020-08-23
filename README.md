@@ -23,8 +23,8 @@ The current supported version is **Font Awesome 5.14.0 Free**. Previous versions
 
 ### macOS Catalina refuses to run unsigned binaries by default
 
-There are a few ways to allow such programs to run.
-See: https://github.com/deanishe/awgo/wiki/Catalina
+There are a few ways to allow such programs to run.  
+See: https://github.com/ruedap/alfred-font-awesome-workflow/issues/119
 
 ## Usage
 
