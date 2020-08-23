@@ -1,4 +1,4 @@
-import { getArgs, includesFlag, getFlagArgs } from "./query";
+import { getArgs, getFlagArgs, includesFlag } from "./query";
 
 describe("getArg()", () => {
   test("empty argv", () => {

@@ -1,7 +1,7 @@
 import Fuse from "fuse.js";
+import { TResponse, TResponseItem } from "./alfred/response";
 import { TIconObject } from "./assets/icons_object";
 import { toResponseItem } from "./icons";
-import { TResponse, TResponseItem } from "./alfred/response";
 
 type TSearchResult = Readonly<{
   item: TIconObject;

@@ -1,4 +1,4 @@
-import { putName, putCode, putRef, putUrl } from "./put";
+import { putCode, putName, putRef, putUrl } from "./put";
 
 describe("putName()", () => {
   test("empty", () => {

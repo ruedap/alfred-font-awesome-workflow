@@ -1,7 +1,7 @@
-import { getArgs, includesFlag, getFlagArgs } from "./query";
 import { getAllIconsObject } from "./assets/icons_object";
+import { putCode, putName, putRef, putUrl } from "./put";
+import { getArgs, getFlagArgs, includesFlag } from "./query";
 import { search, toJson } from "./search";
-import { putName, putCode, putRef, putUrl } from "./put";
 
 const FLAG_FIND = "--find";
 const FLAG_PUT_NAME = "--put-name";

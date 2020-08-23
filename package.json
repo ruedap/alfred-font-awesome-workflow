@@ -27,7 +27,8 @@
     "lint": "eslint . --ext 'ts,js'",
     "lint:fix": "eslint . --fix --ext 'ts,js'",
     "tsc": "tsc --noEmit",
-    "check": "npm run tsc && npm run lint:fix && npm run fmt"
+    "organize-imports": "organize-imports-cli ./tsconfig.json",
+    "check": "npm run organize-imports && npm run lint:fix && npm run fmt && npm run tsc"
   },
   "repository": {
     "type": "git",
@@ -51,6 +52,7 @@
     "eslint-plugin-prettier": "^3.1.4",
     "jest": "^26.4.0",
     "mkdirp": "^1.0.4",
+    "organize-imports-cli": "^0.7.0",
     "pkg": "^4.4.9",
     "prettier": "^2.0.5",
     "rimraf": "^3.0.2",

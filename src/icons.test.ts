@@ -1,4 +1,4 @@
-import { toResponseItem, getAllIcons } from "./icons";
+import { getAllIcons, toResponseItem } from "./icons";
 
 test("toResponseItem()", () => {
   const faIconObject = {
