@@ -1,5 +1,5 @@
-import { search, toJson } from "./search";
 import { TIconObject } from "./assets/icons_object";
+import { search, toJson } from "./search";
 
 describe("search()", () => {
   const list: TIconObject[] = [

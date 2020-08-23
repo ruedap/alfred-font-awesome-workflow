@@ -1,5 +1,5 @@
+import { TResponse, TResponseItem } from "./alfred/response";
 import { getAllIconsObject, TIconObject } from "./assets/icons_object";
-import { TResponseItem, TResponse } from "./alfred/response";
 
 export const toResponseItem = (iconObject: TIconObject): TResponseItem => {
   return {
