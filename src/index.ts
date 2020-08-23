@@ -49,7 +49,7 @@ const main = () => {
     return;
   }
 
-  // no flag
+  // NOTE: No flags
   console.log(toJson(search(list, keys, ""))); // NOTE: Output to Alfred
 };
 
