@@ -17,40 +17,40 @@ const main = () => {
   if (includesFlag(args, FLAG_FIND)) {
     const query = getFlagArgs(args, FLAG_FIND);
     const searchResult = search(list, keys, query);
-    console.log(toJson(searchResult));
+    console.log(toJson(searchResult)); // NOTE: Output to Alfred
     return;
   }
 
   if (includesFlag(args, FLAG_PUT_NAME)) {
     const query = getFlagArgs(args, FLAG_PUT_NAME);
     const result = putName(query);
-    result && console.log(result);
+    result && console.log(result); // NOTE: Output to Alfred
     return;
   }
 
   if (includesFlag(args, FLAG_PUT_CODE)) {
     const query = getFlagArgs(args, FLAG_PUT_CODE);
     const result = putCode(query);
-    result && console.log(result);
+    result && console.log(result); // NOTE: Output to Alfred
     return;
   }
 
   if (includesFlag(args, FLAG_PUT_REF)) {
     const query = getFlagArgs(args, FLAG_PUT_REF);
     const result = putRef(query);
-    result && console.log(result);
+    result && console.log(result); // NOTE: Output to Alfred
     return;
   }
 
   if (includesFlag(args, FLAG_PUT_URL)) {
     const query = getFlagArgs(args, FLAG_PUT_URL);
     const result = putUrl(query);
-    result && console.log(result);
+    result && console.log(result); // NOTE: Output to Alfred
     return;
   }
 
   // no flag
-  console.log(toJson(search(list, keys, "")));
+  console.log(toJson(search(list, keys, ""))); // NOTE: Output to Alfred
 };
 
 main();
