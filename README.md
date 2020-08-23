@@ -21,6 +21,11 @@ Download **[Font-Awesome.alfredworkflow](https://github.com/ruedap/alfred-font-a
 
 The current supported version is **Font Awesome 5.14.0 Free**. Previous versions are available [here](https://github.com/ruedap/alfred-font-awesome-workflow/releases).
 
+### macOS Catalina refuses to run unsigned binaries by default
+
+There are a few ways to allow such programs to run.
+See: https://github.com/deanishe/awgo/wiki/Catalina
+
 ## Usage
 
 **Keyword** `fa`: Search through [Font Awesome icons](https://fontawesome.com/icons?d=gallery&m=free).
