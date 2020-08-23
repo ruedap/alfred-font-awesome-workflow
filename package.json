@@ -34,8 +34,7 @@
     "type": "git",
     "url": "git+https://github.com/ruedap/alfred-font-awesome-workflow.git"
   },
-  "keywords": [],
-  "author": "",
+  "author": "ruedap",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/ruedap/alfred-font-awesome-workflow/issues"
