@@ -1,6 +1,6 @@
 import { getAllIconsJson, getAllIconsObject } from "./icons_object";
 
-test("getAllIconsObjectOriginal()", () => {
+test("getAllIconsJson()", () => {
   const obj = getAllIconsJson();
   expect(Object.keys(obj).length).toBe(1448);
 
