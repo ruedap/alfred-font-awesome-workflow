@@ -1,3 +1,5 @@
+> Would you need [Bootstrap Icons workflow](https://github.com/ruedap/alfred-bootstrap-icons-workflow)?
+
 # Font Awesome workflow for Alfred
 
 [![Latest Version](http://img.shields.io/github/release/ruedap/alfred-font-awesome-workflow.svg?style=flat-square)](https://github.com/ruedap/alfred-font-awesome-workflow/releases)
