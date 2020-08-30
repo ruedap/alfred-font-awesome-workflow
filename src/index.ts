@@ -13,6 +13,10 @@ const FLAG = {
   },
 };
 
+const output = (str: string): void => {
+  process.stdout.write(str); // NOTE: Output to Alfred
+};
+
 const main = () => {
   const args = getArgs();
   const list = getAllIconsObject();
@@ -20,40 +24,40 @@ const main = () => {
   if (includesFlag(args, FLAG.FIND)) {
     const query = getFlagArgs(args, FLAG.FIND);
     const searchResult = search(list, query);
-    console.log(toJson(searchResult)); // NOTE: Output to Alfred
+    output(toJson(searchResult));
     return;
   }
 
   if (includesFlag(args, FLAG.PUT.NAME)) {
     const query = getFlagArgs(args, FLAG.PUT.NAME);
     const result = putName(query);
-    result && console.log(result); // NOTE: Output to Alfred
+    result && output(result);
     return;
   }
 
   if (includesFlag(args, FLAG.PUT.CODE)) {
     const query = getFlagArgs(args, FLAG.PUT.CODE);
     const result = putCode(query);
-    result && console.log(result); // NOTE: Output to Alfred
+    result && output(result);
     return;
   }
 
   if (includesFlag(args, FLAG.PUT.REF)) {
     const query = getFlagArgs(args, FLAG.PUT.REF);
     const result = putRef(query);
-    result && console.log(result); // NOTE: Output to Alfred
+    result && output(result);
     return;
   }
 
   if (includesFlag(args, FLAG.PUT.URL)) {
     const query = getFlagArgs(args, FLAG.PUT.URL);
     const result = putUrl(query);
-    result && console.log(result); // NOTE: Output to Alfred
+    result && output(result);
     return;
   }
 
   // NOTE: No flags
-  console.log(toJson(search(list, ""))); // NOTE: Output to Alfred
+  output(toJson(search(list, "")));
 };
 
 main();
