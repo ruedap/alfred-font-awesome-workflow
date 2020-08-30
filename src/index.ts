@@ -12,11 +12,10 @@ const FLAG_PUT_URL = "--put-url";
 const main = () => {
   const args = getArgs();
   const list = getAllIconsObject();
-  const keys = ["name", "search.terms"];
 
   if (includesFlag(args, FLAG_FIND)) {
     const query = getFlagArgs(args, FLAG_FIND);
-    const searchResult = search(list, keys, query);
+    const searchResult = search(list, query);
     console.log(toJson(searchResult)); // NOTE: Output to Alfred
     return;
   }
@@ -50,7 +49,7 @@ const main = () => {
   }
 
   // NOTE: No flags
-  console.log(toJson(search(list, keys, ""))); // NOTE: Output to Alfred
+  console.log(toJson(search(list, ""))); // NOTE: Output to Alfred
 };
 
 main();

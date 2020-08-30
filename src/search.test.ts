@@ -1,72 +1,59 @@
 import { TIconObject } from "./assets/icons_object";
 import { search, toJson } from "./search";
 
-describe("search()", () => {
-  const list: TIconObject[] = [
-    {
-      name: "AAABBB",
-      search: {
-        terms: ["111", "222", "333"],
-      },
-      unicode: "unicode",
-      label: "label",
-      free: ["free"],
-    },
-    {
-      name: "BBBCCC",
-      search: {
-        terms: ["222", "444", "666"],
-      },
-      unicode: "unicode",
-      label: "label",
-      free: ["free"],
-    },
-    {
-      name: "CCCDDD",
-      search: {
-        terms: ["333", "666", "999"],
-      },
-      unicode: "unicode",
-      label: "label",
-      free: ["free"],
-    },
-  ];
+const EXAMPLE_LIST_1: TIconObject = {
+  name: "AAABBB",
+  search: {
+    terms: ["111", "222", "333"],
+  },
+  unicode: "unicode",
+  label: "label",
+  free: ["free"],
+};
 
+const EXAMPLE_LIST_2: TIconObject = {
+  name: "BBBCCC",
+  search: {
+    terms: ["222", "444", "666"],
+  },
+  unicode: "unicode",
+  label: "label",
+  free: ["free"],
+};
+
+const EXAMPLE_LIST_3: TIconObject = {
+  name: "CCCDDD",
+  search: {
+    terms: ["333", "666", "999"],
+  },
+  unicode: "unicode",
+  label: "label",
+  free: ["free"],
+};
+
+const EXAMPLE_LIST: TIconObject[] = [
+  EXAMPLE_LIST_1,
+  EXAMPLE_LIST_2,
+  EXAMPLE_LIST_3,
+];
+
+describe("search()", () => {
   test("empty query", () => {
-    const keys = ["name", "search.terms"];
     const query = "";
-    const actual = search(list, keys, query);
+    const actual = search(EXAMPLE_LIST, query);
     const expected = [
       {
-        item: {
-          free: ["free"],
-          label: "label",
-          name: "AAABBB",
-          search: { terms: ["111", "222", "333"] },
-          unicode: "unicode",
-        },
+        item: EXAMPLE_LIST_1,
         refIndex: 0,
         score: 0,
       },
       {
-        item: {
-          free: ["free"],
-          label: "label",
-          name: "BBBCCC",
-          search: { terms: ["222", "444", "666"] },
-          unicode: "unicode",
-        },
+        item: EXAMPLE_LIST_2,
         refIndex: 1,
         score: 0,
       },
       {
-        item: {
-          free: ["free"],
-          label: "label",
-          name: "CCCDDD",
-          search: { terms: ["333", "666", "999"] },
-          unicode: "unicode",
-        },
+        item: EXAMPLE_LIST_3,
         refIndex: 2,
         score: 0,
       },
@@ -77,31 +64,18 @@ describe("search()", () => {
   });
 
   test("name key", () => {
-    const keys = ["name", "search.terms"];
     const query = "BBB";
-    const actual = search(list, keys, query);
+    const actual = search(EXAMPLE_LIST, query);
     const expected = [
       {
-        item: {
-          free: ["free"],
-          label: "label",
-          name: "BBBCCC",
-          search: { terms: ["222", "444", "666"] },
-          unicode: "unicode",
-        },
+        item: EXAMPLE_LIST_2,
         refIndex: 1,
-        score: 0.001,
+        score: 0.007943282347242817,
       },
       {
-        item: {
-          free: ["free"],
-          label: "label",
-          name: "AAABBB",
-          search: { terms: ["111", "222", "333"] },
-          unicode: "unicode",
-        },
+        item: EXAMPLE_LIST_1,
         refIndex: 0,
-        score: 0.03,
+        score: 0.08589836120408871,
       },
     ];
 
@@ -110,31 +84,18 @@ describe("search()", () => {
   });
 
   test("search.terms key", () => {
-    const keys = ["name", "search.terms"];
     const query = "666";
-    const actual = search(list, keys, query);
+    const actual = search(EXAMPLE_LIST, query);
     const expected = [
       {
-        item: {
-          free: ["free"],
-          label: "label",
-          name: "BBBCCC",
-          search: { terms: ["222", "444", "666"] },
-          unicode: "unicode",
-        },
+        item: EXAMPLE_LIST_2,
         refIndex: 1,
-        score: 2.220446049250313e-16,
+        score: 0.000020134092876783674,
       },
       {
-        item: {
-          free: ["free"],
-          label: "label",
-          name: "CCCDDD",
-          search: { terms: ["333", "666", "999"] },
-          unicode: "unicode",
-        },
+        item: EXAMPLE_LIST_3,
         refIndex: 2,
-        score: 2.220446049250313e-16,
+        score: 0.000020134092876783674,
       },
     ];
 
@@ -147,24 +108,12 @@ describe("toJson()", () => {
   test("", () => {
     const searchResult = [
       {
-        item: {
-          free: ["free"],
-          label: "label",
-          name: "BBBCCC",
-          search: { terms: ["222", "444", "666"] },
-          unicode: "unicode",
-        },
+        item: EXAMPLE_LIST_2,
         refIndex: 1,
         score: 0.001,
       },
       {
-        item: {
-          free: ["free"],
-          label: "label",
-          name: "AAABBB",
-          search: { terms: ["111", "222", "333"] },
-          unicode: "unicode",
-        },
+        item: EXAMPLE_LIST_1,
         refIndex: 0,
         score: 0.03,
       },
