@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>name</key>
-	<string>Font Awesome 5.14.0.0</string>
+	<string>Font Awesome 5.14.0.1</string>
 	<key>version</key>
-	<string>5.14.0.0</string>
+	<string>5.14.0.1</string>
 	<key>webaddress</key>
 	<string>https://github.com/ruedap/alfred-font-awesome-workflow</string>
 	<key>readme</key>
@@ -16,13 +16,15 @@
 	<string>Search through Font Awesome icons</string>
 	<key>bundleid</key>
 	<string>com.ruedap.font-awesome</string>
+	<key>disabled</key>
+	<false/>
 	<key>connections</key>
 	<dict>
 		<key>06116C11-3F9B-438E-A515-7D3CA35574BE</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>61DCB2DD-8EF7-447E-BED3-63AA4B73235C</string>
+				<string>AA55FF93-E3ED-430B-B08E-62236574DD0F</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -114,8 +116,6 @@
 			</dict>
 		</array>
 	</dict>
-	<key>disabled</key>
-	<false/>
 	<key>objects</key>
 	<array>
 		<dict>
@@ -256,25 +256,21 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>0</integer>
-				<key>script</key>
-				<string>open {query}</string>
-				<key>scriptargtype</key>
-				<integer>0</integer>
-				<key>scriptfile</key>
+				<key>browser</key>
 				<string></string>
-				<key>type</key>
-				<integer>0</integer>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string></string>
+				<key>utf8</key>
+				<false/>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.action.script</string>
+			<string>alfred.workflow.action.openurl</string>
 			<key>uid</key>
-			<string>61DCB2DD-8EF7-447E-BED3-63AA4B73235C</string>
+			<string>AA55FF93-E3ED-430B-B08E-62236574DD0F</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -305,51 +301,51 @@
 		<key>06116C11-3F9B-438E-A515-7D3CA35574BE</key>
 		<dict>
 			<key>xpos</key>
-			<integer>500</integer>
+			<integer>230</integer>
 			<key>ypos</key>
-			<real>340</real>
+			<integer>350</integer>
 		</dict>
 		<key>21557827-8003-42B7-A042-16D4C9278FEC</key>
 		<dict>
 			<key>xpos</key>
-			<integer>300</integer>
+			<integer>30</integer>
 			<key>ypos</key>
-			<real>120</real>
+			<integer>130</integer>
 		</dict>
 		<key>2D5AC270-69DB-4E00-BE29-B7F4927E632A</key>
 		<dict>
 			<key>xpos</key>
-			<integer>500</integer>
+			<integer>230</integer>
 			<key>ypos</key>
-			<real>10</real>
-		</dict>
-		<key>61DCB2DD-8EF7-447E-BED3-63AA4B73235C</key>
-		<dict>
-			<key>xpos</key>
-			<integer>700</integer>
-			<key>ypos</key>
-			<real>340</real>
+			<integer>20</integer>
 		</dict>
 		<key>8CBC1CA3-D946-4766-9551-505842A4BE52</key>
 		<dict>
 			<key>xpos</key>
-			<integer>700</integer>
+			<integer>430</integer>
 			<key>ypos</key>
-			<real>120</real>
+			<integer>130</integer>
 		</dict>
 		<key>8EEB02DD-09BA-4657-A9D8-ACE675D342BC</key>
 		<dict>
 			<key>xpos</key>
-			<integer>500</integer>
+			<integer>230</integer>
 			<key>ypos</key>
-			<real>120</real>
+			<integer>130</integer>
+		</dict>
+		<key>AA55FF93-E3ED-430B-B08E-62236574DD0F</key>
+		<dict>
+			<key>xpos</key>
+			<integer>430</integer>
+			<key>ypos</key>
+			<integer>350</integer>
 		</dict>
 		<key>CE9A7E05-0277-46D5-941F-E5DEC7D9F6F7</key>
 		<dict>
 			<key>xpos</key>
-			<integer>500</integer>
+			<integer>230</integer>
 			<key>ypos</key>
-			<real>230</real>
+			<integer>240</integer>
 		</dict>
 	</dict>
 	<key>variablesdontexport</key>

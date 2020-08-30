@@ -1,7 +1,6 @@
-import { TResponseItem } from "./alfred/response";
 import { getAllIconsObject, TIconObject } from "./assets/icons_object";
 
-type Query = TResponseItem["uid"];
+type Query = string;
 
 const getIconObject = (query: Query): TIconObject | undefined => {
   const allIconsObject = getAllIconsObject();
