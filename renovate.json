@@ -1,6 +1,7 @@
 {
   "extends": ["config:base"],
   "enabledManagers": ["npm"],
+  "labels": ["deps"],
   "ignoreDeprecated": true,
   "timezone": "Asia/Tokyo",
   "schedule": "every weekend",
