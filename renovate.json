@@ -3,7 +3,7 @@
   "enabledManagers": ["npm"],
   "ignoreDeprecated": true,
   "timezone": "Asia/Tokyo",
-  "schedule": "after 9am and before 8pm on Saturday",
+  "schedule": "every weekend",
   "patch": {
     "automerge": true
   }
