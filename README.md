@@ -3,17 +3,17 @@
 # Font Awesome workflow for Alfred
 
 [![Latest Version](http://img.shields.io/github/release/ruedap/alfred-font-awesome-workflow.svg?style=flat-square)](https://github.com/ruedap/alfred-font-awesome-workflow/releases)
-[![License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](http://ruedap.mit-license.org/2015)
+[![License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/ruedap/alfred-font-awesome-workflow/blob/main/LICENSE.md)
 
 You can incrementally search for [Font Awesome icons](https://fontawesome.com/changelog/latest) and paste it to front most app.
 
 #### :pencil: for coding HTML/CSS
 
-![screencast.gif](https://github.com/ruedap/alfred-font-awesome-workflow/raw/master/screenshots/screencast.gif)
+![screencast.gif](https://github.com/ruedap/alfred-font-awesome-workflow/raw/assets/images/screencast.gif)
 
 #### :art: for designing in Photoshop, Illustrator, Sketch, Keynote, etc
 
-![screencast-illustrator.gif](https://github.com/ruedap/alfred-font-awesome-workflow/raw/master/screenshots/screencast-illustrator.gif)
+![screencast-illustrator.gif](https://github.com/ruedap/alfred-font-awesome-workflow/raw/assets/images/screencast-illustrator.gif)
 
 :gem: See also: [Font Awesome Workflow with Sketch 3 — QuickCast.](http://quick.as/46rbfrqr)
 
@@ -25,7 +25,7 @@ The current supported version is **Font Awesome 5.14.0 Free**. Previous versions
 
 #### macOS Catalina refuses to run unsigned binaries by default
 
-There are a few ways to allow such programs to run.  
+There are a few ways to allow such programs to run.
 See: https://github.com/ruedap/alfred-font-awesome-workflow/issues/119
 
 ## Usage
@@ -37,13 +37,13 @@ See: https://github.com/ruedap/alfred-font-awesome-workflow/issues/119
 - `Shift + Enter`: Paste character code (e.g. `f18e`)
 - `Command + Enter`: Open in browser (e.g. <http://fontawesome.io/icon/arrow-circle-o-right>)
 
-![Workflow](https://github.com/ruedap/alfred-font-awesome-workflow/raw/master/screenshots/workflow.png)
+![Workflow](https://github.com/ruedap/alfred-font-awesome-workflow/raw/assets/images/workflow.png)
 
 ## Options
 
 **Disable pasting**: Turn off "Automatically paste to front most app" in Workflow's Preferences.
 
-![Disable pasting](https://github.com/ruedap/alfred-font-awesome-workflow/raw/master/screenshots/option-disable-pasting.png)
+![Disable pasting](https://github.com/ruedap/alfred-font-awesome-workflow/raw/assets/images/option-disable-pasting.png)
 
 ## Changelog
 
@@ -70,7 +70,7 @@ $ npm run open
 
 ## License
 
-Released under the [MIT license](http://ruedap.mit-license.org/2015).
+Released under the [MIT license](https://github.com/ruedap/alfred-font-awesome-workflow/blob/main/LICENSE.md).
 
 ## Author
 
