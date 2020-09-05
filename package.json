@@ -28,7 +28,8 @@
     "lint:fix": "eslint . --fix --ext 'ts,js'",
     "tsc": "tsc --noEmit",
     "organize-imports": "organize-imports-cli ./tsconfig.json",
-    "check": "npm run organize-imports && npm run lint:fix && npm run fmt && npm run tsc"
+    "check": "npm run organize-imports && npm run lint:fix && npm run fmt && npm run tsc",
+    "utils:json": "ts-node ./utils/converters/icons_json.ts"
   },
   "repository": {
     "type": "git",
