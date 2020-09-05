@@ -31,9 +31,10 @@ const SVGS: TSvg[] = INPUT_SVG_PATHS.map((inputPath: string) => {
 });
 
 const makeDir = (svgs: TSvg[]): void => {
-  const outputPath = svgs.map((svg) => path.parse(svg.output).dir);
+  const outputPaths = svgs.map((svg) => path.parse(svg.output).dir);
+  const outputDirs = [...new Set(outputPaths)];
 
-  mkdirp.sync(outputPath);
+  outputDirs.forEach((dir) => mkdirp.sync(dir));
 };
 
 const convert = async (svgs: TSvg[]) => {
@@ -45,8 +46,8 @@ const main = () => {
 
   makeDir(SVGS);
 
-  // convert(SVGS.slice(0, 10)); // DEBUG
-  convert(SVGS);
+  convert(SVGS.slice(0, 10)); // DEBUG
+  // convert(SVGS);
 };
 
 main();
