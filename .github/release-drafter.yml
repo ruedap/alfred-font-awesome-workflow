@@ -1,0 +1,25 @@
+name-template: "Draft 🚧"
+prerelease: false
+exclude-labels:
+  - "skip-changelog"
+categories:
+  - title: "🚀 Features"
+    labels:
+      - "feature"
+      - "feat"
+  - title: "🐛 Bug fixes"
+    labels:
+      - "fix"
+  - title: "📖 Docs"
+    labels:
+      - "docs"
+  - title: "🧰 Maintenance"
+    labels:
+      - "chore"
+  - title: "📦 Dependencies"
+    labels:
+      - "deps"
+change-template: "- $TITLE (#$NUMBER) @$AUTHOR"
+template: |
+  ## Changes
+  $CHANGES

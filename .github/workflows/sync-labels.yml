@@ -1,0 +1,22 @@
+name: Sync labels
+
+on:
+  push:
+    # NOTE: when merged into main branch and the files in paths below have changed
+    branches:
+      - main
+    paths:
+      - '.github/sync-labels.yml'
+      - '.github/workflows/sync-labels.yml'
+
+jobs:
+  labeler:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: crazy-max/ghaction-github-labeler@v3.0.0
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          yaml-file: '.github/sync-labels.yml'
+          skip-delete: false
+          dry-run: false
