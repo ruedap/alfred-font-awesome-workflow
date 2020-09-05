@@ -3,7 +3,7 @@
 # Font Awesome workflow for Alfred
 
 [![Latest Version](http://img.shields.io/github/release/ruedap/alfred-font-awesome-workflow.svg?style=flat-square)](https://github.com/ruedap/alfred-font-awesome-workflow/releases)
-[![License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](http://ruedap.mit-license.org/2015)
+[![License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/ruedap/alfred-font-awesome-workflow/blob/main/LICENSE.md)
 
 You can incrementally search for [Font Awesome icons](https://fontawesome.com/changelog/latest) and paste it to front most app.
 
@@ -70,7 +70,7 @@ $ npm run open
 
 ## License
 
-Released under the [MIT license](http://ruedap.mit-license.org/2015).
+Released under the [MIT license](https://github.com/ruedap/alfred-font-awesome-workflow/blob/main/LICENSE.md).
 
 ## Author
 
