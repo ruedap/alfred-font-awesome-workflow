@@ -46,8 +46,8 @@ const main = () => {
 
   makeDir(SVGS);
 
-  convert(SVGS.slice(0, 10)); // DEBUG
-  // convert(SVGS);
+  // convert(SVGS.slice(0, 10)); // DEBUG
+  convert(SVGS);
 };
 
 main();
