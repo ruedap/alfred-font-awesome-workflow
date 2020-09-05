@@ -1,12 +1,13 @@
 import { getAllIcons, toResponseItem } from "./icons";
+import { TIconObject } from "./assets/icons_object";
 
 test("toResponseItem()", () => {
-  const iconObject = {
+  const iconObject: TIconObject = {
     name: "font-awesome",
     free: ["brands"],
     label: "Font Awesome",
     search: { terms: ["meanpath"] },
-    styles: ["brands"],
+    style: "brands",
     unicode: "f2b4",
   };
 
@@ -22,7 +23,7 @@ test("toResponseItem()", () => {
 
 test("getAllIcons()", () => {
   const allIcons = getAllIcons();
-  expect(allIcons.items.length).toBe(1448);
+  expect(allIcons.items.length).toBe(1601);
 
   const actual = allIcons.items.find((icon) => icon.arg === "font-awesome");
   const expected = {

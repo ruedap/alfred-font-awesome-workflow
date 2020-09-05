@@ -4,8 +4,8 @@ test("getAllIconsJson()", () => {
   const obj = getAllIconsJson();
   expect(Object.keys(obj).length).toBe(1448);
 
-  const faIcon = obj["font-awesome"];
-  const faIconExpected = {
+  const actual = obj["font-awesome"];
+  const expected = {
     changes: ["4.6", "5.0.0"],
     free: ["brands"],
     label: "Font Awesome",
@@ -27,21 +27,21 @@ test("getAllIconsJson()", () => {
     unicode: "f2b4",
     voted: false,
   };
-  expect(faIcon).toStrictEqual(faIconExpected);
+  expect(actual).toStrictEqual(expected);
 });
 
 test("getAllIconsObject()", () => {
   const obj = getAllIconsObject();
-  expect(obj.length).toBe(1448);
+  expect(obj.length).toBe(1601);
 
-  const faIcon = obj.find((icon) => icon.name === "font-awesome");
-  const faIconExpected = {
+  const actual = obj.find((icon) => icon.name === "font-awesome");
+  const expected = {
     name: "font-awesome",
     free: ["brands"],
     label: "Font Awesome",
     search: { terms: ["meanpath"] },
-    styles: ["brands"],
+    style: "brands",
     unicode: "f2b4",
   };
-  expect(faIcon).toStrictEqual(faIconExpected);
+  expect(actual).toStrictEqual(expected);
 });

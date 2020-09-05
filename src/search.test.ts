@@ -6,6 +6,7 @@ const EXAMPLE_LIST_1: TIconObject = {
   search: {
     terms: ["111", "222", "333"],
   },
+  style: "brands",
   unicode: "unicode",
   label: "label",
   free: ["free"],
@@ -16,6 +17,7 @@ const EXAMPLE_LIST_2: TIconObject = {
   search: {
     terms: ["222", "444", "666"],
   },
+  style: "solid",
   unicode: "unicode",
   label: "label",
   free: ["free"],
@@ -26,6 +28,7 @@ const EXAMPLE_LIST_3: TIconObject = {
   search: {
     terms: ["333", "666", "999"],
   },
+  style: "regular",
   unicode: "unicode",
   label: "label",
   free: ["free"],
