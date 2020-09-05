@@ -1,25 +1,24 @@
 import fg from "fast-glob";
+import fs from "fs";
+import util from "util";
 import path from "path";
-
-// FIXME
-// eslint-disable-next-line
-const sharp = require("sharp");
-// eslint-disable-next-line
-const imagemin = require("imagemin");
-// eslint-disable-next-line
-const imageminPngquant = require("imagemin-pngquant");
+import sharp, { OutputInfo } from "sharp";
+import imagemin from "imagemin";
+import imageminPngquant from "imagemin-pngquant";
+import makeDir from "make-dir";
+const writeFile = util.promisify(fs.writeFile);
 
 const INPUT_PNG_DIR = "./assets/icons";
 const INPUT_PNG_PATHS = fg.sync(`${INPUT_PNG_DIR}/**/*.png`);
 
-const composite = async (paths: string[]) => {
-  return await Promise.all(
+const composite = (paths: string[]) => {
+  return Promise.all(
     paths.map(async (p) => {
       const buffer = await sharp(p)
         .flatten({ background: "#ffffff" })
         .toBuffer();
 
-      await sharp(buffer).toFile(p, (err: Error, info: string) => {
+      return await sharp(buffer).toFile(p, (err: Error, _: OutputInfo) => {
         if (!err) return;
         throw new Error(`${err}: ${p}`);
       });
@@ -28,15 +27,22 @@ const composite = async (paths: string[]) => {
 };
 
 const minify = async (paths: string[]) => {
-  const destination = path.parse(paths[0]).dir;
-  return await imagemin(paths, {
-    destination,
+  // NOTE: https://github.com/imagemin/imagemin/issues/191#issuecomment-611523201
+  const images = await imagemin(paths, {
     plugins: [
       imageminPngquant({
         quality: [0.2, 0.4],
       }),
     ],
   });
+
+  return await Promise.all(
+    images.map(async (v) => {
+      v.destinationPath = v.sourcePath;
+      await makeDir(path.dirname(v.destinationPath));
+      await writeFile(v.destinationPath, v.data);
+    })
+  );
 };
 
 const main = async () => {
