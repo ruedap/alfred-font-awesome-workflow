@@ -1,11 +1,10 @@
 import fg from "fast-glob";
 import path from "path";
+import makeDir from "make-dir"
 
 // FIXME
 // eslint-disable-next-line
 const svgexport = require("svgexport");
-// eslint-disable-next-line
-const mkdirp = require("mkdirp");
 
 const INPUT_DIR = "./font-awesome/svgs";
 const INPUT_SVG_PATHS = fg.sync(`${INPUT_DIR}/**/*.svg`);
@@ -30,21 +29,23 @@ const SVGS: TSvg[] = INPUT_SVG_PATHS.map((inputPath: string) => {
   } as TSvg;
 });
 
-const makeDir = (svgs: TSvg[]): void => {
+const makeStylesDir = async (svgs: TSvg[]): Promise<string[]> => {
   const outputPaths = svgs.map((svg) => path.parse(svg.output).dir);
   const outputDirs = [...new Set(outputPaths)];
 
-  outputDirs.forEach((dir) => mkdirp.sync(dir));
+  return await Promise.all(
+    outputDirs.map(async (dir) => await makeDir(dir))
+  )
 };
 
-const convert = async (svgs: TSvg[]) => {
-  return svgexport.render(svgs, process);
+const convert = (svgs: TSvg[]) => {
+  svgexport.render(svgs, process);
 };
 
-const main = () => {
+const main = async () => {
   console.log("start svg2png");
 
-  makeDir(SVGS);
+  await makeStylesDir(SVGS);
 
   // convert(SVGS.slice(0, 10)); // DEBUG
   convert(SVGS);
