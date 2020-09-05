@@ -30,7 +30,9 @@
     "organize-imports": "organize-imports-cli ./tsconfig.json",
     "check": "npm run organize-imports && npm run lint:fix && npm run fmt && npm run tsc",
     "utils:json": "ts-node ./utils/converters/icons_json.ts",
-    "utils:svg2png": "rimraf ./assets/icons && mkdirp ./assets/icons && ts-node ./utils/converters/svg_to_png.ts"
+    "utils:svg2png": "rimraf ./assets/icons && mkdirp ./assets/icons && ts-node ./utils/converters/svg_to_png.ts",
+    "utils:composite": "ts-node ./utils/converters/composite.ts",
+    "utils:icons": "npm run utils:svg2png && npm run utils:composite"
   },
   "repository": {
     "type": "git",
