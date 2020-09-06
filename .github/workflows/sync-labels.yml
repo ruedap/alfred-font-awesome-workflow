@@ -6,8 +6,8 @@ on:
     branches:
       - main
     paths:
-      - '.github/sync-labels.yml'
-      - '.github/workflows/sync-labels.yml'
+      - ".github/sync-labels.yml"
+      - ".github/workflows/sync-labels.yml"
 
 jobs:
   labeler:
@@ -17,6 +17,6 @@ jobs:
       - uses: crazy-max/ghaction-github-labeler@v3.0.0
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          yaml-file: '.github/sync-labels.yml'
+          yaml-file: ".github/sync-labels.yml"
           skip-delete: false
           dry-run: false
