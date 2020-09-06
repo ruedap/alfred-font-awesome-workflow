@@ -108,6 +108,11 @@ describe("toJson()", () => {
   test("", () => {
     const searchResult = [
       {
+        item: EXAMPLE_LIST_3,
+        refIndex: 2,
+        score: 1.0,
+      },
+      {
         item: EXAMPLE_LIST_2,
         refIndex: 1,
         score: 0.001,
@@ -120,7 +125,7 @@ describe("toJson()", () => {
     ];
     const actual = toJson(searchResult);
     const expected =
-      '{"items":[{"title":"BBBCCC","subtitle":"Paste class name: fa-BBBCCC","arg":"BBBCCC","icon":{"path":"./icons/BBBCCC.png"}},{"title":"AAABBB","subtitle":"Paste class name: fa-AAABBB","arg":"AAABBB","icon":{"path":"./icons/AAABBB.png"}}]}';
+      '{"items":[{"title":"CCCDDD","subtitle":"Paste class name: far fa-CCCDDD","arg":"{\\"name\\":\\"CCCDDD\\",\\"style\\":\\"regular\\"}","icon":{"path":"./icons/regular/CCCDDD.png"}},{"title":"BBBCCC","subtitle":"Paste class name: fas fa-BBBCCC","arg":"{\\"name\\":\\"BBBCCC\\",\\"style\\":\\"solid\\"}","icon":{"path":"./icons/solid/BBBCCC.png"}},{"title":"AAABBB","subtitle":"Paste class name: fab fa-AAABBB","arg":"{\\"name\\":\\"AAABBB\\",\\"style\\":\\"brands\\"}","icon":{"path":"./icons/brands/AAABBB.png"}}]}';
 
     expect(actual).toStrictEqual(expected);
   });
