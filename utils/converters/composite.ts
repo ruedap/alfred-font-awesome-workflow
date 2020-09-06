@@ -1,11 +1,11 @@
 import fg from "fast-glob";
 import fs from "fs";
-import util from "util";
-import path from "path";
-import sharp, { OutputInfo } from "sharp";
 import imagemin from "imagemin";
 import imageminPngquant from "imagemin-pngquant";
 import makeDir from "make-dir";
+import path from "path";
+import sharp from "sharp";
+import util from "util";
 const writeFile = util.promisify(fs.writeFile);
 
 const INPUT_PNG_DIR = "./assets/icons";
@@ -18,7 +18,7 @@ const composite = (paths: string[]) => {
         .flatten({ background: "#ffffff" })
         .toBuffer();
 
-      return await sharp(buffer).toFile(p, (err: Error, _: OutputInfo) => {
+      return await sharp(buffer).toFile(p, (err: Error) => {
         if (!err) return;
         throw new Error(`${err}: ${p}`);
       });

@@ -1,6 +1,6 @@
 import { getAllIconsObject, TIconObject } from "./assets/icons_object";
-import { TQuery } from "./query";
 import { getClassName } from "./icons";
+import { TQuery } from "./query";
 
 type TQueryString = string;
 

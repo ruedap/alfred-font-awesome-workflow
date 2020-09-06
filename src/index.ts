@@ -1,6 +1,6 @@
+import { getArgs, getFlagArgs, includesFlag } from "./arg";
 import { getAllIconsObject } from "./assets/icons_object";
 import { putCode, putName, putRef, putUrl } from "./put";
-import { getArgs, getFlagArgs, includesFlag } from "./arg";
 import { search, toJson } from "./search";
 
 const FLAG = {

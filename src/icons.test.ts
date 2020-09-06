@@ -1,5 +1,5 @@
-import { getAllIcons, toResponseItem } from "./icons";
 import { TIconObject } from "./assets/icons_object";
+import { getAllIcons, toResponseItem } from "./icons";
 
 test("toResponseItem()", () => {
   const iconObject: TIconObject = {

@@ -2,7 +2,7 @@ import { TResponse, TResponseItem } from "./alfred/response";
 import { getAllIconsObject, TIconObject } from "./assets/icons_object";
 import { TQuery } from "./query";
 
-export const getClassName = (iconObject: TIconObject) => {
+export const getClassName = (iconObject: TIconObject): string => {
   const prefix = (style: TIconObject["style"]) => {
     switch (style) {
       case "brands":
