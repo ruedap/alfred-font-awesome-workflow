@@ -62,7 +62,6 @@
     "jest": "26.4.2",
     "make-dir": "^3.1.0",
     "make-dir-cli": "^2.0.0",
-    "mkdirp": "1.0.4",
     "organize-imports-cli": "0.7.0",
     "pkg": "4.4.9",
     "prettier": "2.0.5",
