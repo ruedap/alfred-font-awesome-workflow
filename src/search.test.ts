@@ -6,9 +6,9 @@ const EXAMPLE_LIST_1: TIconObject = {
   search: {
     terms: ["111", "222", "333"],
   },
+  style: "brands",
   unicode: "unicode",
   label: "label",
-  free: ["free"],
 };
 
 const EXAMPLE_LIST_2: TIconObject = {
@@ -16,9 +16,9 @@ const EXAMPLE_LIST_2: TIconObject = {
   search: {
     terms: ["222", "444", "666"],
   },
+  style: "solid",
   unicode: "unicode",
   label: "label",
-  free: ["free"],
 };
 
 const EXAMPLE_LIST_3: TIconObject = {
@@ -26,9 +26,9 @@ const EXAMPLE_LIST_3: TIconObject = {
   search: {
     terms: ["333", "666", "999"],
   },
+  style: "regular",
   unicode: "unicode",
   label: "label",
-  free: ["free"],
 };
 
 const EXAMPLE_LIST: TIconObject[] = [
@@ -108,6 +108,11 @@ describe("toJson()", () => {
   test("", () => {
     const searchResult = [
       {
+        item: EXAMPLE_LIST_3,
+        refIndex: 2,
+        score: 1.0,
+      },
+      {
         item: EXAMPLE_LIST_2,
         refIndex: 1,
         score: 0.001,
@@ -120,7 +125,7 @@ describe("toJson()", () => {
     ];
     const actual = toJson(searchResult);
     const expected =
-      '{"items":[{"title":"BBBCCC","subtitle":"Paste class name: fa-BBBCCC","arg":"BBBCCC","icon":{"path":"./icons/BBBCCC.png"}},{"title":"AAABBB","subtitle":"Paste class name: fa-AAABBB","arg":"AAABBB","icon":{"path":"./icons/AAABBB.png"}}]}';
+      '{"items":[{"title":"CCCDDD","subtitle":"Paste class name: far fa-CCCDDD","arg":"eyJuYW1lIjoiQ0NDREREIiwic3R5bGUiOiJyZWd1bGFyIn0=","icon":{"path":"./icons/regular/CCCDDD.png"}},{"title":"BBBCCC","subtitle":"Paste class name: fas fa-BBBCCC","arg":"eyJuYW1lIjoiQkJCQ0NDIiwic3R5bGUiOiJzb2xpZCJ9","icon":{"path":"./icons/solid/BBBCCC.png"}},{"title":"AAABBB","subtitle":"Paste class name: fab fa-AAABBB","arg":"eyJuYW1lIjoiQUFBQkJCIiwic3R5bGUiOiJicmFuZHMifQ==","icon":{"path":"./icons/brands/AAABBB.png"}}]}';
 
     expect(actual).toStrictEqual(expected);
   });

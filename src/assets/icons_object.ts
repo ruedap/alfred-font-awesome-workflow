@@ -1,12 +1,15 @@
 import IconsJson from "@/assets/icons.json";
 
+export type TIconStyle = "brands" | "regular" | "solid";
+
 type TIconJson = Readonly<{
   changes: string[];
   ligatures: string[];
   search: {
     terms: string[];
   };
-  styles: string[];
+  styles: TIconStyle[];
+  free: TIconStyle[];
   unicode: string;
   label: string;
   voted?: boolean;
@@ -20,7 +23,6 @@ type TIconJson = Readonly<{
       path: string;
     };
   };
-  free: string[];
 }>;
 
 type TIconsJson = Readonly<{
@@ -31,22 +33,28 @@ export const getAllIconsJson = (): TIconsJson => {
   return IconsJson as TIconsJson;
 };
 
-export type TIconObject = Pick<
-  TIconJson,
-  "search" | "unicode" | "label" | "free"
-> & {
+export type TIconObject = Pick<TIconJson, "search" | "unicode" | "label"> & {
   name: string;
+  style: TIconStyle;
+};
+
+export const getIconFreeObject = (
+  key: string,
+  iconJson: TIconJson
+): TIconObject[] => {
+  return iconJson.styles.map((style) => {
+    return {
+      name: key,
+      label: iconJson.label,
+      unicode: iconJson.unicode,
+      search: iconJson.search,
+      style: style as TIconStyle,
+    } as TIconObject;
+  });
 };
 
 export const getAllIconsObject = (): TIconObject[] => {
-  return Object.entries(IconsJson as TIconsJson).map(([key, value]) => {
-    return {
-      name: key,
-      label: value.label,
-      unicode: value.unicode,
-      search: value.search,
-      styles: value.styles,
-      free: value.free,
-    } as TIconObject;
+  return Object.entries(IconsJson as TIconsJson).flatMap(([key, iconJson]) => {
+    return getIconFreeObject(key, iconJson);
   });
 };

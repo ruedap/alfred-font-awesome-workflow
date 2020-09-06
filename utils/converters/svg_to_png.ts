@@ -1,6 +1,6 @@
 import fg from "fast-glob";
+import makeDir from "make-dir";
 import path from "path";
-import makeDir from "make-dir"
 
 // FIXME
 // eslint-disable-next-line
@@ -33,9 +33,7 @@ const makeStylesDir = async (svgs: TSvg[]): Promise<string[]> => {
   const outputPaths = svgs.map((svg) => path.parse(svg.output).dir);
   const outputDirs = [...new Set(outputPaths)];
 
-  return await Promise.all(
-    outputDirs.map(async (dir) => await makeDir(dir))
-  )
+  return await Promise.all(outputDirs.map(async (dir) => await makeDir(dir)));
 };
 
 const convert = (svgs: TSvg[]) => {

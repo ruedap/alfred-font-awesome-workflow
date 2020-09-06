@@ -1,6 +1,6 @@
+import { getArgs, getFlagArgs, includesFlag } from "./arg";
 import { getAllIconsObject } from "./assets/icons_object";
-import { putCode, putName, putRef, putUrl } from "./put";
-import { getArgs, getFlagArgs, includesFlag } from "./query";
+import { putCode, putName, putRef, putUrl, TEncodedQuery } from "./put";
 import { search, toJson } from "./search";
 
 const FLAG = {
@@ -22,36 +22,36 @@ const main = () => {
   const list = getAllIconsObject();
 
   if (includesFlag(args, FLAG.FIND)) {
-    const query = getFlagArgs(args, FLAG.FIND);
-    const searchResult = search(list, query);
+    const searchWord = getFlagArgs(args, FLAG.FIND);
+    const searchResult = search(list, searchWord);
     output(toJson(searchResult));
     return;
   }
 
   if (includesFlag(args, FLAG.PUT.NAME)) {
-    const query = getFlagArgs(args, FLAG.PUT.NAME);
-    const result = putName(query);
+    const encodedQuery: TEncodedQuery = getFlagArgs(args, FLAG.PUT.NAME);
+    const result = putName(encodedQuery);
     result && output(result);
     return;
   }
 
   if (includesFlag(args, FLAG.PUT.CODE)) {
-    const query = getFlagArgs(args, FLAG.PUT.CODE);
-    const result = putCode(query);
+    const encodedQuery: TEncodedQuery = getFlagArgs(args, FLAG.PUT.CODE);
+    const result = putCode(encodedQuery);
     result && output(result);
     return;
   }
 
   if (includesFlag(args, FLAG.PUT.REF)) {
-    const query = getFlagArgs(args, FLAG.PUT.REF);
-    const result = putRef(query);
+    const encodedQuery: TEncodedQuery = getFlagArgs(args, FLAG.PUT.REF);
+    const result = putRef(encodedQuery);
     result && output(result);
     return;
   }
 
   if (includesFlag(args, FLAG.PUT.URL)) {
-    const query = getFlagArgs(args, FLAG.PUT.URL);
-    const result = putUrl(query);
+    const encodedQuery: TEncodedQuery = getFlagArgs(args, FLAG.PUT.URL);
+    const result = putUrl(encodedQuery);
     result && output(result);
     return;
   }

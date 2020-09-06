@@ -1,13 +1,37 @@
 import { TResponse, TResponseItem } from "./alfred/response";
 import { getAllIconsObject, TIconObject } from "./assets/icons_object";
+import { TQuery } from "./query";
+
+export const getClassName = (iconObject: TIconObject): string => {
+  const prefix = (style: TIconObject["style"]) => {
+    switch (style) {
+      case "brands":
+        return "fab";
+      case "regular":
+        return "far";
+      case "solid":
+        return "fas";
+      default:
+        return style as never;
+    }
+  };
+
+  const className = `${prefix(iconObject.style)} fa-${iconObject.name}`;
+
+  return className;
+};
 
 export const toResponseItem = (iconObject: TIconObject): TResponseItem => {
+  const argObj = { name: iconObject.name, style: iconObject.style } as TQuery;
+  const arg = JSON.stringify(argObj);
+  const encodedArg = Buffer.from(arg).toString("base64");
+
   return {
     title: iconObject.name,
-    subtitle: `Paste class name: fa-${iconObject.name}`,
-    arg: iconObject.name,
+    subtitle: `Paste class name: ${getClassName(iconObject)}`,
+    arg: encodedArg,
     icon: {
-      path: `./icons/${iconObject.name}.png`,
+      path: `./icons/${iconObject.style}/${iconObject.name}.png`,
     },
   } as TResponseItem;
 };
