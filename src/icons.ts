@@ -24,11 +24,12 @@ export const getClassName = (iconObject: TIconObject): string => {
 export const toResponseItem = (iconObject: TIconObject): TResponseItem => {
   const argObj = { name: iconObject.name, style: iconObject.style } as TQuery;
   const arg = JSON.stringify(argObj);
+  const encodedArg = Buffer.from(arg).toString("base64");
 
   return {
     title: iconObject.name,
     subtitle: `Paste class name: ${getClassName(iconObject)}`,
-    arg: arg,
+    arg: encodedArg,
     icon: {
       path: `./icons/${iconObject.style}/${iconObject.name}.png`,
     },
