@@ -17,10 +17,10 @@
     "test": "jest",
     "test:watch": "jest --watchAll",
     "test:cmd:find": "./dist/font-awesome-workflow --find font-awesome flag",
-    "test:cmd:put:name": "./dist/font-awesome-workflow --put-name font-awesome",
-    "test:cmd:put:code": "./dist/font-awesome-workflow --put-code font-awesome",
-    "test:cmd:put:ref": "./dist/font-awesome-workflow --put-ref font-awesome",
-    "test:cmd:put:url": "./dist/font-awesome-workflow --put-url font-awesome",
+    "test:cmd:put:name": "cross-env-shell \"./dist/font-awesome-workflow --put-name \\\"${npm_package_config_encoded_query}\\\"\"",
+    "test:cmd:put:code": "cross-env-shell \"./dist/font-awesome-workflow --put-code \\\"${npm_package_config_encoded_query}\\\"\"",
+    "test:cmd:put:ref": "cross-env-shell \"./dist/font-awesome-workflow --put-ref \\\"${npm_package_config_encoded_query}\\\"\"",
+    "test:cmd:put:url": "cross-env-shell \"./dist/font-awesome-workflow --put-url \\\"${npm_package_config_encoded_query}\\\"\"",
     "test:cmd:put": "npm run test:cmd:put:name && npm run test:cmd:put:code && npm run test:cmd:put:ref && npm run test:cmd:put:url",
     "test:cmd": "npm run test:cmd:find && npm run test:cmd:put",
     "fmt": "prettier --write .",
@@ -32,7 +32,11 @@
     "utils:json": "ts-node ./utils/converters/icons_json.ts",
     "utils:svg2png": "rimraf ./assets/icons && make-dir ./assets/icons && ts-node ./utils/converters/svg_to_png.ts",
     "utils:composite": "ts-node ./utils/converters/composite.ts",
-    "utils:icons": "npm run utils:svg2png && npm run utils:composite"
+    "utils:icons": "npm run utils:svg2png && npm run utils:composite",
+    "var:encoded_query": "cross-env-shell \"echo \\\"${npm_package_config_encoded_query}\\\"\""
+  },
+  "config": {
+    "encoded_query": "eyJuYW1lIjoiZm9udC1hd2Vzb21lIiwic3R5bGUiOiJicmFuZHMifQ\\=\\="
   },
   "repository": {
     "type": "git",
