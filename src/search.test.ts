@@ -125,7 +125,7 @@ describe("toJson()", () => {
     ];
     const actual = toJson(searchResult);
     const expected =
-      '{"items":[{"title":"CCCDDD","subtitle":"Paste class name: far fa-CCCDDD","arg":"{\\"name\\":\\"CCCDDD\\",\\"style\\":\\"regular\\"}","icon":{"path":"./icons/regular/CCCDDD.png"}},{"title":"BBBCCC","subtitle":"Paste class name: fas fa-BBBCCC","arg":"{\\"name\\":\\"BBBCCC\\",\\"style\\":\\"solid\\"}","icon":{"path":"./icons/solid/BBBCCC.png"}},{"title":"AAABBB","subtitle":"Paste class name: fab fa-AAABBB","arg":"{\\"name\\":\\"AAABBB\\",\\"style\\":\\"brands\\"}","icon":{"path":"./icons/brands/AAABBB.png"}}]}';
+      '{"items":[{"title":"CCCDDD","subtitle":"Paste class name: far fa-CCCDDD","arg":"eyJuYW1lIjoiQ0NDREREIiwic3R5bGUiOiJyZWd1bGFyIn0=","icon":{"path":"./icons/regular/CCCDDD.png"}},{"title":"BBBCCC","subtitle":"Paste class name: fas fa-BBBCCC","arg":"eyJuYW1lIjoiQkJCQ0NDIiwic3R5bGUiOiJzb2xpZCJ9","icon":{"path":"./icons/solid/BBBCCC.png"}},{"title":"AAABBB","subtitle":"Paste class name: fab fa-AAABBB","arg":"eyJuYW1lIjoiQUFBQkJCIiwic3R5bGUiOiJicmFuZHMifQ==","icon":{"path":"./icons/brands/AAABBB.png"}}]}';
 
     expect(actual).toStrictEqual(expected);
   });

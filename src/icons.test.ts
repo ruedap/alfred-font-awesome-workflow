@@ -14,7 +14,7 @@ test("toResponseItem()", () => {
   const expected = {
     title: "font-awesome",
     subtitle: "Paste class name: fab fa-font-awesome",
-    arg: '{"name":"font-awesome","style":"brands"}',
+    arg: "eyJuYW1lIjoiZm9udC1hd2Vzb21lIiwic3R5bGUiOiJicmFuZHMifQ==",
     icon: { path: "./icons/brands/font-awesome.png" },
   };
   expect(actual).toStrictEqual(expected);
@@ -28,7 +28,7 @@ test("getAllIcons()", () => {
   const expected = {
     title: "font-awesome",
     subtitle: "Paste class name: fab fa-font-awesome",
-    arg: '{"name":"font-awesome","style":"brands"}',
+    arg: "eyJuYW1lIjoiZm9udC1hd2Vzb21lIiwic3R5bGUiOiJicmFuZHMifQ==",
     icon: { path: "./icons/brands/font-awesome.png" },
   };
   expect(actual).toStrictEqual(expected);
