@@ -2,7 +2,7 @@
 
 # Font Awesome workflow for Alfred
 
-[![Latest Version](http://img.shields.io/github/release/ruedap/alfred-font-awesome-workflow.svg?style=flat-square)](https://github.com/ruedap/alfred-font-awesome-workflow/releases)
+[![Latest Version](http://img.shields.io/github/release/ruedap/alfred-font-awesome-workflow.svg?style=flat-square)](https://github.com/ruedap/alfred-font-awesome-workflow/releases/latest)
 [![License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/ruedap/alfred-font-awesome-workflow/blob/main/LICENSE.md)
 
 You can incrementally search for [Font Awesome icons](https://fontawesome.com/changelog/latest) and paste it to front most app.
@@ -19,9 +19,9 @@ You can incrementally search for [Font Awesome icons](https://fontawesome.com/ch
 
 ## Installation
 
-Download **[Font-Awesome.alfredworkflow](https://github.com/ruedap/alfred-font-awesome-workflow/releases)** and import to [Alfred](http://www.alfredapp.com/) (requires Powerpack).
+Download **[Font-Awesome.alfredworkflow](https://github.com/ruedap/alfred-font-awesome-workflow/releases/latest)** and import to [Alfred](http://www.alfredapp.com/) (requires Powerpack).
 
-The current supported version is **Font Awesome 5.14.0 Free**. Previous versions are available [here](https://github.com/ruedap/alfred-font-awesome-workflow/releases).
+The current supported version is **Font Awesome 5.14.0 Free**. Previous versions are available [here](https://github.com/ruedap/alfred-font-awesome-workflow/releases/latest).
 
 #### macOS Catalina refuses to run unsigned binaries by default
 
