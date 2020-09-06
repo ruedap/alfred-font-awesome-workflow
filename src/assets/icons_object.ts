@@ -1,6 +1,6 @@
 import IconsJson from "@/assets/icons.json";
 
-type TIconStyle = "brands" | "regular" | "solid";
+export type TIconStyle = "brands" | "regular" | "solid";
 
 type TIconJson = Readonly<{
   changes: string[];

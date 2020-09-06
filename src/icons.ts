@@ -1,7 +1,8 @@
 import { TResponse, TResponseItem } from "./alfred/response";
 import { getAllIconsObject, TIconObject } from "./assets/icons_object";
+import { TQuery } from "./query";
 
-export const toResponseItem = (iconObject: TIconObject): TResponseItem => {
+export const getClassName = (iconObject: TIconObject) => {
   const prefix = (style: TIconObject["style"]) => {
     switch (style) {
       case "brands":
@@ -15,13 +16,18 @@ export const toResponseItem = (iconObject: TIconObject): TResponseItem => {
     }
   };
 
-  const classes = `${prefix(iconObject.style)} fa-${iconObject.name}`;
-  const argObj = { name: iconObject.name, style: iconObject.style };
+  const className = `${prefix(iconObject.style)} fa-${iconObject.name}`;
+
+  return className;
+};
+
+export const toResponseItem = (iconObject: TIconObject): TResponseItem => {
+  const argObj = { name: iconObject.name, style: iconObject.style } as TQuery;
   const arg = JSON.stringify(argObj);
 
   return {
     title: iconObject.name,
-    subtitle: `Paste class name: ${classes}`,
+    subtitle: `Paste class name: ${getClassName(iconObject)}`,
     arg: arg,
     icon: {
       path: `./icons/${iconObject.style}/${iconObject.name}.png`,
