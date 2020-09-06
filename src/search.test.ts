@@ -9,7 +9,6 @@ const EXAMPLE_LIST_1: TIconObject = {
   style: "brands",
   unicode: "unicode",
   label: "label",
-  free: ["free"],
 };
 
 const EXAMPLE_LIST_2: TIconObject = {
@@ -20,7 +19,6 @@ const EXAMPLE_LIST_2: TIconObject = {
   style: "solid",
   unicode: "unicode",
   label: "label",
-  free: ["free"],
 };
 
 const EXAMPLE_LIST_3: TIconObject = {
@@ -31,7 +29,6 @@ const EXAMPLE_LIST_3: TIconObject = {
   style: "regular",
   unicode: "unicode",
   label: "label",
-  free: ["free"],
 };
 
 const EXAMPLE_LIST: TIconObject[] = [

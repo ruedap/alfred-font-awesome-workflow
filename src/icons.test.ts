@@ -4,10 +4,9 @@ import { TIconObject } from "./assets/icons_object";
 test("toResponseItem()", () => {
   const iconObject: TIconObject = {
     name: "font-awesome",
-    free: ["brands"],
+    style: "brands",
     label: "Font Awesome",
     search: { terms: ["meanpath"] },
-    style: "brands",
     unicode: "f2b4",
   };
 

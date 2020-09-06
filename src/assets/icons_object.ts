@@ -8,7 +8,8 @@ type TIconJson = Readonly<{
   search: {
     terms: string[];
   };
-  styles: string[];
+  styles: TIconStyle[];
+  free: TIconStyle[];
   unicode: string;
   label: string;
   voted?: boolean;
@@ -22,7 +23,6 @@ type TIconJson = Readonly<{
       path: string;
     };
   };
-  free: string[];
 }>;
 
 type TIconsJson = Readonly<{
@@ -33,15 +33,12 @@ export const getAllIconsJson = (): TIconsJson => {
   return IconsJson as TIconsJson;
 };
 
-export type TIconObject = Pick<
-  TIconJson,
-  "search" | "unicode" | "label" | "free"
-> & {
+export type TIconObject = Pick<TIconJson, "search" | "unicode" | "label"> & {
   name: string;
   style: TIconStyle;
 };
 
-export const getIconStyleObject = (
+export const getIconFreeObject = (
   key: string,
   iconJson: TIconJson
 ): TIconObject[] => {
@@ -52,13 +49,12 @@ export const getIconStyleObject = (
       unicode: iconJson.unicode,
       search: iconJson.search,
       style: style as TIconStyle,
-      free: iconJson.free,
     } as TIconObject;
   });
 };
 
 export const getAllIconsObject = (): TIconObject[] => {
   return Object.entries(IconsJson as TIconsJson).flatMap(([key, iconJson]) => {
-    return getIconStyleObject(key, iconJson);
+    return getIconFreeObject(key, iconJson);
   });
 };

@@ -12,10 +12,10 @@ describe("getAllIconsJson()", () => {
     const expected = {
       changes: ["4.6", "5.0.0"],
       free: ["brands"],
+      styles: ["brands"],
       label: "Font Awesome",
       ligatures: [],
       search: { terms: ["meanpath"] },
-      styles: ["brands"],
       svg: {
         brands: {
           height: 512,
@@ -42,8 +42,8 @@ describe("getAllIconsJson()", () => {
       search: {
         terms: ["disapprove", "emoticon", "face", "mad", "upset"],
       },
-      styles: ["solid", "regular"],
       free: ["solid", "regular"],
+      styles: ["solid", "regular"],
       ligatures: [],
       unicode: "f556",
       label: "Angry Face",
@@ -87,10 +87,9 @@ describe("getAllIconsObject()", () => {
     const expected = [
       {
         name: "font-awesome",
-        free: ["brands"],
+        style: "brands",
         label: "Font Awesome",
         search: { terms: ["meanpath"] },
-        style: "brands",
         unicode: "f2b4",
       },
     ];
@@ -102,23 +101,21 @@ describe("getAllIconsObject()", () => {
     const actual = obj.filter((icon) => icon.name === "angry");
     const expected = [
       {
-        free: ["solid", "regular"],
+        style: "solid",
         label: "Angry Face",
         name: "angry",
         search: {
           terms: ["disapprove", "emoticon", "face", "mad", "upset"],
         },
-        style: "solid",
         unicode: "f556",
       },
       {
-        free: ["solid", "regular"],
+        style: "regular",
         label: "Angry Face",
         name: "angry",
         search: {
           terms: ["disapprove", "emoticon", "face", "mad", "upset"],
         },
-        style: "regular",
         unicode: "f556",
       },
     ];
