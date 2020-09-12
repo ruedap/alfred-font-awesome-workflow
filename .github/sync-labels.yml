@@ -12,7 +12,7 @@
   description: "Chore"
 - name: "deps"
   color: "f9d0c4"
-  description: "Dependencies"
+  description: "Pull requests that update a dependency file"
 - name: "release"
   color: "eeeeee"
   description: "Release"
