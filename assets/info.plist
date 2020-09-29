@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>name</key>
-	<string>Font Awesome 5.14.0.2</string>
+	<string>Font Awesome 5.15.0.0</string>
 	<key>version</key>
-	<string>5.14.0.2</string>
+	<string>5.15.0.0</string>
 	<key>webaddress</key>
 	<string>https://github.com/ruedap/alfred-font-awesome-workflow</string>
 	<key>readme</key>

@@ -3,7 +3,7 @@ import { getAllIconsJson, getAllIconsObject } from "./icons_object";
 describe("getAllIconsJson()", () => {
   test("length", () => {
     const actual = getAllIconsJson();
-    expect(Object.keys(actual).length).toBe(1448);
+    expect(Object.keys(actual).length).toBe(1459);
   });
 
   test("font-awesome icon", () => {
@@ -78,7 +78,7 @@ describe("getAllIconsJson()", () => {
 describe("getAllIconsObject()", () => {
   test("length", () => {
     const obj = getAllIconsObject();
-    expect(obj.length).toBe(1601);
+    expect(obj.length).toBe(1612);
   });
 
   test("font-awesome icon", () => {
