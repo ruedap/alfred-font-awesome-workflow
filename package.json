@@ -32,8 +32,10 @@
     "utils:json": "ts-node ./utils/converters/icons_json.ts",
     "utils:svg2png": "rimraf ./assets/icons && make-dir ./assets/icons && ts-node ./utils/converters/svg_to_png.ts",
     "utils:composite": "ts-node ./utils/converters/composite.ts",
-    "utils:icons": "npm run utils:svg2png && npm run utils:composite",
-    "var:encoded_query": "cross-env-shell \"echo \\\"${npm_package_config_encoded_query}\\\"\""
+    "var:encoded_query": "cross-env-shell \"echo \\\"${npm_package_config_encoded_query}\\\"\"",
+    "release:json": "npm run utils",
+    "release:icons": "npm run utils:svg2png && npm run utils:composite",
+    "release:build": "npm run build:open"
   },
   "config": {
     "encoded_query": "eyJuYW1lIjoiZm9udC1hd2Vzb21lIiwic3R5bGUiOiJicmFuZHMifQ\\=\\="
