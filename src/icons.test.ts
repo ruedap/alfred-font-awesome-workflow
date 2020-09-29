@@ -22,7 +22,7 @@ test("toResponseItem()", () => {
 
 test("getAllIcons()", () => {
   const allIcons = getAllIcons();
-  expect(allIcons.items.length).toBe(1601);
+  expect(allIcons.items.length).toBe(1612);
 
   const actual = allIcons.items.find((icon) => icon.title === "font-awesome");
   const expected = {
