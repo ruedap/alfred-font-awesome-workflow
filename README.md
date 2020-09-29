@@ -21,7 +21,7 @@ You can incrementally search for [Font Awesome icons](https://fontawesome.com/ch
 
 Download **[Font-Awesome.alfredworkflow](https://github.com/ruedap/alfred-font-awesome-workflow/releases/latest)** and import to [Alfred](http://www.alfredapp.com/) (requires Powerpack).
 
-The current supported version is **Font Awesome 5.14.0 Free**. Previous versions are available [here](https://github.com/ruedap/alfred-font-awesome-workflow/releases/latest).
+The current supported version is **Font Awesome 5.15.0 Free**. Previous versions are available [here](https://github.com/ruedap/alfred-font-awesome-workflow/releases/latest).
 
 #### macOS Catalina refuses to run unsigned binaries by default
 
