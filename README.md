@@ -1,4 +1,4 @@
-> Would you need [Bootstrap Icons workflow](https://github.com/ruedap/alfred-bootstrap-icons-workflow)?
+> 💁 Would you need [Bootstrap Icons workflow](https://github.com/ruedap/alfred-bootstrap-icons-workflow)?
 
 # Font Awesome workflow for Alfred
 
