@@ -33,7 +33,7 @@
     "utils:svg2png": "rimraf ./assets/icons && make-dir ./assets/icons && ts-node ./utils/converters/svg_to_png.ts",
     "utils:composite": "ts-node ./utils/converters/composite.ts",
     "var:encoded_query": "cross-env-shell \"echo \\\"${npm_package_config_encoded_query}\\\"\"",
-    "release:json": "npm run utils",
+    "release:json": "npm run utils:json",
     "release:icons": "npm run utils:svg2png && npm run utils:composite",
     "release:build": "npm run build:open"
   },
