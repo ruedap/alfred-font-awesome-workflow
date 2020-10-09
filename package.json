@@ -66,7 +66,7 @@
     "fast-glob": "3.2.4",
     "imagemin": "7.0.1",
     "imagemin-pngquant": "9.0.1",
-    "jest": "26.4.2",
+    "jest": "26.5.2",
     "make-dir": "3.1.0",
     "make-dir-cli": "2.0.0",
     "organize-imports-cli": "0.7.0",
