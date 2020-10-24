@@ -61,7 +61,7 @@
     "cpx": "1.5.0",
     "cross-env": "7.0.2",
     "eslint": "7.11.0",
-    "eslint-config-prettier": "6.13.0",
+    "eslint-config-prettier": "6.14.0",
     "eslint-plugin-prettier": "3.1.4",
     "fast-glob": "3.2.4",
     "imagemin": "7.0.1",
