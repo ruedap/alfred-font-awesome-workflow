@@ -7,7 +7,9 @@ const main = () => {
   fs.copyFileSync(INPUT_ICONS_JSON_PATH, OUTPUT_ICONS_JSON_PATH);
   const json = JSON.parse(String(fs.readFileSync(OUTPUT_ICONS_JSON_PATH)));
   console.log(
-    `Output ${OUTPUT_ICONS_JSON_PATH} for ${Object.keys(json).length} icons`
+    `Outputted ${OUTPUT_ICONS_JSON_PATH} of ${
+      Object.keys(json).length
+    } icons successfully.`
   );
 };
 

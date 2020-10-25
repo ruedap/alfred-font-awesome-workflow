@@ -41,7 +41,7 @@ const convert = (svgs: TSvg[]) => {
 };
 
 const main = async () => {
-  console.log("start svg2png");
+  console.log("SVG2PNG is progress...");
 
   await makeStylesDir(SVGS);
 

@@ -48,15 +48,13 @@ const minify = async (paths: string[]) => {
 const main = async () => {
   const paths = INPUT_PNG_PATHS;
 
-  console.log("start composite");
+  console.log("Compositing is progress...");
   await composite(paths);
-  console.log("end composite");
+  console.log("Composited successfully.");
 
-  console.log("start minify");
+  console.log("Minifying is progress...");
   await minify(paths);
-  console.log("end minify");
-
-  console.log("composite is complete");
+  console.log("Minified successfully.");
 };
 
 main();
