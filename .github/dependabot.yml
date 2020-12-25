@@ -1,0 +1,12 @@
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "monthly"
+      timezone: "Asia/Tokyo"
+    open-pull-requests-limit: 20
+    labels:
+      - "deps"
+    versioning-strategy: "increase"
+    rebase-strategy: "disabled"
