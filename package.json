@@ -83,6 +83,6 @@
     "webpack-cli": "4.2.0"
   },
   "dependencies": {
-    "fuse.js": "6.4.4"
+    "fuse.js": "6.4.5"
   }
 }
