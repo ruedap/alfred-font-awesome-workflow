@@ -63,7 +63,7 @@
     "eslint": "7.17.0",
     "eslint-config-prettier": "7.1.0",
     "eslint-plugin-prettier": "3.3.1",
-    "fast-glob": "3.2.4",
+    "fast-glob": "3.2.5",
     "imagemin": "7.0.1",
     "imagemin-pngquant": "9.0.1",
     "jest": "26.6.3",
