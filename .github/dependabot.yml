@@ -5,7 +5,7 @@ updates:
     schedule:
       interval: "monthly"
       timezone: "Asia/Tokyo"
-    open-pull-requests-limit: 20
+    open-pull-requests-limit: 3
     labels:
       - "deps"
     versioning-strategy: "increase"
