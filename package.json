@@ -70,7 +70,7 @@
     "make-dir": "3.1.0",
     "make-dir-cli": "3.0.0",
     "organize-imports-cli": "0.8.0",
-    "pkg": "5.1.0",
+    "pkg": "5.3.0",
     "prettier": "2.3.2",
     "rimraf": "3.0.2",
     "sharp": "0.28.3",
