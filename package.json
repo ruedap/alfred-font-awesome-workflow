@@ -2,7 +2,7 @@
   "name": "alfred-font-awesome-workflow",
   "private": true,
   "engines": {
-    "node": "12.x"
+    "node": "14.x"
   },
   "description": "You can incrementally search for Font Awesome icons and paste it to front most app.",
   "scripts": {

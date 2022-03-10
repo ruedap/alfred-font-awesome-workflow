@@ -2,7 +2,7 @@ name: Tests
 
 env:
   CI: true
-  NODE_VERSION: 12.x
+  NODE_VERSION: 14.x
 
 on:
   - push
