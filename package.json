@@ -71,7 +71,7 @@
     "make-dir-cli": "3.0.0",
     "organize-imports-cli": "0.8.0",
     "pkg": "5.3.3",
-    "prettier": "2.3.2",
+    "prettier": "2.8.8",
     "rimraf": "3.0.2",
     "sharp": "0.29.3",
     "svgexport": "0.4.2",
